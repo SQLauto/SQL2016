@@ -18,15 +18,7 @@
           <OmitFromQuery>false</OmitFromQuery>
           <rd:DbType>DateTime</rd:DbType>
         </DataSetParameter>
-        <DataSetParameter Name="@ClassificationID1">
-          <DefaultValue>250</DefaultValue>
-          <ReadOnly>false</ReadOnly>
-          <Nullable>true</Nullable>
-          <OmitFromQuery>false</OmitFromQuery>
-          <rd:DbType>Int32</rd:DbType>
-        </DataSetParameter>
-        <DataSetParameter Name="@ClassificationID2">
-          <DefaultValue>249</DefaultValue>
+        <DataSetParameter Name="@ClassificationID">
           <ReadOnly>false</ReadOnly>
           <Nullable>true</Nullable>
           <OmitFromQuery>false</OmitFromQuery>
@@ -36,12 +28,11 @@
       <CommandText>declare @SessionGuid uniqueidentifier
 exec [APX-2984-db\sql_latin].[APXFirm].[APXUser].[pSessionCreate] 'admin','advs',@SessionGuid = @SessionGuid out
 
-exec [APX-2984-db\sql_latin].[APXFirm].[APXUserCustom].[pF876637SA]
+exec [APX-2984-db\sql_latin].[APXFirm].[APXSSRS].[pReportAppraisal]
 	@SessionGuid = @SessionGuid,
 	@Portfolios = @Portfolios,
 	@Date = @Date,
-	@ClassificationID1 = @ClassificationID1,
-	@ClassificationID2 = @ClassificationID2</CommandText>
+	@ClassificationID = @ClassificationID</CommandText>
     </Query>
     <Fields>
       <Field Name="AccruedInterest">
@@ -92,16 +83,8 @@ exec [APX-2984-db\sql_latin].[APXFirm].[APXUserCustom].[pF876637SA]
         <DataField>EffectivePrice</DataField>
         <rd:TypeName>System.Double</rd:TypeName>
       </Field>
-      <Field Name="LocalPrice">
-        <DataField>LocalPrice</DataField>
-        <rd:TypeName>System.Double</rd:TypeName>
-      </Field>
       <Field Name="EffectiveUnitCost">
         <DataField>EffectiveUnitCost</DataField>
-        <rd:TypeName>System.Double</rd:TypeName>
-      </Field>
-      <Field Name="LocalUnitCost">
-        <DataField>LocalUnitCost</DataField>
         <rd:TypeName>System.Double</rd:TypeName>
       </Field>
       <Field Name="EstMaturityDate">
@@ -136,6 +119,18 @@ exec [APX-2984-db\sql_latin].[APXFirm].[APXUserCustom].[pF876637SA]
         <DataField>IncomeTypeCode</DataField>
         <rd:TypeName>System.String</rd:TypeName>
       </Field>
+      <Field Name="IndustryGroupDisplayOrder">
+        <DataField>IndustryGroupDisplayOrder</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="IndustryGroupIsVisible">
+        <DataField>IndustryGroupIsVisible</DataField>
+        <rd:TypeName>System.Boolean</rd:TypeName>
+      </Field>
+      <Field Name="IndustryGroupName">
+        <DataField>IndustryGroupName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
       <Field Name="IndustrySectorDisplayOrder">
         <DataField>IndustrySectorDisplayOrder</DataField>
         <rd:TypeName>System.Int32</rd:TypeName>
@@ -166,14 +161,6 @@ exec [APX-2984-db\sql_latin].[APXFirm].[APXUserCustom].[pF876637SA]
       </Field>
       <Field Name="LocalCurrencyCode">
         <DataField>LocalCurrencyCode</DataField>
-        <rd:TypeName>System.String</rd:TypeName>
-      </Field>
-      <Field Name="LocalCurrencyISOCode">
-        <DataField>LocalCurrencyISOCode</DataField>
-        <rd:TypeName>System.String</rd:TypeName>
-      </Field>
-      <Field Name="LocalCurrencySymbol">
-        <DataField>LocalCurrencySymbol</DataField>
         <rd:TypeName>System.String</rd:TypeName>
       </Field>
       <Field Name="LocalCurrencyDisplayOrder">
@@ -216,10 +203,6 @@ exec [APX-2984-db\sql_latin].[APXFirm].[APXUserCustom].[pF876637SA]
         <DataField>PrefixedPortfolioBaseCode</DataField>
         <rd:TypeName>System.String</rd:TypeName>
       </Field>
-      <Field Name="PortfolioBaseCode">
-        <DataField>PortfolioBaseCode</DataField>
-        <rd:TypeName>System.String</rd:TypeName>
-      </Field>
       <Field Name="PortfolioBaseIDOrder">
         <DataField>PortfolioBaseIDOrder</DataField>
         <rd:TypeName>System.Int32</rd:TypeName>
@@ -250,22 +233,6 @@ exec [APX-2984-db\sql_latin].[APXFirm].[APXUserCustom].[pF876637SA]
       </Field>
       <Field Name="ReportingCurrencyName">
         <DataField>ReportingCurrencyName</DataField>
-        <rd:TypeName>System.String</rd:TypeName>
-      </Field>
-      <Field Name="ReportingCurrencyISOCode">
-        <DataField>ReportingCurrencyISOCode</DataField>
-        <rd:TypeName>System.String</rd:TypeName>
-      </Field>
-      <Field Name="InverseExchange">
-        <DataField>InverseExchange</DataField>
-        <rd:TypeName>System.Int32</rd:TypeName>
-      </Field>
-      <Field Name="InverseExchangeRate">
-        <DataField>InverseExchangeRate</DataField>
-        <rd:TypeName>System.Double</rd:TypeName>
-      </Field>
-      <Field Name="ReportingCurrencySymbol">
-        <DataField>ReportingCurrencySymbol</DataField>
         <rd:TypeName>System.String</rd:TypeName>
       </Field>
       <Field Name="SecurityID">
@@ -330,30 +297,6 @@ exec [APX-2984-db\sql_latin].[APXFirm].[APXUserCustom].[pF876637SA]
       </Field>
       <Field Name="ZeroMarketValue">
         <DataField>ZeroMarketValue</DataField>
-        <rd:TypeName>System.Double</rd:TypeName>
-      </Field>
-      <Field Name="securityTypeMin">
-        <DataField>securityTypeMin</DataField>
-        <rd:TypeName>System.Double</rd:TypeName>
-      </Field>
-      <Field Name="securityTypeMax">
-        <DataField>securityTypeMax</DataField>
-        <rd:TypeName>System.Double</rd:TypeName>
-      </Field>
-      <Field Name="securityTypeBench">
-        <DataField>securityTypeBench</DataField>
-        <rd:TypeName>System.Double</rd:TypeName>
-      </Field>
-      <Field Name="industrySectorMin">
-        <DataField>industrySectorMin</DataField>
-        <rd:TypeName>System.Double</rd:TypeName>
-      </Field>
-      <Field Name="industrySectorMax">
-        <DataField>industrySectorMax</DataField>
-        <rd:TypeName>System.Double</rd:TypeName>
-      </Field>
-      <Field Name="industrySectorBench">
-        <DataField>industrySectorBench</DataField>
         <rd:TypeName>System.Double</rd:TypeName>
       </Field>
     </Fields>

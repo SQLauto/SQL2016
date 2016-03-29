@@ -13,16 +13,16 @@
       <FullPath>AllocationDetail.rsd</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>PerformanceHistoryLineChart.rsd</Name>
-      <FullPath>PerformanceHistoryLineChart.rsd</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>AllocationSummary.rsd</Name>
       <FullPath>AllocationSummary.rsd</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>PerformanceActivity.rsd</Name>
       <FullPath>PerformanceActivity.rsd</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PerformanceHistoryLineChart.rsd</Name>
+      <FullPath>PerformanceHistoryLineChart.rsd</FullPath>
     </ProjectItem>
   </DataSets>
   <Reports />
@@ -34,7 +34,7 @@
         <OutputPath>bin\Debug</OutputPath>
         <TargetServerVersion>SSRS2008R2</TargetServerVersion>
         <TargetServerURL>http://apx-2984-db.ctp.dev.com/reportserver_SQL2016</TargetServerURL>
-        <TargetFolder>SQL2016</TargetFolder>
+        <TargetFolder>Reports</TargetFolder>
         <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
         <TargetDatasetFolder>Datasets</TargetDatasetFolder>
         <OverwriteDatasets>true</OverwriteDatasets>
