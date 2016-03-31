@@ -2,7 +2,7 @@
 <SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
   <DataSet Name="">
     <Query>
-      <DataSourceReference>DataSource1</DataSourceReference>
+      <DataSourceReference>APXFirm</DataSourceReference>
       <DataSetParameters>
         <DataSetParameter Name="@Portfolios">
           <DefaultValue>+@PWEschB</DefaultValue>
@@ -25,14 +25,10 @@
           <rd:DbType>Int32</rd:DbType>
         </DataSetParameter>
       </DataSetParameters>
-      <CommandText>declare @SessionGuid uniqueidentifier
-exec [APX-2984-db\sql_latin].[APXFirm].[APXUser].[pSessionCreate] 'admin','advs',@SessionGuid = @SessionGuid out
-
-exec [APX-2984-db\sql_latin].[APXFirm].[APXSSRS].[pReportAppraisal]
-	@SessionGuid = @SessionGuid,
-	@Portfolios = @Portfolios,
-	@Date = @Date,
-	@ClassificationID = @ClassificationID</CommandText>
+      <CommandText>DECLARE @SessionGuid uniqueidentifier EXEC [APXFirm].[APXUser].[pSessionCreate] 'admin', 'advs', 
+@SessionGuid = @SessionGuid out EXEC [APXFirm].[APXSSRS].[pReportAppraisal] @SessionGuid = @SessionGuid, @Portfolios = @Portfolios, @Date = @Date, 
+@ClassificationID = @ClassificationID</CommandText>
+      <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
     </Query>
     <Fields>
       <Field Name="AccruedInterest">

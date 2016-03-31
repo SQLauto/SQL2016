@@ -2,11 +2,37 @@
 <SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
   <DataSet Name="">
     <Query>
-      <DataSourceReference>DataSource1</DataSourceReference>
+      <DataSourceReference>APXFirm</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@Portfolios">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@FromDate">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@ToDate">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@ClassificationID">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
       <CommandText>declare @SessionGuid uniqueidentifier
-exec [APX-2984-db\sql_latin].[APXFirm].[APXUser].[pSessionCreate] 'admin','advs',@SessionGuid = @SessionGuid out
+exec [APXUser].[pSessionCreate] 'admin','advs',@SessionGuid = @SessionGuid out
 
-exec [APX-2984-db\sql_latin].[APXFirm].[APXSSRS].[pReportPerformanceHistoryDetailChart]
+exec [APXSSRS].[pReportPerformanceHistoryDetailChart]
 	@SessionGuid = @SessionGuid,
 	@Portfolios = 'BARM',
 	@FromDate = '12/31/2014',

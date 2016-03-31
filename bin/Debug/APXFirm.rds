@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="APXFirm">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=APX-2984-db\sql_latin;Initial Catalog=APXFirm</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>fc66ba1b-d33a-466a-989a-954af4e1fa35</DataSourceID>
+</RptDataSource>
