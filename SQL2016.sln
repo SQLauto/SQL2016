@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "SQL2016", "SQL2016.rptproj", "{329F1BD0-CEB6-440E-8B43-6A58A3ACEE1B}"
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "SQL2016", "SQL2016.rptproj", "{ED1A9D94-5BEA-4EBC-BF1B-3672B7EFFE19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,14 +12,14 @@ Global
 		Release|Default = Release|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{329F1BD0-CEB6-440E-8B43-6A58A3ACEE1B}.Debug|Default.ActiveCfg = Debug
-		{329F1BD0-CEB6-440E-8B43-6A58A3ACEE1B}.Debug|Default.Build.0 = Debug
-		{329F1BD0-CEB6-440E-8B43-6A58A3ACEE1B}.Debug|Default.Deploy.0 = Debug
-		{329F1BD0-CEB6-440E-8B43-6A58A3ACEE1B}.DebugLocal|Default.ActiveCfg = DebugLocal
-		{329F1BD0-CEB6-440E-8B43-6A58A3ACEE1B}.DebugLocal|Default.Build.0 = DebugLocal
-		{329F1BD0-CEB6-440E-8B43-6A58A3ACEE1B}.Release|Default.ActiveCfg = Release
-		{329F1BD0-CEB6-440E-8B43-6A58A3ACEE1B}.Release|Default.Build.0 = Release
-		{329F1BD0-CEB6-440E-8B43-6A58A3ACEE1B}.Release|Default.Deploy.0 = Release
+		{ED1A9D94-5BEA-4EBC-BF1B-3672B7EFFE19}.Debug|Default.ActiveCfg = Debug
+		{ED1A9D94-5BEA-4EBC-BF1B-3672B7EFFE19}.Debug|Default.Build.0 = Debug
+		{ED1A9D94-5BEA-4EBC-BF1B-3672B7EFFE19}.Debug|Default.Deploy.0 = Debug
+		{ED1A9D94-5BEA-4EBC-BF1B-3672B7EFFE19}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{ED1A9D94-5BEA-4EBC-BF1B-3672B7EFFE19}.DebugLocal|Default.Build.0 = DebugLocal
+		{ED1A9D94-5BEA-4EBC-BF1B-3672B7EFFE19}.Release|Default.ActiveCfg = Release
+		{ED1A9D94-5BEA-4EBC-BF1B-3672B7EFFE19}.Release|Default.Build.0 = Release
+		{ED1A9D94-5BEA-4EBC-BF1B-3672B7EFFE19}.Release|Default.Deploy.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

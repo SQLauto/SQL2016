@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DataSource1">
-  <ConnectionProperties>
-    <Extension>SQL</Extension>
-    <ConnectString>Data Source=APX-2984-db\SQL2016;Initial Catalog=NYCTaxiData</ConnectString>
-  </ConnectionProperties>
-  <DataSourceID>bb4312e3-6b6e-47b4-8ee1-7cf501035b3f</DataSourceID>
-</RptDataSource>

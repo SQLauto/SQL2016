@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SQLBIS_HBK_QA">
-  <ConnectionProperties>
-    <Extension>SQL</Extension>
-    <ConnectString>Data Source=vmsfsqlbis.advent.com;Initial Catalog=SqlBis_HBK_QA</ConnectString>
-  </ConnectionProperties>
-  <DataSourceID>234dc368-6d16-4809-afee-3a5a67b454e6</DataSourceID>
-</RptDataSource>

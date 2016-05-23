@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Geneva">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=dkim2;Initial Catalog=GenevaSQL</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>c88b6d8a-b934-47e2-828f-ac201de08b0c</DataSourceID>
+</RptDataSource>
