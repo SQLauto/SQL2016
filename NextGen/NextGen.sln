@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "NextGen", "NextGen.rptproj", "{F206FBE1-EDAB-4193-97C1-6379D7D4B4AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F206FBE1-EDAB-4193-97C1-6379D7D4B4AC}.Debug|Default.ActiveCfg = Debug
+		{F206FBE1-EDAB-4193-97C1-6379D7D4B4AC}.Debug|Default.Build.0 = Debug
+		{F206FBE1-EDAB-4193-97C1-6379D7D4B4AC}.Debug|Default.Deploy.0 = Debug
+		{F206FBE1-EDAB-4193-97C1-6379D7D4B4AC}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{F206FBE1-EDAB-4193-97C1-6379D7D4B4AC}.DebugLocal|Default.Build.0 = DebugLocal
+		{F206FBE1-EDAB-4193-97C1-6379D7D4B4AC}.Release|Default.ActiveCfg = Release
+		{F206FBE1-EDAB-4193-97C1-6379D7D4B4AC}.Release|Default.Build.0 = Release
+		{F206FBE1-EDAB-4193-97C1-6379D7D4B4AC}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

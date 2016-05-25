@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="APXFirm">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=dkim2.advent.com;Initial Catalog=APXFirm</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>8d2aa2d8-f8e9-42e8-aabd-b266a61b5bfb</DataSourceID>
+</RptDataSource>
