@@ -1,1813 +1,1590 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
-  <DataSources>
-    <DataSource Name="APXFirm">
-      <DataSourceReference>APXFirm</DataSourceReference>
-      <rd:DataSourceID>08d2000a-cbb1-468d-964e-f7f03e99440e</rd:DataSourceID>
-    </DataSource>
-  </DataSources>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+  <AutoRefresh>0</AutoRefresh>
   <DataSets>
-    <DataSet Name="AccruedInterest">
-      <Fields>
-        <Field Name="AccruedInterestName">
-          <DataField>AccruedInterestName</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="AccruedInterestID">
-          <DataField>AccruedInterestID</DataField>
-          <rd:TypeName>System.Int16</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>exec APXUser.pGetAccruedInterest</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <Collation>Latin1_General</Collation>
-    </DataSet>
-    <DataSet Name="Configuration">
-      <Fields>
-        <Field Name="AccruedInterestID">
-          <DataField>AccruedInterestID</DataField>
-          <rd:TypeName>System.Int16</rd:TypeName>
-        </Field>
-        <Field Name="AccruePerfFees">
-          <DataField>AccruePerfFees</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="AllocatePerfFees">
-          <DataField>AllocatePerfFees</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="AnnualizeReturns">
-          <DataField>AnnualizeReturns</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="BondCostBasisID">
-          <DataField>BondCostBasisID</DataField>
-          <rd:TypeName>System.Int16</rd:TypeName>
-        </Field>
-        <Field Name="FeeMethod">
-          <DataField>FeeMethod</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="FirmName">
-          <DataField>FirmName</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="FirmLogoURL">
-          <DataField>FirmLogoURL</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="LocaleID">
-          <DataField>LocaleID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="MFBasisIncludeReinvest">
-          <DataField>MFBasisIncludeReinvest</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="PageSize">
-          <DataField>PageSize</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PriceTypeID">
-          <DataField>PriceTypeID</DataField>
-          <rd:TypeName>System.Int16</rd:TypeName>
-        </Field>
-        <Field Name="ReportingCurrencyCode">
-          <DataField>ReportingCurrencyCode</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="RequiredDisclaimerID">
-          <DataField>RequiredDisclaimerID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="ShowCurrencyFullPrecision">
-          <DataField>ShowCurrencyFullPrecision</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="ShowCurrentMBSFace">
-          <DataField>ShowCurrentMBSFace</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="ServerURL">
-          <DataField>ServerURL</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ShowCurrentTIPSFace">
-          <DataField>ShowCurrentTIPSFace</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="ShowIndustryGroup">
-          <DataField>ShowIndustryGroup</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="ShowIndustrySector">
-          <DataField>ShowIndustrySector</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="ShowMultiCurrency">
-          <DataField>ShowMultiCurrency</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="ShowSecuritySymbol">
-          <DataField>ShowSecuritySymbol</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ShowTaxLotsLumped">
-          <DataField>ShowTaxlotsLumped</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="StyleSetID">
-          <DataField>StyleSetID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="UseACB">
-          <DataField>UseACB</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="UseSettlementDate">
-          <DataField>UseSettlementDate</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="YieldOptionID">
-          <DataField>YieldOptionID</DataField>
-          <rd:TypeName>System.Int16</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>EXEC APXUser.pSessionInfoSetGuid @SessionGuid=@SessionGuid
-EXEC APXUser.pGetConfiguration</CommandText>
-        <QueryParameters>
-          <QueryParameter Name="@SessionGuid">
-            <Value>=Parameters!SessionGuid.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <Collation>Latin1_General</Collation>
-    </DataSet>
-    <DataSet Name="Currency">
-      <Fields>
-        <Field Name="CurrencyDisplayName">
-          <DataField>CurrencyDisplayName</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CurrencyCode">
-          <DataField>CurrencyCode</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>EXEC APXUser.pGetCurrency</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <Collation>Latin1_General</Collation>
-    </DataSet>
-    <DataSet Name="FeeMethod">
-      <Fields>
-        <Field Name="Name">
-          <DataField>Name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Value">
-          <DataField>Value</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>EXEC APXUser.pGetFeeMethod</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <Collation>Latin1_General</Collation>
-    </DataSet>
-    <DataSet Name="MFBasisIncludeReinvest">
-      <Fields>
-        <Field Name="Name">
-          <DataField>Name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Value">
-          <DataField>Value</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>EXEC APXUser.pGetMFBasisIncludeReinvest</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <Collation>Latin1_General</Collation>
-    </DataSet>
-    <DataSet Name="LocaleInfo">
-      <Fields>
-        <Field Name="LocaleName">
-          <DataField>LocaleName</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="LocaleID">
-          <DataField>LocaleID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>exec APXUser.pGetLocaleInfo</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <Collation>Latin1_General</Collation>
-    </DataSet>
-    <DataSet Name="PortfolioOverview">
-      <Fields>
-        <Field Name="DataHandle">
-          <DataField>DataHandle</DataField>
-          <rd:TypeName>System.Guid</rd:TypeName>
-        </Field>
-        <Field Name="FirmLogo">
-          <DataField>FirmLogo</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="FromDate">
-          <DataField>FromDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="LocaleID">
-          <DataField>LocaleID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="LegacyLocaleID">
-          <DataField>LegacyLocaleID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="PortfolioBaseID">
-          <DataField>PortfolioBaseID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="PortfolioBaseIDOrder">
-          <DataField>PortfolioBaseIDOrder</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="ReportingCurrencyCode">
-          <DataField>ReportingCurrencyCode</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ReportingCurrencyName">
-          <DataField>ReportingCurrencyName</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ReportHeading1">
-          <DataField>ReportHeading1</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ReportHeading2">
-          <DataField>ReportHeading2</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ReportHeading3">
-          <DataField>ReportHeading3</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ThruDate">
-          <DataField>ThruDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="UseSettlementDate">
-          <DataField>UseSettlementDate</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="ShowMultiCurrency">
-          <DataField>ShowMultiCurrency</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>EXEC APXUser.pSessionInfoSetGuid @SessionGuid=@SessionGuid
-EXEC APXSSRS.pReportPortfolioOverview
-	@SessionGuid = @SessionGuid,
-	@Portfolios = @Portfolios,
-	@FromDate = @FromDate,
-	@ToDate = @ToDate,
-	@ReportingCurrencyCode = @ReportingCurrencyCode,
-
-	-- Optional parameters
-	--@FiscalYearStartDate  = @FiscalYearStartDate,
-	--@IncludeClosedPortfolios  = @IncludeClosedPortfolios,
-	--@IncludeUnsupervisedAssets  = @IncludeUnsupervisedAssets,
-
-	@FeeMethod  = @FeeMethod,
-	--@UseACB  = @UseACB,						-- Use Settings
-	@AccruePerfFees  = @AccruePerfFees,
-	--@AllocatePerfFees  = @AllocatePerfFees,
-	--@AnnualizeReturns  = @AnnualizeReturns,				-- no Use Settings
-	@Period1 = @Period1,
-	@Period2  = @Period2,
-		
-	--@ShowTaxLotsLumped  = @ShowTaxLotsLumped,			-- Use Settings
-	@AccruedInterestID  = @AccruedInterestID,			-- Use Settings (0)
-	@YieldOptionID  = @YieldOptionID,				-- Use Settings (0)
-	--@BondCostBasisID  = @BondCostBasisID,				-- Use Settings (0)
-	@MFBasisIncludeReinvest  = @MFBasisIncludeReinvest,		-- Use Settings
-	@ShowMultiCurrency  = @ShowMultiCurrency,			-- Use Settings
-	@UseSettlementDate  = @UseSettlementDate,			-- Use Settings
-	--@ShowCurrentMBSFace  = @ShowCurrentMBSFace,			-- Use Settings
-	--@ShowCurrentTIPSFace  = @ShowCurrentTIPSFace,			-- Use Settings
-	@LocaleID  = @LocaleID,						-- Use Portfolio Settings
-	@PriceTypeID  = @PriceTypeID,
-	@OverridePortfolioSettings  = @OverridePortfolioSettings</CommandText>
-        <QueryParameters>
-          <QueryParameter Name="@SessionGuid">
-            <Value>=Parameters!SessionGuid.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@Portfolios">
-            <Value>=Parameters!Portfolios.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@FromDate">
-            <Value>=Parameters!FromDate.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@ToDate">
-            <Value>=Parameters!ToDate.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@ReportingCurrencyCode">
-            <Value>=Parameters!ReportingCurrencyCode.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@LocaleID">
-            <Value>=Parameters!LocaleID.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@FeeMethod">
-            <Value>=Parameters!FeeMethod.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@AccruedInterestID">
-            <Value>=Parameters!AccruedInterestID.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@AccruePerfFees">
-            <Value>=Parameters!AccruePerfFees.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@OverridePortfolioSettings">
-            <Value>=Parameters!OverridePortfolioSettings.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@ShowMultiCurrency">
-            <Value>=Parameters!ShowMultiCurrency.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@PriceTypeID">
-            <Value>=Parameters!PriceTypeID.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@Period2">
-            <Value>=Parameters!Period2.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@Period1">
-            <Value>=Parameters!Period1.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@YieldOptionID">
-            <Value>=Parameters!YieldOptionID.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@MFBasisIncludeReinvest">
-            <Value>=Parameters!MFBasisIncludeReinvest.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@UseSettlementDate">
-            <Value>=Parameters!UseSettlementDate.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <Collation>Latin1_General</Collation>
-    </DataSet>
-    <DataSet Name="PriceType">
-      <Fields>
-        <Field Name="PriceTypeName">
-          <DataField>PriceTypeName</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PriceTypeID">
-          <DataField>PriceTypeID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>exec APXUser.pGetPriceType</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <Collation>Latin1_General</Collation>
-    </DataSet>
-    <DataSet Name="ShowCurrencyFullPrecision">
-      <Fields>
-        <Field Name="Name">
-          <DataField>Name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Value">
-          <DataField>Value</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>EXEC APXUser.pGetShowCurrencyFullPrecision</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <Collation>Latin1_General</Collation>
-    </DataSet>
-    <DataSet Name="UseSettlementDate">
-      <Fields>
-        <Field Name="Name">
-          <DataField>Name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Value">
-          <DataField>Value</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>EXEC APXUser.pGetUseSettlementDate</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <Collation>Latin1_General</Collation>
-    </DataSet>
-    <DataSet Name="Classification">
-      <Fields>
-        <Field Name="ClassificationID">
-          <DataField>ClassificationID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="ClassificationName">
-          <DataField>ClassificationName</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>EXEC APXUSer.pGetAllocationClassification</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <Collation>Latin1_General</Collation>
-    </DataSet>
-    <DataSet Name="Yield">
-      <Fields>
-        <Field Name="YieldOptionDesc">
-          <DataField>YieldOptionDesc</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="YieldOptionID">
-          <DataField>YieldOptionID</DataField>
-          <rd:TypeName>System.Int16</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>APXUser.pGetYieldOption</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <Collation>Latin1_General</Collation>
-    </DataSet>
     <DataSet Name="StyleSheet">
+      <SharedDataSet>
+        <SharedDataSetReference>StyleSheet</SharedDataSetReference>
+      </SharedDataSet>
       <Fields>
         <Field Name="StyleSheetXML">
           <DataField>StyleSheetXML</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>EXEC APXUser.pSessionInfoSetGuid @SessionGuid=@SessionGuid
-exec APXUser.pGetStyleSheetInfo</CommandText>
-        <QueryParameters>
-          <QueryParameter Name="@SessionGuid">
-            <Value>=Parameters!SessionGuid.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <Collation>Latin1_General</Collation>
     </DataSet>
-    <DataSet Name="TimePeriods">
+    <DataSet Name="CumulativeTWR">
+      <SharedDataSet>
+        <SharedDataSetReference>CumulativeTWR</SharedDataSetReference>
+      </SharedDataSet>
       <Fields>
-        <Field Name="Name">
-          <DataField>Name</DataField>
+        <Field Name="xsi">
+          <DataField>xsi</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Period">
-          <DataField>Period</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>exec APXUser.pGetTimePeriods</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <Collation>Latin1_General</Collation>
-    </DataSet>
-    <DataSet Name="TimePeriods2">
-      <Fields>
-        <Field Name="Name">
-          <DataField>Name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Period">
-          <DataField>Period</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>exec ApxUser.pGetTimePeriods 'None'</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <Collation>Latin1_General</Collation>
-    </DataSet>
-    <DataSet Name="ChartType">
-      <Fields>
-        <Field Name="Label">
-          <DataField>Label</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Value">
-          <DataField>Value</DataField>
+        <Field Name="PortfolioBaseIDOrder">
+          <DataField>PortfolioBaseIDOrder</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>exec APXUser.pGetChartType</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <Collation>Latin1_General</Collation>
-    </DataSet>
-    <DataSet Name="ReportTranslations1">
-      <Fields>
-        <Field Name="ReportTranslations">
-          <DataField>ReportTranslations</DataField>
+        <Field Name="ClassificationMemberName">
+          <DataField>ClassificationMemberName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>exec APXUser.pGetReportTranslations null, @ContextTagXML, 1</CommandText>
-        <QueryParameters>
-          <QueryParameter Name="@ContextTagXML">
-            <Value>=Parameters!ContextTagXML.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-    </DataSet>
-    <DataSet Name="ReportTranslations2">
-      <Fields>
-        <Field Name="ReportTranslations">
-          <DataField>ReportTranslations</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="ClassificationMemberOrder">
+          <DataField>ClassificationMemberOrder</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CumulativeTWR">
+          <DataField>CumulativeTWR</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="EndingMarketValue">
+          <DataField>EndingMarketValue</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="PeriodFromDate">
+          <DataField>PeriodFromDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PeriodThruDate">
+          <DataField>PeriodThruDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
       </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>exec APXUser.pGetReportTranslations null, @ContextTagXML, 2</CommandText>
-        <QueryParameters>
-          <QueryParameter Name="@ContextTagXML">
-            <Value>=Parameters!ContextTagXML.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
     </DataSet>
-    <DataSet Name="ReportTranslations3">
+    <DataSet Name="PerformanceActivity">
+      <SharedDataSet>
+        <SharedDataSetReference>PerformanceActivity</SharedDataSetReference>
+      </SharedDataSet>
       <Fields>
-        <Field Name="ReportTranslations">
-          <DataField>ReportTranslations</DataField>
+        <Field Name="xsi">
+          <DataField>xsi</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>exec APXUser.pGetReportTranslations null, @ContextTagXML, 3</CommandText>
-        <QueryParameters>
-          <QueryParameter Name="@ContextTagXML">
-            <Value>=Parameters!ContextTagXML.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-    </DataSet>
-    <DataSet Name="ReportTranslations4">
-      <Fields>
-        <Field Name="ReportTranslations">
-          <DataField>ReportTranslations</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="PerformanceTotalGain">
+          <DataField>PerformanceTotalGain</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="PerformanceMarketValueDate1">
+          <DataField>PerformanceMarketValueDate1</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="PerformanceMarketValueDate2">
+          <DataField>PerformanceMarketValueDate2</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="PerformanceIRR">
+          <DataField>PerformanceIRR</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="PerformanceAccruedInterestDelta">
+          <DataField>PerformanceAccruedInterestDelta</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="PerformanceTotalIncome">
+          <DataField>PerformanceTotalIncome</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="PerformanceAdditions">
+          <DataField>PerformanceAdditions</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="PerformanceWithdrawals">
+          <DataField>PerformanceWithdrawals</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="PerformanceFXIRR">
+          <DataField>PerformanceFXIRR</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
       </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>exec APXUser.pGetReportTranslations null, @ContextTagXML, 4</CommandText>
-        <QueryParameters>
-          <QueryParameter Name="@ContextTagXML">
-            <Value>=Parameters!ContextTagXML.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-    </DataSet>
-    <DataSet Name="ReportTranslations5">
-      <Fields>
-        <Field Name="ReportTranslations">
-          <DataField>ReportTranslations</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>exec APXUser.pGetReportTranslations null, @ContextTagXML, 5</CommandText>
-        <QueryParameters>
-          <QueryParameter Name="@ContextTagXML">
-            <Value>=Parameters!ContextTagXML.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-    </DataSet>
-    <DataSet Name="ReportTranslations6">
-      <Fields>
-        <Field Name="ReportTranslations">
-          <DataField>ReportTranslations</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>exec APXUser.pGetReportTranslations null, @ContextTagXML, 6</CommandText>
-        <QueryParameters>
-          <QueryParameter Name="@ContextTagXML">
-            <Value>=Parameters!ContextTagXML.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-    </DataSet>
-    <DataSet Name="ReportTranslations7">
-      <Fields>
-        <Field Name="ReportTranslations">
-          <DataField>ReportTranslations</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>APXFirm</DataSourceName>
-        <CommandText>exec APXUser.pGetReportTranslations null, @ContextTagXML, 7</CommandText>
-        <QueryParameters>
-          <QueryParameter Name="@ContextTagXML">
-            <Value>=Parameters!ContextTagXML.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
     </DataSet>
   </DataSets>
-  <Body>
-    <ReportItems>
-      <Tablix Name="list1">
-        <TablixBody>
-          <TablixColumns>
-            <TablixColumn>
-              <Width>1.50079in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1.50079in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1.50079in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1.50079in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1.50079in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1.50079in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1.49526in</Width>
-            </TablixColumn>
-          </TablixColumns>
-          <TablixRows>
-            <TablixRow>
-              <Height>0.03125in</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="ReportHeading1">
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Variables!Heading1.Value</Value>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.03542in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.67708in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PerformanceTotalGain">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PerformanceTotalGain.Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("KPIValueStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("KPIValueFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("KPIValueSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("KPIValueWeight")</FontWeight>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <TextDecoration>=Code.StyleSheetValue("KPIValueDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("KPIValueColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
                               <Style>
-                                <Color>White</Color>
+                                <TextAlign>Left</TextAlign>
                               </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <Style>
-                        <Border />
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="ReportHeading2">
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Variables!Heading2.Value</Value>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PerformanceTotalGain</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Gainsboro</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <VerticalAlign>Bottom</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox9">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Total Gain</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
                               <Style>
-                                <Color>White</Color>
+                                <TextAlign>Left</TextAlign>
                               </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <Style>
-                        <Border />
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="ReportHeading3">
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Variables!Heading3.Value</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <Style>
-                        <Border />
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="ReportingCurrency">
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Code.Translation(iif(Parameters!FeeMethod.Value = 1, "Net of ", "Gross of ")
-	+ iif(CBool(Parameters!AccruePerfFees.Value) and Parameters!FeeMethod.Value = 1,"Accrued ",nothing) 
-	+ "Fees",Fields!LocaleID.Value,"ReportTitle") + " | "
-	+ Fields!ReportingCurrencyName.Value</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <Style>
-                        <Border />
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="ReportDate">
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Convert.ToDateTime(Fields!FromDate.Value).ToString("d", Globalization.CultureInfo.GetCultureInfo(Fields!LegacyLocaleID.Value)) + " - " + Convert.ToDateTime(Fields!ThruDate.Value).ToString("d", Globalization.CultureInfo.GetCultureInfo(Fields!LegacyLocaleID.Value))</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <Style>
-                        <Border />
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="FirmLogo">
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!FirmLogo.Value</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <Style>
-                        <Border />
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="SettledTrades">
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Code.Translation(Parameters!ReportTitle.Value,Fields!LocaleID.Value,"ReportTitle") + iif(Fields!UseSettlementDate.Value, " - " + Code.Translation("Settled Trades",Fields!LocaleID.Value,"ReportTitle"), nothing)</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <Style>
-                        <Border />
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-              </TablixCells>
-            </TablixRow>
-            <TablixRow>
-              <Height>6.63875in</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Subreport Name="PortfolioOverviewSubreport">
-                      <ReportName>PortfolioOverviewSubreport</ReportName>
-                      <Parameters>
-                        <Parameter Name="SessionGuid">
-                          <Value>=Parameters!SessionGuid.Value</Value>
-                        </Parameter>
-                        <Parameter Name="PortfolioBaseID">
-                          <Value>=Fields!PortfolioBaseID.Value</Value>
-                        </Parameter>
-                        <Parameter Name="PortfolioBaseIDOrder">
-                          <Value>=Fields!PortfolioBaseIDOrder.Value</Value>
-                        </Parameter>
-                        <Parameter Name="DataHandle">
-                          <Value>=Fields!DataHandle.Value</Value>
-                        </Parameter>
-                        <Parameter Name="FromDate">
-                          <Value>=Fields!FromDate.Value</Value>
-                        </Parameter>
-                        <Parameter Name="ToDate">
-                          <Value>=Fields!ThruDate.Value</Value>
-                        </Parameter>
-                        <Parameter Name="Period1">
-                          <Value>=Parameters!Period1.Value</Value>
-                        </Parameter>
-                        <Parameter Name="Period2">
-                          <Value>=Parameters!Period2.Value</Value>
-                        </Parameter>
-                        <Parameter Name="ReportingCurrencyCode">
-                          <Value>=Fields!ReportingCurrencyCode.Value</Value>
-                        </Parameter>
-                        <Parameter Name="ClassificationID">
-                          <Value>=Parameters!ClassificationID.Value</Value>
-                        </Parameter>
-                        <Parameter Name="FeeMethod">
-                          <Value>=Parameters!FeeMethod.Value</Value>
-                        </Parameter>
-                        <Parameter Name="AccruePerfFees">
-                          <Value>=Parameters!AccruePerfFees.Value</Value>
-                        </Parameter>
-                        <Parameter Name="ChartTypeID">
-                          <Value>=Parameters!ChartTypeID.Value</Value>
-                        </Parameter>
-                        <Parameter Name="ShowCurrencyFullPrecision">
-                          <Value>=Parameters!ShowCurrencyFullPrecision.Value</Value>
-                        </Parameter>
-                        <Parameter Name="AccruedInterestID">
-                          <Value>=Parameters!AccruedInterestID.Value</Value>
-                        </Parameter>
-                        <Parameter Name="YieldOptionID">
-                          <Value>=Parameters!YieldOptionID.Value</Value>
-                        </Parameter>
-                        <Parameter Name="LocaleID">
-                          <Value>=Fields!LocaleID.Value</Value>
-                        </Parameter>
-                        <Parameter Name="LegacyLocaleID">
-                          <Value>=Fields!LegacyLocaleID.Value</Value>
-                        </Parameter>
-                        <Parameter Name="OverridePortfolioSettings">
-                          <Value>=Parameters!OverridePortfolioSettings.Value</Value>
-                        </Parameter>
-                      </Parameters>
-                      <NoRowsMessage>No Data Available</NoRowsMessage>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                      </Style>
-                    </Subreport>
-                    <ColSpan>7</ColSpan>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell />
-                <TablixCell />
-                <TablixCell />
-                <TablixCell />
-                <TablixCell />
-                <TablixCell />
-              </TablixCells>
-            </TablixRow>
-          </TablixRows>
-        </TablixBody>
-        <TablixColumnHierarchy>
-          <TablixMembers>
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-          </TablixMembers>
-        </TablixColumnHierarchy>
-        <TablixRowHierarchy>
-          <TablixMembers>
-            <TablixMember>
-              <Group Name="Portfolios">
-                <DocumentMapLabel>=Fields!ReportHeading1.Value</DocumentMapLabel>
-                <GroupExpressions>
-                  <GroupExpression>=Fields!PortfolioBaseIDOrder.Value</GroupExpression>
-                </GroupExpressions>
-                <PageBreak>
-                  <BreakLocation>Between</BreakLocation>
-                </PageBreak>
-                <Variables>
-                  <Variable Name="Heading1">
-                    <Value>=IIf(Not IsNothing(Fields!ReportHeading2.Value) And Not IsNothing(Fields!ReportHeading3.Value), Fields!ReportHeading1.Value, "")</Value>
-                  </Variable>
-                  <Variable Name="Heading2">
-                    <Value>=IIf(Not IsNothing(Fields!ReportHeading2.Value) And Not IsNothing(Fields!ReportHeading3.Value), Fields!ReportHeading2.Value,
-iif((isnothing(Fields!ReportHeading2.Value) and not isnothing(Fields!ReportHeading3.Value)) or (not isnothing(Fields!ReportHeading2.Value) and isnothing(Fields!ReportHeading3.Value)),Fields!ReportHeading1.Value,""))</Value>
-                  </Variable>
-                  <Variable Name="Heading3">
-                    <Value>=iif(not isnothing(Fields!ReportHeading2.Value) and not isnothing(Fields!ReportHeading3.Value), Fields!ReportHeading3.Value,
-iif((isnothing(Fields!ReportHeading2.Value) and not isnothing(Fields!ReportHeading3.Value)),Fields!ReportHeading3.Value,
-iif((not isnothing(Fields!ReportHeading2.Value) and isnothing(Fields!ReportHeading3.Value)),Fields!ReportHeading2.Value,  Fields!ReportHeading1.Value)))</Value>
-                  </Variable>
-                </Variables>
-              </Group>
-              <SortExpressions>
-                <SortExpression>
-                  <Value>=Fields!PortfolioBaseIDOrder.Value</Value>
-                </SortExpression>
-              </SortExpressions>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
               <TablixMembers>
                 <TablixMember>
-                  <KeepWithGroup>After</KeepWithGroup>
-                  <RepeatOnNewPage>true</RepeatOnNewPage>
+                  <Group Name="Details" />
                 </TablixMember>
                 <TablixMember>
-                  <Group Name="list1_Details_Group" />
-                  <TablixMembers>
-                    <TablixMember />
-                  </TablixMembers>
-                  <DataElementOutput>Output</DataElementOutput>
-                  <KeepTogether>true</KeepTogether>
+                  <KeepWithGroup>Before</KeepWithGroup>
                 </TablixMember>
               </TablixMembers>
-            </TablixMember>
-          </TablixMembers>
-        </TablixRowHierarchy>
-        <NoRowsMessage>No Portfolios To Display</NoRowsMessage>
-        <DataSetName>PortfolioOverview</DataSetName>
-        <Height>6.67in</Height>
-        <Width>10.5in</Width>
-        <Style>
-          <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-          <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
-          <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
-          <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
-          <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
-          <Color>=Code.StyleSheetValue("DetailColor")</Color>
-        </Style>
-      </Tablix>
-    </ReportItems>
-    <Height>6.67in</Height>
-    <Style />
-  </Body>
-  <ReportParameters>
-    <ReportParameter Name="SessionGuid">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
-        </Values>
-      </DefaultValue>
-      <Prompt>SessionGuid</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="Portfolios">
-      <DataType>String</DataType>
-      <Prompt>Portfolio</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="FromDate">
-      <DataType>DateTime</DataType>
-      <Prompt>From Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="ToDate">
-      <DataType>DateTime</DataType>
-      <Prompt>To Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="Period1">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>ssd</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Performance Period 1</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>TimePeriods</DataSetName>
-          <ValueField>Period</ValueField>
-          <LabelField>Name</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="Period2">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
-        </Values>
-      </DefaultValue>
-      <Prompt>Performance Period 2</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>TimePeriods2</DataSetName>
-          <ValueField>Period</ValueField>
-          <LabelField>Name</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="ReportingCurrencyCode">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>Configuration</DataSetName>
-          <ValueField>ReportingCurrencyCode</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Reporting Currency</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>Currency</DataSetName>
-          <ValueField>CurrencyCode</ValueField>
-          <LabelField>CurrencyDisplayName</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="ClassificationID">
-      <DataType>Integer</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>-4</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Classification</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>Classification</DataSetName>
-          <ValueField>ClassificationID</ValueField>
-          <LabelField>ClassificationName</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="FeeMethod">
-      <DataType>Integer</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>Configuration</DataSetName>
-          <ValueField>FeeMethod</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Calculate Performance</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>FeeMethod</DataSetName>
-          <ValueField>Value</ValueField>
-          <LabelField>Name</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="AccruePerfFees">
-      <DataType>Boolean</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>Configuration</DataSetName>
-          <ValueField>AccruePerfFees</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Accrue Fees</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="ChartTypeID">
-      <DataType>Integer</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>1</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Chart Type</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>ChartType</DataSetName>
-          <ValueField>Value</ValueField>
-          <LabelField>Label</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="ReportTitle">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>Portfolio Overview</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Report Title</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="ShowCurrencyFullPrecision">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>Configuration</DataSetName>
-          <ValueField>ShowCurrencyFullPrecision</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Currency Display</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>ShowCurrencyFullPrecision</DataSetName>
-          <ValueField>Value</ValueField>
-          <LabelField>Name</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="AccruedInterestID">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>Configuration</DataSetName>
-          <ValueField>AccruedInterestID</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Accrued Interest</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>AccruedInterest</DataSetName>
-          <ValueField>AccruedInterestID</ValueField>
-          <LabelField>AccruedInterestName</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="YieldOptionID">
-      <DataType>Integer</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>Configuration</DataSetName>
-          <ValueField>YieldOptionID</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Yield</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>Yield</DataSetName>
-          <ValueField>YieldOptionID</ValueField>
-          <LabelField>YieldOptionDesc</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="MFBasisIncludeReinvest">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>Configuration</DataSetName>
-          <ValueField>MFBasisIncludeReinvest</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Mutual Fund Cost Basis</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>MFBasisIncludeReinvest</DataSetName>
-          <ValueField>Value</ValueField>
-          <LabelField>Name</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="ShowMultiCurrency">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value>0</Value>
-        </Values>
-      </DefaultValue>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="UseSettlementDate">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>Configuration</DataSetName>
-          <ValueField>UseSettlementDate</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Settlement Date</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>UseSettlementDate</DataSetName>
-          <ValueField>Value</ValueField>
-          <LabelField>Name</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="LocaleID">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>Configuration</DataSetName>
-          <ValueField>LocaleID</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Locale</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>LocaleInfo</DataSetName>
-          <ValueField>LocaleID</ValueField>
-          <LabelField>LocaleName</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="PriceTypeID">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>Configuration</DataSetName>
-          <ValueField>PriceTypeID</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Price Set</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>PriceType</DataSetName>
-          <ValueField>PriceTypeID</ValueField>
-          <LabelField>PriceTypeName</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="OverridePortfolioSettings">
-      <DataType>Boolean</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>True</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Override Portfolio Settings</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="FirmName">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>Configuration</DataSetName>
-          <ValueField>FirmName</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="ServerURL">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>Configuration</DataSetName>
-          <ValueField>ServerURL</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>ServerURL</Prompt>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="StyleSheetXML">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>StyleSheet</DataSetName>
-          <ValueField>StyleSheetXML</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="ContextTagXML">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>="&lt;Translation&gt;&lt;Context&gt;ReportTitle&lt;/Context&gt;&lt;Tag&gt;Gross of Fees&lt;/Tag&gt;&lt;/Translation&gt;
-&lt;Translation&gt;&lt;Context&gt;ReportTitle&lt;/Context&gt;&lt;Tag&gt;Net of Accrued Fees&lt;/Tag&gt;&lt;/Translation&gt;
-&lt;Translation&gt;&lt;Context&gt;ReportTitle&lt;/Context&gt;&lt;Tag&gt;Net of Fees&lt;/Tag&gt;&lt;/Translation&gt;
-&lt;Translation&gt;&lt;Context&gt;ReportTitle&lt;/Context&gt;&lt;Tag&gt;Portfolio Overview&lt;/Tag&gt;&lt;/Translation&gt;
-&lt;Translation&gt;&lt;Context&gt;ReportTitle&lt;/Context&gt;&lt;Tag&gt;Settled Trades&lt;/Tag&gt;&lt;/Translation&gt;"</Value>
-        </Values>
-      </DefaultValue>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="ReportTranslations1">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>ReportTranslations1</DataSetName>
-          <ValueField>ReportTranslations</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="ReportTranslations2">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>ReportTranslations2</DataSetName>
-          <ValueField>ReportTranslations</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="ReportTranslations3">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>ReportTranslations3</DataSetName>
-          <ValueField>ReportTranslations</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="ReportTranslations4">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>ReportTranslations4</DataSetName>
-          <ValueField>ReportTranslations</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="ReportTranslations5">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>ReportTranslations5</DataSetName>
-          <ValueField>ReportTranslations</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="ReportTranslations6">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>ReportTranslations6</DataSetName>
-          <ValueField>ReportTranslations</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="ReportTranslations7">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>ReportTranslations7</DataSetName>
-          <ValueField>ReportTranslations</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Hidden>true</Hidden>
-    </ReportParameter>
-  </ReportParameters>
-  <CustomProperties>
-    <CustomProperty>
-      <Name>CodeGenCollation</Name>
-      <Value>true</Value>
-    </CustomProperty>
-    <CustomProperty>
-      <Name>CodeGenPageSize</Name>
-      <Value>true</Value>
-    </CustomProperty>
-  </CustomProperties>
-  <Code>Private cHeading1 as Object
-Private cHeading2 as Object
-Private cHeading3 as Object
-Private cCurrency as Object
-Private cReportDate as Object
-Private cSettlement as Object
-Private cFirmLogo as Object
-
-Protected Overrides Sub OnInit() 
-  cHeading1 = nothing
-  cHeading2 = nothing
-  cHeading3 = nothing
-  cCurrency = nothing
-  cReportDate = nothing
-  cSettlement = nothing
-  cFirmLogo = nothing
-End Sub
-
-Public Function GetReportHeading1(ReportHeading1 as Object) as String
-if ReportHeading1 is nothing
-   return cHeading1 
-else 
-   cHeading1 = ReportHeading1
-   return cHeading1
-end if
-End Function
-
-Public Function GetReportHeading2(ReportHeading2 as Object) as String
-if ReportHeading2 is nothing
-   return cHeading2 
-else 
-   cHeading2 = ReportHeading2
-   return cHeading2
-end if
-End Function
-
-Public Function GetReportHeading3(ReportHeading3 as Object) as String
-if ReportHeading3 is nothing
-   return cHeading3 
-else 
-   cHeading3 = ReportHeading3
-   return cHeading3
-end if
-End Function
-
-Public Function GetCurrency(Currency as Object) as String
-if Currency is nothing
-   return cCurrency
-else 
-   cCurrency = Currency
-   return cCurrency
-end if
-End Function
-
-Public Function GetReportDate( ReportDate as Object) as String
-if ReportDate is nothing
-   return cReportDate
-else 
-   cReportDate = ReportDate
-   return cReportDate
-end if
-End Function
-
-Public Function GetSettlement( Settlement as Object) as String
-if Settlement is nothing
-   return cSettlement
-else 
-   cSettlement = Settlement 
-   return cSettlement 
-end if
-End Function
-
-Public Function GetFirmLogo( FirmLogo as Object) as String
-if FirmLogo is nothing
-   return cFirmLogo
-else 
-   cFirmLogo = FirmLogo 
-   return cFirmLogo 
-end if
-End Function
-
-Dim StyleSheetHash As System.Collections.Hashtable
-
-Public Function InitStyleSheet()
-
-    Dim xmlDocument As System.Xml.XmlDocument = New System.Xml.XmlDocument()
-    xmlDocument.LoadXml(Report.Parameters!StyleSheetXML.Value)
-    Dim rootNode As System.Xml.XmlElement = xmlDocument.SelectSingleNode("StyleSheetInfo")
-    
-    StyleSheetHash = New System.Collections.Hashtable()
-    
-    For Each a As System.Xml.XmlAttribute In rootNode.Attributes
-      StyleSheetHash.Add(a.Name, a.Value)
-    Next
-    
-End Function
-
-Public Function StyleSheetValue(StyleSheetValueName As String) As String
-
-    If (styleSheetHash Is Nothing)
-      InitStyleSheet()
-    End If
-    
-    If (StyleSheetHash.ContainsKey(StyleSheetValueName))
-      Return StyleSheetHash(StyleSheetValueName)
-    End If
-    
-    Return Nothing
-
-End Function
-
-  Dim TranslationHash As System.Collections.Hashtable
-  Dim HaveNonShariahLang As Boolean = False
-  Dim ShariahLocale As Integer = 1000000
-
-  Public Function InitTranslationHash()
-      TranslationHash = New System.Collections.Hashtable()
-      LoadTranslationHash(1)
-      LoadTranslationHash(2)
-      LoadTranslationHash(3)
-      LoadTranslationHash(4)
-      LoadTranslationHash(5)
-      LoadTranslationHash(6)
-      LoadTranslationHash(7)
-  End Function
-  
-  Public Function LoadTranslationHash(Chunk as Integer)
-      Dim xmlDocument As System.Xml.XmlDocument = New System.Xml.XmlDocument()
-      If Chunk = 1 Then
-        xmlDocument.LoadXml(Report.Parameters!ReportTranslations1.Value)  
-      Else If Chunk = 2 Then
-        xmlDocument.LoadXml(Report.Parameters!ReportTranslations2.Value)
-      Else If Chunk = 3 Then
-        xmlDocument.LoadXml(Report.Parameters!ReportTranslations3.Value)
-      Else If Chunk = 4 Then
-        xmlDocument.LoadXml(Report.Parameters!ReportTranslations4.Value)
-      Else If Chunk = 5 Then
-        xmlDocument.LoadXml(Report.Parameters!ReportTranslations5.Value)
-      Else If Chunk = 6 Then
-        xmlDocument.LoadXml(Report.Parameters!ReportTranslations6.Value)
-      Else 
-        xmlDocument.LoadXml(Report.Parameters!ReportTranslations7.Value)
-      End If
-      
-      Dim rootNode As System.Xml.XmlElement = xmlDocument.SelectSingleNode("Translation")
-      
-      For Each elt As System.Xml.XmlElement In rootNode.SelectNodes("row")
-        Dim key As String = elt.Attributes("T").Value
-        Dim APXLocaleID As String = elt.Attributes("L").Value
-        Dim context As String = elt.Attributes("C").Value
-        Dim translation As String = elt.Attributes("V").Value
-
-       If APXLocaleID &lt; = ShariahLocale
-               HaveNonShariahLang  = True
-       End If  
-        If (Not String.IsNullOrEmpty(APXLocaleID))
-  		key = key + "~~" + APXLocaleID 
-        End If
-  
-  	  
-  	  If (Not String.IsNullOrEmpty(context))
-  		key = key + "~~" + context
-        End If
-  	  
-        TranslationHash.Add(key, translation)
-      Next
-  End Function
-  
-  Public Function Translation(Key As String, APXLocaleID as String, Optional Context As String = Nothing) As String
-  
-      If (TranslationHash Is Nothing)
-        InitTranslationHash()
-      End If
-
-      If (APXLocaleID &lt; ShariahLocale and Not HaveNonShariahLang)
-        Return Key
-      End If  	
-  	If (Not String.IsNullOrEmpty(Context))
-  		Dim contextKey As String = Key + "~~" + APXLocaleID + "~~" + Context
-  		
-  		If (TranslationHash.ContainsKey(contextKey))
-  			Return TranslationHash(contextKey)
-  		End If
-  	End If
-      
-      Dim APXLocaleIDKey As String = Key + "~~" + APXLocaleID
-  
-      If (TranslationHash.ContainsKey(APXLocaleIDKey))
-        Return TranslationHash(APXLocaleIDKey )
-      End If
-  
-      If (TranslationHash.ContainsKey(Key))
-        Return TranslationHash(Key)
-      End If
-      
-      Return Key
-  
-  End Function
-
-</Code>
-  <Width>10.5in</Width>
-  <Page>
-    <PageHeader>
-      <Height>0.8in</Height>
-      <PrintOnFirstPage>true</PrintOnFirstPage>
-      <PrintOnLastPage>true</PrintOnLastPage>
-      <ReportItems>
-        <Rectangle Name="Rectangle6">
+            </TablixRowHierarchy>
+            <DataSetName>PerformanceActivity</DataSetName>
+            <Left>3.02083in</Left>
+            <Height>0.92708in</Height>
+            <Width>2.03542in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Tablix Name="Tablix2">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1.84375in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.67708in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PerformanceMarketValueDate2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PerformanceMarketValueDate2.Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("KPIValueStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("KPIValueFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("KPIValueSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("KPIValueWeight")</FontWeight>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <TextDecoration>=Code.StyleSheetValue("KPIValueDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("KPIValueColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PerformanceMarketValueDate2</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Gainsboro</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <VerticalAlign>Bottom</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox16">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Market Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox16</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Details1" />
+                </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>PerformanceActivity</DataSetName>
+            <Height>0.92708in</Height>
+            <Width>1.84375in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Tablix Name="Tablix3">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.03125in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.67569in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PerformanceIRR">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PerformanceIRR.Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("KPIValueStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("KPIValueFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("KPIValueSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("KPIValueWeight")</FontWeight>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <TextDecoration>=Code.StyleSheetValue("KPIValueDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("KPIValueColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PerformanceIRR</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>Gainsboro</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <VerticalAlign>Bottom</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox24">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Total Return (IRR)</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox24</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Details2" />
+                </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>PerformanceActivity</DataSetName>
+            <Top>0.00139in</Top>
+            <Left>6.12375in</Left>
+            <Height>0.92569in</Height>
+            <Width>2.03125in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Chart Name="Chart1">
+            <ChartCategoryHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="Chart1_CategoryGroup">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!PeriodThruDate.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!PeriodThruDate.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!PeriodThruDate.Value</Label>
+                </ChartMember>
+              </ChartMembers>
+            </ChartCategoryHierarchy>
+            <ChartSeriesHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="Chart1_SeriesGroup">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!ClassificationMemberName.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!ClassificationMemberName.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!ClassificationMemberName.Value</Label>
+                </ChartMember>
+              </ChartMembers>
+            </ChartSeriesHierarchy>
+            <ChartData>
+              <ChartSeriesCollection>
+                <ChartSeries Name="CumulativeTWR">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=Fields!CumulativeTWR.Value</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style />
+                      </ChartDataLabel>
+                      <Style>
+                        <Color>=Code.GetColor(Fields!ClassificationMemberName.Value,Code.StyleSheetValue("ColorPalette"))</Color>
+                      </Style>
+                      <ChartMarker>
+                        <Style />
+                      </ChartMarker>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Type>Line</Type>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+              </ChartSeriesCollection>
+            </ChartData>
+            <ChartAreas>
+              <ChartArea Name="Default">
+                <ChartCategoryAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
+                      </Border>
+                      <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
+                      <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
+                      <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
+                      <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
+                      <Format>d</Format>
+                      <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMinorTickMarks>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption>Axis Title</Caption>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMinorTickMarks>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartCategoryAxes>
+                <ChartValueAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
+                      </Border>
+                      <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
+                      <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
+                      <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
+                      <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
+                      <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMinorTickMarks>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption>Axis Title</Caption>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMinorTickMarks>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartValueAxes>
+                <Style>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                </Style>
+              </ChartArea>
+            </ChartAreas>
+            <ChartLegends>
+              <ChartLegend Name="Default">
+                <Style>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                  <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
+                  <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
+                  <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
+                  <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
+                  <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
+                </Style>
+                <Position>BottomCenter</Position>
+                <ChartLegendTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </ChartLegendTitle>
+                <AutoFitTextDisabled>true</AutoFitTextDisabled>
+                <HeaderSeparatorColor>Black</HeaderSeparatorColor>
+                <ColumnSeparatorColor>Black</ColumnSeparatorColor>
+              </ChartLegend>
+            </ChartLegends>
+            <Palette>BrightPastel</Palette>
+            <ChartBorderSkin>
+              <Style>
+                <BackgroundColor>Gray</BackgroundColor>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <Color>White</Color>
+              </Style>
+            </ChartBorderSkin>
+            <ChartNoDataMessage Name="NoDataMessage">
+              <Caption>No Data Available</Caption>
+              <Style>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <TextAlign>General</TextAlign>
+                <VerticalAlign>Top</VerticalAlign>
+              </Style>
+            </ChartNoDataMessage>
+            <DataSetName>CumulativeTWR</DataSetName>
+            <Top>1.28472in</Top>
+            <Left>3.89001in</Left>
+            <Height>3.75569in</Height>
+            <Width>5.63541in</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Color>LightGrey</Color>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>White</BackgroundColor>
+              <BackgroundGradientType>None</BackgroundGradientType>
+            </Style>
+          </Chart>
+          <Tablix Name="Tablix4">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1.84375in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.94792in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox25">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Beginning Market Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox25</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PerformanceMarketValueDate1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PerformanceMarketValueDate1.Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("DetailColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PerformanceMarketValueDate1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox31">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Additions</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox31</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PerformanceAdditions">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PerformanceAdditions.Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("DetailColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PerformanceAdditions</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox34">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Withdrawals</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox34</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PerformanceWithdrawals">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PerformanceWithdrawals.Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("DetailColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PerformanceWithdrawals</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox37">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Total Income</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox37</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PerformanceTotalIncome">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PerformanceTotalIncome.Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("DetailColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PerformanceTotalIncome</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox40">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Change in Accrued interest</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox40</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PerformanceAccruedInterestDelta">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PerformanceAccruedInterestDelta.Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("DetailColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PerformanceAccruedInterestDelta</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox43">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Ending Market Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox43</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PerformanceMarketValueDate21">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PerformanceMarketValueDate2.Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("DetailColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PerformanceMarketValueDate21</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox46">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>FX IRR</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox46</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PerformanceFXIRR">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PerformanceFXIRR.Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("DetailColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PerformanceFXIRR</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox48">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>IRR</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox48</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PerformanceIRR1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PerformanceIRR.Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("DetailColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PerformanceIRR1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Details3" />
+                  <TablixMembers>
+                    <TablixMember />
+                    <TablixMember />
+                    <TablixMember />
+                    <TablixMember />
+                    <TablixMember />
+                    <TablixMember />
+                    <TablixMember />
+                    <TablixMember />
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>PerformanceActivity</DataSetName>
+            <Top>1.28819in</Top>
+            <Height>2in</Height>
+            <Width>3.79167in</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Textbox Name="Textbox53">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Activity (Since Inception)</Value>
+                    <Style>
+                      <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
+                      <FontFamily>=Code.StyleSheetValue("SectionTitleFamily")</FontFamily>
+                      <FontSize>=Code.StyleSheetValue("SectionTitleSize")</FontSize>
+                      <FontWeight>=Code.StyleSheetValue("SectionTitleWeight")</FontWeight>
+                      <TextDecoration>=Code.StyleSheetValue("SectionTitleDecoration")</TextDecoration>
+                      <Color>=Code.StyleSheetValue("SectionTitleColor")</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox53</rd:DefaultName>
+            <Top>0.96875in</Top>
+            <Height>0.25in</Height>
+            <Width>3.79167in</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox54">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Performance</Value>
+                    <Style>
+                      <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
+                      <FontFamily>=Code.StyleSheetValue("SectionTitleFamily")</FontFamily>
+                      <FontSize>=Code.StyleSheetValue("SectionTitleSize")</FontSize>
+                      <FontWeight>=Code.StyleSheetValue("SectionTitleWeight")</FontWeight>
+                      <TextDecoration>=Code.StyleSheetValue("SectionTitleDecoration")</TextDecoration>
+                      <Color>=Code.StyleSheetValue("SectionTitleColor")</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox53</rd:DefaultName>
+            <Top>0.96875in</Top>
+            <Left>3.89001in</Left>
+            <Height>0.25in</Height>
+            <Width>5.70833in</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <Height>5.04041in</Height>
+        <Style />
+      </Body>
+      <Width>9.75in</Width>
+      <Page>
+        <PageHeader>
+          <Height>1.625in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
-            <Image Name="FirmLogoImage">
-              <Source>External</Source>
-              <Value>=Code.GetFirmLogo(ReportItems!FirmLogo.Value)</Value>
-              <Sizing>FitProportional</Sizing>
-              <Height>0.7in</Height>
-              <Width>1.25in</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Image>
-            <Image Name="HeaderVerticalLine">
-              <Source>External</Source>
-              <Value>HeaderVertLine.jpg</Value>
-              <Sizing>FitProportional</Sizing>
-              <Left>1.25556in</Left>
-              <Height>0.746in</Height>
-              <Width>0.1in</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Image>
-            <Textbox Name="txtReportHeading1">
+            <Textbox Name="Textbox3">
+              <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Code.GetReportHeading1(ReportItems!ReportHeading1.Value)</Value>
-                      <Style>
-                        <FontStyle>=Code.StyleSheetValue("PortfolioNameStyle")</FontStyle>
-                        <FontFamily>=Code.StyleSheetValue("PortfolioNameFamily")</FontFamily>
-                        <FontSize>=Code.StyleSheetValue("PortfolioNameSize")</FontSize>
-                        <FontWeight>=Code.StyleSheetValue("PortfolioNameWeight")</FontWeight>
-                        <TextDecoration>=Code.StyleSheetValue("PortfolioNameDecoration")</TextDecoration>
-                        <Color>=Code.StyleSheetValue("PortfolioNameColor")</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>0.24in</Top>
-              <Left>1.36945in</Left>
-              <Height>0.16in</Height>
-              <Width>4in</Width>
-              <ZIndex>2</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <BackgroundColor>=Code.StyleSheetValue("PortfolioNameBackgroundColor")</BackgroundColor>
-                <VerticalAlign>Bottom</VerticalAlign>
-              </Style>
-            </Textbox>
-            <Textbox Name="txtReportHeading2">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Code.GetReportHeading2(ReportItems!ReportHeading2.Value)</Value>
-                      <Style>
-                        <FontStyle>=Code.StyleSheetValue("PortfolioNameStyle")</FontStyle>
-                        <FontFamily>=Code.StyleSheetValue("PortfolioNameFamily")</FontFamily>
-                        <FontSize>=Code.StyleSheetValue("PortfolioNameSize")</FontSize>
-                        <FontWeight>=Code.StyleSheetValue("PortfolioNameWeight")</FontWeight>
-                        <TextDecoration>=Code.StyleSheetValue("PortfolioNameDecoration")</TextDecoration>
-                        <Color>=Code.StyleSheetValue("PortfolioNameColor")</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>0.4in</Top>
-              <Left>1.36945in</Left>
-              <Height>0.16in</Height>
-              <Width>4in</Width>
-              <ZIndex>3</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <BackgroundColor>=Code.StyleSheetValue("PortfolioNameBackgroundColor")</BackgroundColor>
-                <VerticalAlign>Bottom</VerticalAlign>
-              </Style>
-            </Textbox>
-            <Textbox Name="txtReportHeading3">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Code.GetReportHeading3(ReportItems!ReportHeading3.Value)</Value>
-                      <Style>
-                        <FontStyle>=Code.StyleSheetValue("PortfolioNameStyle")</FontStyle>
-                        <FontFamily>=Code.StyleSheetValue("PortfolioNameFamily")</FontFamily>
-                        <FontSize>=Code.StyleSheetValue("PortfolioNameSize")</FontSize>
-                        <FontWeight>=Code.StyleSheetValue("PortfolioNameWeight")</FontWeight>
-                        <TextDecoration>=Code.StyleSheetValue("PortfolioNameDecoration")</TextDecoration>
-                        <Color>=Code.StyleSheetValue("PortfolioNameColor")</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>0.56in</Top>
-              <Left>1.36945in</Left>
-              <Height>0.16in</Height>
-              <Width>4in</Width>
-              <ZIndex>4</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <BackgroundColor>=Code.StyleSheetValue("PortfolioNameBackgroundColor")</BackgroundColor>
-                <VerticalAlign>Bottom</VerticalAlign>
-              </Style>
-            </Textbox>
-            <Line Name="line2">
-              <Top>0.75in</Top>
-              <Height>0in</Height>
-              <Width>10.5in</Width>
-              <ZIndex>5</ZIndex>
-              <Style>
-                <Border>
-                  <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
-                  <Style>Solid</Style>
-                  <Width>=Code.StyleSheetValue("HeaderLineWidth")</Width>
-                </Border>
-              </Style>
-            </Line>
-            <Textbox Name="ReportTitle">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Code.GetSettlement(ReportItems!SettledTrades.Value)</Value>
+                      <Value>Portfolio Overview</Value>
                       <Style>
                         <FontStyle>=Code.StyleSheetValue("ReportTitleStyle")</FontStyle>
                         <FontFamily>=Code.StyleSheetValue("ReportTitleFamily")</FontFamily>
@@ -1818,176 +1595,287 @@ End Function
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
+                  <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>0.1in</Top>
-              <Left>5.5in</Left>
-              <Height>0.3in</Height>
-              <Width>5in</Width>
-              <ZIndex>6</ZIndex>
+              <rd:DefaultName>Textbox3</rd:DefaultName>
+              <Top>1.25in</Top>
+              <Height>0.375in</Height>
+              <Width>4.04167in</Width>
               <Style>
-                <Border />
+                <Border>
+                  <Style>None</Style>
+                </Border>
                 <BackgroundColor>=Code.StyleSheetValue("ReportTitleBackgroundColor")</BackgroundColor>
                 <VerticalAlign>Bottom</VerticalAlign>
+                <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="txtReportingCurrency">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Code.GetCurrency(ReportItems!ReportingCurrency.Value)</Value>
+            <Rectangle Name="Rectangle2">
+              <ReportItems>
+                <Textbox Name="Textbox62">
+                  <CanGrow>true</CanGrow>
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>=Parameters!Portfolios.Value</Value>
+                          <Style>
+                            <FontStyle>=Code.StyleSheetValue("PortfolioNameStyle")</FontStyle>
+                            <FontFamily>=Code.StyleSheetValue("PortfolioNameFamily")</FontFamily>
+                            <FontSize>=Code.StyleSheetValue("PortfolioNameSize")</FontSize>
+                            <FontWeight>=Code.StyleSheetValue("PortfolioNameWeight")</FontWeight>
+                            <TextDecoration>=Code.StyleSheetValue("PortfolioNameDecoration")</TextDecoration>
+                            <Color>=Code.StyleSheetValue("PortfolioNameColor")</Color>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
                       <Style>
-                        <FontStyle>=Code.StyleSheetValue("ReportDateStyle")</FontStyle>
-                        <FontFamily>=Code.StyleSheetValue("ReportDateFamily")</FontFamily>
-                        <FontSize>=Code.StyleSheetValue("ReportDateSize")</FontSize>
-                        <FontWeight>=Code.StyleSheetValue("ReportDateWeight")</FontWeight>
-                        <TextDecoration>=Code.StyleSheetValue("ReportDateDecoration")</TextDecoration>
-                        <Color>=Code.StyleSheetValue("ReportDateColor")</Color>
+                        <TextAlign>Left</TextAlign>
                       </Style>
-                    </TextRun>
-                  </TextRuns>
+                    </Paragraph>
+                  </Paragraphs>
+                  <rd:DefaultName>Textbox62</rd:DefaultName>
+                  <Top>0.34583in</Top>
+                  <Left>0.07584in</Left>
+                  <Height>0.22917in</Height>
+                  <Width>4.82208in</Width>
                   <Style>
-                    <TextAlign>Right</TextAlign>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                    <VerticalAlign>Bottom</VerticalAlign>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                    <PaddingBottom>2pt</PaddingBottom>
                   </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>0.4in</Top>
-              <Left>5.5in</Left>
-              <Height>0.16in</Height>
-              <Width>5in</Width>
-              <ZIndex>7</ZIndex>
-              <Style>
-                <Border />
-                <BackgroundColor>=Code.StyleSheetValue("ReportDateBackgroundColor")</BackgroundColor>
-                <VerticalAlign>Bottom</VerticalAlign>
-                <PaddingRight>2pt</PaddingRight>
-              </Style>
-            </Textbox>
-            <Textbox Name="txtReportDate">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Code.GetReportDate(ReportItems!ReportDate.Value)</Value>
+                </Textbox>
+                <Textbox Name="Textbox65">
+                  <CanGrow>true</CanGrow>
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>=Parameters!Date.Value</Value>
+                          <Style>
+                            <FontStyle>=Code.StyleSheetValue("ReportDateStyle")</FontStyle>
+                            <FontFamily>=Code.StyleSheetValue("ReportDateFamily")</FontFamily>
+                            <FontSize>=Code.StyleSheetValue("ReportDateSize")</FontSize>
+                            <FontWeight>=Code.StyleSheetValue("ReportDateWeight")</FontWeight>
+                            <Format>d</Format>
+                            <TextDecoration>=Code.StyleSheetValue("ReportDateDecoration")</TextDecoration>
+                            <Color>=Code.StyleSheetValue("ReportDateColor")</Color>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
                       <Style>
-                        <FontStyle>=Code.StyleSheetValue("ReportDateStyle")</FontStyle>
-                        <FontFamily>=Code.StyleSheetValue("ReportDateFamily")</FontFamily>
-                        <FontSize>=Code.StyleSheetValue("ReportDateSize")</FontSize>
-                        <FontWeight>=Code.StyleSheetValue("ReportDateWeight")</FontWeight>
-                        <TextDecoration>=Code.StyleSheetValue("ReportDateDecoration")</TextDecoration>
-                        <Color>=Code.StyleSheetValue("ReportDateColor")</Color>
+                        <TextAlign>Left</TextAlign>
                       </Style>
-                    </TextRun>
-                  </TextRuns>
+                    </Paragraph>
+                  </Paragraphs>
+                  <rd:DefaultName>Textbox65</rd:DefaultName>
+                  <Top>0.575in</Top>
+                  <Left>0.07584in</Left>
+                  <Height>0.225in</Height>
+                  <Width>4.82208in</Width>
+                  <ZIndex>1</ZIndex>
                   <Style>
-                    <TextAlign>Right</TextAlign>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                    <VerticalAlign>Top</VerticalAlign>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingBottom>2pt</PaddingBottom>
                   </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>0.56in</Top>
-              <Left>5.5in</Left>
-              <Height>0.16in</Height>
-              <Width>5in</Width>
-              <ZIndex>8</ZIndex>
+                </Textbox>
+              </ReportItems>
+              <KeepTogether>true</KeepTogether>
+              <Left>4.85208in</Left>
+              <Height>0.875in</Height>
+              <Width>4.89792in</Width>
+              <ZIndex>1</ZIndex>
               <Style>
-                <Border />
-                <BackgroundColor>=Code.StyleSheetValue("ReportDateBackgroundColor")</BackgroundColor>
-                <VerticalAlign>Bottom</VerticalAlign>
-                <PaddingRight>2pt</PaddingRight>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <BackgroundColor>#ecf4f7</BackgroundColor>
               </Style>
-            </Textbox>
+            </Rectangle>
+            <Image Name="Image1">
+              <Source>Embedded</Source>
+              <Value>logo</Value>
+              <Height>1.03125in</Height>
+              <Width>1.84375in</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
           </ReportItems>
-          <KeepTogether>true</KeepTogether>
-          <Height>0.8in</Height>
-          <Width>10.5in</Width>
           <Style>
             <Border>
               <Style>None</Style>
             </Border>
           </Style>
-        </Rectangle>
-      </ReportItems>
-      <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
-      </Style>
-    </PageHeader>
-    <PageFooter>
-      <Height>0.3in</Height>
-      <PrintOnFirstPage>true</PrintOnFirstPage>
-      <PrintOnLastPage>true</PrintOnLastPage>
-      <ReportItems>
-        <Line Name="line1">
-          <Top>0.05in</Top>
-          <Height>0in</Height>
-          <Width>10.5in</Width>
+        </PageHeader>
+        <PageFooter>
+          <Height>0.375in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="Textbox1">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla convallis dapibus. Integer at blandit lacus. Sed elementum pellentesque enim vitae vehicula.</Value>
+                      <Style>
+                        <FontStyle>=Code.StyleSheetValue("FooterStyle")</FontStyle>
+                        <FontFamily>=Code.StyleSheetValue("FooterFamily")</FontFamily>
+                        <FontSize>=Code.StyleSheetValue("FooterSize")</FontSize>
+                        <FontWeight>=Code.StyleSheetValue("FooterWeight")</FontWeight>
+                        <TextDecoration>=Code.StyleSheetValue("FooterDecoration")</TextDecoration>
+                        <Color>=Code.StyleSheetValue("FooterColor")</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox1</rd:DefaultName>
+              <Height>0.375in</Height>
+              <Width>9.74999in</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <BackgroundColor>=Code.StyleSheetValue("FooterBackgroundColor")</BackgroundColor>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
           <Style>
             <Border>
-              <Color>=Code.StyleSheetValue("FooterLineColor")</Color>
-              <Style>Solid</Style>
-              <Width>=Code.StyleSheetValue("FooterLineWidth")</Width>
+              <Style>None</Style>
             </Border>
           </Style>
-        </Line>
-        <Textbox Name="FirmName">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=Parameters!FirmName.Value</Value>
-                  <Style>
-                    <FontStyle>=Code.StyleSheetValue("FirmNameStyle")</FontStyle>
-                    <FontFamily>=Code.StyleSheetValue("FirmNameFamily")</FontFamily>
-                    <FontSize>=Code.StyleSheetValue("FirmNameSize")</FontSize>
-                    <FontWeight>=Code.StyleSheetValue("FirmNameWeight")</FontWeight>
-                    <TextDecoration>=Code.StyleSheetValue("FirmNameDecoration")</TextDecoration>
-                    <Color>=Code.StyleSheetValue("FirmNameColor")</Color>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Left</TextAlign>
-              </Style>
-            </Paragraph>
-          </Paragraphs>
-          <Top>0.1in</Top>
-          <Height>0.2in</Height>
-          <Width>10.5in</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <Border />
-            <BackgroundColor>=Code.StyleSheetValue("FirmNameBackgroundColor")</BackgroundColor>
-            <VerticalAlign>Middle</VerticalAlign>
-            <PaddingLeft>2pt</PaddingLeft>
-          </Style>
-        </Textbox>
-      </ReportItems>
-      <Style />
-    </PageFooter>
-    <PageHeight>8.5in</PageHeight>
-    <PageWidth>11in</PageWidth>
-    <InteractiveHeight>0in</InteractiveHeight>
-    <InteractiveWidth>0in</InteractiveWidth>
-    <LeftMargin>0.25in</LeftMargin>
-    <RightMargin>0.25in</RightMargin>
-    <TopMargin>0.37in</TopMargin>
-    <BottomMargin>0.36in</BottomMargin>
-    <Style />
-  </Page>
+        </PageFooter>
+        <PageHeight>8.5in</PageHeight>
+        <PageWidth>11in</PageWidth>
+        <LeftMargin>0.625in</LeftMargin>
+        <RightMargin>0.625in</RightMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="StyleSheetXML">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>StyleSheet</DataSetName>
+          <ValueField>StyleSheetXML</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="Portfolios">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Cardinal Capital</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Portfolios</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Date">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>=Today()</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Date</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>
+		Dim StyleSheetHash As System.Collections.Hashtable
+
+		Public Function InitStyleSheet()
+
+		Dim xmlDocument As System.Xml.XmlDocument = New System.Xml.XmlDocument()
+		xmlDocument.LoadXml(Report.Parameters!StyleSheetXML.Value)
+		Dim rootNode As System.Xml.XmlElement = xmlDocument.SelectSingleNode("StyleSheetInfo")
+
+		StyleSheetHash = New System.Collections.Hashtable()
+
+		For Each a As System.Xml.XmlAttribute In rootNode.Attributes
+		StyleSheetHash.Add(a.Name, a.Value)
+		Next
+
+		End Function
+
+		Public Function StyleSheetValue(StyleSheetValueName As String) As String
+
+		If (styleSheetHash Is Nothing)
+		InitStyleSheet()
+		End If
+
+		If (StyleSheetHash.ContainsKey(StyleSheetValueName))
+		Return StyleSheetHash(StyleSheetValueName)
+		End If
+
+		Return Nothing
+
+		End Function
+
+Private ColorCount As Integer = 0
+Private ColorMapping As New System.Collections.Hashtable()
+Private Colors() As String = nothing
+
+Public Function GetColor(ByVal groupingValue As String, ByVal delimitedColors As String) As String
+    ' 1. If the mapping already exists, then just return the mapped color.
+    If ColorMapping.ContainsKey(groupingValue) Then Return ColorMapping(groupingValue)
+
+    ' 2. Create the ColorPaletteColors() if they do not already exist.
+    If Colors Is Nothing Then Colors = delimitedColors.Split(New Char() {","c}, StringSplitOptions.RemoveEmptyEntries)
+
+    ' 3. Add the new color to the mapping.
+    Dim color As String = Colors(ColorCount Mod Colors.Length)
+    ColorCount = ColorCount + 1
+    ColorMapping.Add(groupingValue, color)
+
+    ' 4. Return the new color.
+    Return color
+End Function
+</Code>
+  <EmbeddedImages>
+    <EmbeddedImage Name="logo">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>/9j/4AAQSkZJRgABAAEASABIAAD//gAfTEVBRCBUZWNobm9sb2dpZXMgSW5jLiBWMS4wMQD/2wCEAAUFBQgFCAwHBwwMCQkJDA0MDAwMDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0BBQgICgcKDAcHDA0MCgwNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDf/EAaIAAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKCwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+foRAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/AABEIAGMAsQMBIgACEQEDEQH/2gAMAwEAAhEDEQA/APsnp0opaKACik6UZoAWiiigBKKKKAClo6UlAC0lLSUALRR0ooAKKKOlABRRRQAUUnSigAoo6UtACYoxS0UAFVru6jsIZLmY7Y4UZ3OM4VQWPA5PA6Dk1ZrL1u5isrC5uJ4zNFDBLI8QAJkRI2Zk
+APBLAEYPHNNatLzE9nbexmSeKIbeKSSaG4iljaFBblUMztcNsgCbZGjPmNlQTIoQq3mFApNeVeI9fgudSad1kh8kWyzTTCRH0Vo5izNII98ZF4rBY2jcrJgeYzQcrBc2Ut5NMskMXlxtpRJj1W9kjUSTu0eJdgIIBU548hSk0OTIKpapHaxXpP2YpLYtEIokH2uG8lec/aTeXEo3zAKU8k3BRo5Sxj3zLsX1Y0oxd4Xd10tppF92938ut1dPzPbP4alk162er8ktl8+lnt7JbeLraVZDLDc2zRRJMqTRhXlikYojxqrtyz4Xy5Nkqsy70XcK2tO1JdQDjy5IJIX2SRShdykqrjlGdCGVgQVcjnBwQQPCtSsBbLNd2tuiRLaWkm0andsI4muSY1J2lI0UZ+QHyYVDSxkla9Z8JTKyXNuYlhmtrjy5mjnkuUkcxRSBxPKFlchHRGDjKMmzlQpPNUpRpxur3+Wm3aT79u3TfenUlOXaK9dd/Jdl+PXbrelFHSiuI7QopaKACkpaKACiiigBOlLRSUAHSijGKWgBOlLRRQAUlLRQAUUUUAFeWeJ9L1Rbi5vYZjbIuyWK9Ny4hs4Ioh56SWXMdxuKyP8AMp3CQbnQwpXqfSszWmt0sLg3i+ZbCCXzk67o9jb16j7y5HUdeo61pBuL0W+n4/1vo+pEkra6W1PnjS9MuILKaOSCVbRAobS/tM0Eyz3KRpDdmRY0edLmQOEgORA2QE8xWihnaK7t5bWJ51gkgAjZTtXypAyjLI0UZYGQ+YqJHItoGFyrSBgK1NQsrmxuJHEdy7NJpS4fUCz5a5kESM5XaMZ+U5PlkmQGR3+bG1i/sobq5jlh2RKbdNWaUrcz2zRzlontZTJvuDclgrBF3W+FZkDDyR7cZcvZt66Wdrpeb19567ydk7318WcHV2vFR0u7q9m/JaafLV+lkWN5HBdvb79Ok5uHuXllZJbWZDHFAtkYVWV5G/dCTyBIH/ffNK3l
+Nb0HQdUmtZYLJJLZITJDbWf2ySF9JnYiQPOyqv24OHSdWbzAEbylDo7PRqMM128kYgnhga0tJEB1EviFrr5CWTft28YAdlQ/vEkfaceteFoYrZbiEJKlys4+0tNL57vIYoyjebxlfK8tVXam0LjYOp5qsuWPPGzvr0023s79beWy0bv00Vr7OV00rdbPfbS3S/nvutNDVdestAjRr+UIX+VFALPI3cJGgZ298AgZGTWfp/jLTNRnW0V3guH+5HcRSQM/+55iqGPspJ9qyNHWO58S6lJc4a4tkto7cN/BA8e5mjz/AH5Cd5HfAzziuzvbK2vNn2qNJPKdZI94B2yKcqy56MD0xXHKNOnaMlJycU7ppJcyUlZW1Sur6q+trHRGVSd5QcVFScbNNt8rcXd30bs7aO2l7lLWPENjoKqb2TY0hxGihnkcjrsjQFmx3IGBkZNVdI8W6drUptreRkuFG4wzRvDJt9QsiqWHrtzjvisHRY47jxHqU1yA1zbi3jtw3VIGj3Exg9A7k7iO/B64pfH8Ucdva3kY230N5bi2YcOWeQK8Y7lWTcWXocc1oqcOaNF83PJJ811ZOSUl7ttUrpN3XV+Rm6s+WVZcvJFyXLZ3ai3F+9fRuzaXK+i6m/qPivTdKlkguZtksIjJQI7MfN3bAgVSZGba3ypkgDLYFV7XxrpN1DNP53ki1x5yTI8UibuFzG6hjuPC7QckgDk4rFsbKKbxbeXLqGeCztlQn+HzN+4j0OFxnrgkdCaZqunQXPiyxlkUEraTP04LRuAhPqUMhK56HBHIqlTpX5HzX9mpt3Vr8vM4pW6rrfS+ztrLqVfiXLb2jglZ7c3KpN36PW1te6vp0Wk+LtO1mc2lu7pOF3iOaKSFmT+8gkVdw+nOOSMUl94w0vTmkjnmxLDIImjCOzl2UOFRFUs/ykElAQM8kVleKlCapo8y8OLuRN3fY8D7hn0OBxVHwxaWreIdYuGCm6SWFVzjKxtCpJX0
+3MMMR/dApKnT5XUtLl5Oblur35+S17bdb2021G6lRSVJOPNz8vNZpW5Oe/Lffpa+vkdLpHivTtZlNtA7JcKNxhmjeGTb6hJFUsPUrnHfFW9Z8QWOgIr30gj8w7UQBnkc+iRoCzds4GBkZIzXL/EBI4oLW7iwL6G9t1tmH3yzyBXjB6lWj3Fl6HAzRpccdz4o1GS5w01tDbLahv4YXQtI0YPrLkMw5HTPOKSpwa9quZQSbcbrmunFaO1rPmTvbSzWthurOMvY+7z80UpWajaSlLWN91ytWvrdPS5oR+PdHZHeSV4DCFZ45opY5NrMEDKjIGcbmAJQHGcnArW1HxHp+kS+ReTLC4hM+GDY8sOEyCAQWLEKEBLsTwprkvinaWsujNNOFE0MsJgb+IM0iqyg9cMhbI6cZ/hFO1CxivPF1mZlD+Rp8kqAjIDiYKDj1G8kehwRyBVRp05RU/eStUurp/BGLVnZb3100+Wsyq1YSdP3G06dnZr45STurva2muvz039N8X6dqlwLOJpI52BZEmikhMijkmPzFXdgc4HOOcYBrYstUt9QeaK3bc9rIYpVIZSrgA4wwGQQQVYZVh0JrlPHCBf7NmAxJHqlqFbuA5ZXGfRhwR349Kj1R18N65DqRIS01NRa3JPCrOgLW8rf7y7oiTwBjNR7OMknC6coyaTafvReqvZbx20301uae1nBtTs1GUVJpNe7JaO13a0t/LXQ65tUtkvF07d/pLxmYIAxxGG2lmIG1Ru4GSCT0zWjXBeDEOpPc+IZQQdQk224PVbSElIsDt5h3SN65BrvawqRVOXIt0kpf4uq+T0+VzopSc4870Tbcf8AD0b9Vr87BRSUVibC010V1KsAysCCCMgg9QR3B7inUdKAMlNC0+O3ezW2hFvL/rIvLXY/T7y4wcYGM9MDGMCvPdb8LTJqML6dabUtVh/s+SFoYoLNmlY3pniLKziaIqDtjlLDIURuS59YorWM5Rd73v3v/Xl6
+aGbgrWStbsZFpoOnWCSx21tBClx/rVSJFEnUYcAAMOTwcjk+pq5ZWNvp0fk2saQx5J2ooUZPUnHUn1PNeUePIb6/8SaNp1jcy2SXMV+J5ImwwiVYWbZ/CJCMokhBMZcuvIqp4m8N2/gJbbXNFkuIZY7y2iuke4mmS6hnlWJxKsruC43hlcYKkZxnGNVC6inN3mrpatXu0ru/W2mj+RF7NtRXu6X620btp567HpGteGYNWlS8SSWzvIQVS4gYK+0nJRwQVkTPO1gfYjJzQh8ImSeO41S8uNRNuweKOTy44VcfdcxxKoZ1PQsTj0rmtYS48Z+IJtA8+a00vTIIZbtbdzFLczXG4xxGRcMsKxqSwUgsTg9ivL/EPwSfCuhXV94buLmzCIPtFubiaWKWMuoLL5js0UyHDLIjDKhkIIatYc3u0nOzdkvdT5VLZc26uney011tqYyhC7qcl0nd6tXa68uztbd66HrOs+GYtUmS8illsr2JdiTwMAxTOdjhgVkTPO1hwehGTVfT/Caw3SX+oXM2o3EOfKM2xY4ieCyRRqqhyOCxyfTBrhvFttear4h0fTra6ns4rmzuvtDQuVcxKIWbaeiyMcIJMbkDsVINZfibw3L4MvdOHhm4ns/7WuDYXCyTS3CYlQsLlVmd8TxBWZWzgnAIwWDOPNyxhz2bi7abLW6ct0nZ6K677g4w5nPk2avq9XpZ8uzautXqex2+jR29/NqSsxkuY4o2U42gRbtpXjOTuOck+2KWXRo5dQi1MswlgikhC5G0rIysSeM5G0YwQPavJfFfhiDwJBB4g0ma7W6gu7ZLhpbmaYXcU0yRSLOsjspJ37gVVdpGQAcYh8beI4r/AF86DfzXltpdlBHLcLZR3DS3M03KRSSWyO8cCx/MRlS7EjJwCsKDk1KEm1ytN21SilFqybvo0lr11sW3GK5ZRS95O19LtuV7+qbZ67qWjR6lNbTyMytZSmZAuMMxVkw2QeMNngg571wO
+n+H11XWNVnjlltLqG5iEc8LANtaBCUZWDJIhIBKsp5GQRXn91q+meF5Ir/wk2qK6Sxi4sJINRe3uYGYLJj7RGwjmRTvSQOOhUg5wfpdcdQOvPpTcpUFZN2lHlV1Zq0lJpx1un6tO/wAiHTjWabS0lzO2t/dcU09LNffp8zk7DwmIbpL/AFG5m1G5hz5Jm2LHFngtHFGqoHI4LnJ9MHmreteGYdXlju0kls7yAFY7iAhXCnkowIKvGTztYHnOMZOejpa5/azupX1Sstkku1trd1azNvZQUXC2jd3ve/e+9+zvdHn154ATV4yuq3lzeSDHls3losWGDFo4kQR72A2szBjtJAx1rqW0aJtSTVdzebHbtbBeNm1nEhJ4zuyMdcY7VsUUOrN6N6K6S0SSe9klZXt0BUYR1UddG3dttxvZtt3dr9TI1fR49YWFZWZBbXEVyu3HLxElVOQflOecYPoRXL/EBRqFrDoiANNqc6RrkZ8uONhLLN/2zRfzYV39JgZzjkUQqOnKMt+R3itrPo/vs/PYKlNTjKO3MkpPuuq+66Xa9yC1to7KFLeEbI4UVEUdlUAAfgBViiisvNmyVtFsgooopDCiiigApKWigDh9W0a6uvEml6lEmbWzgvkmfco2tMsIjG0kM24q3KggY5xkUfEHRrrXdLFrYp5kourSXbuVPkiuI5HOXKjhFJxnJ6AE129GK0U2nFq3ubfe3r82RyqzXff7rfoeb67oup6Xq/8AwkmgxpdvNCtve2TuIvPSMkxSxSt8izR5K4f5WQ44Ncr40h8V+OdJn06108aZEyguJ7iB57gqykQxiN/LiTI3PJJICyjaq8nPudFaRquLi+WLlG1m730262dul1f8CXC91dpPdK3X5XOCutEvJPEWm6iqA21pZXUMr7l+WSTydi7c7jnY3KggY5IyKl8W6NdapeaRNapvSx1ATzncq7IxDKm7DEFvmZRhctznGM13FFRztNPTRNL0d/8ANlcq
+1Xd3+63+RwvxF0W71/R2srBPNmNxayBSyp8sVxHI5y5VeFUnGcnGBk1R13R9U0nV/wDhItBiS8a4hW3vbJ5BCZljJMU0MrfIssYYqVfCsnAwea9IoojUcUo2VtdH1va6f3K1rO4nBN31T0+Vr/5nmQvfFHiO4hiS1OgWUUqSXE0s0E9xMqHJgijj8xEVzw8jn7udo7H02iiplK9rJRS6L/Ntt/eUly9W/X/gaCUdKWioKCikxRQAtFFFABRRRQAUUUUAFFJRQAdKKMUtACUUUtABRRRQAUUUUAFFFFABR0oooAKKKKACiiigBMYopaKACik6UUALRRRQAgpaQUtABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABSUtFADM0ZoooA//2Q==</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
   <CodeModules>
     <CodeModule>System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</CodeModule>
   </CodeModules>
-  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
-  <rd:ReportID>afee08b0-2540-4991-b3d1-3f7cc180cdde</rd:ReportID>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>a5adcbf6-9aca-49ca-9a4a-5bedfc772530</rd:ReportID>
 </Report>

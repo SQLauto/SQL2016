@@ -40,55 +40,43 @@
       <Name>TaxLotDetail.rsd</Name>
       <FullPath>TaxLotDetail.rsd</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>PerformanceActivity.rsd</Name>
+      <FullPath>PerformanceActivity.rsd</FullPath>
+    </ProjectItem>
   </DataSets>
   <Reports>
     <ProjectItem>
+      <Name>PortfolioOverview.rdl</Name>
+      <FullPath>PortfolioOverview.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>AllocationOverviewBySort.rdl</Name>
       <FullPath>AllocationOverviewBySort.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>G876637SA.rdl</Name>
-      <FullPath>G876637SA.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Performance Overview.rdl</Name>
-      <FullPath>Performance Overview.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>PerformanceOverview.rdl</Name>
-      <FullPath>PerformanceOverview.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>PerformanceOverviewSubreport.rdl</Name>
-      <FullPath>PerformanceOverviewSubreport.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>PortfolioAppraisal.rdl</Name>
-      <FullPath>PortfolioAppraisal.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>PortfolioEvent.rdl</Name>
       <FullPath>PortfolioEvent.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>RealizedGainLoss.rdl</Name>
-      <FullPath>RealizedGainLoss.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>PortfolioOverview.rdl</Name>
       <FullPath>PortfolioOverview.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>PortfolioOverviewSubreport.rdl</Name>
-      <FullPath>PortfolioOverviewSubreport.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>HouseholdOverviewSubreport.rdl</Name>
-      <FullPath>HouseholdOverviewSubreport.rdl</FullPath>
+      <Name>RealizedGainLoss.rdl</Name>
+      <FullPath>RealizedGainLoss.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>AllocationOverview.rdl</Name>
       <FullPath>AllocationOverview.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PerformanceOverview.rdl</Name>
+      <FullPath>PerformanceOverview.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Appraisal.rdl</Name>
+      <FullPath>Appraisal.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

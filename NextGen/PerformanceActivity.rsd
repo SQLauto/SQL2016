@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="">
+    <Query>
+      <DataSourceReference>XML</DataSourceReference>
+      <CommandText>&lt;Query&gt;
+&lt;XmlData&gt;
+&lt;data-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+&lt;record&gt;
+&lt;FixedIncomeBondDescription/&gt;
+&lt;FormatLocalCurrency&gt;,0.00&lt;/FormatLocalCurrency&gt;
+&lt;FormatPerUnit&gt;,0.00&lt;/FormatPerUnit&gt;
+&lt;FormatQuantity/&gt;
+&lt;FormatReportingCurrency&gt;,0.00&lt;/FormatReportingCurrency&gt;
+&lt;PerformanceACB&gt;5485725.865&lt;/PerformanceACB&gt;
+&lt;PerformanceAccruedInterestDate1&gt;0&lt;/PerformanceAccruedInterestDate1&gt;
+&lt;PerformanceAccruedInterestDate2&gt;2816.711111&lt;/PerformanceAccruedInterestDate2&gt;
+&lt;PerformanceAccruedInterestDelta&gt;2816.711111&lt;/PerformanceAccruedInterestDelta&gt;
+&lt;PerformanceAdditions&gt;27525217.46&lt;/PerformanceAdditions&gt;
+&lt;PerformanceAnnualizedFXIRR&gt;1900-01-00&lt;/PerformanceAnnualizedFXIRR&gt;
+&lt;PerformanceAnnualizedIRR&gt;11.98139534&lt;/PerformanceAnnualizedIRR&gt;
+&lt;PerformanceAnnualizedPriceIRR&gt;11.98089981&lt;/PerformanceAnnualizedPriceIRR&gt;
+&lt;PerformanceClassificationMemberCode&gt;totport&lt;/PerformanceClassificationMemberCode&gt;
+&lt;PerformanceClassificationMemberID&gt;-9&lt;/PerformanceClassificationMemberID&gt;
+&lt;PerformanceClassificationMemberName&gt;Portfolio&lt;/PerformanceClassificationMemberName&gt;
+&lt;PerformanceDividends&gt;4220930.577&lt;/PerformanceDividends&gt;
+&lt;PerformanceFees&gt;0&lt;/PerformanceFees&gt;
+&lt;PerformanceFromDate&gt;00:00.0&lt;/PerformanceFromDate&gt;
+&lt;PerformanceFXIRR&gt;0.043286902&lt;/PerformanceFXIRR&gt;
+&lt;PerformanceFXRealizedGainLossOnMval&gt;2334.398245&lt;/PerformanceFXRealizedGainLossOnMval&gt;
+&lt;PerformanceFXUnrealizedGainLossOnMval&gt;40.20253872&lt;/PerformanceFXUnrealizedGainLossOnMval&gt;
+&lt;PerformanceInterest&gt;187968.25&lt;/PerformanceInterest&gt;
+&lt;PerformanceIRR&gt;511.4120517&lt;/PerformanceIRR&gt;
+&lt;PerformanceManagementFees&gt;0&lt;/PerformanceManagementFees&gt;
+&lt;PerformanceManagementFeesPaidByClient&gt;0&lt;/PerformanceManagementFeesPaidByClient&gt;
+&lt;PerformanceMarketValueDate1&gt;0&lt;/PerformanceMarketValueDate1&gt;
+&lt;PerformanceMarketValueDate2&gt;2916379.38&lt;/PerformanceMarketValueDate2&gt;
+&lt;PerformanceNonZeroMarketValueDate1&gt;0&lt;/PerformanceNonZeroMarketValueDate1&gt;
+&lt;PerformanceNonZeroMarketValueDate2&gt;2916379.38&lt;/PerformanceNonZeroMarketValueDate2&gt;
+&lt;PerformancePortfolioFees&gt;0&lt;/PerformancePortfolioFees&gt;
+&lt;PerformancePortfolioFeesPaidByClient&gt;0&lt;/PerformancePortfolioFeesPaidByClient&gt;
+&lt;PerformancePriceIRR&gt;511.3687648&lt;/PerformancePriceIRR&gt;
+&lt;PerformancePriceRealizedGainLossOnMval&gt;23719882.18&lt;/PerformancePriceRealizedGainLossOnMval&gt;
+&lt;PerformancePriceUnrealizedGainLossOnMval&gt;-79309.125&lt;/PerformancePriceUnrealizedGainLossOnMval&gt;
+&lt;PerformanceRealizedGainLossOnCost&gt;23687342.32&lt;/PerformanceRealizedGainLossOnCost&gt;
+&lt;PerformanceRealizedGainLossOnMval/&gt;
+&lt;PerformanceThruDate&gt;00:00.0&lt;/PerformanceThruDate&gt;
+&lt;PerformanceTotalGain&gt;28054663.2&lt;/PerformanceTotalGain&gt;
+&lt;PerformanceTotalIncome&gt;4411715.538&lt;/PerformanceTotalIncome&gt;
+&lt;PerformanceTransfersIn&gt;0&lt;/PerformanceTransfersIn&gt;
+&lt;PerformanceTransfersOut&gt;0&lt;/PerformanceTransfersOut&gt;
+&lt;PerformanceUnrealizedGainLossOnCost&gt;0&lt;/PerformanceUnrealizedGainLossOnCost&gt;
+&lt;PerformanceUnrealizedGainLossOnMval&gt;-79268.92246&lt;/PerformanceUnrealizedGainLossOnMval&gt;
+&lt;PerformanceWithdrawals&gt;-3786513.261&lt;/PerformanceWithdrawals&gt;
+&lt;PortfolioBaseCode&gt;case&lt;/PortfolioBaseCode&gt;
+&lt;PortfolioBaseID&gt;180&lt;/PortfolioBaseID&gt;
+&lt;PortfolioBaseIDOrder&gt;1&lt;/PortfolioBaseIDOrder&gt;
+&lt;PortfolioCloseDate/&gt;
+&lt;PortfolioInitialValue&gt;871859.1&lt;/PortfolioInitialValue&gt;
+&lt;PortfolioInvestmentGoal/&gt;
+&lt;PortfolioStartDate&gt;12/31/1997&lt;/PortfolioStartDate&gt;
+&lt;PositionCostBasis&gt;51790550.68&lt;/PositionCostBasis&gt;
+&lt;PositionQuantity/&gt;
+&lt;PositionUnitCost/&gt;
+&lt;ReportHeading1&gt;Evan Case Trust&lt;/ReportHeading1&gt;
+&lt;ReportHeading2&gt;CASE&lt;/ReportHeading2&gt;
+&lt;ReportHeading3&gt;Seismic Bank 990123475&lt;/ReportHeading3&gt;
+&lt;ReportHeadingFirmLogo&gt;logo.jpg&lt;/ReportHeadingFirmLogo&gt;
+&lt;ReportHeadingFirmName&gt;Advent Software&lt;/ReportHeadingFirmName&gt;
+&lt;ReportHeadingReportingCurrencyName&gt;US Dollar&lt;/ReportHeadingReportingCurrencyName&gt;
+&lt;ReportSettingAccruedInterestIsVisible&gt;1&lt;/ReportSettingAccruedInterestIsVisible&gt;
+&lt;ReportSettingLegacyLocaleID&gt;1033&lt;/ReportSettingLegacyLocaleID&gt;
+&lt;ReportSettingLocaleID&gt;1033&lt;/ReportSettingLocaleID&gt;
+&lt;ReportSettingReturnIsAnnualized&gt;1&lt;/ReportSettingReturnIsAnnualized&gt;
+&lt;ReportSettingShowFees&gt;0&lt;/ReportSettingShowFees&gt;
+&lt;ReportSettingShowMultiCurrency&gt;0&lt;/ReportSettingShowMultiCurrency&gt;
+&lt;ReportSettingUseACB&gt;1&lt;/ReportSettingUseACB&gt;
+&lt;SecurityCusip&gt;##69##&lt;/SecurityCusip&gt;
+&lt;SecurityCusip9&gt;##70##&lt;/SecurityCusip9&gt;
+&lt;SecurityFitchRating&gt;##71##&lt;/SecurityFitchRating&gt;
+&lt;SecurityFullSecurityName&gt;##72##&lt;/SecurityFullSecurityName&gt;
+&lt;SecurityHold&gt;##73##&lt;/SecurityHold&gt;
+&lt;SecurityHoldCode&gt;##74##&lt;/SecurityHoldCode&gt;
+&lt;SecurityID&gt;##75##&lt;/SecurityID&gt;
+&lt;SecurityIncomeTypeCode&gt;##76##&lt;/SecurityIncomeTypeCode&gt;
+&lt;SecurityIsBond&gt;##77##&lt;/SecurityIsBond&gt;
+&lt;SecurityIsCash&gt;##78##&lt;/SecurityIsCash&gt;
+&lt;SecurityISIN&gt;##79##&lt;/SecurityISIN&gt;
+&lt;SecurityIsShortPosition&gt;##80##&lt;/SecurityIsShortPosition&gt;
+&lt;SecurityIsZeroCoupon&gt;##81##&lt;/SecurityIsZeroCoupon&gt;
+&lt;SecurityIsZeroMarketValue&gt;##82##&lt;/SecurityIsZeroMarketValue&gt;
+&lt;SecurityLocalCurrencyCode&gt;##83##&lt;/SecurityLocalCurrencyCode&gt;
+&lt;SecurityLocalCurrencyDisplayOrder&gt;##84##&lt;/SecurityLocalCurrencyDisplayOrder&gt;
+&lt;SecurityLocalCurrencyISOCode&gt;##85##&lt;/SecurityLocalCurrencyISOCode&gt;
+&lt;SecurityLocalCurrencyName&gt;##86##&lt;/SecurityLocalCurrencyName&gt;
+&lt;SecurityMoodyRating&gt;##87##&lt;/SecurityMoodyRating&gt;
+&lt;SecurityOptionSymbol&gt;##88##&lt;/SecurityOptionSymbol&gt;
+&lt;SecurityProprietarySymbol&gt;##89##&lt;/SecurityProprietarySymbol&gt;
+&lt;SecuritySEDOL&gt;##90##&lt;/SecuritySEDOL&gt;
+&lt;SecuritySPRating&gt;##91##&lt;/SecuritySPRating&gt;
+&lt;SecuritySymbol&gt;##92##&lt;/SecuritySymbol&gt;
+&lt;SecurityTicker&gt;##93##&lt;/SecurityTicker&gt;
+&lt;SecurityTypeCode&gt;##94##&lt;/SecurityTypeCode&gt;
+&lt;/record&gt;
+&lt;/data-set&gt;
+&lt;/XmlData&gt;
+&lt;ElementPath&gt;
+data-set/record{PerformanceTotalGain(float),PerformanceMarketValueDate1(float),PerformanceMarketValueDate2(float),PerformanceIRR(float),PerformanceAccruedInterestDelta(float),PerformanceTotalIncome(float),PerformanceAdditions(float),PerformanceWithdrawals(float),PerformanceFXIRR(float)}
+&lt;/ElementPath&gt;
+&lt;/Query&gt;</CommandText>
+      <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+    </Query>
+    <Fields>
+      <Field Name="xsi">
+        <DataField>xsi</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="PerformanceTotalGain">
+        <DataField>PerformanceTotalGain</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="PerformanceMarketValueDate1">
+        <DataField>PerformanceMarketValueDate1</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="PerformanceMarketValueDate2">
+        <DataField>PerformanceMarketValueDate2</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="PerformanceIRR">
+        <DataField>PerformanceIRR</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="PerformanceAccruedInterestDelta">
+        <DataField>PerformanceAccruedInterestDelta</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="PerformanceTotalIncome">
+        <DataField>PerformanceTotalIncome</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="PerformanceAdditions">
+        <DataField>PerformanceAdditions</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="PerformanceWithdrawals">
+        <DataField>PerformanceWithdrawals</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="PerformanceFXIRR">
+        <DataField>PerformanceFXIRR</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
