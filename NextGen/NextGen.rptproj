@@ -3,10 +3,6 @@
   <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmRkbDEwMF8xMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDA4L2VuZ2luZS8xMDAvMTAwIiB4bWxuczpkZGwyMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAiIHhtbG5zOmRkbDIwMF8yMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAvMjAwIiB4bWxuczpkZGwzMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAiIHhtbG5zOmRkbDMwMF8zMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAvMzAwIiB4bWxuczpkZGw0MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAiIHhtbG5zOmRkbDQwMF80MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAvNDAwIiB4bWxuczpkd2Q9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vRGF0YVdhcmVob3VzZS9EZXNpZ25lci8xLjAiPg0KICA8RW5hYmxlZD5mYWxzZTwvRW5hYmxlZD4NCiAgPFByb2plY3ROYW1lPjwvUHJvamVjdE5hbWU+DQogIDxBdXhQYXRoPjwvQXV4UGF0aD4NCiAgPExvY2FsUGF0aD48L0xvY2FsUGF0aD4NCiAgPFByb3ZpZGVyPjwvUHJvdmlkZXI+DQo8L1NvdXJjZUNvbnRyb2xJbmZvPg==</State>
   <DataSources>
     <ProjectItem>
-      <Name>XML.rds</Name>
-      <FullPath>XML.rds</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>APXFirm.rds</Name>
       <FullPath>APXFirm.rds</FullPath>
     </ProjectItem>
@@ -14,11 +10,27 @@
       <Name>GenevaSQL.rds</Name>
       <FullPath>GenevaSQL.rds</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>XML.rds</Name>
+      <FullPath>XML.rds</FullPath>
+    </ProjectItem>
   </DataSources>
   <DataSets>
     <ProjectItem>
       <Name>CumulativeTWR.rsd</Name>
       <FullPath>CumulativeTWR.rsd</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PerformanceHistorySummary.rsd</Name>
+      <FullPath>PerformanceHistorySummary.rsd</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PortfolioEvent.rsd</Name>
+      <FullPath>PortfolioEvent.rsd</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>RealizedGainLoss.rsd</Name>
+      <FullPath>RealizedGainLoss.rsd</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>StyleSheet.rsd</Name>
@@ -31,12 +43,52 @@
   </DataSets>
   <Reports>
     <ProjectItem>
-      <Name>Sample.rdl</Name>
-      <FullPath>Sample.rdl</FullPath>
+      <Name>AllocationOverviewBySort.rdl</Name>
+      <FullPath>AllocationOverviewBySort.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>G876637SA.rdl</Name>
       <FullPath>G876637SA.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Performance Overview.rdl</Name>
+      <FullPath>Performance Overview.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PerformanceOverview.rdl</Name>
+      <FullPath>PerformanceOverview.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PerformanceOverviewSubreport.rdl</Name>
+      <FullPath>PerformanceOverviewSubreport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PortfolioAppraisal.rdl</Name>
+      <FullPath>PortfolioAppraisal.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PortfolioEvent.rdl</Name>
+      <FullPath>PortfolioEvent.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>RealizedGainLoss.rdl</Name>
+      <FullPath>RealizedGainLoss.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PortfolioOverview.rdl</Name>
+      <FullPath>PortfolioOverview.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PortfolioOverviewSubreport.rdl</Name>
+      <FullPath>PortfolioOverviewSubreport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>HouseholdOverviewSubreport.rdl</Name>
+      <FullPath>HouseholdOverviewSubreport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AllocationOverview.rdl</Name>
+      <FullPath>AllocationOverview.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
@@ -51,7 +103,6 @@
         <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
         <OverwriteDataSources>true</OverwriteDataSources>
         <TargetDatasetFolder>Datasets</TargetDatasetFolder>
-        <OverwriteDatasets>true</OverwriteDatasets>
         <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
       </Options>
     </Configuration>

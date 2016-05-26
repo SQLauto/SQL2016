@@ -13,88 +13,118 @@
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="Holdings">
+    <DataSet Name="RealizedGainLoss">
       <SharedDataSet>
-        <SharedDataSetReference>TaxLotDetail</SharedDataSetReference>
+        <SharedDataSetReference>RealizedGainLoss</SharedDataSetReference>
       </SharedDataSet>
       <Fields>
-        <Field Name="Portfolio">
-          <DataField>Portfolio</DataField>
+        <Field Name="xsi">
+          <DataField>xsi</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AcctDate">
+          <DataField>AcctDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Group1">
+          <DataField>Group1</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Ccy">
           <DataField>Ccy</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Sort">
-          <DataField>Sort</DataField>
+        <Field Name="IDesc">
+          <DataField>IDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="InvestCode">
+          <DataField>InvestCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ClosingDate">
+          <DataField>ClosingDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="OpeningDate">
+          <DataField>OpeningDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="TransID">
+          <DataField>TransID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LotID">
+          <DataField>LotID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TranType">
+          <DataField>TranType</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Qty">
           <DataField>Qty</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="Invest">
-          <DataField>Invest</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="TaxLotDesc">
-          <DataField>TaxLotDesc</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="LotID">
-          <DataField>LotID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="TaxLotDay">
-          <DataField>TaxLotDay</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="CostUnit">
-          <DataField>CostUnit</DataField>
+        <Field Name="ClosingPrice">
+          <DataField>ClosingPrice</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="MktPrice">
-          <DataField>MktPrice</DataField>
+        <Field Name="NetProceedsBook">
+          <DataField>NetProceedsBook</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="NetProceedsLocal">
+          <DataField>NetProceedsLocal</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="CostBook">
           <DataField>CostBook</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="Amort">
-          <DataField>Amort</DataField>
+        <Field Name="CostLocal">
+          <DataField>CostLocal</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="MVBook">
-          <DataField>MVBook</DataField>
+        <Field Name="PriceGainBook">
+          <DataField>PriceGainBook</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="Accrued">
-          <DataField>Accrued</DataField>
+        <Field Name="PriceGainLocal">
+          <DataField>PriceGainLocal</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="UnrealFXBook">
-          <DataField>UnrealFXBook</DataField>
+        <Field Name="FXGainLoss">
+          <DataField>FXGainLoss</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="UnrealPriceBook">
-          <DataField>UnrealPriceBook</DataField>
+        <Field Name="STCapitalGL">
+          <DataField>STCapitalGL</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="MktPriceDesc">
-          <DataField>MktPriceDesc</DataField>
+        <Field Name="LTCapitalGL">
+          <DataField>LTCapitalGL</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="IsMediumOfExchange">
-          <DataField>IsMediumOfExchange</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
+        <Field Name="OrdinaryIncome">
+          <DataField>OrdinaryIncome</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="IsForwardCash">
-          <DataField>IsForwardCash</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
+        <Field Name="TotalGLBook">
+          <DataField>TotalGLBook</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
       </Fields>
+      <Filters>
+        <Filter>
+          <FilterExpression>=Fields!ClosingDate.Value</FilterExpression>
+          <Operator>Between</Operator>
+          <FilterValues>
+            <FilterValue>=Parameters!FromDate.Value</FilterValue>
+            <FilterValue>=Parameters!Date.Value</FilterValue>
+          </FilterValues>
+        </Filter>
+      </Filters>
     </DataSet>
   </DataSets>
   <ReportSections>
@@ -105,7 +135,16 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.89583in</Width>
+                  <Width>2.5625in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.83333in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.73958in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1in</Width>
@@ -114,19 +153,13 @@
                   <Width>0.83333in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.23958in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>0.83333in</Width>
-                </TablixColumn>
-                <TablixColumn>
                   <Width>1.1875in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.35417in</Width>
+                  <Width>0.59375in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.40625in</Width>
+                  <Width>1.00001in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -135,7 +168,7 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox35">
+                        <Textbox Name="Textbox42">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -154,6 +187,138 @@
                                 </TextRun>
                               </TextRuns>
                               <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox42</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("ColumnHeaderBackgroundColor")</BackgroundColor>
+                            <VerticalAlign>Bottom</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox33">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Closing Date</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox33</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("ColumnHeaderBackgroundColor")</BackgroundColor>
+                            <VerticalAlign>Bottom</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox34">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Qty</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox34</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("ColumnHeaderBackgroundColor")</BackgroundColor>
+                            <VerticalAlign>Bottom</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox35">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Closing Price</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox35</rd:DefaultName>
@@ -184,7 +349,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Quantity</Value>
+                                  <Value>Net Proceeds</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
@@ -221,50 +386,6 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox8">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Price</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
-                                    <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox8</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
-                              <Style>None</Style>
-                            </Border>
-                            <BottomBorder>
-                              <Style>Solid</Style>
-                            </BottomBorder>
-                            <BackgroundColor>=Code.StyleSheetValue("ColumnHeaderBackgroundColor")</BackgroundColor>
-                            <VerticalAlign>Bottom</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
                         <Textbox Name="Textbox37">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -272,7 +393,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Market Value</Value>
+                                  <Value>Net Proceeds Local</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
@@ -309,51 +430,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox42">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Unit Cost</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
-                                    <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox42</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
-                              <Style>None</Style>
-                            </Border>
-                            <BottomBorder>
-                              <Style>Solid</Style>
-                            </BottomBorder>
-                            <BackgroundColor>=Code.StyleSheetValue("ColumnHeaderBackgroundColor")</BackgroundColor>
-                            <VerticalAlign>Bottom</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox47">
+                        <Textbox Name="Textbox38">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -376,7 +453,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox47</rd:DefaultName>
+                          <rd:DefaultName>Textbox38</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
@@ -397,14 +474,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox52">
+                        <Textbox Name="Textbox39">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Unreal Price Book</Value>
+                                  <Value>Cost Local</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
@@ -420,7 +497,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox52</rd:DefaultName>
+                          <rd:DefaultName>Textbox39</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
@@ -441,14 +518,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox57">
+                        <Textbox Name="Textbox40">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Unreal FXBook</Value>
+                                  <Value>Total GLBook</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
@@ -464,7 +541,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox57</rd:DefaultName>
+                          <rd:DefaultName>Textbox40</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
@@ -490,14 +567,14 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Ccy">
+                        <Textbox Name="TranType">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Ccy.Value</Value>
+                                  <Value>=Fields!TranType.Value</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
@@ -511,47 +588,21 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Ccy</rd:DefaultName>
+                          <rd:DefaultName>TranType</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>White</Color>
-                              <Style>Solid</Style>
+                              <Style>None</Style>
                             </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox18">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <Format>#,0.00</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox18</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
+                            <BottomBorder>
                               <Style>Solid</Style>
-                            </Border>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Style>Solid</Style>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Style>Solid</Style>
+                            </RightBorder>
                             <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -585,8 +636,17 @@
                           <Style>
                             <Border>
                               <Color>White</Color>
-                              <Style>Solid</Style>
+                              <Style>None</Style>
                             </Border>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Style>Solid</Style>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Style>Solid</Style>
+                            </RightBorder>
                             <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -598,20 +658,61 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="MVBook1">
+                        <Textbox Name="Textbox27">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!MVBook.Value)</Value>
+                                  <Value />
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox27</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Style>Solid</Style>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Style>Solid</Style>
+                            </RightBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox14">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
                                     <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
                                     <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
                                   </Style>
@@ -622,12 +723,70 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>MVBook1</rd:DefaultName>
+                          <rd:DefaultName>Textbox14</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>White</Color>
-                              <Style>Solid</Style>
+                              <Style>None</Style>
                             </Border>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Style>Solid</Style>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Style>Solid</Style>
+                            </RightBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox30">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox30</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Style>Solid</Style>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Style>Solid</Style>
+                            </RightBorder>
                             <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -667,176 +826,19 @@
                           <Style>
                             <Border>
                               <Color>White</Color>
-                              <Style>Solid</Style>
+                              <Style>None</Style>
                             </Border>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Style>Solid</Style>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Style>Solid</Style>
+                            </RightBorder>
                             <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="CostBook1">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!CostBook.Value)</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>CostBook1</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="UnrealPriceBook1">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!UnrealPriceBook.Value)</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>UnrealPriceBook1</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="UnrealFXBook1">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!UnrealFXBook.Value)</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>UnrealFXBook1</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-                <TablixRow>
-                  <Height>0.25in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Sort">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!Sort.Value</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Sort</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>8pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
@@ -855,7 +857,12 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <Format>#,0.00</Format>
+                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -868,8 +875,66 @@
                           <Style>
                             <Border>
                               <Color>White</Color>
-                              <Style>Solid</Style>
+                              <Style>None</Style>
                             </Border>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Style>Solid</Style>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Style>Solid</Style>
+                            </RightBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox17">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox17</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Style>Solid</Style>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Style>Solid</Style>
+                            </RightBorder>
                             <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -890,7 +955,12 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <Format>#,0.00</Format>
+                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -903,213 +973,17 @@
                           <Style>
                             <Border>
                               <Color>White</Color>
-                              <Style>Solid</Style>
+                              <Style>None</Style>
                             </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="MVBook2">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!MVBook.Value)</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>MVBook2</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
+                            <BottomBorder>
                               <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox44">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox44</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
+                            </BottomBorder>
+                            <LeftBorder>
                               <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="CostBook2">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!CostBook.Value)</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>CostBook2</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
+                            </LeftBorder>
+                            <RightBorder>
                               <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="UnrealPriceBook2">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!UnrealPriceBook.Value)</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>UnrealPriceBook2</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="UnrealFXBook2">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!UnrealFXBook.Value)</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>UnrealFXBook2</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
-                              <Style>Solid</Style>
-                            </Border>
+                            </RightBorder>
                             <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1126,332 +1000,14 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Invest">
+                        <Textbox Name="InvestCode">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Invest.Value</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Invest</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>12pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox33">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <Format>#,0.00</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox33</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox34">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <Format>#,0.00</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox34</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="MVBook3">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!MVBook.Value)</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>MVBook3</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox45">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox45</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="CostBook3">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!CostBook.Value)</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>CostBook3</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="UnrealPriceBook3">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!UnrealPriceBook.Value)</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>UnrealPriceBook3</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="UnrealFXBook3">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!UnrealFXBook.Value)</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>UnrealFXBook3</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>White</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-                <TablixRow>
-                  <Height>0.25in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="TaxLotDesc">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!TaxLotDesc.Value</Value>
+                                  <Value>=Fields!InvestCode.Value</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
@@ -1465,19 +1021,57 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>TaxLotDesc</rd:DefaultName>
+                          <rd:DefaultName>InvestCode</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <BackgroundColor>= IIf(True = True,
-	IIf(RowNumber("Ccy") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),
-	IIf(True = True,
-	IIf(RowNumber("Sort") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),
-	IIf(RowNumber("Invest") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2"))
-	))</BackgroundColor>
+	IIf(RowNumber("TranType") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),Code.StyleSheetValue("AltDetailBackgroundColor2"))</BackgroundColor>
                             <PaddingLeft>20pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ClosingDate">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ClosingDate.Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
+                                    <Format>d</Format>
+                                    <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("DetailColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ClosingDate</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>= IIf(True = True,
+	IIf(RowNumber("TranType") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),Code.StyleSheetValue("AltDetailBackgroundColor2"))</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
@@ -1500,7 +1094,7 @@
                                     <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
                                     <Color>=Code.StyleSheetValue("DetailColor")</Color>
                                   </Style>
@@ -1518,11 +1112,7 @@
                               <Style>Solid</Style>
                             </Border>
                             <BackgroundColor>= IIf(True = True,
-	IIf(RowNumber("Ccy") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),
-	IIf(True = True,
-	IIf(RowNumber("Sort") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),
-	IIf(RowNumber("Invest") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2"))
-	))</BackgroundColor>
+	IIf(RowNumber("TranType") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),Code.StyleSheetValue("AltDetailBackgroundColor2"))</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1533,20 +1123,20 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="MktPrice">
+                        <Textbox Name="ClosingPrice">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!MktPrice.Value</Value>
+                                  <Value>=Fields!ClosingPrice.Value</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
                                     <Color>=Code.StyleSheetValue("DetailColor")</Color>
                                   </Style>
@@ -1557,18 +1147,14 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>MktPrice</rd:DefaultName>
+                          <rd:DefaultName>ClosingPrice</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <BackgroundColor>= IIf(True = True,
-	IIf(RowNumber("Ccy") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),
-	IIf(True = True,
-	IIf(RowNumber("Sort") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),
-	IIf(RowNumber("Invest") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2"))
-	))</BackgroundColor>
+	IIf(RowNumber("TranType") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),Code.StyleSheetValue("AltDetailBackgroundColor2"))</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1579,20 +1165,20 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="MVBook">
+                        <Textbox Name="NetProceedsBook">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!MVBook.Value</Value>
+                                  <Value>=Fields!NetProceedsBook.Value</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
                                     <Color>=Code.StyleSheetValue("DetailColor")</Color>
                                   </Style>
@@ -1603,18 +1189,14 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>MVBook</rd:DefaultName>
+                          <rd:DefaultName>NetProceedsBook</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <BackgroundColor>= IIf(True = True,
-	IIf(RowNumber("Ccy") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),
-	IIf(True = True,
-	IIf(RowNumber("Sort") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),
-	IIf(RowNumber("Invest") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2"))
-	))</BackgroundColor>
+	IIf(RowNumber("TranType") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),Code.StyleSheetValue("AltDetailBackgroundColor2"))</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1625,20 +1207,19 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="CostUnit">
+                        <Textbox Name="NetProceedsLocal">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!CostUnit.Value</Value>
+                                  <Value>=Fields!NetProceedsLocal.Value</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
                                     <Color>=Code.StyleSheetValue("DetailColor")</Color>
                                   </Style>
@@ -1649,18 +1230,14 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>CostUnit</rd:DefaultName>
+                          <rd:DefaultName>NetProceedsLocal</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <BackgroundColor>= IIf(True = True,
-	IIf(RowNumber("Ccy") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),
-	IIf(True = True,
-	IIf(RowNumber("Sort") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),
-	IIf(RowNumber("Invest") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2"))
-	))</BackgroundColor>
+	IIf(RowNumber("TranType") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),Code.StyleSheetValue("AltDetailBackgroundColor2"))</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1684,7 +1261,6 @@
                                     <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
                                     <Color>=Code.StyleSheetValue("DetailColor")</Color>
                                   </Style>
@@ -1702,11 +1278,7 @@
                               <Style>Solid</Style>
                             </Border>
                             <BackgroundColor>= IIf(True = True,
-	IIf(RowNumber("Ccy") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),
-	IIf(True = True,
-	IIf(RowNumber("Sort") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),
-	IIf(RowNumber("Invest") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2"))
-	))</BackgroundColor>
+	IIf(RowNumber("TranType") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),Code.StyleSheetValue("AltDetailBackgroundColor2"))</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1717,20 +1289,19 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="UnrealPriceBook">
+                        <Textbox Name="CostLocal">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!UnrealPriceBook.Value</Value>
+                                  <Value>=Fields!CostLocal.Value</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
                                     <Color>=Code.StyleSheetValue("DetailColor")</Color>
                                   </Style>
@@ -1741,18 +1312,14 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>UnrealPriceBook</rd:DefaultName>
+                          <rd:DefaultName>CostLocal</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <BackgroundColor>= IIf(True = True,
-	IIf(RowNumber("Ccy") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),
-	IIf(True = True,
-	IIf(RowNumber("Sort") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),
-	IIf(RowNumber("Invest") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2"))
-	))</BackgroundColor>
+	IIf(RowNumber("TranType") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),Code.StyleSheetValue("AltDetailBackgroundColor2"))</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1763,20 +1330,19 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="UnrealFXBook">
+                        <Textbox Name="TotalGLBook">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!UnrealFXBook.Value</Value>
+                                  <Value>=Fields!TotalGLBook.Value</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
-                                    <Format>#,0.00</Format>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
                                     <Color>=Code.StyleSheetValue("DetailColor")</Color>
                                   </Style>
@@ -1787,18 +1353,14 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>UnrealFXBook</rd:DefaultName>
+                          <rd:DefaultName>TotalGLBook</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <BackgroundColor>= IIf(True = True,
-	IIf(RowNumber("Ccy") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),
-	IIf(True = True,
-	IIf(RowNumber("Sort") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),
-	IIf(RowNumber("Invest") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2"))
-	))</BackgroundColor>
+	IIf(RowNumber("TranType") Mod 2,Code.StyleSheetValue("AltDetailBackgroundColor1"),Code.StyleSheetValue("AltDetailBackgroundColor2")),Code.StyleSheetValue("AltDetailBackgroundColor2"))</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1821,6 +1383,7 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -1831,61 +1394,38 @@
                   <KeepTogether>true</KeepTogether>
                 </TablixMember>
                 <TablixMember>
-                  <Group Name="Ccy">
+                  <Group Name="TranType">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!Ccy.Value</GroupExpression>
+                      <GroupExpression>=Fields!TranType.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!Ccy.Value</Value>
+                      <Value>=Fields!TranType.Value</Value>
                     </SortExpression>
                   </SortExpressions>
                   <TablixMembers>
-                    <TablixMember />
                     <TablixMember>
-                      <Group Name="Sort">
-                        <GroupExpressions>
-                          <GroupExpression>=Fields!Sort.Value</GroupExpression>
-                        </GroupExpressions>
-                      </Group>
+                      <KeepWithGroup>After</KeepWithGroup>
+                      <RepeatOnNewPage>true</RepeatOnNewPage>
+                      <KeepTogether>true</KeepTogether>
+                    </TablixMember>
+                    <TablixMember>
+                      <Group Name="Details" />
                       <SortExpressions>
                         <SortExpression>
-                          <Value>=Fields!Sort.Value</Value>
+                          <Value>=Fields!ClosingDate.Value</Value>
                         </SortExpression>
                       </SortExpressions>
-                      <TablixMembers>
-                        <TablixMember />
-                        <TablixMember>
-                          <Group Name="Invest">
-                            <GroupExpressions>
-                              <GroupExpression>=Fields!Invest.Value</GroupExpression>
-                            </GroupExpressions>
-                          </Group>
-                          <SortExpressions>
-                            <SortExpression>
-                              <Value>=Fields!Invest.Value</Value>
-                            </SortExpression>
-                          </SortExpressions>
-                          <TablixMembers>
-                            <TablixMember>
-                              <KeepWithGroup>After</KeepWithGroup>
-                            </TablixMember>
-                            <TablixMember>
-                              <Group Name="Details" />
-                            </TablixMember>
-                          </TablixMembers>
-                        </TablixMember>
-                      </TablixMembers>
                     </TablixMember>
                   </TablixMembers>
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>Holdings</DataSetName>
+            <DataSetName>RealizedGainLoss</DataSetName>
             <Top>0.01389in</Top>
-            <Height>1.25in</Height>
-            <Width>9.74999in</Width>
+            <Height>0.75in</Height>
+            <Width>9.75in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1893,7 +1433,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>1.26389in</Height>
+        <Height>0.76389in</Height>
         <Style />
       </Body>
       <Width>9.75in</Width>
@@ -1910,7 +1450,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Portfolio Appraisal</Value>
+                      <Value>Realized Gains &amp; Losses</Value>
                       <Style>
                         <FontStyle>=Code.StyleSheetValue("ReportTitleStyle")</FontStyle>
                         <FontFamily>=Code.StyleSheetValue("ReportTitleFamily")</FontFamily>
@@ -1987,7 +1527,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value>=Parameters!Date.Value</Value>
+                          <Value>=CStr(Parameters!FromDate.Value) + " to " + CStr(Parameters!Date.Value)</Value>
                           <Style>
                             <FontStyle>=Code.StyleSheetValue("ReportDateStyle")</FontStyle>
                             <FontFamily>=Code.StyleSheetValue("ReportDateFamily")</FontFamily>
@@ -2125,6 +1665,15 @@
         </Values>
       </DefaultValue>
       <Prompt>Portfolios</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FromDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>12/31/2013 12:00:00 AM</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>From Date</Prompt>
     </ReportParameter>
     <ReportParameter Name="Date">
       <DataType>DateTime</DataType>
