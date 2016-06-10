@@ -398,8 +398,221 @@
           <QueryParameter Name="AddendumPages">
             <Value>=Parameters!AddendumPages.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="ConnectionString">
+            <Value>=Parameters!ConnectionString.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="Consolidate">
+            <Value>=Parameters!Consolidate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ManagementFirm">
+            <Value>=Parameters!ManagementFirm.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PortfolioDescription">
+            <Value>=Parameters!PortfolioDescription.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="RegionalSettings">
+            <Value>=Parameters!RegionalSettings.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="MonetaryPrecision">
+            <Value>=Parameters!MonetaryPrecision.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="QuantityPrecision">
+            <Value>=Parameters!QuantityPrecision.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PricingPrecision">
+            <Value>=Parameters!PricingPrecision.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingParameters">
+            <Value>=Parameters!AccountingParameters.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingRule">
+            <Value>=Parameters!AccountingRule.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AmortizeOnUnrealizedDate">
+            <Value>=Parameters!AmortizeOnUnrealizedDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BidAskClosing">
+            <Value>=Parameters!BidAskClosing.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BookCurrencyDescription">
+            <Value>=Parameters!BookCurrencyDescription.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableLDErrorRead">
+            <Value>=Parameters!DisableLDErrorRead.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableManualJE">
+            <Value>=Parameters!DisableManualJE.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableHyperlinks">
+            <Value>=Parameters!DisableHyperlinks.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableBooks">
+            <Value>=Parameters!DisableBooks.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableSnapshots">
+            <Value>=Parameters!DisableSnapshots.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="EnableRealTimePricing">
+            <Value>=Parameters!EnableRealTimePricing.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ExpandAddendum">
+            <Value>=Parameters!ExpandAddendum.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FundLegalEntityDescription">
+            <Value>=Parameters!FundLegalEntityDescription.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PostDividendTaxLotDetail">
+            <Value>=Parameters!PostDividendTaxLotDetail.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PostValidationErrors">
+            <Value>=Parameters!PostValidationErrors.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SeparateFundLegalEntities">
+            <Value>=Parameters!SeparateFundLegalEntities.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SnapshotUse">
+            <Value>=Parameters!SnapshotUse.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="StyleName">
+            <Value>=Parameters!StyleName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="WithholdAffectNetCashAmount">
+            <Value>=Parameters!WithholdAffectNetCashAmount.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="UseAPFrom">
+            <Value>=Parameters!UseAPFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="requestType">
+            <Value>=Parameters!requestType.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="HideManualJELabel">
+            <Value>=Parameters!HideManualJELabel.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ScreenType">
+            <Value>=Parameters!ScreenType.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingSelectionRuleUsed">
+            <Value>=Parameters!AccountingSelectionRuleUsed.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LumpCrossGL">
+            <Value>=Parameters!LumpCrossGL.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="GainCalcMethod">
+            <Value>=Parameters!GainCalcMethod.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="EnableWashSales">
+            <Value>=Parameters!EnableWashSales.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FreezeAccountingDate">
+            <Value>=Parameters!FreezeAccountingDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FreezeKnowledgeDate">
+            <Value>=Parameters!FreezeKnowledgeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ConsolidateLegalEntities">
+            <Value>=Parameters!ConsolidateLegalEntities.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ParallelConsolidationChildren">
+            <Value>=Parameters!ParallelConsolidationChildren.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AllowBoxedPosition">
+            <Value>=Parameters!AllowBoxedPosition.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DoNotApplyTWRAdjustments">
+            <Value>=Parameters!DoNotApplyTWRAdjustments.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="TWROpeningFlowMethod">
+            <Value>=Parameters!TWROpeningFlowMethod.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="GetKTimesFromDefaultCalendar">
+            <Value>=Parameters!GetKTimesFromDefaultCalendar.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="RelativeDate">
+            <Value>=Parameters!RelativeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LotLevelOverrides">
+            <Value>=Parameters!LotLevelOverrides.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LogoName">
+            <Value>=Parameters!LogoName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ExcludeErrorIDs">
+            <Value>=Parameters!ExcludeErrorIDs.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="MOERoundingMethod">
+            <Value>=Parameters!MOERoundingMethod.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BalancePercentage">
+            <Value>=Parameters!BalancePercentage.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="MarkStartDate">
+            <Value>=Parameters!MarkStartDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="TimeSeriesTransitionMarkMembers">
+            <Value>=Parameters!TimeSeriesTransitionMarkMembers.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="EnableTimeSeries">
+            <Value>=Parameters!EnableTimeSeries.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="HybridHistoricalView">
+            <Value>=Parameters!HybridHistoricalView.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ReportPeriodEndDate">
+            <Value>=Parameters!ReportPeriodEndDate.Value</Value>
+          </QueryParameter>
         </QueryParameters>
-        <CommandText>select NameSort ID from Portfolio</CommandText>
+        <CommandText>select NameSort ID
+from Portfolio
+GIVEN  Portfolio = :Portfolio,
+  AccountingPeriodStartDate = :PeriodStartDate,
+  AccountingPeriodEndDate = :PeriodEndDate,
+  KnowledgeDate = :KnowledgeDate,
+  PriorKnowledgeDate = :PriorKnowledgeDate,
+  AccountingFilters = :AccountingFilters,
+  AccountingRunType = :AccountingRunType,
+  AccountingPeriod = :AccountingPeriod,
+  AccountingView = :AccountingView,
+  AccrueOnSTIF = :AccrueOnSTIF,
+  AccrueWithhold = :AccrueWithhold,
+  AmortizationElection = :AmortizationElection,
+  AppraisalDay = :AppraisalDay,
+  BidAskPricing = :BidAskPricing,
+  BookCurrency = :BookCurrency,
+  BusinessCalendar = :BusinessCalendar,
+  ByPassRule = :ByPassRule,
+  CounterClosingRuleOverride = :CounterClosingRuleOverride,
+  CrossingCurrency = :CrossingCurrency,
+  CrossZeroOnCoverShort = :CrossZeroOnCoverShort,
+  CrossZeroOnDebt = :CrossZeroOnDebt,
+  CrossZeroOnEquity = :CrossZeroOnEquity,
+  CrossZeroOnFutures = :CrossZeroOnFutures,
+  CrossZeroOnOptions = :CrossZeroOnOptions,
+  DisableFreezepoints = :DisableFreezepoints,
+  DisableLockdowns = :DisableLockdowns,
+  DisableStrategyFilters = :DisableStrategyFilters,
+  DisableInvestmentFilters = :DisableInvestmentFilters,
+  DisableLocAcctFilters = :DisableLocAcctFilters,
+  ExcludeCommission = :ExcludeCommission,
+  LegalEntity = :FundLegalEntity,
+  FuturesClosingRuleOverride = :FuturesClosingRuleOverride,
+  InvestmentClosingRuleOverride = :InvestmentClosingRuleOverride,
+  IgnoreSpecificLotClosing = :IgnoreSpecificLotClosing,
+  LumpExpensesInSummaryLockdown = :LumpExpensesInSummaryLockdown,
+  PaydownGLasGainLoss = :PaydownGLasGainLoss,
+  LumpCashLots = :LumpCashLots,
+  LumpNonCashLots = :LumpNonCashLots,
+  MarkLegalEntity = :MarkLegalEntity,
+  MarkToMarketCashTransfer = :MarkToMarketCashTransfer,
+  PriceSchedule = :PriceSchedule,
+  SecondaryCounterClosingRuleOverride = :SecondaryCounterClosingRuleOverride,
+  SecondaryFuturesClosingRuleOverride = :SecondaryFuturesClosingRuleOverride,
+  SecondaryInvestmentClosingRuleOverride = :SecondaryInvestmentClosingRuleOverride,
+  SegregateIncome = :SegregateIncome,
+  SettleFXCost = :SettleFXCost,
+  WithholdPurchasedSoldAI = :WithholdPurchasedSoldAI,
+  FiscalCalendar = :FiscalCalendar,
+  AccountingCalendar = :AccountingCalendar,
+  BypassFLEConsolidatingFlag = :BypassFLEConsolidatingFlag</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <Fields>
@@ -425,11 +638,876 @@
   <ReportParameters>
     <ReportParameter Name="JobTitle">
       <DataType>String</DataType>
-      <Prompt>Job Title</Prompt>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>=Globals!ReportName</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="AddendumPages">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>Short</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
       <Prompt>Addendum Pages</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>None</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Short</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Long</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Param</Value>
+            <Label>Parameters Only</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="ConnectionString">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Connection String</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="Portfolio">
+      <DataType>String</DataType>
+      <Prompt>Portfolio</Prompt>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="PeriodStartDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>01/01/1950</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Period Start Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PeriodEndDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>=CDate(ToDay().Date()+" 23:59:59")</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Period End Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="KnowledgeDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>=CDate(ToDay().Date()+" 23:59:59")</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Knowledge Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PriorKnowledgeDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>=CDate(ToDay().Date()+" 00:00:01")</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Prior Knowledge Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Consolidate">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Consolidate</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ManagementFirm">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Management Firm</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PortfolioDescription">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Portfolio Description</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RegionalSettings">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>en-US</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Regional Settings</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MonetaryPrecision">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>2</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Monetary Precision</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="QuantityPrecision">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>3</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Quantity Precision</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PricingPrecision">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>4</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Pricing Precision</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccountingFilters">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accounting Filters</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccountingParameters">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accounting Parameters</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccountingRunType">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>Dynamic</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>AccountingRunType</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccountingPeriod">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accounting Period</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccountingView">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accounting View</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccountingRule">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accounting Rule</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccrueOnSTIF">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accrue On STIF</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccrueWithhold">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accrue Withhold</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AmortizationElection">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Amortization Election</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AmortizeOnUnrealizedDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Amortize On Unrealized Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AppraisalDay">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Appraisal Day</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BidAskClosing">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Bid Ask Closing</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BidAskPricing">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Bid Ask Pricing</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BookCurrency">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Book Currency</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BusinessCalendar">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Business Calendar</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ByPassRule">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>By Pass Rule</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CounterClosingRuleOverride">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Counter Closing Rule Override</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CrossingCurrency">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Crossing Currency</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BookCurrencyDescription">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Book Currency Description</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CrossZeroOnCoverShort">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Cross Zero On Cover Short</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CrossZeroOnDebt">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Cross Zero On Debt</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CrossZeroOnEquity">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Cross Zero On Equity</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CrossZeroOnFutures">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Cross Zero On Futures</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CrossZeroOnOptions">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Cross Zero On Options</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisableFreezepoints">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable Freezepoints</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisableLDErrorRead">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable LDError Read</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisableLockdowns">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable Lockdowns</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisableStrategyFilters">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable Strategy Filters</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="DisableInvestmentFilters">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable Investment Filters</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="DisableLocAcctFilters">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable Loc Acct Filters</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="DisableManualJE">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable Manual JE</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisableHyperlinks">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable Hyperlinks</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisableBooks">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>DisableBooks</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisableSnapshots">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable Snapshots</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EnableRealTimePricing">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Enable Real Time Pricing</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ExcludeCommission">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Exclude Commission</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ExpandAddendum">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Expand Addendum Pages</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FundLegalEntity">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Fund Legal Entity</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FundLegalEntityDescription">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Fund Legal Entity Description</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FuturesClosingRuleOverride">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Futures Closing Rule Override</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="InvestmentClosingRuleOverride">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Investment Closing Rule Override</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="IgnoreSpecificLotClosing">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Ignore Specific Lot Closing</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LumpExpensesInSummaryLockdown">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Lump Expenses in Summary Lockdown</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PaydownGLasGainLoss">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Process Paydown GL as Realized Gain/Loss</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LumpCashLots">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Lump Cash Lots</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LumpNonCashLots">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Lump Non Cash Lots</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MarkLegalEntity">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>All</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Mark Legal Entity</Prompt>
+      <Hidden>true</Hidden>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>All</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>MatchingLegalEntity</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>MatchingBookCurreny</Value>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="MarkToMarketCashTransfer">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Mark To Market Cash Transfer</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PostDividendTaxLotDetail">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Post Dividend Tax Lot Detail</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PostValidationErrors">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Post Validation Errors</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PriceSchedule">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Price Schedule</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SecondaryCounterClosingRuleOverride">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Secondary Counter Closing Rule Override</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SecondaryFuturesClosingRuleOverride">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Secondary Futures Closing Rule Override</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SecondaryInvestmentClosingRuleOverride">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Secondary Investment Closing Rule Override</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SegregateIncome">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Segregate Income</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SeparateFundLegalEntities">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Separate Fund Legal Entities</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SettleFXCost">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Settle FXCost</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SnapshotUse">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>Do Not Create or Use</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Snapshot Usage</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="StyleName">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="WithholdPurchasedSoldAI">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Withhold Purchased Sold AI</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="WithholdAffectNetCashAmount">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Withholding Tax Affects Net Settlement Cash Amount</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="UseAPFrom">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Use</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="requestType">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>ssrs</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Request Type</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="HideManualJELabel">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Hide Manual JELabel</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ScreenType">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Screen Type</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="AccountingSelectionRuleUsed">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>False</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accounting Selection Rule Used</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="LumpCrossGL">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Cross Gain Loss Inclusion</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="GainCalcMethod">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>GainCalcMethod</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EnableWashSales">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>False</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Enable Wash Sales</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FreezeAccountingDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Freeze Accounting Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FreezeKnowledgeDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Freeze Knowledge Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ConsolidateLegalEntities">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>SeparateFundLegalEntities</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Consolidate Legal Entities</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ParallelConsolidationChildren">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>0</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt># Of Processes To Use</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AllowBoxedPosition">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Allow Boxed Position</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DoNotApplyTWRAdjustments">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Do Not Apply TWR Adjustments</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TWROpeningFlowMethod">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Opening Flow Calculation Method</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="GetKTimesFromDefaultCalendar">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Get Knowledge Times from Default Calendar</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RelativeDate">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Relative Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FiscalCalendar">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Fiscal Calendar</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LotLevelOverrides">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Lot Level Overrides</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LogoName">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Logo Name</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ExcludeErrorIDs">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Exclude Error IDs</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MOERoundingMethod">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>RoundNearest</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>MOE Rounding Method</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BalancePercentage">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Balance Percentage</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccountingCalendar">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accounting Calendar</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MarkStartDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Mark Start Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TimeSeriesTransitionMarkMembers">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Time Series Transition Mark Members</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EnableTimeSeries">
+      <DataType>Boolean</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Enable Time Series</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="HybridHistoricalView">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>False</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Hybrid Historical View</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="ReportPeriodEndDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <Prompt>Report Period End</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BypassFLEConsolidatingFlag">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>True</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Bypass Fund Legal Entity when Consolidating</Prompt>
     </ReportParameter>
   </ReportParameters>
   <Language>en-US</Language>

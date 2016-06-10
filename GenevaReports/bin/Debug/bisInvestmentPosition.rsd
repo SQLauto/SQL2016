@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="">
+    <Query>
+      <DataSourceReference>GenevaSource</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="AccountingFilters">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="AccountingParameters">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="AccountingRule">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="AccountingRunType">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="AccountingView">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="AccrueOnSTIF">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="AccrueWithhold">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="AmortizationElection">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="AmortizeOnUnrealizedDate">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="AppraisalDay">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="BidAskClosing">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="BidAskPricing">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="BookCurrency">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="BusinessCalendar">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="ByPassRule">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="CashFlowWeighting">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="ConsolidateLegalEntities">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="CounterClosingRuleOverride">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="CrossingCurrency">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="CrossZeroOnCoverShort">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="CrossZeroOnDebt">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="CrossZeroOnEquity">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="CrossZeroOnFutures">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="CrossZeroOnOptions">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="DisableBooks">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="DisableFreezepoints">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="DisableLDErrorRead">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="DisableLockdowns">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="DisableManualJE">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="ExcludeCommission">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="FreezeAccountingDate">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="FreezeKnowledgeDate">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="FundLegalEntity">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="FuturesClosingRuleOverride">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="GainCalcMethod">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="IgnoreSpecificLotClosing">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="InvestmentClosingRuleOverride">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="KnowledgeDate">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="LumpCashLots">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="LumpCrossGL">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="LumpExpensesInSummaryLockdown">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="LumpNonCashLots">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="MarkLegalEntity">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="MarkToMarketCashTransfer">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="ParallelConsolidationChildren">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="PerformanceFee">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="PerformanceParameters">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="PeriodEndDate">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="PeriodStartDate">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="Portfolio">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="PostDividendTaxLotDetail">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="PostValidationErrors">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="PriceSchedule">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="PriorKnowledgeDate">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="SecondaryCounterClosingRuleOverride">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="SecondaryFuturesClosingRuleOverride">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="SecondaryInvestmentClosingRuleOverride">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="SegregateIncome">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="SettleFXCost">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="SnapshotUse">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="TWRInceptionDate">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="UseCFOverrides">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="UseHistPeriodData">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="UseIRROverrides">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="UseNotionalValues">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="WithholdPurchasedSoldAI">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="ShowClosedLots">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="JobTitle">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="AddendumPages">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="Consolidate">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="UseAPFrom">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT {Key} _Key_ ,
+   {Investment.Code} _Investment_Code_ ,
+   SUM(Balance(Net,Unit,PeriodEnd,AllAssetsAndPayables,Quantity))  QtyEnd ,
+   SUM(Balance(Net,Book,PeriodEnd,AllAssetsAndPayables,MktValSummary))  MarketValueBookEnd ,
+   SUM(Balance(Net,Book,PeriodEnd,AllAssetsAndPayables,AmortizedCost))  CostBookEnd ,
+   SUM(Balance(Net,Local,PeriodEnd,AllAssetsAndPayables,AmortizedCost))  CostLocalEnd ,
+   SUM(Balance(Net,Book,PeriodEnd,All,AllAccruedInterest)) AccruedIntBookEnd ,
+   SUM(Balance(Net,Local,PeriodEnd,All,AllAccruedInterest)) AccruedIntLocalEnd ,
+   {MarketPrice(Book,PeriodEnd)} MktPriceBookEnd ,
+   {MarketPrice(Local,PeriodEnd)} MktPriceLocalEnd ,
+   SUM(Balance(Net,Local,PeriodEnd,AllAssetsAndPayables,MktValSummary))  MarketValueLocalEnd ,
+   SUM(Balance(Net,Book,PeriodEnd,AllAssetsAndPayables,MktValSummary)-Balance(Net,Book,PeriodEnd,InDefault,AllAmortizationAssetLiability)+Balance(Net,Book,PeriodEnd,All,AllAccruedInterest)-Balance(Net,Book,PeriodEnd,InDefault,AllAccruedInterest)) NetAssetValuePeriodEnd ,
+   SUM(Balance(Net,Unit,PeriodEnd,AllAssetsAndPayables,OriginalFace))  OrigFaceEnd ,
+   Balance(Net,Book,PeriodEnd,AllAssetsAndPayables,UnitCost)  UnitCostBookEnd ,
+   Balance(Net,Local,PeriodEnd,AllAssetsAndPayables,UnitCost)  UnitCostLocalEnd ,
+   SUM(Balance(Net,Book,PeriodEnd,AllAssetsAndPayables,UnrealizedFXGL)) UnrealizedFXGainLoss ,
+   SUM(Balance(Net,Book,PeriodEnd,AllAssetsAndPayables,UnrealizedPriceGL))  UnrealizedPriceGainLoss ,
+   {Investment.Description} _Investment_Description_ ,
+   {Investment.AssetType.Code} _Investment_AssetType_Code_ ,
+   {Investment.AssetType.Description} _Investment_AssetType_Description_ ,
+   {Investment.BifurcationCurrency.Code} _Investment_BifurcationCurrency_Code_ ,
+   {Investment.BifurcationCurrency.Description} _Investment_BifurcationCurrency_Description_ ,
+   {Investment.InvestmentType.Code} _Investment_InvestmentType_Code_ ,
+   {Investment.InvestmentType.Description} _Investment_InvestmentType_Description_ ,
+   {Investment.RiskCurrency.Code} _Investment_RiskCurrency_Code_ ,
+   {Investment.RiskCurrency.Description} _Investment_RiskCurrency_Description_ 
+FROM bisInvestmentPosition 
+GIVEN AccountingFilters = :AccountingFilters ,
+   AccountingParameters = :AccountingParameters ,
+   AccountingRule = :AccountingRule ,
+   AccountingRunType = :AccountingRunType ,
+   AccountingView = :AccountingView ,
+   AccrueOnSTIF = :AccrueOnSTIF ,
+   AccrueWithhold = :AccrueWithhold ,
+   AmortizationElection = :AmortizationElection ,
+   AmortizeOnUnrealizedDate = :AmortizeOnUnrealizedDate ,
+   AppraisalDay = :AppraisalDay ,
+   BidAskClosing = :BidAskClosing ,
+   BidAskPricing = :BidAskPricing ,
+   BookCurrency = :BookCurrency ,
+   BusinessCalendar = :BusinessCalendar ,
+   ByPassRule = :ByPassRule ,
+   CashFlowWeighting = :CashFlowWeighting ,
+   ConsolidateLegalEntities = :ConsolidateLegalEntities ,
+   CounterClosingRuleOverride = :CounterClosingRuleOverride ,
+   CrossingCurrency = :CrossingCurrency ,
+   CrossZeroOnCoverShort = :CrossZeroOnCoverShort ,
+   CrossZeroOnDebt = :CrossZeroOnDebt ,
+   CrossZeroOnEquity = :CrossZeroOnEquity ,
+   CrossZeroOnFutures = :CrossZeroOnFutures ,
+   CrossZeroOnOptions = :CrossZeroOnOptions ,
+   DisableBooks = :DisableBooks ,
+   DisableFreezepoints = :DisableFreezepoints ,
+   DisableLDErrorRead = :DisableLDErrorRead ,
+   DisableLockdowns = :DisableLockdowns ,
+   DisableManualJE = :DisableManualJE ,
+   ExcludeCommission = :ExcludeCommission ,
+   FreezeAccountingDate = :FreezeAccountingDate ,
+   FreezeKnowledgeDate = :FreezeKnowledgeDate ,
+   LegalEntity = :FundLegalEntity ,
+   FuturesClosingRuleOverride = :FuturesClosingRuleOverride ,
+   GainCalcMethod = :GainCalcMethod ,
+   IgnoreSpecificLotClosing = :IgnoreSpecificLotClosing ,
+   InvestmentClosingRuleOverride = :InvestmentClosingRuleOverride ,
+   KnowledgeDate = :KnowledgeDate ,
+   LumpCashLots = :LumpCashLots ,
+   LumpCrossGL = :LumpCrossGL ,
+   LumpExpensesInSummaryLockdown = :LumpExpensesInSummaryLockdown ,
+   LumpNonCashLots = :LumpNonCashLots ,
+   MarkLegalEntity = :MarkLegalEntity ,
+   MarkToMarketCashTransfer = :MarkToMarketCashTransfer ,
+   ParallelConsolidationChildren = :ParallelConsolidationChildren ,
+   PerformanceFee = :PerformanceFee ,
+   PerformanceParameters = :PerformanceParameters ,
+   AccountingPeriodEndDate = :PeriodEndDate ,
+   AccountingPeriodStartDate = :PeriodStartDate ,
+   Portfolio = :Portfolio ,
+   PostDividendTaxLotDetail = :PostDividendTaxLotDetail ,
+   PostValidationErrors = :PostValidationErrors ,
+   PriceSchedule = :PriceSchedule ,
+   PriorKnowledgeDate = :PriorKnowledgeDate ,
+   SecondaryCounterClosingRuleOverride = :SecondaryCounterClosingRuleOverride ,
+   SecondaryFuturesClosingRuleOverride = :SecondaryFuturesClosingRuleOverride ,
+   SecondaryInvestmentClosingRuleOverride = :SecondaryInvestmentClosingRuleOverride ,
+   SegregateIncome = :SegregateIncome ,
+   SettleFXCost = :SettleFXCost ,
+   SnapshotUse = :SnapshotUse ,
+   TWRInceptionDate = :TWRInceptionDate ,
+   UseCFOverrides = :UseCFOverrides ,
+   UseHistPeriodData = :UseHistPeriodData ,
+   UseIRROverrides = :UseIRROverrides ,
+   UseNotionalValues = :UseNotionalValues ,
+   WithholdPurchasedSoldAI = :WithholdPurchasedSoldAI 
+WHERE ((:ShowClosedLots == "0" AND (QtyEnd &gt;= 0.00001 OR QtyEnd &lt;= -0.00001)) OR :ShowClosedLots == "1" OR :ShowClosedLots == "") 
+LIMIT 100
+;
+TYPE _Key_ = System.String,
+  _Investment_Code_ = System.String,
+  QtyEnd = System.Double,
+  MarketValueBookEnd = System.Double,
+  CostBookEnd = System.Double,
+  CostLocalEnd = System.Double,
+  AccruedIntBookEnd = System.Double,
+  AccruedIntLocalEnd = System.Double,
+  MktPriceBookEnd = System.Double,
+  MktPriceLocalEnd = System.Double,
+  MarketValueLocalEnd = System.Double,
+  NetAssetValuePeriodEnd = System.Double,
+  OrigFaceEnd = System.Double,
+  UnitCostBookEnd = System.Double,
+  UnitCostLocalEnd = System.Double,
+  UnrealizedFXGainLoss = System.Double,
+  UnrealizedPriceGainLoss = System.Double,
+  _Investment_Description_ = System.String,
+  _Investment_AssetType_Code_ = System.String,
+  _Investment_AssetType_Description_ = System.String,
+  _Investment_BifurcationCurrency_Code_ = System.String,
+  _Investment_BifurcationCurrency_Description_ = System.String,
+  _Investment_InvestmentType_Code_ = System.String,
+  _Investment_InvestmentType_Description_ = System.String,
+  _Investment_RiskCurrency_Code_ = System.String,
+  _Investment_RiskCurrency_Description_ = System.String,
+  _Portfolio_NameSort_ = System.String,
+  _Investment_ClassName_ = System.String,
+  _Portfolio_ClassName_ = System.String,
+  _TaxLotTransaction_FundLegalEntity_Code_ = System.String,
+  ClassName = System.String</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="ID_Key_">
+        <DataField>_Key_</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Investment_Code_">
+        <DataField>_Investment_Code_</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="QtyEnd">
+        <DataField>QtyEnd</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="MarketValueBookEnd">
+        <DataField>MarketValueBookEnd</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="CostBookEnd">
+        <DataField>CostBookEnd</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="CostLocalEnd">
+        <DataField>CostLocalEnd</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="AccruedIntBookEnd">
+        <DataField>AccruedIntBookEnd</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="AccruedIntLocalEnd">
+        <DataField>AccruedIntLocalEnd</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="MktPriceBookEnd">
+        <DataField>MktPriceBookEnd</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="MktPriceLocalEnd">
+        <DataField>MktPriceLocalEnd</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="MarketValueLocalEnd">
+        <DataField>MarketValueLocalEnd</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="NetAssetValuePeriodEnd">
+        <DataField>NetAssetValuePeriodEnd</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="OrigFaceEnd">
+        <DataField>OrigFaceEnd</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="UnitCostBookEnd">
+        <DataField>UnitCostBookEnd</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="UnitCostLocalEnd">
+        <DataField>UnitCostLocalEnd</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="UnrealizedFXGainLoss">
+        <DataField>UnrealizedFXGainLoss</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="UnrealizedPriceGainLoss">
+        <DataField>UnrealizedPriceGainLoss</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="ID_Investment_Description_">
+        <DataField>_Investment_Description_</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Investment_AssetType_Code_">
+        <DataField>_Investment_AssetType_Code_</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Investment_AssetType_Description_">
+        <DataField>_Investment_AssetType_Description_</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Investment_BifurcationCurrency_Code_">
+        <DataField>_Investment_BifurcationCurrency_Code_</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Investment_BifurcationCurrency_Description_">
+        <DataField>_Investment_BifurcationCurrency_Description_</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Investment_InvestmentType_Code_">
+        <DataField>_Investment_InvestmentType_Code_</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Investment_InvestmentType_Description_">
+        <DataField>_Investment_InvestmentType_Description_</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Investment_RiskCurrency_Code_">
+        <DataField>_Investment_RiskCurrency_Code_</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Investment_RiskCurrency_Description_">
+        <DataField>_Investment_RiskCurrency_Description_</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="genKnowledgeDate">
+        <DataField>genKnowledgeDate</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="genKnowledgeDateExact">
+        <DataField>genKnowledgeDateExact</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="genDataSetID">
+        <DataField>genDataSetID</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

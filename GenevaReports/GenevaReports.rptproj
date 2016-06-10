@@ -6,12 +6,49 @@
       <Name>GenevaSource.rds</Name>
       <FullPath>GenevaSource.rds</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>XML.rds</Name>
+      <FullPath>XML.rds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>GenevaSQLSource.rds</Name>
+      <FullPath>GenevaSQLSource.rds</FullPath>
+    </ProjectItem>
   </DataSources>
-  <DataSets />
+  <DataSets>
+    <ProjectItem>
+      <Name>StyleSheet.rsd</Name>
+      <FullPath>StyleSheet.rsd</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>bisInvestmentPosition.rsd</Name>
+      <FullPath>bisInvestmentPosition.rsd</FullPath>
+    </ProjectItem>
+  </DataSets>
   <Reports>
     <ProjectItem>
       <Name>Portfolios.rdl</Name>
       <FullPath>Portfolios.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AllocationOverview.rdl</Name>
+      <FullPath>AllocationOverview.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Appraisal Summary.rdl</Name>
+      <FullPath>Appraisal Summary.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>SubReport_AddendumErrors.rdl</Name>
+      <FullPath>SubReport_AddendumErrors.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>SubReport_SmallHeaderLandscape.rdl</Name>
+      <FullPath>SubReport_SmallHeaderLandscape.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AllocationOverview_sample.rdl</Name>
+      <FullPath>AllocationOverview_sample.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
