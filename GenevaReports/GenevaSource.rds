@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="GenevaSource">
+  <ConnectionProperties>
+    <Extension>GENEVA</Extension>
+    <ConnectString>appserver=http://dkim2.advent.com; host=optcs3.advent.com; port=11001</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>e771d4bd-1085-474f-a6bc-3c8ca0150b2c</DataSourceID>
+</RptDataSource>

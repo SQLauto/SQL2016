@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "GenevaReports", "GenevaReports.rptproj", "{0F579317-B297-479C-A488-3E88A3D7475A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F579317-B297-479C-A488-3E88A3D7475A}.Debug|Default.ActiveCfg = Debug
+		{0F579317-B297-479C-A488-3E88A3D7475A}.Debug|Default.Build.0 = Debug
+		{0F579317-B297-479C-A488-3E88A3D7475A}.Debug|Default.Deploy.0 = Debug
+		{0F579317-B297-479C-A488-3E88A3D7475A}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{0F579317-B297-479C-A488-3E88A3D7475A}.DebugLocal|Default.Build.0 = DebugLocal
+		{0F579317-B297-479C-A488-3E88A3D7475A}.Release|Default.ActiveCfg = Release
+		{0F579317-B297-479C-A488-3E88A3D7475A}.Release|Default.Build.0 = Release
+		{0F579317-B297-479C-A488-3E88A3D7475A}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
