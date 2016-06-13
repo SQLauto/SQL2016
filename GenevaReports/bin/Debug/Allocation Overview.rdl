@@ -4,9 +4,12 @@
   <DataSources>
     <DataSource Name="GenevaSource">
       <Transaction>true</Transaction>
-      <DataSourceReference>GenevaSource</DataSourceReference>
+      <ConnectionProperties>
+        <DataProvider>GENEVA</DataProvider>
+        <ConnectString>=Parameters!ConnectionString.Value</ConnectString>
+      </ConnectionProperties>
       <rd:SecurityType>None</rd:SecurityType>
-      <rd:DataSourceID>b782d3fb-24d4-4103-b098-041071eec351</rd:DataSourceID>
+      <rd:DataSourceID>0ab0ec5b-afc3-4376-9d52-a92168de3af4</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -1610,6 +1613,7 @@ TYPE _Key_ = System.String,
     <ReportParameter Name="Portfolio">
       <DataType>String</DataType>
       <Prompt>Portfolio</Prompt>
+      <MultiValue>true</MultiValue>
     </ReportParameter>
     <ReportParameter Name="PeriodStartDate">
       <DataType>DateTime</DataType>

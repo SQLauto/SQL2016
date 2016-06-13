@@ -3,6 +3,7 @@
   <ConnectionProperties>
     <Extension>SQL</Extension>
     <ConnectString>Data Source=DKIM2;Initial Catalog=Geneva</ConnectString>
+    <IntegratedSecurity>true</IntegratedSecurity>
   </ConnectionProperties>
   <DataSourceID>d7522150-d583-48b4-86fe-d00e971f2731</DataSourceID>
 </RptDataSource>

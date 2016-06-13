@@ -7,36 +7,44 @@
       <FullPath>GenevaSource.rds</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>XML.rds</Name>
-      <FullPath>XML.rds</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>GenevaSQLSource.rds</Name>
       <FullPath>GenevaSQLSource.rds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>XML.rds</Name>
+      <FullPath>XML.rds</FullPath>
     </ProjectItem>
   </DataSources>
   <DataSets>
     <ProjectItem>
-      <Name>StyleSheet.rsd</Name>
-      <FullPath>StyleSheet.rsd</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>bisInvestmentPosition.rsd</Name>
       <FullPath>bisInvestmentPosition.rsd</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>StyleSheet.rsd</Name>
+      <FullPath>StyleSheet.rsd</FullPath>
     </ProjectItem>
   </DataSets>
   <Reports>
     <ProjectItem>
-      <Name>Portfolios.rdl</Name>
-      <FullPath>Portfolios.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>AllocationOverview.rdl</Name>
-      <FullPath>AllocationOverview.rdl</FullPath>
+      <Name>AllocationOverview_sample.rdl</Name>
+      <FullPath>AllocationOverview_sample.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Appraisal Summary.rdl</Name>
       <FullPath>Appraisal Summary.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Performance Summary.rdl</Name>
+      <FullPath>Performance Summary.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Periodic TWR - 2-Level.rdl</Name>
+      <FullPath>Periodic TWR - 2-Level.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Portfolios.rdl</Name>
+      <FullPath>Portfolios.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>SubReport_AddendumErrors.rdl</Name>
@@ -47,8 +55,20 @@
       <FullPath>SubReport_SmallHeaderLandscape.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>AllocationOverview_sample.rdl</Name>
-      <FullPath>AllocationOverview_sample.rdl</FullPath>
+      <Name>SubReport_SmallHeaderLandscape_NextGen.rdl</Name>
+      <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Allocation Overview.rdl</Name>
+      <FullPath>Allocation Overview.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Cumulative Daily TWR - 2-Level.rdl</Name>
+      <FullPath>Cumulative Daily TWR - 2-Level.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Cumulative Daily TWR.rdl</Name>
+      <FullPath>Cumulative Daily TWR.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

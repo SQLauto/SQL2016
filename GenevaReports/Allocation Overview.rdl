@@ -3,9 +3,13 @@
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="GenevaSource">
-      <DataSourceReference>GenevaSource</DataSourceReference>
+      <Transaction>true</Transaction>
+      <ConnectionProperties>
+        <DataProvider>GENEVA</DataProvider>
+        <ConnectString>=Parameters!ConnectionString.Value</ConnectString>
+      </ConnectionProperties>
       <rd:SecurityType>None</rd:SecurityType>
-      <rd:DataSourceID>b782d3fb-24d4-4103-b098-041071eec351</rd:DataSourceID>
+      <rd:DataSourceID>0ab0ec5b-afc3-4376-9d52-a92168de3af4</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -513,7 +517,7 @@ TYPE _Key_ = System.String,
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>0.14063in</Top>
+            <Top>1.39063in</Top>
             <Height>0.25in</Height>
             <Width>4.82292in</Width>
             <Style>
@@ -785,7 +789,7 @@ TYPE _Key_ = System.String,
               </Style>
             </ChartNoDataMessage>
             <DataSetName>InvestmentPosition</DataSetName>
-            <Top>0.4323in</Top>
+            <Top>1.6823in</Top>
             <Height>4.9809in</Height>
             <Width>4.92792in</Width>
             <ZIndex>1</ZIndex>
@@ -1402,7 +1406,7 @@ TYPE _Key_ = System.String,
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>InvestmentPosition</DataSetName>
-            <Top>0.4323in</Top>
+            <Top>1.6823in</Top>
             <Left>5.07375in</Left>
             <Height>0.55208in</Height>
             <Width>4.67625in</Width>
@@ -1413,126 +1417,166 @@ TYPE _Key_ = System.String,
               </Border>
             </Style>
           </Tablix>
+          <Rectangle Name="Rectangle1">
+            <ReportItems>
+              <Subreport Name="Addendum">
+                <ReportName>SubReport_AddendumErrors</ReportName>
+                <Parameters>
+                  <Parameter Name="DataSetID">
+                    <Value>=First(Fields!genDataSetID.Value, "InvestmentPosition")</Value>
+                  </Parameter>
+                  <Parameter Name="ReportTitle">
+                    <Value>=Globals!ReportName</Value>
+                  </Parameter>
+                  <Parameter Name="AddendumPages">
+                    <Value>=Parameters!AddendumPages.Value</Value>
+                  </Parameter>
+                  <Parameter Name="ToggleException">
+                    <Value>=Parameters!ExpandAddendum.Value</Value>
+                  </Parameter>
+                  <Parameter Name="DisableHyperlinks">
+                    <Value>=Parameters!DisableHyperlinks.Value</Value>
+                  </Parameter>
+                  <Parameter Name="AccountingSelectionRuleUsed">
+                    <Value>=Parameters!AccountingSelectionRuleUsed.Value</Value>
+                  </Parameter>
+                  <Parameter Name="AccountingReport">
+                    <Value>=True</Value>
+                  </Parameter>
+                  <Parameter Name="Portfolio">
+                    <Value>=Parameters!Portfolio.Value</Value>
+                  </Parameter>
+                  <Parameter Name="PeriodStartDate">
+                    <Value>=Parameters!PeriodStartDate.Value</Value>
+                  </Parameter>
+                  <Parameter Name="PeriodEndDate">
+                    <Value>=Parameters!PeriodEndDate.Value</Value>
+                  </Parameter>
+                  <Parameter Name="KnowledgeDate">
+                    <Value>=Parameters!KnowledgeDate.Value</Value>
+                  </Parameter>
+                  <Parameter Name="Consolidate">
+                    <Value>=Parameters!Consolidate.Value</Value>
+                  </Parameter>
+                  <Parameter Name="RegionalSettings">
+                    <Value>=Parameters!RegionalSettings.Value</Value>
+                  </Parameter>
+                  <Parameter Name="QuantityPrecision">
+                    <Value>=Parameters!QuantityPrecision.Value</Value>
+                  </Parameter>
+                  <Parameter Name="PricingPrecision">
+                    <Value>=Parameters!PricingPrecision.Value</Value>
+                  </Parameter>
+                  <Parameter Name="ExcludeErrorIDs">
+                    <Value>=Parameters!ExcludeErrorIDs.Value</Value>
+                  </Parameter>
+                </Parameters>
+                <MergeTransactions>true</MergeTransactions>
+                <KeepTogether>true</KeepTogether>
+                <Height>0.75in</Height>
+                <Width>10.4in</Width>
+                <ToolTip>Addendum Pages</ToolTip>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <PageBreak>
+              <BreakLocation>Start</BreakLocation>
+            </PageBreak>
+            <KeepTogether>true</KeepTogether>
+            <Top>6.6632in</Top>
+            <Height>0.75in</Height>
+            <Width>10.4in</Width>
+            <ZIndex>3</ZIndex>
+            <Visibility>
+              <Hidden>=Parameters!AddendumPages.Value="None"</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle2">
+            <ReportItems>
+              <Subreport Name="HeaderSubreport">
+                <ReportName>SubReport_SmallHeaderLandscape_NextGen</ReportName>
+                <Parameters>
+                  <Parameter Name="DataSetID">
+                    <Value>=First(Fields!genDataSetID.Value, "InvestmentPosition")</Value>
+                  </Parameter>
+                  <Parameter Name="ReportTitle">
+                    <Value>=Globals!ReportName</Value>
+                  </Parameter>
+                  <Parameter Name="AccountingRunType">
+                    <Value>=Parameters!AccountingRunType.Value</Value>
+                  </Parameter>
+                  <Parameter Name="RegionalSettings">
+                    <Value>=Parameters!RegionalSettings.Value</Value>
+                  </Parameter>
+                  <Parameter Name="ConnectionString">
+                    <Value>=Parameters!ConnectionString.Value</Value>
+                  </Parameter>
+                  <Parameter Name="HidePeriodStartDate">
+                    <Value>=Parameters!AccountingRunType.Value="Dynamic"</Value>
+                  </Parameter>
+                  <Parameter Name="ExtraParamName1">
+                    <Value>InventoryState</Value>
+                  </Parameter>
+                  <Parameter Name="LogoName">
+                    <Value>=Parameters!LogoName.Value</Value>
+                  </Parameter>
+                </Parameters>
+                <MergeTransactions>true</MergeTransactions>
+                <KeepTogether>true</KeepTogether>
+                <Height>1.38875in</Height>
+                <Width>10.4in</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Height>1.38875in</Height>
+            <Width>10.4in</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
         </ReportItems>
-        <Height>5.48264in</Height>
+        <Height>7.4132in</Height>
         <Style />
       </Body>
-      <Width>9.75in</Width>
+      <Width>10.4in</Width>
       <Page>
-        <PageHeader>
-          <Height>1.625in</Height>
+        <PageFooter>
+          <Height>0.4in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
-            <Textbox Name="Textbox3">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Allocation Overview</Value>
-                      <Style>
-                        <FontStyle>=Code.StyleSheetValue("ReportTitleStyle")</FontStyle>
-                        <FontFamily>=Code.StyleSheetValue("ReportTitleFamily")</FontFamily>
-                        <FontSize>=Code.StyleSheetValue("ReportTitleSize")</FontSize>
-                        <FontWeight>=Code.StyleSheetValue("ReportTitleWeight")</FontWeight>
-                        <TextDecoration>=Code.StyleSheetValue("ReportTitleDecoration")</TextDecoration>
-                        <Color>=Code.StyleSheetValue("ReportTitleColor")</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox3</rd:DefaultName>
-              <Top>1.25in</Top>
-              <Height>0.375in</Height>
-              <Width>4.04167in</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <BackgroundColor>=Code.StyleSheetValue("ReportTitleBackgroundColor")</BackgroundColor>
-                <VerticalAlign>Bottom</VerticalAlign>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Rectangle Name="Rectangle2">
-              <KeepTogether>true</KeepTogether>
-              <Left>4.85208in</Left>
-              <Height>0.875in</Height>
-              <Width>4.89792in</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <BackgroundColor>#ecf4f7</BackgroundColor>
-              </Style>
-            </Rectangle>
-            <Image Name="Image1">
-              <Source>Embedded</Source>
-              <Value>logo</Value>
-              <Height>1.03125in</Height>
-              <Width>1.84375in</Width>
-              <ZIndex>2</ZIndex>
+            <Image Name="GenevaLogo">
+              <Source>External</Source>
+              <Value>GenevaLogo.jpg</Value>
+              <Sizing>Fit</Sizing>
+              <Top>0.18in</Top>
+              <Left>8.9in</Left>
+              <Height>0.22in</Height>
+              <Width>1.1in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
               </Style>
             </Image>
-          </ReportItems>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </PageHeader>
-        <PageFooter>
-          <Height>0.375in</Height>
-          <PrintOnFirstPage>true</PrintOnFirstPage>
-          <PrintOnLastPage>true</PrintOnLastPage>
-          <ReportItems>
-            <Textbox Name="Textbox1">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla convallis dapibus. Integer at blandit lacus. Sed elementum pellentesque enim vitae vehicula.</Value>
-                      <Style>
-                        <FontStyle>=Code.StyleSheetValue("FooterStyle")</FontStyle>
-                        <FontFamily>=Code.StyleSheetValue("FooterFamily")</FontFamily>
-                        <FontSize>=Code.StyleSheetValue("FooterSize")</FontSize>
-                        <FontWeight>=Code.StyleSheetValue("FooterWeight")</FontWeight>
-                        <TextDecoration>=Code.StyleSheetValue("FooterDecoration")</TextDecoration>
-                        <Color>=Code.StyleSheetValue("FooterColor")</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Height>0.375in</Height>
-              <Width>9.74999in</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <BackgroundColor>=Code.StyleSheetValue("FooterBackgroundColor")</BackgroundColor>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
           </ReportItems>
           <Style>
             <Border>

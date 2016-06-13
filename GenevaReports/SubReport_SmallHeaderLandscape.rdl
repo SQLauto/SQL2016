@@ -1869,11 +1869,7 @@ FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
   <DataSources>
     <DataSource Name="GenevaSource">
       <Transaction>true</Transaction>
-      <ConnectionProperties>
-        <DataProvider>GENEVA</DataProvider>
-        <ConnectString>=Parameters!ConnectionString.Value</ConnectString>
-        <Prompt>Specify a user name and password for data source GenevaSource</Prompt>
-      </ConnectionProperties>
+      <DataSourceReference>GenevaSource</DataSourceReference>
       <rd:SecurityType>DataBase</rd:SecurityType>
       <rd:DataSourceID>7ab44b89-c513-496a-85f2-d4f868248b3a</rd:DataSourceID>
     </DataSource>
@@ -2016,8 +2012,8 @@ FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
           <Value>False</Value>
         </Values>
       </DefaultValue>
-      <Hidden>true</Hidden>
       <Prompt>Display Investment in Fund for Net Position Appraisal</Prompt>
+      <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="HideBookCurrency">
       <DataType>Boolean</DataType>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Profiles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile Name="DevDefault" Type="Development">
+    <DataSources>
+      <DataSource Name="GenevaSource">
+        <Transaction>true</Transaction>
+        <ConnectionProperties>
+          <ConnectString>apperver=dkim2.advent.com</ConnectString>
+          <DataProvider>GENEVA</DataProvider>
+        </ConnectionProperties>
+      </DataSource>
+    </DataSources>
+    <UserInfos>
+      <UserInfo DataSourceName="GenevaSource">
+        <UserName>accessadmin</UserName>
+        <Password>welcome</Password>
+      </UserInfo>
+    </UserInfos>
+  </Profile>
+  <Profile Name="SharedDefault" Type="Shared/Live/Interactive">
+    <DataSources>
+      <DataSource Name="GenevaSource">
+        <Transaction>true</Transaction>
+        <ConnectionProperties>
+          <ConnectString>=Parameters!ConnectionString.Value</ConnectString>
+          <DataProvider>GENEVA</DataProvider>
+          <Prompt>Specify a user name and password for data source GenevaSource</Prompt>
+        </ConnectionProperties>
+      </DataSource>
+    </DataSources>
+    <UserInfos />
+  </Profile>
+  <Profile Name="BatchDefault" Type="Batch">
+    <DataSources>
+      <DataSource Name="GenevaSource">
+        <Transaction>true</Transaction>
+        <ConnectionProperties>
+          <ConnectString>apperver=dkim2.advent.com</ConnectString>
+          <DataProvider>GENEVA</DataProvider>
+        </ConnectionProperties>
+      </DataSource>
+    </DataSources>
+    <UserInfos>
+      <UserInfo DataSourceName="GenevaSource">
+        <UserName>accessadmin</UserName>
+        <Password>welcome</Password>
+      </UserInfo>
+    </UserInfos>
+  </Profile>
+</Profiles>

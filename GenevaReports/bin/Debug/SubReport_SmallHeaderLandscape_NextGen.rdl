@@ -1,0 +1,788 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+  <Description>Addendum Errors Subreport - Portrait</Description>
+  <Author>Advent Software, Inc.</Author>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="GenevaSource">
+      <Transaction>true</Transaction>
+      <ConnectionProperties>
+        <DataProvider>GENEVA</DataProvider>
+        <ConnectString>=Parameters!ConnectionString.Value</ConnectString>
+        <Prompt>Specify a user name and password for data source GenevaSource:</Prompt>
+      </ConnectionProperties>
+      <rd:SecurityType>DataBase</rd:SecurityType>
+      <rd:DataSourceID>7ab44b89-c513-496a-85f2-d4f868248b3a</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="ReportParameters">
+      <Query>
+        <DataSourceName>GenevaSource</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="DataSetID">
+            <Value>=Parameters!DataSetID.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="JobTitle">
+            <Value>=Parameters!JobTitle.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AddendumPages">
+            <Value>=Parameters!AddendumPages.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>GetTable ReportParameters</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Value">
+          <DataField>Value</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="genKnowledgeDate">
+          <DataField>genKnowledgeDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="genKnowledgeDateExact">
+          <DataField>genKnowledgeDateExact</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="genDataSetID">
+          <DataField>genDataSetID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="StyleSheet">
+      <SharedDataSet>
+        <SharedDataSetReference>StyleSheet</SharedDataSetReference>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="StyleSheetXML">
+          <DataField>StyleSheetXML</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Rectangle Name="rectangle1">
+            <ReportItems>
+              <Textbox Name="ReportTitleTextbox">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=UCase(Parameters!ReportTitle.Value)</Value>
+                        <Style>
+                          <FontStyle>=Code.StyleSheetValue("ReportTitleStyle")</FontStyle>
+                          <FontFamily>=Code.StyleSheetValue("ReportTitleFamily")</FontFamily>
+                          <FontSize>=Code.StyleSheetValue("ReportTitleSize")</FontSize>
+                          <FontWeight>=Code.StyleSheetValue("ReportTitleWeight")</FontWeight>
+                          <TextDecoration>=Code.StyleSheetValue("ReportTitleDecoration")</TextDecoration>
+                          <Color>=Code.StyleSheetValue("ReportTitleColor")</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.02in</Top>
+                <Height>0.25in</Height>
+                <Width>6.7in</Width>
+                <Style>
+                  <VerticalAlign>Middle</VerticalAlign>
+                  <PaddingLeft>12pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <DataElementOutput>NoOutput</DataElementOutput>
+            <Top>1.11875in</Top>
+            <Left>0.00083in</Left>
+            <Height>0.27in</Height>
+            <Width>9.74917in</Width>
+            <Style>
+              <BackgroundColor>=Code.StyleSheetValue("ReportTitleBackgroundColor")</BackgroundColor>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle3">
+            <ReportItems>
+              <Tablix Name="PeriodEndList">
+                <TablixBody>
+                  <TablixColumns>
+                    <TablixColumn>
+                      <Width>4.54958in</Width>
+                    </TablixColumn>
+                  </TablixColumns>
+                  <TablixRows>
+                    <TablixRow>
+                      <Height>0.25in</Height>
+                      <TablixCells>
+                        <TablixCell>
+                          <CellContents>
+                            <Rectangle Name="PeriodEndList_Contents">
+                              <ReportItems>
+                                <Textbox Name="textbox2">
+                                  <CanGrow>true</CanGrow>
+                                  <KeepTogether>true</KeepTogether>
+                                  <Paragraphs>
+                                    <Paragraph>
+                                      <TextRuns>
+                                        <TextRun>
+                                          <Value>=IIF(Parameters!HidePeriodStartDate.Value,
+"Reporting Date: " &amp; FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate),
+"Reporting Period: " &amp; FormatDateTime(Last(Fields!Value.Value), DateFormat.ShortDate) &amp; " - " &amp; 
+FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
+                                          <Style>
+                                            <FontStyle>=Code.StyleSheetValue("ReportDateStyle")</FontStyle>
+                                            <FontFamily>=Code.StyleSheetValue("ReportDateFamily")</FontFamily>
+                                            <FontSize>=Code.StyleSheetValue("ReportDateSize")</FontSize>
+                                            <FontWeight>=Code.StyleSheetValue("ReportDateWeight")</FontWeight>
+                                            <TextDecoration>=Code.StyleSheetValue("ReportDateDecoration")</TextDecoration>
+                                            <Color>=Code.StyleSheetValue("ReportDateColor")</Color>
+                                          </Style>
+                                        </TextRun>
+                                      </TextRuns>
+                                      <Style>
+                                        <TextAlign>Left</TextAlign>
+                                      </Style>
+                                    </Paragraph>
+                                  </Paragraphs>
+                                  <Height>0.25in</Height>
+                                  <Width>4.54958in</Width>
+                                  <Style>
+                                    <VerticalAlign>Middle</VerticalAlign>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>4pt</PaddingRight>
+                                    <PaddingTop>1pt</PaddingTop>
+                                  </Style>
+                                </Textbox>
+                              </ReportItems>
+                              <KeepTogether>true</KeepTogether>
+                              <Style />
+                            </Rectangle>
+                          </CellContents>
+                        </TablixCell>
+                      </TablixCells>
+                    </TablixRow>
+                  </TablixRows>
+                </TablixBody>
+                <TablixColumnHierarchy>
+                  <TablixMembers>
+                    <TablixMember />
+                  </TablixMembers>
+                </TablixColumnHierarchy>
+                <TablixRowHierarchy>
+                  <TablixMembers>
+                    <TablixMember>
+                      <Group Name="PeriodEndList_Details_Group">
+                        <GroupExpressions>
+                          <GroupExpression>="1"</GroupExpression>
+                        </GroupExpressions>
+                      </Group>
+                      <Visibility>
+                        <Hidden>=Fields!Value.Value = ""</Hidden>
+                      </Visibility>
+                      <DataElementOutput>Output</DataElementOutput>
+                      <KeepTogether>true</KeepTogether>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixRowHierarchy>
+                <DataSetName>ReportParameters</DataSetName>
+                <Filters>
+                  <Filter>
+                    <FilterExpression>=Fields!Name.Value</FilterExpression>
+                    <Operator>Like</Operator>
+                    <FilterValues>
+                      <FilterValue>Period*Date</FilterValue>
+                    </FilterValues>
+                  </Filter>
+                </Filters>
+                <SortExpressions>
+                  <SortExpression>
+                    <Value>=Fields!Name.Value</Value>
+                  </SortExpression>
+                </SortExpressions>
+                <Top>0.5625in</Top>
+                <Left>0.34834in</Left>
+                <Height>0.25in</Height>
+                <Width>4.54958in</Width>
+                <DataElementOutput>NoOutput</DataElementOutput>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <FontSize>8pt</FontSize>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Tablix>
+              <Tablix Name="PortfolioDescriptionList">
+                <TablixBody>
+                  <TablixColumns>
+                    <TablixColumn>
+                      <Width>4.48556in</Width>
+                    </TablixColumn>
+                  </TablixColumns>
+                  <TablixRows>
+                    <TablixRow>
+                      <Height>0.25in</Height>
+                      <TablixCells>
+                        <TablixCell>
+                          <CellContents>
+                            <Rectangle Name="PortfolioDescriptionList_Contents">
+                              <ReportItems>
+                                <Textbox Name="PortfolioDescriptionTextbox2">
+                                  <CanGrow>true</CanGrow>
+                                  <KeepTogether>true</KeepTogether>
+                                  <Paragraphs>
+                                    <Paragraph>
+                                      <TextRuns>
+                                        <TextRun>
+                                          <Value>=Fields!Value.Value</Value>
+                                          <Style>
+                                            <FontStyle>=Code.StyleSheetValue("PortfolioNameStyle")</FontStyle>
+                                            <FontFamily>=Code.StyleSheetValue("PortfolioNameFamily")</FontFamily>
+                                            <FontSize>=Code.StyleSheetValue("PortfolioNameSize")</FontSize>
+                                            <FontWeight>=Code.StyleSheetValue("PortfolioNameWeight")</FontWeight>
+                                            <TextDecoration>=Code.StyleSheetValue("PortfolioNameDecoration")</TextDecoration>
+                                            <Color>=Code.StyleSheetValue("PortfolioNameColor")</Color>
+                                          </Style>
+                                        </TextRun>
+                                      </TextRuns>
+                                      <Style>
+                                        <TextAlign>Left</TextAlign>
+                                      </Style>
+                                    </Paragraph>
+                                  </Paragraphs>
+                                  <Height>0.25in</Height>
+                                  <Width>4.48556in</Width>
+                                  <DataElementOutput>NoOutput</DataElementOutput>
+                                  <Style>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <VerticalAlign>Bottom</VerticalAlign>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                  </Style>
+                                </Textbox>
+                              </ReportItems>
+                              <KeepTogether>true</KeepTogether>
+                              <Style />
+                            </Rectangle>
+                          </CellContents>
+                        </TablixCell>
+                      </TablixCells>
+                    </TablixRow>
+                  </TablixRows>
+                </TablixBody>
+                <TablixColumnHierarchy>
+                  <TablixMembers>
+                    <TablixMember />
+                  </TablixMembers>
+                </TablixColumnHierarchy>
+                <TablixRowHierarchy>
+                  <TablixMembers>
+                    <TablixMember>
+                      <Group Name="PortfolioDescriptionList_Details_Group">
+                        <DataElementName>Item</DataElementName>
+                      </Group>
+                      <DataElementName>Item_Collection</DataElementName>
+                      <DataElementOutput>Output</DataElementOutput>
+                      <KeepTogether>true</KeepTogether>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixRowHierarchy>
+                <DataSetName>ReportParameters</DataSetName>
+                <Filters>
+                  <Filter>
+                    <FilterExpression>=Fields!Name.Value</FilterExpression>
+                    <Operator>Equal</Operator>
+                    <FilterValues>
+                      <FilterValue>PortfolioDescription</FilterValue>
+                    </FilterValues>
+                  </Filter>
+                </Filters>
+                <Top>0.30972in</Top>
+                <Left>0.34834in</Left>
+                <Height>0.25in</Height>
+                <Width>4.48556in</Width>
+                <ZIndex>1</ZIndex>
+                <DataElementOutput>NoOutput</DataElementOutput>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Tablix>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Left>4.85208in</Left>
+            <Height>0.875in</Height>
+            <Width>4.89792in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>#ecf4f7</BackgroundColor>
+            </Style>
+          </Rectangle>
+          <Image Name="image1">
+            <Source>External</Source>
+            <Value>NextGenlogo.jpg</Value>
+            <Height>1.03125in</Height>
+            <Width>1.84375in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+        </ReportItems>
+        <Height>1.38875in</Height>
+        <Style />
+      </Body>
+      <Width>9.75in</Width>
+      <Page>
+        <PageHeight>8.5in</PageHeight>
+        <PageWidth>11in</PageWidth>
+        <InteractiveHeight>1.5in</InteractiveHeight>
+        <InteractiveWidth>7.5in</InteractiveWidth>
+        <ColumnSpacing>0in</ColumnSpacing>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="StyleSheetXML">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>StyleSheet</DataSetName>
+          <ValueField>StyleSheetXML</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="ReportTitle">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report Title</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ConnectionString">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Connection String</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="DataSetID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Data Set ID</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccountingRunType">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accounting Run Type</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RegionalSettings">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>en-US</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_7</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AddendumPages">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Addendum Pages</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="JobTitle">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="HidePeriodStartDate">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>False</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Hide Period Start Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EnableWorld">
+      <DataType>Boolean</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>False</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Display Investment in Fund for Net Position Appraisal</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="HideBookCurrency">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>False</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Hide Book Currency</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="HidePortfolio">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>False</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Hide Portfolio</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="HideAccountingPeriod">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>False</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Hide Accounting Period</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="HideAccountingCalendar">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Hide Accounting Calendar</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="HidePriorKnowledgeDate">
+      <DataType>Boolean</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>False</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Hide Prior Knowledge Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="HideKnowledgeDate">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>False</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Hide Knowledge Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ExtraParamName1">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Extra Param Name1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ExtraParamName2">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Extra Param Name2</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ExtraParamName3">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Extra Param Name3</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ExtraParamName5">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Extra Param Name5</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ExtraParamName4">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Extra Param Name4</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ExtraParamName4Desc">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Extra Param Name4 Description</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ExtraDateName1">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Extra Date Name1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ExtraDateName2">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Extra Date Name2</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FundLegalEntityDescription">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Fund Legal Entity Description</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="UseNotionalValues">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>UseNotionalValues</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="UseIRROverrides">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>UseIRROverrides</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="UseCFOverrides">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>UseCFOverrides</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CashFlowWeighting">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>CashFlowWeighting</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DoNotApplyTWRAdjustments">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DoNotApplyTWRAdjustments</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ReportSubTitle">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportSubTitle</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LogoName">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Logo Name</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="IgnoreSpecificLotClosing">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Ignore Specific Lot Closing</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PaydownGLasGainLoss">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Process Paydown GL as Realized Gain/Loss</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LumpExpensesInSummaryLockdown">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Lump Expenses in Summary Lockdown</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>
+		Dim StyleSheetHash As System.Collections.Hashtable
+
+		Public Function InitStyleSheet()
+
+		Dim xmlDocument As System.Xml.XmlDocument = New System.Xml.XmlDocument()
+		xmlDocument.LoadXml(Report.Parameters!StyleSheetXML.Value)
+		Dim rootNode As System.Xml.XmlElement = xmlDocument.SelectSingleNode("StyleSheetInfo")
+
+		StyleSheetHash = New System.Collections.Hashtable()
+
+		For Each a As System.Xml.XmlAttribute In rootNode.Attributes
+		StyleSheetHash.Add(a.Name, a.Value)
+		Next
+
+		End Function
+
+		Public Function StyleSheetValue(StyleSheetValueName As String) As String
+
+		If (styleSheetHash Is Nothing)
+		InitStyleSheet()
+		End If
+
+		If (StyleSheetHash.ContainsKey(StyleSheetValueName))
+		Return StyleSheetHash(StyleSheetValueName)
+		End If
+
+		Return Nothing
+
+		End Function
+
+		Private ColorCount As Integer = 0
+		Private ColorMapping As New System.Collections.Hashtable()
+		Private Colors() As String = nothing
+
+		Public Function GetColor(ByVal groupingValue As String, ByVal delimitedColors As String) As String
+		' 1. If the mapping already exists, then just return the mapped color.
+		If ColorMapping.ContainsKey(groupingValue) Then Return ColorMapping(groupingValue)
+
+		' 2. Create the ColorPaletteColors() if they do not already exist.
+		If Colors Is Nothing Then Colors = delimitedColors.Split(New Char() {","c}, StringSplitOptions.RemoveEmptyEntries)
+
+		' 3. Add the new color to the mapping.
+		Dim color As String = Colors(ColorCount Mod Colors.Length)
+		ColorCount = ColorCount + 1
+		ColorMapping.Add(groupingValue, color)
+
+		' 4. Return the new color.
+		Return color
+		End Function
+	</Code>
+  <Language>=Parameters!RegionalSettings.Value</Language>
+  <CodeModules>
+    <CodeModule>System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</CodeModule>
+  </CodeModules>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>5bc85988-376e-42a9-aa99-8061dcf5b345</rd:ReportID>
+</Report>
