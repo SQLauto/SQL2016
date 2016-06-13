@@ -27,12 +27,24 @@
   </DataSets>
   <Reports>
     <ProjectItem>
+      <Name>Allocation Overview.rdl</Name>
+      <FullPath>Allocation Overview.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>AllocationOverview_sample.rdl</Name>
       <FullPath>AllocationOverview_sample.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Appraisal Summary.rdl</Name>
       <FullPath>Appraisal Summary.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Cumulative Daily TWR - 2-Level.rdl</Name>
+      <FullPath>Cumulative Daily TWR - 2-Level.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Cumulative Daily TWR.rdl</Name>
+      <FullPath>Cumulative Daily TWR.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Performance Summary.rdl</Name>
@@ -59,16 +71,8 @@
       <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Allocation Overview.rdl</Name>
-      <FullPath>Allocation Overview.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Cumulative Daily TWR - 2-Level.rdl</Name>
-      <FullPath>Cumulative Daily TWR - 2-Level.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Cumulative Daily TWR.rdl</Name>
-      <FullPath>Cumulative Daily TWR.rdl</FullPath>
+      <Name>NEXTGEN Portfolio Exposure Appraisal.rdl</Name>
+      <FullPath>NEXTGEN Portfolio Exposure Appraisal.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
