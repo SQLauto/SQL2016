@@ -2988,7 +2988,7 @@
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Previous(1+Fields!TWRBook.Value/100)*(1+Fields!TWRBook.Value/100)</Y>
+                        <Y>= Iif(IsNothing(Fields!TWRBook.Value),100, Previous(1+Fields!TWRBook.Value/100)*(1+Fields!TWRBook.Value/100))</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />

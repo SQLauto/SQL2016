@@ -47,8 +47,8 @@
       <FullPath>Cumulative Daily TWR.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Performance Summary.rdl</Name>
-      <FullPath>Performance Summary.rdl</FullPath>
+      <Name>NEXTGEN Portfolio Exposure Appraisal.rdl</Name>
+      <FullPath>NEXTGEN Portfolio Exposure Appraisal.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Periodic TWR - 2-Level.rdl</Name>
@@ -71,8 +71,16 @@
       <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>NEXTGEN Portfolio Exposure Appraisal.rdl</Name>
-      <FullPath>NEXTGEN Portfolio Exposure Appraisal.rdl</FullPath>
+      <Name>NEXTGEN Portfolio Overview.rdl</Name>
+      <FullPath>NEXTGEN Portfolio Overview.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Performance Summary.rdl</Name>
+      <FullPath>Performance Summary.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>TWR Performance History.rdl</Name>
+      <FullPath>TWR Performance History.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
