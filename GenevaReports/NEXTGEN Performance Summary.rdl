@@ -3287,8 +3287,8 @@
         </PageFooter>
         <PageHeight>8.5in</PageHeight>
         <PageWidth>11in</PageWidth>
-        <LeftMargin>0.625in</LeftMargin>
-        <RightMargin>0.625in</RightMargin>
+        <LeftMargin>0.25in</LeftMargin>
+        <RightMargin>0.25in</RightMargin>
         <Style />
       </Page>
     </ReportSection>

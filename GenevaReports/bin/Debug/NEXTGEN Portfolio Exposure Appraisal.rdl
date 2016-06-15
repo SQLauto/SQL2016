@@ -2104,7 +2104,6 @@
                           <ZIndex>158</ZIndex>
                           <DataElementName>Currency</DataElementName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>5pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2113,6 +2112,7 @@
                           </Style>
                         </Textbox>
                         <ColSpan>3</ColSpan>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell />
@@ -2141,7 +2141,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1096</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2149,6 +2148,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2175,7 +2175,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1097</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2183,6 +2182,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2220,7 +2220,6 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2228,6 +2227,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2265,7 +2265,6 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2273,6 +2272,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2310,7 +2310,6 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2318,6 +2317,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2355,7 +2355,6 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2363,6 +2362,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -2394,7 +2394,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox14</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>5pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2402,6 +2401,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2427,7 +2427,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox622</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2435,6 +2434,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2460,7 +2460,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox623</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2468,6 +2467,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2497,7 +2497,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1334</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2506,6 +2505,7 @@
                           </Style>
                         </Textbox>
                         <ColSpan>2</ColSpan>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell />
@@ -2538,7 +2538,6 @@
                           <ZIndex>72</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2546,6 +2545,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2577,7 +2577,6 @@
                           <ZIndex>71</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2585,6 +2584,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2609,7 +2609,6 @@
                           <ZIndex>70</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2617,6 +2616,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2648,7 +2648,6 @@
                           <ZIndex>69</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2656,6 +2655,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -2692,7 +2692,6 @@
                           <ZIndex>157</ZIndex>
                           <DataElementName>FxRate</DataElementName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>9pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2730,7 +2729,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1851</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2738,6 +2736,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2764,7 +2763,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1852</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2772,6 +2770,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2798,7 +2797,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1853</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2806,6 +2804,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2832,7 +2831,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1854</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2840,6 +2838,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2866,7 +2865,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1855</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2874,6 +2872,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2900,7 +2899,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1856</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2908,6 +2906,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -2941,7 +2940,6 @@
                           <ZIndex>156</ZIndex>
                           <DataElementName>Sort</DataElementName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>13pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2977,7 +2975,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox42</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2985,6 +2982,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3009,7 +3007,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox43</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3017,6 +3014,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3054,7 +3052,6 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3062,6 +3059,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3099,7 +3097,6 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3107,6 +3104,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3144,7 +3142,6 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3152,6 +3149,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3189,7 +3187,6 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3197,6 +3194,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -3225,7 +3223,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox352</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>13pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3257,7 +3254,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox353</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3265,6 +3261,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3288,7 +3285,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox354</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3296,6 +3292,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3319,7 +3316,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox355</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3327,6 +3323,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3350,7 +3347,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox356</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3358,6 +3354,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3395,7 +3392,6 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3403,6 +3399,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3440,7 +3437,6 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3448,6 +3444,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3472,7 +3469,6 @@
                           <ZIndex>36</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3480,6 +3476,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3504,7 +3501,6 @@
                           <ZIndex>35</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3512,6 +3508,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -3543,7 +3540,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox13</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>13pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3575,7 +3571,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox341</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3583,6 +3578,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3606,7 +3602,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox343</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3614,6 +3609,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3643,7 +3639,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1334</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3652,6 +3647,7 @@
                           </Style>
                         </Textbox>
                         <ColSpan>2</ColSpan>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell />
@@ -3684,7 +3680,6 @@
                           <ZIndex>47</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3692,6 +3687,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3723,7 +3719,6 @@
                           <ZIndex>46</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3731,6 +3726,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3755,7 +3751,6 @@
                           <ZIndex>45</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3763,6 +3758,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3794,7 +3790,6 @@
                           <ZIndex>44</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3802,6 +3797,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -3835,7 +3831,6 @@
                             </Paragraph>
                           </Paragraphs>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>17pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3873,7 +3868,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox9</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3881,6 +3875,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3907,7 +3902,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox22</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3915,6 +3909,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3952,7 +3947,6 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3960,6 +3954,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3997,7 +3992,6 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -4005,6 +3999,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -4042,7 +4037,6 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -4050,6 +4044,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -4087,7 +4082,6 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
-                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -4095,6 +4089,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -4138,7 +4133,6 @@
                             <PaddingBottom>1pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -4485,7 +4479,6 @@
                             <PaddingBottom>1pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -4805,7 +4798,6 @@
                             <PaddingBottom>1pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -5089,7 +5081,6 @@
                             <PaddingBottom>1pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -5864,7 +5855,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>Data</DataSetName>
-            <Height>3.22083in</Height>
+            <Height>3.22084in</Height>
             <Width>10.25001in</Width>
             <Visibility>
               <Hidden>=Code.InitColorGroups(Parameters!Color.Value)</Hidden>

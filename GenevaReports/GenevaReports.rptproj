@@ -39,6 +39,10 @@
       <FullPath>Appraisal Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Asset Allocation Detail.rdl</Name>
+      <FullPath>Asset Allocation Detail.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Cumulative Daily TWR - 2-Level.rdl</Name>
       <FullPath>Cumulative Daily TWR - 2-Level.rdl</FullPath>
     </ProjectItem>
@@ -47,8 +51,28 @@
       <FullPath>Cumulative Daily TWR.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>IRR Analysis by Investment.rdl</Name>
+      <FullPath>IRR Analysis by Investment.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NEXTGEN Profit Loss Summary.rdl</Name>
+      <FullPath>NEXTGEN Profit Loss Summary.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NEXTGEN Asset Allocation Detail.rdl</Name>
+      <FullPath>NEXTGEN Asset Allocation Detail.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NEXTGEN Performance Summary.rdl</Name>
+      <FullPath>NEXTGEN Performance Summary.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>NEXTGEN Portfolio Exposure Appraisal.rdl</Name>
       <FullPath>NEXTGEN Portfolio Exposure Appraisal.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NEXTGEN Portfolio Overview.rdl</Name>
+      <FullPath>NEXTGEN Portfolio Overview.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Periodic TWR - 2-Level.rdl</Name>
@@ -71,16 +95,16 @@
       <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>NEXTGEN Portfolio Overview.rdl</Name>
-      <FullPath>NEXTGEN Portfolio Overview.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Performance Summary.rdl</Name>
-      <FullPath>Performance Summary.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>TWR Performance History.rdl</Name>
       <FullPath>TWR Performance History.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NEXTGEN Consolidated Allocation Summary.rdl</Name>
+      <FullPath>NEXTGEN Consolidated Allocation Summary.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NEXTGEN Allocation Summary.rdl</Name>
+      <FullPath>NEXTGEN Allocation Summary.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
