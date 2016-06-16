@@ -55,12 +55,16 @@
       <FullPath>IRR Analysis by Investment.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>NEXTGEN Profit Loss Summary.rdl</Name>
-      <FullPath>NEXTGEN Profit Loss Summary.rdl</FullPath>
+      <Name>NEXTGEN Allocation Summary.rdl</Name>
+      <FullPath>NEXTGEN Allocation Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>NEXTGEN Asset Allocation Detail.rdl</Name>
       <FullPath>NEXTGEN Asset Allocation Detail.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NEXTGEN Consolidated Allocation Summary.rdl</Name>
+      <FullPath>NEXTGEN Consolidated Allocation Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>NEXTGEN Performance Summary.rdl</Name>
@@ -73,6 +77,10 @@
     <ProjectItem>
       <Name>NEXTGEN Portfolio Overview.rdl</Name>
       <FullPath>NEXTGEN Portfolio Overview.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NEXTGEN Profit Loss Summary.rdl</Name>
+      <FullPath>NEXTGEN Profit Loss Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Periodic TWR - 2-Level.rdl</Name>
@@ -99,12 +107,8 @@
       <FullPath>TWR Performance History.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>NEXTGEN Consolidated Allocation Summary.rdl</Name>
-      <FullPath>NEXTGEN Consolidated Allocation Summary.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>NEXTGEN Allocation Summary.rdl</Name>
-      <FullPath>NEXTGEN Allocation Summary.rdl</FullPath>
+      <Name>CycleTimeReport - Copy.rdl</Name>
+      <FullPath>CycleTimeReport - Copy.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
