@@ -24,6 +24,772 @@
         </Field>
       </Fields>
     </DataSet>
+    <DataSet Name="PerfData">
+      <Query>
+        <DataSourceName>GenevaSource</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="JobTitle">
+            <Value>=Globals!ReportName</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossingCurrency">
+            <Value>=Parameters!CrossingCurrency.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BookCurrency">
+            <Value>=Parameters!BookCurrency.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PriceSchedule">
+            <Value>=Parameters!PriceSchedule.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LumpCashLots">
+            <Value>=Parameters!LumpCashLots.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LumpNonCashLots">
+            <Value>=Parameters!LumpNonCashLots.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingView">
+            <Value>=Parameters!AccountingView.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BusinessCalendar">
+            <Value>=Parameters!BusinessCalendar.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BidAskPricing">
+            <Value>=Parameters!BidAskPricing.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnFutures">
+            <Value>=Parameters!CrossZeroOnFutures.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnOptions">
+            <Value>=Parameters!CrossZeroOnOptions.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnEquity">
+            <Value>=Parameters!CrossZeroOnEquity.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnDebt">
+            <Value>=Parameters!CrossZeroOnDebt.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnCoverShort">
+            <Value>=Parameters!CrossZeroOnCoverShort.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SettleFXCost">
+            <Value>=Parameters!SettleFXCost.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SegregateIncome">
+            <Value>=Parameters!SegregateIncome.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="WithholdPurchasedSoldAI">
+            <Value>=Parameters!WithholdPurchasedSoldAI.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccrueWithhold">
+            <Value>=Parameters!AccrueWithhold.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingRunType">
+            <Value>Dynamic</Value>
+          </QueryParameter>
+          <QueryParameter Name="AppraisalDay">
+            <Value>=Parameters!AppraisalDay.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccrueOnSTIF">
+            <Value>=Parameters!AccrueOnSTIF.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AmortizationElection">
+            <Value>=Parameters!AmortizationElection.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ByPassRule">
+            <Value>=Parameters!ByPassRule.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ExcludeCommission">
+            <Value>=Parameters!ExcludeCommission.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CounterClosingRuleOverride">
+            <Value>=Parameters!CounterClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FuturesClosingRuleOverride">
+            <Value>=Parameters!FuturesClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="InvestmentClosingRuleOverride">
+            <Value>=Parameters!InvestmentClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SecondaryCounterClosingRuleOverride">
+            <Value>=Parameters!SecondaryCounterClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SecondaryFuturesClosingRuleOverride">
+            <Value>=Parameters!SecondaryFuturesClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SecondaryInvestmentClosingRuleOverride">
+            <Value>=Parameters!SecondaryInvestmentClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="MarkToMarketCashTransfer">
+            <Value>=Parameters!MarkToMarketCashTransfer.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="RegionalSettings">
+            <Value>=Parameters!RegionalSettings.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FundLegalEntityDescription">
+            <Value>=Parameters!FundLegalEntityDescription.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FundStructure">
+            <Value>=Parameters!FundStructure.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FundStructureType">
+            <Value>=Parameters!FundStructureType.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="MarkLegalEntity">
+            <Value>=Parameters!MarkLegalEntity.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FundLegalEntity">
+            <Value>=Parameters!FundLegalEntity.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SeparateFundLegalEntities">
+            <Value>=Parameters!SeparateFundLegalEntities.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="Portfolio">
+            <Value>=Parameters!Portfolio.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PeriodStartDate">
+            <Value>=Parameters!PeriodStartDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PeriodEndDate">
+            <Value>=Parameters!PeriodEndDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="KnowledgeDate">
+            <Value>=Parameters!KnowledgeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PriorKnowledgeDate">
+            <Value>=Parameters!PriorKnowledgeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingPeriod">
+            <Value>=Parameters!AccountingPeriod.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingCalendar">
+            <Value>=Parameters!AccountingCalendar.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="StyleName">
+            <Value>=Parameters!StyleName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AddendumPages">
+            <Value>=Parameters!AddendumPages.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ManagementFirm">
+            <Value>=Parameters!ManagementFirm.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PerfAnnReturns">
+            <Value>=Parameters!PerfAnnReturns.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PortfolioDescription">
+            <Value>=Parameters!PortfolioDescription.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PerformanceMethod">
+            <Value>=Parameters!PerformanceMethod.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PerformanceFee">
+            <Value>=Parameters!PerformanceFee.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PerformanceWithholding">
+            <Value>=Parameters!PerformanceWithholding.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableInvestmentFilters">
+            <Value>=Parameters!DisableInvestmentFilters.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableStrategyFilters">
+            <Value>=Parameters!DisableStrategyFilters.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableLocAcctFilters">
+            <Value>=Parameters!DisableLocAcctFilters.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="requestType">
+            <Value>=Parameters!requestType.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="Consolidate">
+            <Value>=Parameters!Consolidate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AmortizeOnUnrealizedDate">
+            <Value>=Parameters!AmortizeOnUnrealizedDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableFreezepoints">
+            <Value>=Parameters!DisableFreezepoints.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableLDErrorRead">
+            <Value>=Parameters!DisableLDErrorRead.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableLockdowns">
+            <Value>=Parameters!DisableLockdowns.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PostDividendTaxLotDetail">
+            <Value>=Parameters!PostDividendTaxLotDetail.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PostValidationErrors">
+            <Value>=Parameters!PostValidationErrors.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableManualJE">
+            <Value>=Parameters!DisableManualJE.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingParameters">
+            <Value>=Parameters!AccountingParameters.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ConsolidateLegalEntities">
+            <Value>=Parameters!ConsolidateLegalEntities.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BidAskClosing">
+            <Value>=Parameters!BidAskClosing.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SnapshotUse">
+            <Value>=Parameters!SnapshotUse.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="UseAPFrom">
+            <Value>=Parameters!UseAPFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableSnapshots">
+            <Value>=Parameters!DisableSnapshots.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="EnableRealTimePricing">
+            <Value>=Parameters!EnableRealTimePricing.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ExpandAddendum">
+            <Value>=Parameters!ExpandAddendum.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableHyperlinks">
+            <Value>=Parameters!DisableHyperlinks.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingRule">
+            <Value>=Parameters!AccountingRule.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableBooks">
+            <Value>=Parameters!DisableBooks.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingSelectionRuleUsed">
+            <Value>=Parameters!AccountingSelectionRuleUsed.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LumpCrossGL">
+            <Value>=Parameters!LumpCrossGL.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="GainCalcMethod">
+            <Value>=Parameters!GainCalcMethod.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FreezeAccountingDate">
+            <Value>=Parameters!FreezeAccountingDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FreezeKnowledgeDate">
+            <Value>=Parameters!FreezeKnowledgeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ParallelConsolidationChildren">
+            <Value>=Parameters!ParallelConsolidationChildren.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableCashManagement">
+            <Value>=Parameters!DisableCashManagement.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AllowBoxedPosition">
+            <Value>=Parameters!AllowBoxedPosition.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="GetKTimesFromDefaultCalendar">
+            <Value>=Parameters!GetKTimesFromDefaultCalendar.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AlternateID">
+            <Value>=Parameters!AlternateID.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FiscalCalendar">
+            <Value>=Parameters!FiscalCalendar.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="RelativeDate">
+            <Value>=Parameters!RelativeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LotLevelOverrides">
+            <Value>=Parameters!LotLevelOverrides.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="MOERoundingMethod">
+            <Value>=Parameters!MOERoundingMethod.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="HybridHistoricalView">
+            <Value>=Parameters!HybridHistoricalView.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BypassFLEConsolidatingFlag">
+            <Value>=Parameters!BypassFLEConsolidatingFlag.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="IgnoreSpecificLotClosing">
+            <Value>=Parameters!IgnoreSpecificLotClosing.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PaydownGLasGainLoss">
+            <Value>=Parameters!PaydownGLasGainLoss.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LumpExpensesInSummaryLockdown">
+            <Value>=Parameters!LumpExpensesInSummaryLockdown.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>
+				  RUNRSL perf.rsl FlatData;
+				  TYPE
+				  RowName=String,
+				  Val=Decimal,
+				  Error=String,
+				  ValDesc=String,
+				  Key=String,
+				  NewLineKey=String
+			  </CommandText>
+      </Query>
+      <Fields>
+        <Field Name="RowName">
+          <DataField>RowName</DataField>
+        </Field>
+        <Field Name="Val">
+          <DataField>Val</DataField>
+        </Field>
+        <Field Name="Error">
+          <DataField>Error</DataField>
+        </Field>
+        <Field Name="ValDesc">
+          <DataField>ValDesc</DataField>
+        </Field>
+        <Field Name="Key">
+          <DataField>Key</DataField>
+        </Field>
+        <Field Name="NewLineKey">
+          <DataField>NewLineKey</DataField>
+        </Field>
+        <Field Name="genKnowledgeDate">
+          <DataField>genKnowledgeDate</DataField>
+        </Field>
+        <Field Name="genActualKnowledgeDate">
+          <DataField>genActualKnowledgeDate</DataField>
+        </Field>
+        <Field Name="genDataSetID">
+          <DataField>genDataSetID</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="TWR">
+      <Query>
+        <DataSourceName>GenevaSource</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="JobTitle">
+            <Value>=Globals!ReportName</Value>
+          </QueryParameter>
+          <QueryParameter Name="Portfolio">
+            <Value>=Parameters!Portfolio.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="UseAPFrom">
+            <Value>=Parameters!UseAPFrom.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="Consolidate">
+            <Value>=Parameters!Consolidate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PeriodStartDate">
+            <Value>=Parameters!PeriodStartDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PeriodEndDate">
+            <Value>=Parameters!PeriodEndDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="KnowledgeDate">
+            <Value>=Parameters!KnowledgeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PriorKnowledgeDate">
+            <Value>=Parameters!PriorKnowledgeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingPeriod">
+            <Value>=Parameters!AccountingPeriod.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingCalendar">
+            <Value>=Parameters!AccountingCalendar.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FiscalCalendar">
+            <Value>=Parameters!FiscalCalendar.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="MarkFiscalStartDays">
+            <Value>=Parameters!MarkFiscalStartDays.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="StyleName">
+            <Value>=Parameters!StyleName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ManagementFirm">
+            <Value>=Parameters!ManagementFirm.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AddendumPages">
+            <Value>=Parameters!AddendumPages.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingFilters">
+            <Value>=Parameters!AccountingFilters.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossingCurrency">
+            <Value>=Parameters!CrossingCurrency.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BookCurrency">
+            <Value>=Parameters!BookCurrency.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PriceSchedule">
+            <Value>=Parameters!PriceSchedule.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LumpCashLots">
+            <Value>=Parameters!LumpCashLots.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LumpNonCashLots">
+            <Value>=Parameters!LumpNonCashLots.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingView">
+            <Value>=Parameters!AccountingView.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BusinessCalendar">
+            <Value>=Parameters!BusinessCalendar.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BidAskPricing">
+            <Value>=Parameters!BidAskPricing.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BidAskClosing">
+            <Value>=Parameters!BidAskClosing.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnFutures">
+            <Value>=Parameters!CrossZeroOnFutures.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnOptions">
+            <Value>=Parameters!CrossZeroOnOptions.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnEquity">
+            <Value>=Parameters!CrossZeroOnEquity.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnDebt">
+            <Value>=Parameters!CrossZeroOnDebt.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnCoverShort">
+            <Value>=Parameters!CrossZeroOnCoverShort.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SettleFXCost">
+            <Value>=Parameters!SettleFXCost.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SegregateIncome">
+            <Value>=Parameters!SegregateIncome.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="WithholdPurchasedSoldAI">
+            <Value>=Parameters!WithholdPurchasedSoldAI.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccrueWithhold">
+            <Value>=Parameters!AccrueWithhold.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingRunType">
+            <Value>TWR</Value>
+          </QueryParameter>
+          <QueryParameter Name="AppraisalDay">
+            <Value>=Parameters!AppraisalDay.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccrueOnSTIF">
+            <Value>=Parameters!AccrueOnSTIF.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AmortizationElection">
+            <Value>=Parameters!AmortizationElection.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AmortizeOnUnrealizedDate">
+            <Value>=Parameters!AmortizeOnUnrealizedDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ByPassRule">
+            <Value>=Parameters!ByPassRule.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ExcludeCommission">
+            <Value>=Parameters!ExcludeCommission.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CounterClosingRuleOverride">
+            <Value>=Parameters!CounterClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FuturesClosingRuleOverride">
+            <Value>=Parameters!FuturesClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="InvestmentClosingRuleOverride">
+            <Value>=Parameters!InvestmentClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SecondaryCounterClosingRuleOverride">
+            <Value>=Parameters!SecondaryCounterClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SecondaryFuturesClosingRuleOverride">
+            <Value>=Parameters!SecondaryFuturesClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SecondaryInvestmentClosingRuleOverride">
+            <Value>=Parameters!SecondaryInvestmentClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="MarkToMarketCashTransfer">
+            <Value>=Parameters!MarkToMarketCashTransfer.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PostDividendTaxLotDetail">
+            <Value>=Parameters!PostDividendTaxLotDetail.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingParameters">
+            <Value>=Parameters!AccountingParameters.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ConsolidateLegalEntities">
+            <Value>=Parameters!ConsolidateLegalEntities.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FundLegalEntityDescription">
+            <Value>=Parameters!FundLegalEntityDescription.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FundStructure">
+            <Value>=Parameters!FundStructure.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FundStructureType">
+            <Value>=Parameters!FundStructureType.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="MarkLegalEntity">
+            <Value>=Parameters!MarkLegalEntity.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FundLegalEntity">
+            <Value>=Parameters!FundLegalEntity.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SeparateFundLegalEntities">
+            <Value>=Parameters!SeparateFundLegalEntities.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableFreezepoints">
+            <Value>=Parameters!DisableFreezepoints.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableLockdowns">
+            <Value>=Parameters!DisableLockdowns.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableManualJE">
+            <Value>=Parameters!DisableManualJE.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableLDErrorRead">
+            <Value>=Parameters!DisableLDErrorRead.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableSnapshots">
+            <Value>=Parameters!DisableSnapshots.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="EnableRealTimePricing">
+            <Value>=Parameters!EnableRealTimePricing.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PostValidationErrors">
+            <Value>=Parameters!PostValidationErrors.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SnapshotUse">
+            <Value>=Parameters!SnapshotUse.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="RegionalSettings">
+            <Value>=Parameters!RegionalSettings.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="TWRLevel1">
+            <Value>=Parameters!TWRLevel1.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="TWRLevel2">
+            <Value>=Parameters!TWRLevel2.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PerformanceParameters">
+            <Value>=Parameters!PerformanceParameters.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DoNotApplyTWRAdjustments">
+            <Value>=Parameters!DoNotApplyTWRAdjustments.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="OpeningFlowMethod">
+            <Value>=Parameters!OpeningFlowMethod.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="UseCFOverrides">
+            <Value>=Parameters!UseCFOverrides.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="UseIRROverrides">
+            <Value>=Parameters!UseIRROverrides.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CashFlowWeighting">
+            <Value>=Parameters!CashFlowWeighting.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="TWRInceptionDate">
+            <Value>=Parameters!TWRInceptionDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PerformanceFee">
+            <Value>=Parameters!PerformanceFee.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="UseNotionalValues">
+            <Value>=Parameters!UseNotionalValues.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DeriveTWRDetail">
+            <Value>=Parameters!DeriveTWRDetail.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DeriveTWRLocal">
+            <Value>=Parameters!DeriveTWRLocal.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PortfolioDescription">
+            <Value>=Parameters!PortfolioDescription.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="UseHistPeriodData">
+            <Value>=Parameters!UseHistPeriodData.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="MonthsInPeriod">
+            <Value>=Parameters!MonthsInPeriod.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ReportFromPeriodEnd">
+            <Value>=Parameters!ReportFromPeriodEnd.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="TWRBasis">
+            <Value>=Parameters!TWRBasis.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="requestType">
+            <Value>=Parameters!requestType.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ExpandAddendum">
+            <Value>=Parameters!ExpandAddendum.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingRule">
+            <Value>=Parameters!AccountingRule.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableHyperlinks">
+            <Value>=Parameters!DisableHyperlinks.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableBooks">
+            <Value>=Parameters!DisableBooks.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingSelectionRuleUsed">
+            <Value>=Parameters!AccountingSelectionRuleUsed.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LumpCrossGL">
+            <Value>=Parameters!LumpCrossGL.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="GainCalcMethod">
+            <Value>=Parameters!GainCalcMethod.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FreezeAccountingDate">
+            <Value>=Parameters!FreezeAccountingDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FreezeKnowledgeDate">
+            <Value>=Parameters!FreezeKnowledgeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ParallelConsolidationChildren">
+            <Value>=Parameters!ParallelConsolidationChildren.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableCashManagement">
+            <Value>=Parameters!DisableCashManagement.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AllowBoxedPosition">
+            <Value>=Parameters!AllowBoxedPosition.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="GetKTimesFromDefaultCalendar">
+            <Value>=Parameters!GetKTimesFromDefaultCalendar.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AlternateID">
+            <Value>=Parameters!AlternateID.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="RelativeDate">
+            <Value>=Parameters!RelativeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LotLevelOverrides">
+            <Value>=Parameters!LotLevelOverrides.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="MOERoundingMethod">
+            <Value>=Parameters!MOERoundingMethod.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="HybridHistoricalView">
+            <Value>=Parameters!HybridHistoricalView.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BypassFLEConsolidatingFlag">
+            <Value>=Parameters!BypassFLEConsolidatingFlag.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="IgnoreSpecificLotClosing">
+            <Value>=Parameters!IgnoreSpecificLotClosing.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PaydownGLasGainLoss">
+            <Value>=Parameters!PaydownGLasGainLoss.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LumpExpensesInSummaryLockdown">
+            <Value>=Parameters!LumpExpensesInSummaryLockdown.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>
+				  RUNRSL twrperfhist.rsl FlatData;
+				  TYPE
+				  Seg3=String,
+				  Seg4=String,
+				  SegType=Decimal,
+				  IntervalStartDate=DateTime,
+				  EndDate=DateTime,
+				  Override=String,
+				  PortfolioPeriodTWR=Decimal,
+				  PortfolioPeriodTWRStr=String,
+				  P1=String,
+				  Bench1PeriodTWR=Decimal,
+				  Bench1PeriodTWRStr=String,
+				  Bench2PeriodTWR=Decimal,
+				  Bench2PeriodTWRStr=String,
+				  Bench3PeriodTWR=Decimal,
+				  Bench3PeriodTWRStr=String,
+				  PortfolioCumulativeTWR=Decimal,
+				  PortfolioCumulativeTWRStr=String,
+				  Bench1CumulativeTWR=Decimal,
+				  Bench1CumulativeTWRStr=String,
+				  Bench2CumulativeTWR=Decimal,
+				  Bench2CumulativeTWRStr=String,
+				  Bench3CumulativeTWR=Decimal,
+				  Bench3CumulativeTWRStr=String
+			  </CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Seg3">
+          <DataField>Seg3</DataField>
+        </Field>
+        <Field Name="Seg4">
+          <DataField>Seg4</DataField>
+        </Field>
+        <Field Name="SegType">
+          <DataField>SegType</DataField>
+        </Field>
+        <Field Name="IntervalStartDate">
+          <DataField>IntervalStartDate</DataField>
+        </Field>
+        <Field Name="EndDate">
+          <DataField>EndDate</DataField>
+        </Field>
+        <Field Name="Override">
+          <DataField>Override</DataField>
+        </Field>
+        <Field Name="PortfolioPeriodTWR">
+          <DataField>PortfolioPeriodTWR</DataField>
+        </Field>
+        <Field Name="PortfolioPeriodTWRStr">
+          <DataField>PortfolioPeriodTWRStr</DataField>
+        </Field>
+        <Field Name="P1">
+          <DataField>P1</DataField>
+        </Field>
+        <Field Name="Bench1PeriodTWR">
+          <DataField>Bench1PeriodTWR</DataField>
+        </Field>
+        <Field Name="Bench1PeriodTWRStr">
+          <DataField>Bench1PeriodTWRStr</DataField>
+        </Field>
+        <Field Name="Bench2PeriodTWR">
+          <DataField>Bench2PeriodTWR</DataField>
+        </Field>
+        <Field Name="Bench2PeriodTWRStr">
+          <DataField>Bench2PeriodTWRStr</DataField>
+        </Field>
+        <Field Name="Bench3PeriodTWR">
+          <DataField>Bench3PeriodTWR</DataField>
+        </Field>
+        <Field Name="Bench3PeriodTWRStr">
+          <DataField>Bench3PeriodTWRStr</DataField>
+        </Field>
+        <Field Name="PortfolioCumulativeTWR">
+          <DataField>PortfolioCumulativeTWR</DataField>
+        </Field>
+        <Field Name="PortfolioCumulativeTWRStr">
+          <DataField>PortfolioCumulativeTWRStr</DataField>
+        </Field>
+        <Field Name="Bench1CumulativeTWR">
+          <DataField>Bench1CumulativeTWR</DataField>
+        </Field>
+        <Field Name="Bench1CumulativeTWRStr">
+          <DataField>Bench1CumulativeTWRStr</DataField>
+        </Field>
+        <Field Name="Bench2CumulativeTWR">
+          <DataField>Bench2CumulativeTWR</DataField>
+        </Field>
+        <Field Name="Bench2CumulativeTWRStr">
+          <DataField>Bench2CumulativeTWRStr</DataField>
+        </Field>
+        <Field Name="Bench3CumulativeTWR">
+          <DataField>Bench3CumulativeTWR</DataField>
+        </Field>
+        <Field Name="Bench3CumulativeTWRStr">
+          <DataField>Bench3CumulativeTWRStr</DataField>
+        </Field>
+        <Field Name="genKnowledgeDate">
+          <DataField>genKnowledgeDate</DataField>
+        </Field>
+        <Field Name="genActualKnowledgeDate">
+          <DataField>genActualKnowledgeDate</DataField>
+        </Field>
+        <Field Name="genDataSetID">
+          <DataField>genDataSetID</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
     <DataSet Name="FlatData">
       <Query>
         <DataSourceName>GenevaSource</DataSourceName>
@@ -1274,7 +2040,7 @@
               <BreakLocation>Start</BreakLocation>
             </PageBreak>
             <KeepTogether>true</KeepTogether>
-            <Top>4.29444in</Top>
+            <Top>4.41944in</Top>
             <Left>0.00002in</Left>
             <Height>0.75in</Height>
             <Width>10.4in</Width>
@@ -2870,7 +3636,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>FlatData</DataSetName>
-            <Top>3.6375in</Top>
+            <Top>3.7875in</Top>
             <Left>0.75in</Left>
             <Height>0.58125in</Height>
             <Width>8.44642in</Width>
@@ -2927,6 +3693,7 @@
                 </Parameters>
                 <MergeTransactions>true</MergeTransactions>
                 <KeepTogether>true</KeepTogether>
+                <Left>0.00005in</Left>
                 <Height>0.39792in</Height>
                 <Width>10.39995in</Width>
                 <Style>
@@ -2939,7 +3706,7 @@
             <KeepTogether>true</KeepTogether>
             <Left>0.00002in</Left>
             <Height>0.39792in</Height>
-            <Width>10.39995in</Width>
+            <Width>10.4in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -3245,7 +4012,7 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>Cumulative</DataSetName>
-            <Top>0.82167in</Top>
+            <Top>0.97167in</Top>
             <Height>2.6875in</Height>
             <Width>9.97289in</Width>
             <ZIndex>3</ZIndex>
@@ -3488,10 +4255,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>Cumulative</DataSetName>
-            <Top>0.53in</Top>
+            <Top>0.48in</Top>
             <Left>0.35292in</Left>
             <Height>0.0625in</Height>
-            <Width>0.30208in</Width>
+            <Width>0.30207in</Width>
             <ZIndex>4</ZIndex>
             <Visibility>
               <Hidden>true</Hidden>
@@ -3502,8 +4269,505 @@
               </Border>
             </Style>
           </Tablix>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1.73958in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.1875in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox36">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Last(Fields!PortfolioPeriodTWR.Value)</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("KPIValueStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("KPIValueFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("KPIValueSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("KPIValueWeight")</FontWeight>
+                                    <Format>0.00;(0.00)</Format>
+                                    <TextDecoration>=Code.StyleSheetValue("KPIValueDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("KPIValueColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox36</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.03125in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox35">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox35</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.03125in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox37">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox37</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox38">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Total Return</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox38</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Seg4">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Seg4.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!Seg4.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixMembers>
+                    <TablixMember>
+                      <KeepWithGroup>After</KeepWithGroup>
+                    </TablixMember>
+                    <TablixMember>
+                      <Group Name="Details1" />
+                      <Visibility>
+                        <Hidden>true</Hidden>
+                      </Visibility>
+                    </TablixMember>
+                    <TablixMember>
+                      <Visibility>
+                        <Hidden>true</Hidden>
+                      </Visibility>
+                      <KeepWithGroup>Before</KeepWithGroup>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>TWR</DataSetName>
+            <Filters>
+              <Filter>
+                <FilterExpression>=Fields!SegType.Value</FilterExpression>
+                <Operator>Equal</Operator>
+                <FilterValues>
+                  <FilterValue>DATA</FilterValue>
+                </FilterValues>
+              </Filter>
+            </Filters>
+            <Top>0.43833in</Top>
+            <Left>0.9675in</Left>
+            <Height>0.5in</Height>
+            <Width>1.73958in</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Tablix Name="Tablix3">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.25in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Val">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Val.Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("KPIValueStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("KPIValueFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("KPIValueSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("KPIValueWeight")</FontWeight>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <TextDecoration>=Code.StyleSheetValue("KPIValueDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("KPIValueColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Val</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox39">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Total Market Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox39</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Details2" />
+                </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>PerfData</DataSetName>
+            <Filters>
+              <Filter>
+                <FilterExpression>=Fields!RowName.Value</FilterExpression>
+                <Operator>Equal</Operator>
+                <FilterValues>
+                  <FilterValue>Ending Market Value</FilterValue>
+                </FilterValues>
+              </Filter>
+            </Filters>
+            <Top>0.43833in</Top>
+            <Left>4.07767in</Left>
+            <Height>0.5in</Height>
+            <Width>2.25in</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Tablix Name="Tablix4">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Val1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Val.Value</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("KPIValueStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("KPIValueFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("KPIValueSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("KPIValueWeight")</FontWeight>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <TextDecoration>=Code.StyleSheetValue("KPIValueDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("KPIValueColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Val1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox40">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Total Gains after Fees</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox40</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Details3" />
+                </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>PerfData</DataSetName>
+            <Filters>
+              <Filter>
+                <FilterExpression>=Fields!RowName.Value</FilterExpression>
+                <Operator>Equal</Operator>
+                <FilterValues>
+                  <FilterValue>Total Gain after Fees</FilterValue>
+                </FilterValues>
+              </Filter>
+            </Filters>
+            <Top>0.43833in</Top>
+            <Left>7.44642in</Left>
+            <Height>0.5in</Height>
+            <Width>2in</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
         </ReportItems>
-        <Height>5.04444in</Height>
+        <Height>5.16944in</Height>
         <Style />
       </Body>
       <Width>10.40002in</Width>
@@ -4796,6 +6060,117 @@
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
       <Prompt>Performance Key</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MonthsInPeriod">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>1</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Months In Period</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ReportFromPeriodEnd">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Report From Period End</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TWRBasis">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>100</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>TWRBasis</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>0</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>100</Value>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="PerfAnnReturns">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>True</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Perf Ann Returns</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PerformanceMethod">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Performance Method</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PerformanceWithholding">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Performance Withholding</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisableInvestmentFilters">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable Investment Filters</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="DisableStrategyFilters">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable Strategy Filters</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="DisableLocAcctFilters">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable Loc Acct Filters</Prompt>
+      <Hidden>true</Hidden>
     </ReportParameter>
   </ReportParameters>
   <Code>Public Shared Dim iLoop As Integer = 1

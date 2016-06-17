@@ -107,8 +107,16 @@
       <FullPath>TWR Performance History.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>CycleTimeReport - Copy.rdl</Name>
-      <FullPath>CycleTimeReport - Copy.rdl</FullPath>
+      <Name>Fixed Income Distribution.rdl</Name>
+      <FullPath>Fixed Income Distribution.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NEXTGEN Fixed Income Portfolio Composition.rdl</Name>
+      <FullPath>NEXTGEN Fixed Income Portfolio Composition.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fixed Income Portfolio Composition.rdl</Name>
+      <FullPath>Fixed Income Portfolio Composition.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
