@@ -1216,7 +1216,7 @@ perAssets=Decimal</CommandText>
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.25in</Width>
+                  <Width>0.2in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.17187in</Width>
@@ -1354,12 +1354,164 @@ perAssets=Decimal</CommandText>
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.03125in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox1">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("DetailColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>12pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox3">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("DetailColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox4">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("DetailColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox4</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox5">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("DetailColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox5</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.2in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox27">
-                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
@@ -1397,7 +1549,6 @@ perAssets=Decimal</CommandText>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Group2">
-                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
@@ -1434,7 +1585,6 @@ perAssets=Decimal</CommandText>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="MVBook1">
-                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
@@ -1474,7 +1624,6 @@ perAssets=Decimal</CommandText>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="perAssets">
-                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
@@ -1498,6 +1647,159 @@ perAssets=Decimal</CommandText>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>perAssets</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.03125in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox6">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("DetailColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox6</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>12pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox7">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("DetailColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox8">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("DetailColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox9">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("DetailColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1685,9 +1987,15 @@ perAssets=Decimal</CommandText>
                       </SortExpressions>
                       <TablixMembers>
                         <TablixMember>
+                          <KeepWithGroup>After</KeepWithGroup>
+                        </TablixMember>
+                        <TablixMember>
                           <Visibility>
                             <Hidden>=Parameters!Group2.Value="None"</Hidden>
                           </Visibility>
+                          <KeepWithGroup>After</KeepWithGroup>
+                        </TablixMember>
+                        <TablixMember>
                           <KeepWithGroup>After</KeepWithGroup>
                         </TablixMember>
                         <TablixMember>
@@ -1705,8 +2013,8 @@ perAssets=Decimal</CommandText>
             <DataSetName>Data</DataSetName>
             <Top>3.53in</Top>
             <Left>0.375in</Left>
-            <Height>0.5625in</Height>
-            <Width>4.24479in</Width>
+            <Height>0.575in</Height>
+            <Width>4.19479in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -2157,8 +2465,20 @@ perAssets=Decimal</CommandText>
                 <ColumnSeparatorColor>Black</ColumnSeparatorColor>
               </ChartLegend>
             </ChartLegends>
-            <Palette>BrightPastel</Palette>
-            <ChartBorderSkin>
+            <Palette>Custom</Palette>
+			  <ChartCustomPaletteColors>
+				  <ChartCustomPaletteColor>#ff9900</ChartCustomPaletteColor>
+				  <ChartCustomPaletteColor>#99e052</ChartCustomPaletteColor>
+				  <ChartCustomPaletteColor>#52bde0</ChartCustomPaletteColor>
+				  <ChartCustomPaletteColor>#34b234</ChartCustomPaletteColor>
+				  <ChartCustomPaletteColor>#3473b2</ChartCustomPaletteColor>
+				  <ChartCustomPaletteColor>#7334b2</ChartCustomPaletteColor>
+				  <ChartCustomPaletteColor>#69b9aa</ChartCustomPaletteColor>
+				  <ChartCustomPaletteColor>#ecc043</ChartCustomPaletteColor>
+				  <ChartCustomPaletteColor>#6dc497</ChartCustomPaletteColor>
+				  <ChartCustomPaletteColor>#9d689b</ChartCustomPaletteColor>
+			  </ChartCustomPaletteColors>
+			  <ChartBorderSkin>
               <Style>
                 <BackgroundColor>Gray</BackgroundColor>
                 <BackgroundGradientType>None</BackgroundGradientType>

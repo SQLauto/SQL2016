@@ -51,6 +51,14 @@
       <FullPath>Cumulative Daily TWR.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Fixed Income Distribution.rdl</Name>
+      <FullPath>Fixed Income Distribution.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fixed Income Portfolio Composition.rdl</Name>
+      <FullPath>Fixed Income Portfolio Composition.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>IRR Analysis by Investment.rdl</Name>
       <FullPath>IRR Analysis by Investment.rdl</FullPath>
     </ProjectItem>
@@ -65,6 +73,10 @@
     <ProjectItem>
       <Name>NEXTGEN Consolidated Allocation Summary.rdl</Name>
       <FullPath>NEXTGEN Consolidated Allocation Summary.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NEXTGEN Fixed Income Overview.rdl</Name>
+      <FullPath>NEXTGEN Fixed Income Overview.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>NEXTGEN Performance Summary.rdl</Name>
@@ -107,16 +119,8 @@
       <FullPath>TWR Performance History.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Fixed Income Distribution.rdl</Name>
-      <FullPath>Fixed Income Distribution.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>NEXTGEN Fixed Income Portfolio Composition.rdl</Name>
       <FullPath>NEXTGEN Fixed Income Portfolio Composition.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Fixed Income Portfolio Composition.rdl</Name>
-      <FullPath>Fixed Income Portfolio Composition.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
@@ -130,6 +134,7 @@
         <TargetFolder>GenevaReports</TargetFolder>
         <TargetDataSourceFolder>GenevaReports</TargetDataSourceFolder>
         <TargetDatasetFolder>GenevaReports</TargetDatasetFolder>
+        <OverwriteDatasets>true</OverwriteDatasets>
         <TargetReportPartFolder>GenevaReports</TargetReportPartFolder>
       </Options>
     </Configuration>
