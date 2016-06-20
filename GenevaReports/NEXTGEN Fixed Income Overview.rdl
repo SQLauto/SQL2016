@@ -1161,6 +1161,9 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                     <ChartCategoryAxes>
                       <ChartAxis Name="Primary">
                         <Style>
+                          <Border>
+                            <Color>Gainsboro</Color>
+                          </Border>
                           <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
                           <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
                           <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
@@ -1189,6 +1192,13 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                             </Border>
                           </Style>
                         </ChartMinorGridLines>
+                        <ChartMajorTickMarks>
+                          <Style>
+                            <Border>
+                              <Color>Gainsboro</Color>
+                            </Border>
+                          </Style>
+                        </ChartMajorTickMarks>
                         <ChartMinorTickMarks>
                           <Length>0.5</Length>
                         </ChartMinorTickMarks>
@@ -1240,6 +1250,9 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                     <ChartValueAxes>
                       <ChartAxis Name="Primary">
                         <Style>
+                          <Border>
+                            <Color>Gainsboro</Color>
+                          </Border>
                           <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
                           <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
                           <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
@@ -1268,6 +1281,13 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                             </Border>
                           </Style>
                         </ChartMinorGridLines>
+                        <ChartMajorTickMarks>
+                          <Style>
+                            <Border>
+                              <Color>Gainsboro</Color>
+                            </Border>
+                          </Style>
+                        </ChartMajorTickMarks>
                         <ChartMinorTickMarks>
                           <Length>0.5</Length>
                         </ChartMinorTickMarks>
@@ -1420,6 +1440,9 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                     <ChartCategoryAxes>
                       <ChartAxis Name="Primary">
                         <Style>
+                          <Border>
+                            <Color>Gainsboro</Color>
+                          </Border>
                           <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
                           <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
                           <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
@@ -1448,6 +1471,13 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                             </Border>
                           </Style>
                         </ChartMinorGridLines>
+                        <ChartMajorTickMarks>
+                          <Style>
+                            <Border>
+                              <Color>Gainsboro</Color>
+                            </Border>
+                          </Style>
+                        </ChartMajorTickMarks>
                         <ChartMinorTickMarks>
                           <Length>0.5</Length>
                         </ChartMinorTickMarks>
@@ -1500,6 +1530,9 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                     <ChartValueAxes>
                       <ChartAxis Name="Primary">
                         <Style>
+                          <Border>
+                            <Color>Gainsboro</Color>
+                          </Border>
                           <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
                           <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
                           <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
@@ -1528,6 +1561,13 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                             </Border>
                           </Style>
                         </ChartMinorGridLines>
+                        <ChartMajorTickMarks>
+                          <Style>
+                            <Border>
+                              <Color>Gainsboro</Color>
+                            </Border>
+                          </Style>
+                        </ChartMajorTickMarks>
                         <ChartMinorTickMarks>
                           <Length>0.5</Length>
                         </ChartMinorTickMarks>
@@ -2243,7 +2283,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
-                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                         <TablixCell>
@@ -2282,7 +2321,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
-                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                         <TablixCell>
@@ -2321,7 +2359,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
-                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                       </TablixCells>
