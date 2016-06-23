@@ -976,7 +976,7 @@ perAssets=Decimal</CommandText>
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Sum(Fields!MVBook.Value)</Y>
+                        <Y>=Fields!MVBook.Value</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
@@ -1280,7 +1280,7 @@ perAssets=Decimal</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!MVBook.Value</Value>
+                                  <Value>=Sum(Fields!MVBook.Value)</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
@@ -1320,7 +1320,7 @@ perAssets=Decimal</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!perAssets.Value</Value>
+                                  <Value>=Sum(Fields!perAssets.Value)</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
@@ -1590,7 +1590,7 @@ perAssets=Decimal</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!MVBook.Value</Value>
+                                  <Value>=Sum(Fields!MVBook.Value)</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
@@ -1629,7 +1629,7 @@ perAssets=Decimal</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!perAssets.Value</Value>
+                                  <Value>=Sum(Fields!perAssets.Value)</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
@@ -2466,19 +2466,19 @@ perAssets=Decimal</CommandText>
               </ChartLegend>
             </ChartLegends>
             <Palette>Custom</Palette>
-			  <ChartCustomPaletteColors>
-				  <ChartCustomPaletteColor>#ff9900</ChartCustomPaletteColor>
-				  <ChartCustomPaletteColor>#99e052</ChartCustomPaletteColor>
-				  <ChartCustomPaletteColor>#52bde0</ChartCustomPaletteColor>
-				  <ChartCustomPaletteColor>#34b234</ChartCustomPaletteColor>
-				  <ChartCustomPaletteColor>#3473b2</ChartCustomPaletteColor>
-				  <ChartCustomPaletteColor>#7334b2</ChartCustomPaletteColor>
-				  <ChartCustomPaletteColor>#69b9aa</ChartCustomPaletteColor>
-				  <ChartCustomPaletteColor>#ecc043</ChartCustomPaletteColor>
-				  <ChartCustomPaletteColor>#6dc497</ChartCustomPaletteColor>
-				  <ChartCustomPaletteColor>#9d689b</ChartCustomPaletteColor>
-			  </ChartCustomPaletteColors>
-			  <ChartBorderSkin>
+            <ChartCustomPaletteColors>
+              <ChartCustomPaletteColor>#ff9900</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#99e052</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#52bde0</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#34b234</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#3473b2</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#7334b2</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#69b9aa</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#ecc043</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#6dc497</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#9d689b</ChartCustomPaletteColor>
+            </ChartCustomPaletteColors>
+            <ChartBorderSkin>
               <Style>
                 <BackgroundColor>Gray</BackgroundColor>
                 <BackgroundGradientType>None</BackgroundGradientType>
@@ -2538,8 +2538,8 @@ perAssets=Decimal</CommandText>
         <InteractiveWidth>10.4in</InteractiveWidth>
         <LeftMargin>0.25in</LeftMargin>
         <RightMargin>0.25in</RightMargin>
-        <TopMargin>0.25in</TopMargin>
-        <BottomMargin>0.25in</BottomMargin>
+        <TopMargin>0.15in</TopMargin>
+        <BottomMargin>0.15in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
