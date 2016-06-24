@@ -60,6 +60,10 @@
         <SharedDataSetReference>StyleSheet</SharedDataSetReference>
       </SharedDataSet>
       <Fields>
+        <Field Name="StyleSheet">
+          <DataField>StyleSheet</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="StyleSheetXML">
           <DataField>StyleSheetXML</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -80,7 +84,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=UCase(Parameters!ReportTitle.Value)</Value>
+                        <Value>=Parameters!ReportTitle.Value</Value>
                         <Style>
                           <FontStyle>=Code.StyleSheetValue("ReportTitleStyle")</FontStyle>
                           <FontFamily>=Code.StyleSheetValue("ReportTitleFamily")</FontFamily>
@@ -366,12 +370,18 @@ FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
     <ReportParameter Name="StyleSheetXML">
       <DataType>String</DataType>
       <DefaultValue>
+        <Values>
+          <Value>Variant 1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>StyleSheetXML</Prompt>
+      <ValidValues>
         <DataSetReference>
           <DataSetName>StyleSheet</DataSetName>
           <ValueField>StyleSheetXML</ValueField>
+          <LabelField>StyleSheet</LabelField>
         </DataSetReference>
-      </DefaultValue>
-      <Hidden>true</Hidden>
+      </ValidValues>
     </ReportParameter>
     <ReportParameter Name="ReportTitle">
       <DataType>String</DataType>

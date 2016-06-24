@@ -794,6 +794,10 @@ perAssets=Decimal</CommandText>
         <SharedDataSetReference>StyleSheet</SharedDataSetReference>
       </SharedDataSet>
       <Fields>
+        <Field Name="StyleSheet">
+          <DataField>StyleSheet</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="StyleSheetXML">
           <DataField>StyleSheetXML</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -911,6 +915,9 @@ perAssets=Decimal</CommandText>
                   </Parameter>
                   <Parameter Name="LogoName">
                     <Value>=Parameters!LogoName.Value</Value>
+                  </Parameter>
+                  <Parameter Name="StyleSheetXML">
+                    <Value>=Parameters!StyleSheetXML.Value</Value>
                   </Parameter>
                 </Parameters>
                 <MergeTransactions>true</MergeTransactions>
@@ -2141,7 +2148,9 @@ perAssets=Decimal</CommandText>
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
-                      <Style />
+                      <Style>
+                        <Color>=Code.GetColor("PRgain",Code.StyleSheetValue("ColorPalette"))</Color>
+                      </Style>
                       <ChartMarker>
                         <Style />
                       </ChartMarker>
@@ -2176,7 +2185,9 @@ perAssets=Decimal</CommandText>
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
-                      <Style />
+                      <Style>
+                        <Color>=Code.GetColor("PUgain",Code.StyleSheetValue("ColorPalette"))</Color>
+                      </Style>
                       <ChartMarker>
                         <Style />
                       </ChartMarker>
@@ -2211,7 +2222,9 @@ perAssets=Decimal</CommandText>
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
-                      <Style />
+                      <Style>
+                        <Color>=Code.GetColor("FxRgain",Code.StyleSheetValue("ColorPalette"))</Color>
+                      </Style>
                       <ChartMarker>
                         <Style />
                       </ChartMarker>
@@ -2246,7 +2259,9 @@ perAssets=Decimal</CommandText>
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
-                      <Style />
+                      <Style>
+                        <Color>=Code.GetColor("FxUgain",Code.StyleSheetValue("ColorPalette"))</Color>
+                      </Style>
                       <ChartMarker>
                         <Style />
                       </ChartMarker>
@@ -2548,12 +2563,18 @@ perAssets=Decimal</CommandText>
     <ReportParameter Name="StyleSheetXML">
       <DataType>String</DataType>
       <DefaultValue>
+        <Values>
+          <Value>Variant 1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Style Sheet</Prompt>
+      <ValidValues>
         <DataSetReference>
           <DataSetName>StyleSheet</DataSetName>
           <ValueField>StyleSheetXML</ValueField>
+          <LabelField>StyleSheet</LabelField>
         </DataSetReference>
-      </DefaultValue>
-      <Hidden>true</Hidden>
+      </ValidValues>
     </ReportParameter>
     <ReportParameter Name="ConnectionString">
       <DataType>String</DataType>
@@ -2570,6 +2591,7 @@ perAssets=Decimal</CommandText>
     <ReportParameter Name="Portfolio">
       <DataType>String</DataType>
       <Prompt>Portfolio</Prompt>
+      <MultiValue>true</MultiValue>
     </ReportParameter>
     <ReportParameter Name="PeriodEndDate">
       <DataType>DateTime</DataType>

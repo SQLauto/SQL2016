@@ -79,6 +79,10 @@
       <FullPath>NEXTGEN Fixed Income Overview.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>NEXTGEN Fixed Income Portfolio Composition.rdl</Name>
+      <FullPath>NEXTGEN Fixed Income Portfolio Composition.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>NEXTGEN Performance Summary.rdl</Name>
       <FullPath>NEXTGEN Performance Summary.rdl</FullPath>
     </ProjectItem>
@@ -119,8 +123,8 @@
       <FullPath>TWR Performance History.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>NEXTGEN Fixed Income Portfolio Composition.rdl</Name>
-      <FullPath>NEXTGEN Fixed Income Portfolio Composition.rdl</FullPath>
+      <Name>NEXTGEN Assets Under Management.rdl</Name>
+      <FullPath>NEXTGEN Assets Under Management.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

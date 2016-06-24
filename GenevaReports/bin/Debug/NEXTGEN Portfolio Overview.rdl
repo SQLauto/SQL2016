@@ -929,6 +929,10 @@ NewLineKey=String</CommandText>
         <SharedDataSetReference>StyleSheet</SharedDataSetReference>
       </SharedDataSet>
       <Fields>
+        <Field Name="StyleSheet">
+          <DataField>StyleSheet</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="StyleSheetXML">
           <DataField>StyleSheetXML</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -1176,6 +1180,9 @@ NewLineKey=String</CommandText>
                   </Parameter>
                   <Parameter Name="LogoName">
                     <Value>=Parameters!LogoName.Value</Value>
+                  </Parameter>
+                  <Parameter Name="StyleSheetXML">
+                    <Value>=Parameters!StyleSheetXML.Value</Value>
                   </Parameter>
                 </Parameters>
                 <MergeTransactions>true</MergeTransactions>
@@ -4372,13 +4379,14 @@ NewLineKey=String</CommandText>
     </ReportParameter>
     <ReportParameter Name="StyleSheetXML">
       <DataType>String</DataType>
-      <DefaultValue>
+      <Prompt>Style Sheet</Prompt>
+      <ValidValues>
         <DataSetReference>
           <DataSetName>StyleSheet</DataSetName>
           <ValueField>StyleSheetXML</ValueField>
+          <LabelField>StyleSheet</LabelField>
         </DataSetReference>
-      </DefaultValue>
-      <Hidden>true</Hidden>
+      </ValidValues>
     </ReportParameter>
     <ReportParameter Name="MarkFiscalStartDays">
       <DataType>Boolean</DataType>

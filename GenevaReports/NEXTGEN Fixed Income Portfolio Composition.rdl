@@ -547,6 +547,10 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
         <SharedDataSetReference>StyleSheet</SharedDataSetReference>
       </SharedDataSet>
       <Fields>
+        <Field Name="StyleSheet">
+          <DataField>StyleSheet</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="StyleSheetXML">
           <DataField>StyleSheetXML</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -959,6 +963,9 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </Parameter>
                   <Parameter Name="LogoName">
                     <Value>=Parameters!LogoName.Value</Value>
+                  </Parameter>
+                  <Parameter Name="StyleSheetXML">
+                    <Value>=Parameters!StyleSheetXML.Value</Value>
                   </Parameter>
                 </Parameters>
                 <MergeTransactions>true</MergeTransactions>
@@ -2322,6 +2329,9 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   <Parameter Name="LogoName">
                     <Value>=Parameters!LogoName.Value</Value>
                   </Parameter>
+                  <Parameter Name="StyleSheetXML">
+                    <Value>=Parameters!StyleSheetXML.Value</Value>
+                  </Parameter>
                 </Parameters>
                 <MergeTransactions>true</MergeTransactions>
                 <KeepTogether>true</KeepTogether>
@@ -2801,7 +2811,11 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=IIF(Fields!SectorDesc.Value = "", "Undefined",Fields!SectorDesc.Value)</Value>
+                                      <Value>=Code.TextCap(
+	IIF(Fields!SectorDesc.Value = "",
+		"Undefined",
+		Fields!SectorDesc.Value),
+	220,"...")</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
                                         <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
@@ -4082,7 +4096,11 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Iif(IsNothing(Fields!RetingDesc.Value),"Undefined",Fields!RetingDesc.Value)</Value>
+                                      <Value>=Code.TextCap(
+	Iif(IsNothing(Fields!RetingDesc.Value),
+		"Undefined",
+		Fields!RetingDesc.Value),
+	220,"...")</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
                                         <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
@@ -4106,7 +4124,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 <PaddingRight>1pt</PaddingRight>
                               </Style>
                             </Textbox>
-                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                         <TablixCell>
@@ -4667,6 +4684,9 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </Parameter>
                   <Parameter Name="LogoName">
                     <Value>=Parameters!LogoName.Value</Value>
+                  </Parameter>
+                  <Parameter Name="StyleSheetXML">
+                    <Value>=Parameters!StyleSheetXML.Value</Value>
                   </Parameter>
                 </Parameters>
                 <MergeTransactions>true</MergeTransactions>
@@ -5905,13 +5925,14 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
     </ReportParameter>
     <ReportParameter Name="StyleSheetXML">
       <DataType>String</DataType>
-      <DefaultValue>
+      <Prompt>Style Sheet</Prompt>
+      <ValidValues>
         <DataSetReference>
           <DataSetName>StyleSheet</DataSetName>
           <ValueField>StyleSheetXML</ValueField>
+          <LabelField>StyleSheet</LabelField>
         </DataSetReference>
-      </DefaultValue>
-      <Hidden>true</Hidden>
+      </ValidValues>
     </ReportParameter>
   </ReportParameters>
   <Code>
@@ -6001,12 +6022,47 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
 		return false
 		end function
 
+Public Function TextWidth(str As String) AS Double
+    'Returns the width, in pixels, of a string, assuming Tahoma size 8.
+    Dim size As System.Drawing.SizeF
+    Dim font As New system.Drawing.Font("Tahoma", 8)
+    size = System.Windows.Forms.TextRenderer.MeasureText(str, font)
+    TextWidth = size.Width
+End Function
 
+Public Function TextCap(str As String, maxWidth As Integer, Optional suffix As String = "") As String
+    'Truncates a string to fit within maxWidth pixels, optionally adding a suffix string if
+    'any characters were truncated.
+
+    Dim w As Integer, l As Integer
+    l = Len(str)
+    w = TextWidth(str)
+    For i As Integer = 1 To 10
+        If (w &gt; maxWidth) Then
+            l = (l * maxWidth / w)
+            If (l &lt; 0) Then
+                l = 0
+                Exit For
+            End If
+            w = TextWidth(Left(str, l) + suffix)
+        Else
+            Exit For
+        End If
+    Next i
+
+    If l &lt; Len(str) Then
+        TextCap = Left(str, l) + suffix
+    Else
+        TextCap = Left(str, l)
+    End If
+End Function
 	
 </Code>
   <Language>=Parameters!RegionalSettings.Value</Language>
   <CodeModules>
     <CodeModule>System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</CodeModule>
+    <CodeModule>System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</CodeModule>
+    <CodeModule>System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</CodeModule>
   </CodeModules>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
