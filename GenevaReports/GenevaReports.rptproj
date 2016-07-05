@@ -17,51 +17,11 @@
   </DataSources>
   <DataSets>
     <ProjectItem>
-      <Name>bisInvestmentPosition.rsd</Name>
-      <FullPath>bisInvestmentPosition.rsd</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>StyleSheet.rsd</Name>
       <FullPath>StyleSheet.rsd</FullPath>
     </ProjectItem>
   </DataSets>
   <Reports>
-    <ProjectItem>
-      <Name>Allocation Overview.rdl</Name>
-      <FullPath>Allocation Overview.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>AllocationOverview_sample.rdl</Name>
-      <FullPath>AllocationOverview_sample.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Appraisal Summary.rdl</Name>
-      <FullPath>Appraisal Summary.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Asset Allocation Detail.rdl</Name>
-      <FullPath>Asset Allocation Detail.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Cumulative Daily TWR - 2-Level.rdl</Name>
-      <FullPath>Cumulative Daily TWR - 2-Level.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Cumulative Daily TWR.rdl</Name>
-      <FullPath>Cumulative Daily TWR.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Fixed Income Distribution.rdl</Name>
-      <FullPath>Fixed Income Distribution.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Fixed Income Portfolio Composition.rdl</Name>
-      <FullPath>Fixed Income Portfolio Composition.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>IRR Analysis by Investment.rdl</Name>
-      <FullPath>IRR Analysis by Investment.rdl</FullPath>
-    </ProjectItem>
     <ProjectItem>
       <Name>NEXTGEN Allocation Summary.rdl</Name>
       <FullPath>NEXTGEN Allocation Summary.rdl</FullPath>
@@ -69,6 +29,10 @@
     <ProjectItem>
       <Name>NEXTGEN Asset Allocation Detail.rdl</Name>
       <FullPath>NEXTGEN Asset Allocation Detail.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NEXTGEN Assets Under Management.rdl</Name>
+      <FullPath>NEXTGEN Assets Under Management.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>NEXTGEN Consolidated Allocation Summary.rdl</Name>
@@ -99,32 +63,12 @@
       <FullPath>NEXTGEN Profit Loss Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Periodic TWR - 2-Level.rdl</Name>
-      <FullPath>Periodic TWR - 2-Level.rdl</FullPath>
+      <Name>Fixed Income Distribution.rdl</Name>
+      <FullPath>Fixed Income Distribution.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Portfolios.rdl</Name>
-      <FullPath>Portfolios.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>SubReport_AddendumErrors.rdl</Name>
-      <FullPath>SubReport_AddendumErrors.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>SubReport_SmallHeaderLandscape.rdl</Name>
-      <FullPath>SubReport_SmallHeaderLandscape.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>SubReport_SmallHeaderLandscape_NextGen.rdl</Name>
-      <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>TWR Performance History.rdl</Name>
-      <FullPath>TWR Performance History.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>NEXTGEN Assets Under Management.rdl</Name>
-      <FullPath>NEXTGEN Assets Under Management.rdl</FullPath>
+      <Name>Fixed Income Portfolio Composition.rdl</Name>
+      <FullPath>Fixed Income Portfolio Composition.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

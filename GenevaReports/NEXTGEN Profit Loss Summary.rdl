@@ -875,7 +875,7 @@ perAssets=Decimal</CommandText>
               <BreakLocation>Start</BreakLocation>
             </PageBreak>
             <KeepTogether>true</KeepTogether>
-            <Top>5.95in</Top>
+            <Top>6.2in</Top>
             <Height>0.75in</Height>
             <Width>10.4in</Width>
             <Visibility>
@@ -896,7 +896,7 @@ perAssets=Decimal</CommandText>
                     <Value>=First(Fields!genDataSetID.Value, "Data")</Value>
                   </Parameter>
                   <Parameter Name="ReportTitle">
-                    <Value>=Globals!ReportName &amp; " by " &amp; Parameters!Group1.Value</Value>
+                    <Value>=Globals!ReportName</Value>
                   </Parameter>
                   <Parameter Name="AccountingRunType">
                     <Value>=Parameters!AccountingRunType.Value</Value>
@@ -995,7 +995,7 @@ perAssets=Decimal</CommandText>
                           <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
                         </Style>
                         <Label>=Fields!perAssets.Value</Label>
-                        <Visible>true</Visible>
+                        <Position>Outside</Position>
                       </ChartDataLabel>
                       <Style>
                         <Color>=Code.GetColor(Fields!Group2.Value,Code.StyleSheetValue("ColorPalette"))</Color>
@@ -1216,8 +1216,8 @@ perAssets=Decimal</CommandText>
               </Style>
             </ChartNoDataMessage>
             <DataSetName>Data</DataSetName>
-            <Top>0.92583in</Top>
-            <Height>2.1875in</Height>
+            <Top>0.80083in</Top>
+            <Height>2.36389in</Height>
             <Width>4.61979in</Width>
             <ZIndex>2</ZIndex>
             <Style>
@@ -1247,7 +1247,7 @@ perAssets=Decimal</CommandText>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.2in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -1260,12 +1260,12 @@ perAssets=Decimal</CommandText>
                                 <TextRun>
                                   <Value>=Fields!Group1.Value</Value>
                                   <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
+                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1297,15 +1297,15 @@ perAssets=Decimal</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!MVBook.Value</Value>
+                                  <Value>=SUM(Fields!MVBook.Value)</Value>
                                   <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
+                                    <FontStyle>=Code.StyleSheetValue("SectioHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1337,15 +1337,15 @@ perAssets=Decimal</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!perAssets.Value</Value>
+                                  <Value>=SUM(Fields!perAssets.Value)</Value>
                                   <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionSubtotalFamily")</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
+                                    <FontStyle>=Code.StyleSheetValue("SectioHeaderStyle")</FontStyle>
+                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
                                     <Format>0.0;(0.0)</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1607,7 +1607,7 @@ perAssets=Decimal</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!MVBook.Value</Value>
+                                  <Value>=SUM(Fields!MVBook.Value)</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
@@ -1646,7 +1646,7 @@ perAssets=Decimal</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!perAssets.Value</Value>
+                                  <Value>=SUM(Fields!perAssets.Value)</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
@@ -1981,7 +1981,8 @@ perAssets=Decimal</CommandText>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!Group1.Value</Value>
+                      <Value>=Fields!MVBook.Value</Value>
+                      <Direction>Descending</Direction>
                     </SortExpression>
                   </SortExpressions>
                   <TablixMembers>
@@ -2002,7 +2003,8 @@ perAssets=Decimal</CommandText>
                       </Group>
                       <SortExpressions>
                         <SortExpression>
-                          <Value>=Fields!Group2.Value</Value>
+                          <Value>=Fields!MVBook.Value</Value>
+                          <Direction>Descending</Direction>
                         </SortExpression>
                       </SortExpressions>
                       <TablixMembers>
@@ -2029,8 +2031,8 @@ perAssets=Decimal</CommandText>
             </TablixRowHierarchy>
             <DataSetName>Data</DataSetName>
             <Top>3.1925in</Top>
-            <Left>0.375in</Left>
-            <Height>0.575in</Height>
+            <Left>0.0375in</Left>
+            <Height>0.525in</Height>
             <Width>4.19479in</Width>
             <ZIndex>3</ZIndex>
             <Style>
@@ -2046,7 +2048,7 @@ perAssets=Decimal</CommandText>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Allocations</Value>
+                    <Value>="Allocations by " &amp; Parameters!Group1.Value &amp; " then by " &amp; Parameters!Group2.Value</Value>
                     <Style>
                       <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
                       <FontFamily>=Code.StyleSheetValue("SectionTitleFamily")</FontFamily>
@@ -2062,9 +2064,9 @@ perAssets=Decimal</CommandText>
             </Paragraphs>
             <rd:DefaultName>Textbox29</rd:DefaultName>
             <Top>0.46944in</Top>
-            <Left>0.29042in</Left>
+            <Left>0.04042in</Left>
             <Height>0.25in</Height>
-            <Width>4.32937in</Width>
+            <Width>4.86642in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -2083,7 +2085,7 @@ perAssets=Decimal</CommandText>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Profit and Loss</Value>
+                    <Value>="Profit and Loss by " &amp; Parameters!Group1.Value</Value>
                     <Style>
                       <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
                       <FontFamily>=Code.StyleSheetValue("SectionTitleFamily")</FontFamily>
@@ -2099,7 +2101,7 @@ perAssets=Decimal</CommandText>
             </Paragraphs>
             <rd:DefaultName>Textbox29</rd:DefaultName>
             <Top>0.46944in</Top>
-            <Left>5.17073in</Left>
+            <Left>4.92073in</Left>
             <Height>0.25in</Height>
             <Width>4.32937in</Width>
             <ZIndex>5</ZIndex>
@@ -2158,7 +2160,9 @@ perAssets=Decimal</CommandText>
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
-                      <Style />
+                      <Style>
+                        <Color>=Code.GetColor("PRGain",Code.StyleSheetValue("ColorPalette"))</Color>
+                      </Style>
                       <ChartMarker>
                         <Style />
                       </ChartMarker>
@@ -2193,7 +2197,9 @@ perAssets=Decimal</CommandText>
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
-                      <Style />
+                      <Style>
+                        <Color>=Code.GetColor("PUGain",Code.StyleSheetValue("ColorPalette"))</Color>
+                      </Style>
                       <ChartMarker>
                         <Style />
                       </ChartMarker>
@@ -2228,7 +2234,9 @@ perAssets=Decimal</CommandText>
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
-                      <Style />
+                      <Style>
+                        <Color>=Code.GetColor("FxUGain",Code.StyleSheetValue("ColorPalette"))</Color>
+                      </Style>
                       <ChartMarker>
                         <Style />
                       </ChartMarker>
@@ -2263,7 +2271,9 @@ perAssets=Decimal</CommandText>
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
-                      <Style />
+                      <Style>
+                        <Color>=Code.GetColor("FxRGain",Code.StyleSheetValue("ColorPalette"))</Color>
+                      </Style>
                       <ChartMarker>
                         <Style />
                       </ChartMarker>
@@ -2328,6 +2338,7 @@ perAssets=Decimal</CommandText>
                       </Style>
                     </ChartMinorGridLines>
                     <ChartMajorTickMarks>
+                      <Enabled>False</Enabled>
                       <Style>
                         <Border>
                           <Color>Gainsboro</Color>
@@ -2393,13 +2404,18 @@ perAssets=Decimal</CommandText>
                       <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
                       <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
                       <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
-                      <Format>#,0;(#,0)</Format>
+                      <Format>=SWITCH(MAX(Fields!TotGL.Value)&gt;1000000000,"0,,,;(0,,,)",
+	MAX(Fields!TotGL.Value)&gt;1000000,"0,,;(0,,)", 
+		MAX(Fields!TotGL.Value)&gt;=0,"0,;(0,)")</Format>
                       <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
                     </Style>
                     <ChartAxisTitle>
-                      <Caption />
+                      <Caption>=SWITCH(MAX(Fields!TotGL.Value)&gt;1000000000,"In Billions",MAX(Fields!TotGL.Value)&gt;1000000,"In Millions",MAX(Fields!TotGL.Value)&gt;=0,"In Thousands")</Caption>
                       <Style>
-                        <FontSize>8pt</FontSize>
+                        <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
+                        <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
+                        <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
+                        <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
                       </Style>
                     </ChartAxisTitle>
                     <ChartMajorGridLines>
@@ -2418,6 +2434,7 @@ perAssets=Decimal</CommandText>
                       </Style>
                     </ChartMinorGridLines>
                     <ChartMajorTickMarks>
+                      <Enabled>False</Enabled>
                       <Style>
                         <Border>
                           <Color>Gainsboro</Color>
@@ -2530,9 +2547,9 @@ perAssets=Decimal</CommandText>
               </Style>
             </ChartNoDataMessage>
             <DataSetName>IRR_Analysis</DataSetName>
-            <Top>3.50917in</Top>
+            <Top>3.63417in</Top>
             <Left>4.92583in</Left>
-            <Height>2.39916in</Height>
+            <Height>2.52416in</Height>
             <Width>5.47417in</Width>
             <ZIndex>6</ZIndex>
             <Style>
@@ -2589,7 +2606,9 @@ perAssets=Decimal</CommandText>
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
-                      <Style />
+                      <Style>
+                        <Color>=Code.GetColor("PRGain",Code.StyleSheetValue("ColorPalette"))</Color>
+                      </Style>
                       <ChartMarker>
                         <Style />
                       </ChartMarker>
@@ -2624,7 +2643,9 @@ perAssets=Decimal</CommandText>
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
-                      <Style />
+                      <Style>
+                        <Color>=Code.GetColor("PUGain",Code.StyleSheetValue("ColorPalette"))</Color>
+                      </Style>
                       <ChartMarker>
                         <Style />
                       </ChartMarker>
@@ -2659,7 +2680,9 @@ perAssets=Decimal</CommandText>
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
-                      <Style />
+                      <Style>
+                        <Color>=Code.GetColor("FxRGain",Code.StyleSheetValue("ColorPalette"))</Color>
+                      </Style>
                       <ChartMarker>
                         <Style />
                       </ChartMarker>
@@ -2694,7 +2717,9 @@ perAssets=Decimal</CommandText>
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
-                      <Style />
+                      <Style>
+                        <Color>=Code.GetColor("FxUGain",Code.StyleSheetValue("ColorPalette"))</Color>
+                      </Style>
                       <ChartMarker>
                         <Style />
                       </ChartMarker>
@@ -2759,6 +2784,7 @@ perAssets=Decimal</CommandText>
                       </Style>
                     </ChartMinorGridLines>
                     <ChartMajorTickMarks>
+                      <Enabled>False</Enabled>
                       <Style>
                         <Border>
                           <Color>Gainsboro</Color>
@@ -2824,13 +2850,18 @@ perAssets=Decimal</CommandText>
                       <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
                       <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
                       <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
-                      <Format>#,0;(#,0)</Format>
+                      <Format>=SWITCH(MAX(Fields!TotGL.Value)&gt;1000000000,"0,,,;(0,,,)",
+	MAX(Fields!TotGL.Value)&gt;1000000,"0,,;(0,,)", 
+		MAX(Fields!TotGL.Value)&gt;=0,"0,;(0,)")</Format>
                       <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
                     </Style>
                     <ChartAxisTitle>
-                      <Caption />
+                      <Caption>=SWITCH(MAX(Fields!TotGL.Value)&gt;1000000000,"In Billions",MAX(Fields!TotGL.Value)&gt;1000000,"In Millions",MAX(Fields!TotGL.Value)&gt;=0,"In Thousands")</Caption>
                       <Style>
-                        <FontSize>8pt</FontSize>
+                        <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
+                        <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
+                        <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
+                        <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
                       </Style>
                     </ChartAxisTitle>
                     <ChartMajorGridLines>
@@ -2849,6 +2880,7 @@ perAssets=Decimal</CommandText>
                       </Style>
                     </ChartMinorGridLines>
                     <ChartMajorTickMarks>
+                      <Enabled>False</Enabled>
                       <Style>
                         <Border>
                           <Color>Gainsboro</Color>
@@ -2961,9 +2993,9 @@ perAssets=Decimal</CommandText>
               </Style>
             </ChartNoDataMessage>
             <DataSetName>IRR_Analysis</DataSetName>
-            <Top>0.92583in</Top>
+            <Top>0.80083in</Top>
             <Left>4.92583in</Left>
-            <Height>2.51667in</Height>
+            <Height>2.36389in</Height>
             <Width>5.47417in</Width>
             <ZIndex>7</ZIndex>
             <Style>
@@ -2975,8 +3007,45 @@ perAssets=Decimal</CommandText>
               <BackgroundGradientType>None</BackgroundGradientType>
             </Style>
           </Chart>
+          <Textbox Name="Textbox14">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Profit and Loss by " &amp; Parameters!Group2.Value</Value>
+                    <Style>
+                      <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
+                      <FontFamily>=Code.StyleSheetValue("SectionTitleFamily")</FontFamily>
+                      <FontSize>=Code.StyleSheetValue("SectionTitleSize")</FontSize>
+                      <FontWeight>=Code.StyleSheetValue("SectionTitleWeight")</FontWeight>
+                      <TextDecoration>=Code.StyleSheetValue("SectionTitleDecoration")</TextDecoration>
+                      <Color>=Code.StyleSheetValue("SectionTitleColor")</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox14</rd:DefaultName>
+            <Top>3.3175in</Top>
+            <Left>4.92583in</Left>
+            <Height>0.25in</Height>
+            <Width>4.32427in</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>6.7in</Height>
+        <Height>6.95in</Height>
         <Style />
       </Body>
       <Width>10.4in</Width>
@@ -3005,8 +3074,7 @@ perAssets=Decimal</CommandText>
         <InteractiveWidth>10.4in</InteractiveWidth>
         <LeftMargin>0.25in</LeftMargin>
         <RightMargin>0.25in</RightMargin>
-        <TopMargin>0.25in</TopMargin>
-        <BottomMargin>0.25in</BottomMargin>
+        <BottomMargin>0.15in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
@@ -4208,29 +4276,6 @@ perAssets=Decimal</CommandText>
           <ValueField>Name</ValueField>
           <LabelField>Name</LabelField>
         </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="Color">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>Blue</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Group Background Color</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>Blue</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Gray</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>NoColor</Value>
-          </ParameterValue>
-        </ParameterValues>
       </ValidValues>
     </ReportParameter>
     <ReportParameter Name="LumpSwapGL">

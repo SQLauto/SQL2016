@@ -3645,9 +3645,6 @@
             <Height>0.58125in</Height>
             <Width>8.44642in</Width>
             <ZIndex>1</ZIndex>
-            <Visibility>
-              <Hidden>=Code.InitColorGroups(Parameters!Color.Value)</Hidden>
-            </Visibility>
             <Style />
           </Tablix>
           <Rectangle Name="Rectangle2">
@@ -3805,7 +3802,7 @@
                   <ChartAxis Name="Primary">
                     <Style>
                       <Border>
-                        <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
+                        <Color>Gainsboro</Color>
                       </Border>
                       <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
                       <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
@@ -3836,6 +3833,9 @@
                         </Border>
                       </Style>
                     </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Enabled>False</Enabled>
+                    </ChartMajorTickMarks>
                     <ChartMinorTickMarks>
                       <Length>0.5</Length>
                     </ChartMinorTickMarks>
@@ -3889,7 +3889,7 @@
                   <ChartAxis Name="Primary">
                     <Style>
                       <Border>
-                        <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
+                        <Color>Gainsboro</Color>
                         <Style>Solid</Style>
                       </Border>
                       <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
@@ -3921,6 +3921,9 @@
                         </Border>
                       </Style>
                     </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Enabled>False</Enabled>
+                    </ChartMajorTickMarks>
                     <ChartMinorTickMarks>
                       <Length>0.5</Length>
                     </ChartMinorTickMarks>
@@ -4809,6 +4812,7 @@
         <PageWidth>11in</PageWidth>
         <LeftMargin>0.25in</LeftMargin>
         <RightMargin>0.25in</RightMargin>
+        <BottomMargin>0.15in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
@@ -5697,29 +5701,6 @@
       <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>
       <Prompt>Fiscal Calendar</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="Color">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>Blue</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Group Background Color</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>Blue</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Gray</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>NoColor</Value>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
     </ReportParameter>
     <ReportParameter Name="MarkFiscalStartDays">
       <DataType>Boolean</DataType>

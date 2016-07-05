@@ -2111,6 +2111,7 @@
                           <ZIndex>158</ZIndex>
                           <DataElementName>Currency</DataElementName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>5pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2147,6 +2148,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1096</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2180,6 +2182,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1097</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2224,6 +2227,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2268,6 +2272,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2312,6 +2317,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2356,6 +2362,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2394,6 +2401,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox14</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>5pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2426,6 +2434,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox622</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2458,6 +2467,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox623</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2494,6 +2504,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1334</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2534,6 +2545,7 @@
                           <ZIndex>72</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2572,6 +2584,7 @@
                           <ZIndex>71</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2603,6 +2616,7 @@
                           <ZIndex>70</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2641,6 +2655,7 @@
                           <ZIndex>69</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2684,6 +2699,7 @@
                           <ZIndex>157</ZIndex>
                           <DataElementName>FxRate</DataElementName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>9pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2720,6 +2736,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1851</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2753,6 +2770,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1852</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2786,6 +2804,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1853</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2819,6 +2838,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1854</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2852,6 +2872,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1855</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2885,6 +2906,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1856</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2925,6 +2947,7 @@
                           <ZIndex>156</ZIndex>
                           <DataElementName>Sort</DataElementName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>13pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2959,6 +2982,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox42</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -2990,6 +3014,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox43</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3034,6 +3059,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3078,6 +3104,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3122,6 +3149,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3166,6 +3194,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3201,6 +3230,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox352</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>13pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3231,6 +3261,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox353</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3261,6 +3292,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox354</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3291,6 +3323,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox355</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3321,6 +3354,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox356</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3365,6 +3399,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3409,6 +3444,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3440,6 +3476,7 @@
                           <ZIndex>36</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3471,6 +3508,7 @@
                           <ZIndex>35</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3509,6 +3547,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox13</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>13pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3539,6 +3578,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox341</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3569,6 +3609,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox343</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3605,6 +3646,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox1334</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3645,6 +3687,7 @@
                           <ZIndex>47</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3683,6 +3726,7 @@
                           <ZIndex>46</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3714,6 +3758,7 @@
                           <ZIndex>45</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3752,6 +3797,7 @@
                           <ZIndex>44</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3792,6 +3838,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>17pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3828,6 +3875,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox9</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3861,6 +3909,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox22</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3905,6 +3954,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3949,6 +3999,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -3993,6 +4044,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -4037,6 +4089,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>1pt</PaddingLeft>
                             <PaddingRight>1pt</PaddingRight>
@@ -5811,9 +5864,6 @@
             <DataSetName>Data</DataSetName>
             <Height>3.22084in</Height>
             <Width>10.25001in</Width>
-            <Visibility>
-              <Hidden>=Code.InitColorGroups(Parameters!Color.Value)</Hidden>
-            </Visibility>
             <Style />
           </Tablix>
           <Rectangle Name="Rectangle2">
@@ -5923,10 +5973,9 @@
         <PageWidth>11in</PageWidth>
         <InteractiveHeight>455in</InteractiveHeight>
         <InteractiveWidth>10.4in</InteractiveWidth>
-        <LeftMargin>0.3in</LeftMargin>
-        <RightMargin>0.3in</RightMargin>
-        <TopMargin>0.5in</TopMargin>
-        <BottomMargin>0.5in</BottomMargin>
+        <LeftMargin>0.25in</LeftMargin>
+        <RightMargin>0.25in</RightMargin>
+        <BottomMargin>0.15in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
@@ -6967,29 +7016,6 @@
           </ParameterValue>
           <ParameterValue>
             <Value>UserDef5</Value>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="Color">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>Blue</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Group Background Color</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>Blue</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Gray</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>NoColor</Value>
           </ParameterValue>
         </ParameterValues>
       </ValidValues>

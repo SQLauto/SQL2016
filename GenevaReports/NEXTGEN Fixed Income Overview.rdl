@@ -9,7 +9,6 @@
       <ConnectionProperties>
         <DataProvider>GENEVA</DataProvider>
         <ConnectString>=Parameters!ConnectionString.Value</ConnectString>
-        <Prompt>Specify a user name and password for data source GenevaSource</Prompt>
       </ConnectionProperties>
       <rd:SecurityType>DataBase</rd:SecurityType>
       <rd:DataSourceID>08d4100e-362f-48be-a1fd-a764404c1ffa</rd:DataSourceID>
@@ -155,9 +154,6 @@
           <QueryParameter Name="MarkToMarketCashTransfer">
             <Value>=Parameters!MarkToMarketCashTransfer.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="RegionalSettings">
-            <Value>=Parameters!RegionalSettings.Value</Value>
-          </QueryParameter>
           <QueryParameter Name="FundLegalEntityDescription">
             <Value>=Parameters!FundLegalEntityDescription.Value</Value>
           </QueryParameter>
@@ -182,9 +178,6 @@
           <QueryParameter Name="Portfolio">
             <Value>=Parameters!Portfolio.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="ScreenType">
-            <Value>=Parameters!ScreenType.Value</Value>
-          </QueryParameter>
           <QueryParameter Name="PeriodStartDate">
             <Value>=Parameters!PeriodStartDate.Value</Value>
           </QueryParameter>
@@ -196,9 +189,6 @@
           </QueryParameter>
           <QueryParameter Name="PriorKnowledgeDate">
             <Value>=Parameters!PriorKnowledgeDate.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="StyleName">
-            <Value>=Parameters!StyleName.Value</Value>
           </QueryParameter>
           <QueryParameter Name="AddendumPages">
             <Value>=Parameters!AddendumPages.Value</Value>
@@ -248,20 +238,11 @@
           <QueryParameter Name="EnableRealTimePricing">
             <Value>=Parameters!EnableRealTimePricing.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="ExpandAddendum">
-            <Value>=Parameters!ExpandAddendum.Value</Value>
-          </QueryParameter>
           <QueryParameter Name="DisableBooks">
             <Value>=Parameters!DisableBooks.Value</Value>
           </QueryParameter>
           <QueryParameter Name="AccountingRule">
             <Value>=Parameters!AccountingRule.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="DisableHyperlinks">
-            <Value>=Parameters!DisableHyperlinks.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="AccountingSelectionRuleUsed">
-            <Value>=Parameters!AccountingSelectionRuleUsed.Value</Value>
           </QueryParameter>
           <QueryParameter Name="LumpCrossGL">
             <Value>=Parameters!LumpCrossGL.Value</Value>
@@ -290,44 +271,8 @@
           <QueryParameter Name="ParallelConsolidationChildren">
             <Value>=Parameters!ParallelConsolidationChildren.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="AllowBoxedPosition">
-            <Value>=Parameters!AllowBoxedPosition.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="GetKTimesFromDefaultCalendar">
-            <Value>=Parameters!GetKTimesFromDefaultCalendar.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="AlternateID">
-            <Value>=Parameters!AlternateID.Value</Value>
-          </QueryParameter>
           <QueryParameter Name="FiscalCalendar">
             <Value>=Parameters!FiscalCalendar.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="RelativeDate">
-            <Value>=Parameters!RelativeDate.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="LotLevelOverrides">
-            <Value>=Parameters!LotLevelOverrides.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="MOERoundingMethod">
-            <Value>=Parameters!MOERoundingMethod.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="HybridHistoricalView">
-            <Value>=Parameters!HybridHistoricalView.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="BypassFLEConsolidatingFlag">
-            <Value>=Parameters!BypassFLEConsolidatingFlag.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="EnableTimeSeries">
-            <Value>=Parameters!EnableTimeSeries.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="IgnoreSpecificLotClosing">
-            <Value>=Parameters!IgnoreSpecificLotClosing.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="PaydownGLasGainLoss">
-            <Value>=Parameters!PaydownGLasGainLoss.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="LumpExpensesInSummaryLockdown">
-            <Value>=Parameters!LumpExpensesInSummaryLockdown.Value</Value>
           </QueryParameter>
         </QueryParameters>
         <CommandText>SELECT
@@ -340,6 +285,7 @@
           {Investment.SubIndustry.Industry.IndustryGroup.Sector.Description} SectorDesc,
           {Investment.SubIndustry.Industry.IndustryGroup.Sector.Code} SectorCode,
           {Investment.Rating.Description} RetingDesc,
+          {Investment.Rating.Rating} Rating,
           {Investment.Code } Invest,
           {Investment.Description } InvestDesc,
           ({ Investment.MaturityDate } - :PeriodEndDate)/(86400*365) MaturityYears,
@@ -431,32 +377,9 @@ GIVEN  Portfolio = :Portfolio,
 WHERE	(Qty != 0 AND ({ Investment.IsCreditFacility() } == :IncludedCreditFacility OR {Investment.IsBond()} == :IncludedBond OR {Investment.ClassName} == :IncludedAssetBack))
           OR ((AI !=0 OR MarketValue != 0) AND ({ BasketInvestment.IsCreditFacility() } == :IncludedCreditFacility OR {BasketInvestment.IsBond()} == :IncludedBond OR {BasketInvestment.ClassName} == :IncludedAssetBack))
 COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <Fields>
-        <Field Name="GroupDesc">
-          <DataField>GroupDesc</DataField>
-        </Field>
-        <Field Name="GroupCode">
-          <DataField>GroupCode</DataField>
-        </Field>
-        <Field Name="SectorDesc">
-          <DataField>SectorDesc</DataField>
-        </Field>
-        <Field Name="SectorCode">
-          <DataField>SectorCode</DataField>
-        </Field>
-        <Field Name="RetingDesc">
-          <DataField>RetingDesc</DataField>
-        </Field>
-        <Field Name="Invest">
-          <DataField>Invest</DataField>
-        </Field>
-        <Field Name="InvestDesc">
-          <DataField>InvestDesc</DataField>
-        </Field>
-        <Field Name="MaturityYears">
-          <DataField>MaturityYears</DataField>
-        </Field>
         <Field Name="MaturityYearsGroup">
           <Value>
             =IIF(Fields!MaturityYears.Value&gt;=0 and Fields!MaturityYears.Value&lt;3, "A",
@@ -465,80 +388,137 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
             IIF(Fields!MaturityYears.Value &gt;= 10 and Fields!MaturityYears.Value &lt; 20,"D","E"))))
           </Value>
         </Field>
-        <Field Name="Qty">
-          <DataField>Qty</DataField>
-        </Field>
-        <Field Name="AI">
-          <DataField>AI</DataField>
-        </Field>
-        <Field Name="Cost">
-          <DataField>Cost</DataField>
-        </Field>
-        <Field Name="YTCBook">
-          <DataField>YTCBook</DataField>
-        </Field>
-        <Field Name="MarketValue">
-          <DataField>MarketValue</DataField>
-        </Field>
-        <Field Name="MDuration">
-          <DataField>MDuration</DataField>
-        </Field>
-        <Field Name="YTMBook">
-          <DataField>YTMBook</DataField>
-        </Field>
-        <Field Name="PrctAsset">
-          <DataField>PrctAsset</DataField>
-        </Field>
-        <Field Name="Conv">
-          <DataField>Conv</DataField>
-        </Field>
-        <Field Name="PortDesc">
-          <DataField>PortDesc</DataField>
-        </Field>
-        <Field Name="Fdesc">
-          <DataField>Fdesc</DataField>
-        </Field>
-        <Field Name="TotalMktVal">
-          <DataField>TotalMktVal</DataField>
-        </Field>
-        <Field Name="AP">
-          <DataField>AP</DataField>
-        </Field>
-        <Field Name="AC">
-          <DataField>AC</DataField>
-        </Field>
-        <Field Name="SeparateFLE">
-          <DataField>SeparateFLE</DataField>
-        </Field>
-        <Field Name="FE">
-          <DataField>FE</DataField>
-        </Field>
-        <Field Name="port">
-          <DataField>port</DataField>
-        </Field>
-        <Field Name="manFirm">
-          <DataField>manFirm</DataField>
+        <Field Name="GroupDesc">
+          <DataField>GroupDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="WeightedYTM">
           <Value>=Fields!MarketValue.Value * Fields!YTMBook.Value</Value>
         </Field>
+        <Field Name="GroupCode">
+          <DataField>GroupCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="WeightedMDuration">
           <Value>=Fields!MarketValue.Value * Fields!MDuration.Value</Value>
+        </Field>
+        <Field Name="SectorDesc">
+          <DataField>SectorDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SectorCode">
+          <DataField>SectorCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="WeightedYTCBook">
           <Value>=Fields!Cost.Value * Fields!YTCBook.Value</Value>
         </Field>
+        <Field Name="RetingDesc">
+          <DataField>RetingDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="WeightedConv">
           <Value>=Fields!MarketValue.Value * Fields!Conv.Value</Value>
         </Field>
+        <Field Name="Rating">
+          <DataField>Rating</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Invest">
+          <DataField>Invest</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="InvestDesc">
+          <DataField>InvestDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MaturityYears">
+          <DataField>MaturityYears</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="Qty">
+          <DataField>Qty</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="AI">
+          <DataField>AI</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Cost">
+          <DataField>Cost</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="YTCBook">
+          <DataField>YTCBook</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="MarketValue">
+          <DataField>MarketValue</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="MDuration">
+          <DataField>MDuration</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="YTMBook">
+          <DataField>YTMBook</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="PrctAsset">
+          <DataField>PrctAsset</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Conv">
+          <DataField>Conv</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="PortDesc">
+          <DataField>PortDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Fdesc">
+          <DataField>Fdesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TotalMktVal">
+          <DataField>TotalMktVal</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="AP">
+          <DataField>AP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AC">
+          <DataField>AC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SeparateFLE">
+          <DataField>SeparateFLE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FE">
+          <DataField>FE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="port">
+          <DataField>port</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="manFirm">
+          <DataField>manFirm</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="genKnowledgeDate">
           <DataField>genKnowledgeDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="genActualKnowledgeDate">
-          <DataField>genActualKnowledgeDate</DataField>
+        <Field Name="genKnowledgeDateExact">
+          <DataField>genKnowledgeDateExact</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="genDataSetID">
           <DataField>genDataSetID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
@@ -704,7 +684,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                       </Group>
                       <SortExpressions>
                         <SortExpression>
-                          <Value>=Fields!SectorDesc.Value</Value>
+                          <Value>=Sum(Fields!MarketValue.Value)</Value>
+                          <Direction>Descending</Direction>
                         </SortExpression>
                       </SortExpressions>
                       <Label>=Iif(IsNothing(Fields!SectorDesc.Value),"Undefined",Fields!SectorDesc.Value)</Label>
@@ -714,7 +695,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                 <ChartSeriesHierarchy>
                   <ChartMembers>
                     <ChartMember>
-                      <Label>Total Mkt Val</Label>
+                      <Label>Market Value</Label>
                     </ChartMember>
                   </ChartMembers>
                 </ChartSeriesHierarchy>
@@ -724,7 +705,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                       <ChartDataPoints>
                         <ChartDataPoint>
                           <ChartDataPointValues>
-                            <Y>=Sum(Fields!TotalMktVal.Value)</Y>
+                            <Y>=Sum(Fields!MarketValue.Value)</Y>
                           </ChartDataPointValues>
                           <ChartDataLabel>
                             <Style>
@@ -746,8 +727,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                           <DataElementOutput>Output</DataElementOutput>
                         </ChartDataPoint>
                       </ChartDataPoints>
-                      <Type>Shape</Type>
-                      <Subtype>Doughnut</Subtype>
                       <Style />
                       <ChartEmptyPoints>
                         <Style />
@@ -772,6 +751,9 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                     <ChartCategoryAxes>
                       <ChartAxis Name="Primary">
                         <Style>
+                          <Border>
+                            <Color>Gainsboro</Color>
+                          </Border>
                           <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
                           <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
                           <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
@@ -779,11 +761,12 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                           <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
                         </Style>
                         <ChartAxisTitle>
-                          <Caption>Axis Title</Caption>
+                          <Caption />
                           <Style>
                             <FontSize>8pt</FontSize>
                           </Style>
                         </ChartAxisTitle>
+                        <Interval>1</Interval>
                         <ChartMajorGridLines>
                           <Enabled>False</Enabled>
                           <Style>
@@ -800,6 +783,9 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                             </Border>
                           </Style>
                         </ChartMinorGridLines>
+                        <ChartMajorTickMarks>
+                          <Enabled>False</Enabled>
+                        </ChartMajorTickMarks>
                         <ChartMinorTickMarks>
                           <Length>0.5</Length>
                         </ChartMinorTickMarks>
@@ -851,16 +837,25 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                     <ChartValueAxes>
                       <ChartAxis Name="Primary">
                         <Style>
+                          <Border>
+                            <Color>Gainsboro</Color>
+                          </Border>
                           <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
                           <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
                           <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
                           <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
+                          <Format>=SWITCH(MAX(Sum(Fields!MarketValue.Value))&gt;1000000000,"0,,,;(0,,,)",
+	MAX(Sum(Fields!MarketValue.Value))&gt;1000000,"0,,;(0,,)", 
+		MAX(Sum(Fields!MarketValue.Value))&gt;=0,"0,;(0,)")</Format>
                           <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
                         </Style>
                         <ChartAxisTitle>
-                          <Caption>Axis Title</Caption>
+                          <Caption>=SWITCH(MAX(SUM(Fields!MarketValue.Value))&gt;1000000000,"In Billions",MAX(SUM(Fields!MarketValue.Value))&gt;1000000,"In Millions",MAX(SUM(Fields!MarketValue.Value))&gt;=0,"In Thousands")</Caption>
                           <Style>
-                            <FontSize>8pt</FontSize>
+                            <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
+                            <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
+                            <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
+                            <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
                           </Style>
                         </ChartAxisTitle>
                         <ChartMajorGridLines>
@@ -878,6 +873,9 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                             </Border>
                           </Style>
                         </ChartMinorGridLines>
+                        <ChartMajorTickMarks>
+                          <Enabled>False</Enabled>
+                        </ChartMajorTickMarks>
                         <ChartMinorTickMarks>
                           <Length>0.5</Length>
                         </ChartMinorTickMarks>
@@ -930,30 +928,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                     </Style>
                   </ChartArea>
                 </ChartAreas>
-                <ChartLegends>
-                  <ChartLegend Name="Legend1">
-                    <Style>
-                      <BackgroundGradientType>None</BackgroundGradientType>
-                      <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
-                      <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
-                      <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
-                      <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
-                      <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
-                    </Style>
-                    <Position>BottomCenter</Position>
-                    <ChartLegendTitle>
-                      <Caption />
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                        <TextAlign>Center</TextAlign>
-                      </Style>
-                    </ChartLegendTitle>
-                    <AutoFitTextDisabled>true</AutoFitTextDisabled>
-                    <HeaderSeparatorColor>Black</HeaderSeparatorColor>
-                    <ColumnSeparatorColor>Black</ColumnSeparatorColor>
-                  </ChartLegend>
-                </ChartLegends>
                 <Palette>BrightPastel</Palette>
                 <ChartBorderSkin>
                   <Style>
@@ -972,9 +946,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                 </ChartNoDataMessage>
                 <DataSetName>FlatData</DataSetName>
                 <Top>0.74236in</Top>
-                <Left>0.00764in</Left>
-                <Height>3.20083in</Height>
-                <Width>3.29167in</Width>
+                <Height>2.64875in</Height>
+                <Width>10.5in</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
@@ -1007,9 +980,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                 </Paragraphs>
                 <rd:DefaultName>Textbox10</rd:DefaultName>
                 <Top>0.42778in</Top>
-                <Left>0.00764in</Left>
                 <Height>0.25in</Height>
-                <Width>3.29167in</Width>
+                <Width>10.5in</Width>
                 <ZIndex>2</ZIndex>
                 <Style>
                   <Border>
@@ -1043,7 +1015,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox10</rd:DefaultName>
-                <Top>0.43056in</Top>
+                <Top>3.50556in</Top>
                 <Left>3.50382in</Left>
                 <Height>0.25in</Height>
                 <Width>3.35417in</Width>
@@ -1080,7 +1052,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox10</rd:DefaultName>
-                <Top>0.43056in</Top>
+                <Top>3.50556in</Top>
                 <Left>7.00382in</Left>
                 <Height>0.25in</Height>
                 <Width>3.25382in</Width>
@@ -1183,6 +1155,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                             <FontSize>8pt</FontSize>
                           </Style>
                         </ChartAxisTitle>
+                        <Interval>1</Interval>
                         <ChartMajorGridLines>
                           <Enabled>False</Enabled>
                           <Style>
@@ -1200,289 +1173,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                           </Style>
                         </ChartMinorGridLines>
                         <ChartMajorTickMarks>
-                          <Style>
-                            <Border>
-                              <Color>Gainsboro</Color>
-                            </Border>
-                          </Style>
-                        </ChartMajorTickMarks>
-                        <ChartMinorTickMarks>
-                          <Length>0.5</Length>
-                        </ChartMinorTickMarks>
-                        <CrossAt>NaN</CrossAt>
-                        <Minimum>NaN</Minimum>
-                        <Maximum>NaN</Maximum>
-                        <ChartAxisScaleBreak>
-                          <Style />
-                        </ChartAxisScaleBreak>
-                      </ChartAxis>
-                      <ChartAxis Name="Secondary">
-                        <Style>
-                          <FontSize>8pt</FontSize>
-                        </Style>
-                        <ChartAxisTitle>
-                          <Caption>Axis Title</Caption>
-                          <Style>
-                            <FontSize>8pt</FontSize>
-                          </Style>
-                        </ChartAxisTitle>
-                        <ChartMajorGridLines>
                           <Enabled>False</Enabled>
-                          <Style>
-                            <Border>
-                              <Color>Gainsboro</Color>
-                            </Border>
-                          </Style>
-                        </ChartMajorGridLines>
-                        <ChartMinorGridLines>
-                          <Style>
-                            <Border>
-                              <Color>Gainsboro</Color>
-                              <Style>Dotted</Style>
-                            </Border>
-                          </Style>
-                        </ChartMinorGridLines>
-                        <ChartMinorTickMarks>
-                          <Length>0.5</Length>
-                        </ChartMinorTickMarks>
-                        <CrossAt>NaN</CrossAt>
-                        <Location>Opposite</Location>
-                        <Minimum>NaN</Minimum>
-                        <Maximum>NaN</Maximum>
-                        <ChartAxisScaleBreak>
-                          <Style />
-                        </ChartAxisScaleBreak>
-                      </ChartAxis>
-                    </ChartCategoryAxes>
-                    <ChartValueAxes>
-                      <ChartAxis Name="Primary">
-                        <Style>
-                          <Border>
-                            <Color>Gainsboro</Color>
-                          </Border>
-                          <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
-                          <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
-                          <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
-                          <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
-                          <Format>0.0%</Format>
-                          <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
-                        </Style>
-                        <ChartAxisTitle>
-                          <Caption />
-                          <Style>
-                            <FontSize>8pt</FontSize>
-                          </Style>
-                        </ChartAxisTitle>
-                        <ChartMajorGridLines>
-                          <Style>
-                            <Border>
-                              <Color>Gainsboro</Color>
-                            </Border>
-                          </Style>
-                        </ChartMajorGridLines>
-                        <ChartMinorGridLines>
-                          <Style>
-                            <Border>
-                              <Color>Gainsboro</Color>
-                              <Style>Dotted</Style>
-                            </Border>
-                          </Style>
-                        </ChartMinorGridLines>
-                        <ChartMajorTickMarks>
-                          <Style>
-                            <Border>
-                              <Color>Gainsboro</Color>
-                            </Border>
-                          </Style>
-                        </ChartMajorTickMarks>
-                        <ChartMinorTickMarks>
-                          <Length>0.5</Length>
-                        </ChartMinorTickMarks>
-                        <CrossAt>NaN</CrossAt>
-                        <Minimum>NaN</Minimum>
-                        <Maximum>NaN</Maximum>
-                        <ChartAxisScaleBreak>
-                          <Style />
-                        </ChartAxisScaleBreak>
-                      </ChartAxis>
-                      <ChartAxis Name="Secondary">
-                        <Style>
-                          <FontSize>8pt</FontSize>
-                        </Style>
-                        <ChartAxisTitle>
-                          <Caption>Axis Title</Caption>
-                          <Style>
-                            <FontSize>8pt</FontSize>
-                          </Style>
-                        </ChartAxisTitle>
-                        <ChartMajorGridLines>
-                          <Style>
-                            <Border>
-                              <Color>Gainsboro</Color>
-                            </Border>
-                          </Style>
-                        </ChartMajorGridLines>
-                        <ChartMinorGridLines>
-                          <Style>
-                            <Border>
-                              <Color>Gainsboro</Color>
-                              <Style>Dotted</Style>
-                            </Border>
-                          </Style>
-                        </ChartMinorGridLines>
-                        <ChartMinorTickMarks>
-                          <Length>0.5</Length>
-                        </ChartMinorTickMarks>
-                        <CrossAt>NaN</CrossAt>
-                        <Location>Opposite</Location>
-                        <Minimum>NaN</Minimum>
-                        <Maximum>NaN</Maximum>
-                        <ChartAxisScaleBreak>
-                          <Style />
-                        </ChartAxisScaleBreak>
-                      </ChartAxis>
-                    </ChartValueAxes>
-                    <Style>
-                      <BackgroundGradientType>None</BackgroundGradientType>
-                    </Style>
-                  </ChartArea>
-                </ChartAreas>
-                <Palette>BrightPastel</Palette>
-                <ChartBorderSkin>
-                  <Style>
-                    <BackgroundColor>Gray</BackgroundColor>
-                    <BackgroundGradientType>None</BackgroundGradientType>
-                    <Color>White</Color>
-                  </Style>
-                </ChartBorderSkin>
-                <ChartNoDataMessage Name="NoDataMessage">
-                  <Caption>No Data Available</Caption>
-                  <Style>
-                    <BackgroundGradientType>None</BackgroundGradientType>
-                    <TextAlign>General</TextAlign>
-                    <VerticalAlign>Top</VerticalAlign>
-                  </Style>
-                </ChartNoDataMessage>
-                <DataSetName>FlatData</DataSetName>
-                <Top>0.75in</Top>
-                <Left>3.50382in</Left>
-                <Height>3.19319in</Height>
-                <Width>3.35417in</Width>
-                <ZIndex>5</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <BackgroundColor>White</BackgroundColor>
-                  <BackgroundGradientType>None</BackgroundGradientType>
-                </Style>
-              </Chart>
-              <Chart Name="Chart3">
-                <ChartCategoryHierarchy>
-                  <ChartMembers>
-                    <ChartMember>
-                      <Group Name="Chart3_CategoryGroup">
-                        <GroupExpressions>
-                          <GroupExpression>=Fields!RetingDesc.Value</GroupExpression>
-                        </GroupExpressions>
-                      </Group>
-                      <SortExpressions>
-                        <SortExpression>
-                          <Value>=Fields!RetingDesc.Value</Value>
-                        </SortExpression>
-                      </SortExpressions>
-                      <Label>=Code.TextCap(
-	Iif(IsNothing(Fields!RetingDesc.Value),
-		"Undefined",
-		Fields!RetingDesc.Value),
-	100,"...")</Label>
-                    </ChartMember>
-                  </ChartMembers>
-                </ChartCategoryHierarchy>
-                <ChartSeriesHierarchy>
-                  <ChartMembers>
-                    <ChartMember>
-                      <Label>Prct Asset</Label>
-                    </ChartMember>
-                  </ChartMembers>
-                </ChartSeriesHierarchy>
-                <ChartData>
-                  <ChartSeriesCollection>
-                    <ChartSeries Name="PrctAsset">
-                      <ChartDataPoints>
-                        <ChartDataPoint>
-                          <ChartDataPointValues>
-                            <Y>=Sum(Fields!PrctAsset.Value)</Y>
-                          </ChartDataPointValues>
-                          <ChartDataLabel>
-                            <Style />
-                          </ChartDataLabel>
-                          <Style>
-                            <Color>=Code.GetColor("Quality",Code.StyleSheetValue("ColorPalette"))</Color>
-                          </Style>
-                          <ChartMarker>
-                            <Style />
-                          </ChartMarker>
-                          <DataElementOutput>Output</DataElementOutput>
-                        </ChartDataPoint>
-                      </ChartDataPoints>
-                      <Type>Bar</Type>
-                      <Style />
-                      <ChartEmptyPoints>
-                        <Style />
-                        <ChartMarker>
-                          <Style />
-                        </ChartMarker>
-                        <ChartDataLabel>
-                          <Style />
-                        </ChartDataLabel>
-                      </ChartEmptyPoints>
-                      <ValueAxisName>Primary</ValueAxisName>
-                      <CategoryAxisName>Primary</CategoryAxisName>
-                      <ChartSmartLabel>
-                        <CalloutLineColor>Black</CalloutLineColor>
-                        <MinMovingDistance>0pt</MinMovingDistance>
-                      </ChartSmartLabel>
-                    </ChartSeries>
-                  </ChartSeriesCollection>
-                </ChartData>
-                <ChartAreas>
-                  <ChartArea Name="Default">
-                    <ChartCategoryAxes>
-                      <ChartAxis Name="Primary">
-                        <Style>
-                          <Border>
-                            <Color>Gainsboro</Color>
-                          </Border>
-                          <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
-                          <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
-                          <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
-                          <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
-                          <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
-                        </Style>
-                        <ChartAxisTitle>
-                          <Caption />
-                          <Style>
-                            <FontSize>8pt</FontSize>
-                          </Style>
-                        </ChartAxisTitle>
-                        <ChartMajorGridLines>
-                          <Enabled>False</Enabled>
-                          <Style>
-                            <Border>
-                              <Color>Gainsboro</Color>
-                            </Border>
-                          </Style>
-                        </ChartMajorGridLines>
-                        <ChartMinorGridLines>
-                          <Style>
-                            <Border>
-                              <Color>Gainsboro</Color>
-                              <Style>Dotted</Style>
-                            </Border>
-                          </Style>
-                        </ChartMinorGridLines>
-                        <ChartMajorTickMarks>
                           <Style>
                             <Border>
                               <Color>Gainsboro</Color>
@@ -1573,6 +1264,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                           </Style>
                         </ChartMinorGridLines>
                         <ChartMajorTickMarks>
+                          <Enabled>False</Enabled>
                           <Style>
                             <Border>
                               <Color>Gainsboro</Color>
@@ -1585,6 +1277,292 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                         <CrossAt>NaN</CrossAt>
                         <Minimum>NaN</Minimum>
                         <Maximum>NaN</Maximum>
+                        <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
+                        <ChartAxisScaleBreak>
+                          <Style />
+                        </ChartAxisScaleBreak>
+                      </ChartAxis>
+                      <ChartAxis Name="Secondary">
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                        <ChartAxisTitle>
+                          <Caption>Axis Title</Caption>
+                          <Style>
+                            <FontSize>8pt</FontSize>
+                          </Style>
+                        </ChartAxisTitle>
+                        <ChartMajorGridLines>
+                          <Style>
+                            <Border>
+                              <Color>Gainsboro</Color>
+                            </Border>
+                          </Style>
+                        </ChartMajorGridLines>
+                        <ChartMinorGridLines>
+                          <Style>
+                            <Border>
+                              <Color>Gainsboro</Color>
+                              <Style>Dotted</Style>
+                            </Border>
+                          </Style>
+                        </ChartMinorGridLines>
+                        <ChartMinorTickMarks>
+                          <Length>0.5</Length>
+                        </ChartMinorTickMarks>
+                        <CrossAt>NaN</CrossAt>
+                        <Location>Opposite</Location>
+                        <Minimum>NaN</Minimum>
+                        <Maximum>NaN</Maximum>
+                        <ChartAxisScaleBreak>
+                          <Style />
+                        </ChartAxisScaleBreak>
+                      </ChartAxis>
+                    </ChartValueAxes>
+                    <Style>
+                      <BackgroundGradientType>None</BackgroundGradientType>
+                    </Style>
+                  </ChartArea>
+                </ChartAreas>
+                <Palette>BrightPastel</Palette>
+                <ChartBorderSkin>
+                  <Style>
+                    <BackgroundColor>Gray</BackgroundColor>
+                    <BackgroundGradientType>None</BackgroundGradientType>
+                    <Color>White</Color>
+                  </Style>
+                </ChartBorderSkin>
+                <ChartNoDataMessage Name="NoDataMessage">
+                  <Caption>No Data Available</Caption>
+                  <Style>
+                    <BackgroundGradientType>None</BackgroundGradientType>
+                    <TextAlign>General</TextAlign>
+                    <VerticalAlign>Top</VerticalAlign>
+                  </Style>
+                </ChartNoDataMessage>
+                <DataSetName>FlatData</DataSetName>
+                <Top>3.825in</Top>
+                <Left>3.50382in</Left>
+                <Height>2.64111in</Height>
+                <Width>3.35417in</Width>
+                <ZIndex>5</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <BackgroundColor>White</BackgroundColor>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                </Style>
+              </Chart>
+              <Chart Name="Chart3">
+                <ChartCategoryHierarchy>
+                  <ChartMembers>
+                    <ChartMember>
+                      <Group Name="Chart3_CategoryGroup">
+                        <GroupExpressions>
+                          <GroupExpression>=Fields!Rating.Value</GroupExpression>
+                        </GroupExpressions>
+                      </Group>
+                      <SortExpressions>
+                        <SortExpression>
+                          <Value>=Sum(Fields!PrctAsset.Value)</Value>
+                          <Direction>Descending</Direction>
+                        </SortExpression>
+                      </SortExpressions>
+                      <Label>=Iif(IsNothing(Fields!Rating.Value),"Undefined",Fields!Rating.Value)</Label>
+                    </ChartMember>
+                  </ChartMembers>
+                </ChartCategoryHierarchy>
+                <ChartSeriesHierarchy>
+                  <ChartMembers>
+                    <ChartMember>
+                      <Label>Prct Asset</Label>
+                    </ChartMember>
+                  </ChartMembers>
+                </ChartSeriesHierarchy>
+                <ChartData>
+                  <ChartSeriesCollection>
+                    <ChartSeries Name="PrctAsset">
+                      <ChartDataPoints>
+                        <ChartDataPoint>
+                          <ChartDataPointValues>
+                            <Y>=Sum(Fields!PrctAsset.Value)</Y>
+                          </ChartDataPointValues>
+                          <ChartDataLabel>
+                            <Style />
+                          </ChartDataLabel>
+                          <Style>
+                            <Color>=Code.GetColor("Quality",Code.StyleSheetValue("ColorPalette"))</Color>
+                          </Style>
+                          <ChartMarker>
+                            <Style />
+                          </ChartMarker>
+                          <DataElementOutput>Output</DataElementOutput>
+                        </ChartDataPoint>
+                      </ChartDataPoints>
+                      <Type>Bar</Type>
+                      <Style />
+                      <ChartEmptyPoints>
+                        <Style />
+                        <ChartMarker>
+                          <Style />
+                        </ChartMarker>
+                        <ChartDataLabel>
+                          <Style />
+                        </ChartDataLabel>
+                      </ChartEmptyPoints>
+                      <ValueAxisName>Primary</ValueAxisName>
+                      <CategoryAxisName>Primary</CategoryAxisName>
+                      <ChartSmartLabel>
+                        <CalloutLineColor>Black</CalloutLineColor>
+                        <MinMovingDistance>0pt</MinMovingDistance>
+                      </ChartSmartLabel>
+                    </ChartSeries>
+                  </ChartSeriesCollection>
+                </ChartData>
+                <ChartAreas>
+                  <ChartArea Name="Default">
+                    <ChartCategoryAxes>
+                      <ChartAxis Name="Primary">
+                        <Style>
+                          <Border>
+                            <Color>Gainsboro</Color>
+                          </Border>
+                          <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
+                          <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
+                          <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
+                          <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
+                          <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
+                        </Style>
+                        <ChartAxisTitle>
+                          <Caption />
+                          <Style>
+                            <FontSize>8pt</FontSize>
+                          </Style>
+                        </ChartAxisTitle>
+                        <Interval>1</Interval>
+                        <ChartMajorGridLines>
+                          <Enabled>False</Enabled>
+                          <Style>
+                            <Border>
+                              <Color>Gainsboro</Color>
+                            </Border>
+                          </Style>
+                        </ChartMajorGridLines>
+                        <ChartMinorGridLines>
+                          <Style>
+                            <Border>
+                              <Color>Gainsboro</Color>
+                              <Style>Dotted</Style>
+                            </Border>
+                          </Style>
+                        </ChartMinorGridLines>
+                        <ChartMajorTickMarks>
+                          <Enabled>False</Enabled>
+                          <Style>
+                            <Border>
+                              <Color>Gainsboro</Color>
+                            </Border>
+                          </Style>
+                        </ChartMajorTickMarks>
+                        <ChartMinorTickMarks>
+                          <Length>0.5</Length>
+                        </ChartMinorTickMarks>
+                        <CrossAt>NaN</CrossAt>
+                        <Minimum>NaN</Minimum>
+                        <Maximum>NaN</Maximum>
+                        <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
+                        <ChartAxisScaleBreak>
+                          <Style />
+                        </ChartAxisScaleBreak>
+                      </ChartAxis>
+                      <ChartAxis Name="Secondary">
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                        <ChartAxisTitle>
+                          <Caption>Axis Title</Caption>
+                          <Style>
+                            <FontSize>8pt</FontSize>
+                          </Style>
+                        </ChartAxisTitle>
+                        <ChartMajorGridLines>
+                          <Enabled>False</Enabled>
+                          <Style>
+                            <Border>
+                              <Color>Gainsboro</Color>
+                            </Border>
+                          </Style>
+                        </ChartMajorGridLines>
+                        <ChartMinorGridLines>
+                          <Style>
+                            <Border>
+                              <Color>Gainsboro</Color>
+                              <Style>Dotted</Style>
+                            </Border>
+                          </Style>
+                        </ChartMinorGridLines>
+                        <ChartMinorTickMarks>
+                          <Length>0.5</Length>
+                        </ChartMinorTickMarks>
+                        <CrossAt>NaN</CrossAt>
+                        <Location>Opposite</Location>
+                        <Minimum>NaN</Minimum>
+                        <Maximum>NaN</Maximum>
+                        <ChartAxisScaleBreak>
+                          <Style />
+                        </ChartAxisScaleBreak>
+                      </ChartAxis>
+                    </ChartCategoryAxes>
+                    <ChartValueAxes>
+                      <ChartAxis Name="Primary">
+                        <Style>
+                          <Border>
+                            <Color>Gainsboro</Color>
+                          </Border>
+                          <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
+                          <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
+                          <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
+                          <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
+                          <Format>0.0%</Format>
+                          <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
+                        </Style>
+                        <ChartAxisTitle>
+                          <Caption />
+                          <Style>
+                            <FontSize>8pt</FontSize>
+                          </Style>
+                        </ChartAxisTitle>
+                        <ChartMajorGridLines>
+                          <Style>
+                            <Border>
+                              <Color>Gainsboro</Color>
+                            </Border>
+                          </Style>
+                        </ChartMajorGridLines>
+                        <ChartMinorGridLines>
+                          <Style>
+                            <Border>
+                              <Color>Gainsboro</Color>
+                              <Style>Dotted</Style>
+                            </Border>
+                          </Style>
+                        </ChartMinorGridLines>
+                        <ChartMajorTickMarks>
+                          <Enabled>False</Enabled>
+                          <Style>
+                            <Border>
+                              <Color>Gainsboro</Color>
+                            </Border>
+                          </Style>
+                        </ChartMajorTickMarks>
+                        <ChartMinorTickMarks>
+                          <Length>0.5</Length>
+                        </ChartMinorTickMarks>
+                        <CrossAt>NaN</CrossAt>
+                        <Minimum>NaN</Minimum>
+                        <Maximum>NaN</Maximum>
+                        <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
                         <ChartAxisScaleBreak>
                           <Style />
                         </ChartAxisScaleBreak>
@@ -1652,9 +1630,9 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </Style>
                 </ChartNoDataMessage>
                 <DataSetName>FlatData</DataSetName>
-                <Top>0.75in</Top>
+                <Top>3.825in</Top>
                 <Left>7.00382in</Left>
-                <Height>3.19319in</Height>
+                <Height>2.64111in</Height>
                 <Width>3.49618in</Width>
                 <ZIndex>6</ZIndex>
                 <Style>
@@ -2196,7 +2174,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </TablixMembers>
                 </TablixRowHierarchy>
                 <DataSetName>FlatData</DataSetName>
-                <Top>4.33208in</Top>
+                <Top>3.83208in</Top>
                 <Left>0.00764in</Left>
                 <Height>1.5in</Height>
                 <Width>3.29166in</Width>
@@ -2229,7 +2207,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox10</rd:DefaultName>
-                <Top>4.01264in</Top>
+                <Top>3.51264in</Top>
                 <Height>0.25in</Height>
                 <Width>3.29167in</Width>
                 <ZIndex>8</ZIndex>
@@ -2243,341 +2221,10 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   <PaddingBottom>2pt</PaddingBottom>
                 </Style>
               </Textbox>
-              <Tablix Name="Tablix2">
-                <TablixBody>
-                  <TablixColumns>
-                    <TablixColumn>
-                      <Width>1.35417in</Width>
-                    </TablixColumn>
-                    <TablixColumn>
-                      <Width>1.34375in</Width>
-                    </TablixColumn>
-                    <TablixColumn>
-                      <Width>0.65625in</Width>
-                    </TablixColumn>
-                  </TablixColumns>
-                  <TablixRows>
-                    <TablixRow>
-                      <Height>0.25in</Height>
-                      <TablixCells>
-                        <TablixCell>
-                          <CellContents>
-                            <Textbox Name="Textbox5">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Parameters!Group1.Value</Value>
-                                      <Style>
-                                        <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
-                                        <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
-                                        <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
-                                        <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
-                                        <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>Textbox5</rd:DefaultName>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                          </CellContents>
-                        </TablixCell>
-                        <TablixCell>
-                          <CellContents>
-                            <Textbox Name="Textbox6">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>Market Value</Value>
-                                      <Style>
-                                        <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
-                                        <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
-                                        <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
-                                        <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
-                                        <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style>
-                                    <TextAlign>Right</TextAlign>
-                                  </Style>
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>Textbox6</rd:DefaultName>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                          </CellContents>
-                        </TablixCell>
-                        <TablixCell>
-                          <CellContents>
-                            <Textbox Name="Textbox7">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>% Assets</Value>
-                                      <Style>
-                                        <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
-                                        <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
-                                        <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
-                                        <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
-                                        <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style>
-                                    <TextAlign>Right</TextAlign>
-                                  </Style>
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>Textbox7</rd:DefaultName>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                          </CellContents>
-                        </TablixCell>
-                      </TablixCells>
-                    </TablixRow>
-                    <TablixRow>
-                      <Height>0.25in</Height>
-                      <TablixCells>
-                        <TablixCell>
-                          <CellContents>
-                            <Textbox Name="GroupDesc">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Fields!GroupDesc.Value</Value>
-                                      <Style>
-                                        <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
-                                        <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
-                                        <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
-                                        <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
-                                        <Color>=Code.StyleSheetValue("DetailColor")</Color>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>GroupDesc</rd:DefaultName>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                          </CellContents>
-                        </TablixCell>
-                        <TablixCell>
-                          <CellContents>
-                            <Textbox Name="MarketValue1">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Fields!MarketValue.Value</Value>
-                                      <Style>
-                                        <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
-                                        <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
-                                        <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
-                                        <Format>#,0.00;(#,0.00)</Format>
-                                        <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
-                                        <Color>=Code.StyleSheetValue("DetailColor")</Color>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style>
-                                    <TextAlign>Right</TextAlign>
-                                  </Style>
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>MarketValue1</rd:DefaultName>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                          </CellContents>
-                        </TablixCell>
-                        <TablixCell>
-                          <CellContents>
-                            <Textbox Name="PrctAsset">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Fields!PrctAsset.Value</Value>
-                                      <Style>
-                                        <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
-                                        <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
-                                        <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
-                                        <Format>0.00%</Format>
-                                        <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
-                                        <Color>=Code.StyleSheetValue("DetailColor")</Color>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style>
-                                    <TextAlign>Right</TextAlign>
-                                  </Style>
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>PrctAsset</rd:DefaultName>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                          </CellContents>
-                        </TablixCell>
-                      </TablixCells>
-                    </TablixRow>
-                  </TablixRows>
-                </TablixBody>
-                <TablixColumnHierarchy>
-                  <TablixMembers>
-                    <TablixMember />
-                    <TablixMember />
-                    <TablixMember />
-                  </TablixMembers>
-                </TablixColumnHierarchy>
-                <TablixRowHierarchy>
-                  <TablixMembers>
-                    <TablixMember>
-                      <KeepWithGroup>After</KeepWithGroup>
-                    </TablixMember>
-                    <TablixMember>
-                      <Group Name="Details1">
-                        <GroupExpressions>
-                          <GroupExpression>=Fields!GroupDesc.Value</GroupExpression>
-                        </GroupExpressions>
-                      </Group>
-                      <SortExpressions>
-                        <SortExpression>
-                          <Value>=Fields!PrctAsset.Value</Value>
-                          <Direction>Descending</Direction>
-                        </SortExpression>
-                      </SortExpressions>
-                      <Visibility>
-                        <Hidden>=IIf(RunningValue(Fields!GroupDesc.Value, CountDistinct, Nothing) &lt;= Parameters!TopValue.Value, false, true)</Hidden>
-                      </Visibility>
-                    </TablixMember>
-                  </TablixMembers>
-                </TablixRowHierarchy>
-                <DataSetName>FlatData</DataSetName>
-                <Top>4.33208in</Top>
-                <Left>3.62882in</Left>
-                <Height>0.5in</Height>
-                <Width>3.35417in</Width>
-                <ZIndex>9</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                </Style>
-              </Tablix>
-              <Textbox Name="Textbox14">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>="Top " &amp; CStr(Parameters!TopValue.Value) &amp; " " &amp; Parameters!Group1.Value</Value>
-                        <Style>
-                          <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
-                          <FontFamily>=Code.StyleSheetValue("SectionTitleFamily")</FontFamily>
-                          <FontSize>=Code.StyleSheetValue("SectionTitleSize")</FontSize>
-                          <FontWeight>=Code.StyleSheetValue("SectionTitleWeight")</FontWeight>
-                          <TextDecoration>=Code.StyleSheetValue("SectionTitleDecoration")</TextDecoration>
-                          <Color>=Code.StyleSheetValue("SectionTitleColor")</Color>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style />
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox10</rd:DefaultName>
-                <Top>4.01264in</Top>
-                <Left>3.62882in</Left>
-                <Height>0.25in</Height>
-                <Width>3.29167in</Width>
-                <ZIndex>10</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <DataElementOutput>ContentsOnly</DataElementOutput>
-            <Height>6.08208in</Height>
+            <Height>6.46611in</Height>
             <Width>10.5in</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -2587,7 +2234,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
             </Style>
           </Rectangle>
         </ReportItems>
-        <Height>6.3125in</Height>
+        <Height>6.46611in</Height>
         <Style />
       </Body>
       <Width>10.5in</Width>
@@ -2616,7 +2263,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
         <InteractiveWidth>10.4in</InteractiveWidth>
         <LeftMargin>0.25in</LeftMargin>
         <RightMargin>0.25in</RightMargin>
-        <TopMargin>0.15in</TopMargin>
         <BottomMargin>0.15in</BottomMargin>
         <Style />
       </Page>

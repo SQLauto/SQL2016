@@ -3274,10 +3274,9 @@ NewLineKey=String</CommandText>
         <PageWidth>11in</PageWidth>
         <InteractiveHeight>455in</InteractiveHeight>
         <InteractiveWidth>7.9in</InteractiveWidth>
-        <LeftMargin>0.3in</LeftMargin>
-        <RightMargin>0.3in</RightMargin>
-        <TopMargin>0.3in</TopMargin>
-        <BottomMargin>0.3in</BottomMargin>
+        <LeftMargin>0.25in</LeftMargin>
+        <RightMargin>0.25in</RightMargin>
+        <BottomMargin>0.15in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
