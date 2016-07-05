@@ -1228,7 +1228,7 @@ perAssets=Decimal</CommandText>
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=Parameters!Group2.Value</Value>
+                        <Value>=System.Text.RegularExpressions.Regex.Replace(Parameters!Group2.Value, "(?&lt;=[a-z])([A-Z])"," $1")</Value>
                         <Style>
                           <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
                           <FontFamily>=Code.StyleSheetValue("SectionTitleFamily")</FontFamily>
@@ -1696,7 +1696,7 @@ perAssets=Decimal</CommandText>
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>="Profit and Loss by " &amp; Parameters!Group2.Value</Value>
+                        <Value>="Profit and Loss by " &amp; System.Text.RegularExpressions.Regex.Replace(Parameters!Group2.Value, "(?&lt;=[a-z])([A-Z])"," $1")</Value>
                         <Style>
                           <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
                           <FontFamily>=Code.StyleSheetValue("SectionTitleFamily")</FontFamily>
@@ -1733,7 +1733,7 @@ perAssets=Decimal</CommandText>
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>="Allocations by " &amp; Parameters!Group1.Value &amp; " then by " &amp; Parameters!Group2.Value</Value>
+                        <Value>="Allocations by " &amp; System.Text.RegularExpressions.Regex.Replace(Parameters!Group1.Value, "(?&lt;=[a-z])([A-Z])"," $1") &amp; " then by " &amp; System.Text.RegularExpressions.Regex.Replace(Parameters!Group2.Value, "(?&lt;=[a-z])([A-Z])"," $1")</Value>
                         <Style>
                           <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
                           <FontFamily>=Code.StyleSheetValue("SectionTitleFamily")</FontFamily>

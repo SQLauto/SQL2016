@@ -84,7 +84,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=Replace(Parameters!ReportTitle.Value, "NEXTGEN ","")</Value>
+                        <Value>=System.Text.RegularExpressions.Regex.Replace(Replace(Parameters!ReportTitle.Value, "NEXTGEN ",""), "(?&lt;=[a-z])([A-Z])"," $1")</Value>
                         <Style>
                           <FontStyle>=Code.StyleSheetValue("ReportTitleStyle")</FontStyle>
                           <FontFamily>=Code.StyleSheetValue("ReportTitleFamily")</FontFamily>

@@ -276,6 +276,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandText>SELECT
+	{Grouping(:Group1,"Description")} Group1,
           DECODE(:Group1,
           "AssetType",{Investment.AssetType.Description},
           "InvestmentType", {Investment.InvestmentType.Description}) GroupDesc,
@@ -387,6 +388,10 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
             IIF(Fields!MaturityYears.Value &gt;= 7 and Fields!MaturityYears.Value &lt; 10,"C",
             IIF(Fields!MaturityYears.Value &gt;= 10 and Fields!MaturityYears.Value &lt; 20,"D","E"))))
           </Value>
+        </Field>
+        <Field Name="Group1">
+          <DataField>Group1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="GroupDesc">
           <DataField>GroupDesc</DataField>
@@ -679,7 +684,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                     <ChartMember>
                       <Group Name="Chart1_CategoryGroup">
                         <GroupExpressions>
-                          <GroupExpression>=Fields!SectorDesc.Value</GroupExpression>
+                          <GroupExpression>=Fields!Group1.Value</GroupExpression>
                         </GroupExpressions>
                       </Group>
                       <SortExpressions>
@@ -688,7 +693,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                           <Direction>Descending</Direction>
                         </SortExpression>
                       </SortExpressions>
-                      <Label>=Iif(IsNothing(Fields!SectorDesc.Value),"Undefined",Fields!SectorDesc.Value)</Label>
+                      <Label>=Fields!Group1.Value</Label>
                     </ChartMember>
                   </ChartMembers>
                 </ChartCategoryHierarchy>
@@ -964,7 +969,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Sector Allocation</Value>
+                        <Value>=System.Text.RegularExpressions.Regex.Replace(Parameters!Group1.Value, "(?&lt;=[a-z])([A-Z])"," $1") &amp; " Allocation"</Value>
                         <Style>
                           <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
                           <FontFamily>=Code.StyleSheetValue("SectionTitleFamily")</FontFamily>
@@ -2997,20 +3002,97 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value>AssetType</Value>
+          <Value>IncomeCurrency</Value>
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
-      <Prompt>Group By</Prompt>
+      <Prompt>Group1</Prompt>
       <ValidValues>
         <ParameterValues>
           <ParameterValue>
+            <Value>None</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Analyst</Value>
+          </ParameterValue>
+          <ParameterValue>
             <Value>AssetType</Value>
-            <Label>Asset Type</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>BusinessUnit</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Custodian</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>CustodianAccount</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>DeliveryAgent</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Denomination</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Exchange</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>IncomeCurrency</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Industry</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Industry2</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>IndustryGroup</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>IndustryGroup2</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Investment</Value>
           </ParameterValue>
           <ParameterValue>
             <Value>InvestmentType</Value>
-            <Label>Investment Type</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>IssueCountry</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Issuer</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>LONGSHORT</Value>
+            <Label>Long Short</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>LocalBasisCurrency</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>PriceDenom</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>PrintGroup</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>RiskCurrency</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Sector</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Sector2</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Strategy</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>SubIndustry</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>SubIndustry2</Value>
           </ParameterValue>
         </ParameterValues>
       </ValidValues>

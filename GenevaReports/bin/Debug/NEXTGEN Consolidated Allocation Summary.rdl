@@ -2946,14 +2946,22 @@ perAssets=Decimal</CommandText>
                           <PaddingBottom>2pt</PaddingBottom>
                         </Style>
                       </Textbox>
+                      <rd:Selected>true</rd:Selected>
                     </CellContents>
                   </TablixHeader>
                   <TablixMembers>
-                    <TablixMember />
-                    <TablixMember />
-                    <TablixMember />
+                    <TablixMember>
+                      <RepeatOnNewPage>true</RepeatOnNewPage>
+                    </TablixMember>
+                    <TablixMember>
+                      <RepeatOnNewPage>true</RepeatOnNewPage>
+                    </TablixMember>
+                    <TablixMember>
+                      <RepeatOnNewPage>true</RepeatOnNewPage>
+                    </TablixMember>
                     <TablixMember />
                   </TablixMembers>
+                  <KeepTogether>true</KeepTogether>
                 </TablixMember>
               </TablixMembers>
             </TablixColumnHierarchy>

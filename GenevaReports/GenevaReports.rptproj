@@ -27,10 +27,6 @@
       <FullPath>NEXTGEN Allocation Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>NEXTGEN Asset Allocation Detail.rdl</Name>
-      <FullPath>NEXTGEN Asset Allocation Detail.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>NEXTGEN Assets Under Management.rdl</Name>
       <FullPath>NEXTGEN Assets Under Management.rdl</FullPath>
     </ProjectItem>
@@ -63,12 +59,8 @@
       <FullPath>NEXTGEN Profit Loss Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Fixed Income Distribution.rdl</Name>
-      <FullPath>Fixed Income Distribution.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Fixed Income Portfolio Composition.rdl</Name>
-      <FullPath>Fixed Income Portfolio Composition.rdl</FullPath>
+      <Name>SubReport_SmallHeaderLandscape_NextGen.rdl</Name>
+      <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
