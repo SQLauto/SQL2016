@@ -1391,7 +1391,11 @@
   <DataSources>
     <DataSource Name="GenevaSource">
       <Transaction>true</Transaction>
-      <DataSourceReference>GenevaSource</DataSourceReference>
+      <ConnectionProperties>
+        <DataProvider>GENEVA</DataProvider>
+        <ConnectString>=Parameters!ConnectionString.Value</ConnectString>
+        <Prompt>Specify a user name and password for data source GenevaSource</Prompt>
+      </ConnectionProperties>
       <rd:SecurityType>DataBase</rd:SecurityType>
       <rd:DataSourceID>ad9c836b-4daa-414c-bfbc-cee99d3c0be6</rd:DataSourceID>
     </DataSource>
@@ -1836,6 +1840,7 @@ perAssets=Decimal</CommandText>
     <ReportParameter Name="Portfolio">
       <DataType>String</DataType>
       <Prompt>Portfolio</Prompt>
+      <MultiValue>true</MultiValue>
     </ReportParameter>
     <ReportParameter Name="PeriodEndDate">
       <DataType>DateTime</DataType>
@@ -3102,12 +3107,12 @@ perAssets=Decimal</CommandText>
     <ReportParameter Name="HybridHistoricalView">
       <DataType>Boolean</DataType>
       <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <DefaultValue>
         <Values>
           <Value>False</Value>
         </Values>
       </DefaultValue>
-      <AllowBlank>true</AllowBlank>
       <Prompt>Hybrid Historical View</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>

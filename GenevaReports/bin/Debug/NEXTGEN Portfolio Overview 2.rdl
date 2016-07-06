@@ -2797,7 +2797,6 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                 <ChartData>
                   <ChartSeriesCollection>
                     <ChartSeries Name="LongMval">
-                      <Hidden>=IsNothing(SUM(Fields!LongMval.Value))</Hidden>
                       <ChartDataPoints>
                         <ChartDataPoint>
                           <ChartDataPointValues>
@@ -2815,7 +2814,6 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                           <DataElementOutput>Output</DataElementOutput>
                         </ChartDataPoint>
                       </ChartDataPoints>
-                      <Subtype>Stacked</Subtype>
                       <Style />
                       <ChartEmptyPoints>
                         <Style />
@@ -2834,7 +2832,6 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                       </ChartSmartLabel>
                     </ChartSeries>
                     <ChartSeries Name="ShortMval">
-                      <Hidden>=IsNothing(SUM(Fields!ShortMval.Value))</Hidden>
                       <ChartDataPoints>
                         <ChartDataPoint>
                           <ChartDataPointValues>
@@ -2852,7 +2849,6 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                           <DataElementOutput>Output</DataElementOutput>
                         </ChartDataPoint>
                       </ChartDataPoints>
-                      <Subtype>Stacked</Subtype>
                       <Style />
                       <ChartEmptyPoints>
                         <Style />
@@ -3087,9 +3083,6 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                     <AutoFitTextDisabled>true</AutoFitTextDisabled>
                     <HeaderSeparatorColor>Black</HeaderSeparatorColor>
                     <ColumnSeparatorColor>Black</ColumnSeparatorColor>
-                    <Reversed>False</Reversed>
-                    <MaxAutoSize>100</MaxAutoSize>
-                    <TextWrapThreshold>0</TextWrapThreshold>
                   </ChartLegend>
                 </ChartLegends>
                 <Palette>BrightPastel</Palette>
@@ -3704,9 +3697,9 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                 </ChartNoDataMessage>
                 <DataSetName>Cumulative</DataSetName>
                 <Top>3.62513in</Top>
-                <Left>5.03in</Left>
+                <Left>5.29042in</Left>
                 <Height>1.96098in</Height>
-                <Width>5.37in</Width>
+                <Width>5.10958in</Width>
                 <ZIndex>5</ZIndex>
                 <Style>
                   <Border>
@@ -3739,9 +3732,9 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                 </Paragraphs>
                 <rd:DefaultName>Textbox2</rd:DefaultName>
                 <Top>3.34735in</Top>
-                <Left>5.03in</Left>
+                <Left>5.29042in</Left>
                 <Height>0.25in</Height>
-                <Width>5.37in</Width>
+                <Width>5.10958in</Width>
                 <ZIndex>6</ZIndex>
                 <Style>
                   <Border>

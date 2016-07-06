@@ -1455,7 +1455,7 @@ perAssets=Decimal</CommandText>
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Allocations</Value>
+                        <Value>="Exposure by " &amp; System.Text.RegularExpressions.Regex.Replace(Parameters!Group1.Value, "(?&lt;=[a-z])([A-Z])"," $1")</Value>
                         <Style>
                           <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
                           <FontFamily>=Code.StyleSheetValue("SectionTitleFamily")</FontFamily>

@@ -23,16 +23,16 @@
   </DataSets>
   <Reports>
     <ProjectItem>
-      <Name>NEXTGEN Allocation Summary.rdl</Name>
-      <FullPath>NEXTGEN Allocation Summary.rdl</FullPath>
+      <Name>NEXTGEN Exposure Summary.rdl</Name>
+      <FullPath>NEXTGEN Exposure Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>NEXTGEN Assets Under Management.rdl</Name>
       <FullPath>NEXTGEN Assets Under Management.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>NEXTGEN Consolidated Allocation Summary.rdl</Name>
-      <FullPath>NEXTGEN Consolidated Allocation Summary.rdl</FullPath>
+      <Name>NEXTGEN Consolidated Exposure Summary.rdl</Name>
+      <FullPath>NEXTGEN Consolidated Exposure Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>NEXTGEN Fixed Income Overview.rdl</Name>
@@ -51,8 +51,8 @@
       <FullPath>NEXTGEN Portfolio Exposure Appraisal.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>NEXTGEN Portfolio Overview.rdl</Name>
-      <FullPath>NEXTGEN Portfolio Overview.rdl</FullPath>
+      <Name>NEXTGEN Portfolio Summary.rdl</Name>
+      <FullPath>NEXTGEN Portfolio Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>NEXTGEN Profit Loss Summary.rdl</Name>
@@ -61,6 +61,10 @@
     <ProjectItem>
       <Name>SubReport_SmallHeaderLandscape_NextGen.rdl</Name>
       <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NEXTGEN Portfolio Overview.rdl</Name>
+      <FullPath>NEXTGEN Portfolio Overview.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

@@ -9,6 +9,7 @@
       <ConnectionProperties>
         <DataProvider>GENEVA</DataProvider>
         <ConnectString>=Parameters!ConnectionString.Value</ConnectString>
+        <Prompt>Specify a user name and password for data source GenevaSource:</Prompt>
       </ConnectionProperties>
       <rd:SecurityType>DataBase</rd:SecurityType>
       <rd:DataSourceID>08d4100e-362f-48be-a1fd-a764404c1ffa</rd:DataSourceID>
@@ -969,7 +970,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=System.Text.RegularExpressions.Regex.Replace(Parameters!Group1.Value, "(?&lt;=[a-z])([A-Z])"," $1") &amp; " Allocation"</Value>
+                        <Value>=System.Text.RegularExpressions.Regex.Replace(Parameters!Group1.Value, "(?&lt;=[a-z])([A-Z])"," $1") &amp; " Exposure"</Value>
                         <Style>
                           <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
                           <FontFamily>=Code.StyleSheetValue("SectionTitleFamily")</FontFamily>

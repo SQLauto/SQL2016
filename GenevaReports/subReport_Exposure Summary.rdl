@@ -1,0 +1,4053 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="table1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>1.8in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.4in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.4in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.4in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.4in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.25in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox16">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox16</rd:DefaultName>
+                      <ZIndex>25</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox17">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox17</rd:DefaultName>
+                      <ZIndex>24</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox18">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox18</rd:DefaultName>
+                      <ZIndex>23</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox19">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox19</rd:DefaultName>
+                      <ZIndex>22</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox20">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox20</rd:DefaultName>
+                      <ZIndex>21</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.2in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox15">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Parameters!Group1.Value &amp; " Exposure"</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>20</ZIndex>
+                      <DataElementOutput>NoOutput</DataElementOutput>
+                      <Style>
+                        <BackgroundColor>#c1d9f0</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>1pt</PaddingTop>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>5</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.1in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox1</rd:DefaultName>
+                      <ZIndex>19</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox9">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <ZIndex>18</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox10">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <ZIndex>17</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox12">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox12</rd:DefaultName>
+                      <ZIndex>16</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox13">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox13</rd:DefaultName>
+                      <ZIndex>15</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.15in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox21">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox21</rd:DefaultName>
+                      <ZIndex>14</ZIndex>
+                      <Style>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Long Market Value</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <ZIndex>13</ZIndex>
+                      <Style>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1.5pt</Width>
+                        </BottomBorder>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox3">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Short Market Value</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <ZIndex>12</ZIndex>
+                      <Style>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1.5pt</Width>
+                        </BottomBorder>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox4">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Net Exposure</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <ZIndex>11</ZIndex>
+                      <Style>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1.5pt</Width>
+                        </BottomBorder>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox7">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Gross Exposure</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <ZIndex>10</ZIndex>
+                      <Style>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1.5pt</Width>
+                        </BottomBorder>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.1in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox22">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox22</rd:DefaultName>
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox23">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox23</rd:DefaultName>
+                      <ZIndex>8</ZIndex>
+                      <Style>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1.5pt</Width>
+                        </TopBorder>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox24">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox24</rd:DefaultName>
+                      <ZIndex>7</ZIndex>
+                      <Style>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1.5pt</Width>
+                        </TopBorder>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox25">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox25</rd:DefaultName>
+                      <ZIndex>6</ZIndex>
+                      <Style>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1.5pt</Width>
+                        </TopBorder>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox26">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox26</rd:DefaultName>
+                      <ZIndex>5</ZIndex>
+                      <Style>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1.5pt</Width>
+                        </TopBorder>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.15in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Counterparty">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Group1.Value</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>9pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Counterparty</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <DataElementName>Exposure</DataElementName>
+                      <DataElementOutput>Output</DataElementOutput>
+                      <Style>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox11">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=sum(Fields!LongMval.Value)</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Format>="N"&amp;Parameters!MonetaryPrecision.Value</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <ZIndex>3</ZIndex>
+                      <DataElementName>LMV</DataElementName>
+                      <DataElementOutput>Output</DataElementOutput>
+                      <Style>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox14">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=sum(Fields!ShortMval.Value)</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Format>="N"&amp;Parameters!MonetaryPrecision.Value</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox14</rd:DefaultName>
+                      <ZIndex>2</ZIndex>
+                      <DataElementName>SMV</DataElementName>
+                      <DataElementOutput>Output</DataElementOutput>
+                      <Style>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox5">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=FORMAT(sum(Fields!LongMval.Value)+sum(Fields!ShortMval.Value),"N"&amp;Parameters!MonetaryPrecision.Value)</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Format>="N"&amp;Parameters!MonetaryPrecision.Value</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox5</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <DataElementName>NetMV</DataElementName>
+                      <DataElementOutput>Output</DataElementOutput>
+                      <Style>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox6">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=iif(sum(Fields!LongMval.Value)=0 and sum(Fields!ShortMval.Value)=0,0,Abs(sum(Fields!LongMval.Value))+Abs(sum(Fields!ShortMval.Value)))</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <Format>="N"&amp;Parameters!MonetaryPrecision.Value</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox6</rd:DefaultName>
+                      <DataElementName>GrossMV</DataElementName>
+                      <DataElementOutput>Output</DataElementOutput>
+                      <Style>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="Group1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!Group1.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <TablixMembers>
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>=Parameters!ShowChart.Value</Hidden>
+                  </Visibility>
+                  <KeepWithGroup>After</KeepWithGroup>
+                  <KeepTogether>true</KeepTogether>
+                </TablixMember>
+              </TablixMembers>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>GetExposureInfo</DataSetName>
+        <Height>0.95in</Height>
+        <Width>7.4in</Width>
+        <Visibility>
+          <Hidden>=Parameters!ShowChart.Value</Hidden>
+        </Visibility>
+        <DataElementOutput>Output</DataElementOutput>
+        <Style />
+      </Tablix>
+      <Rectangle Name="Rectangle1">
+        <ReportItems>
+          <Textbox Name="textbox8">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!Group1.Value &amp; " Exposure"</Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>textbox8</rd:DefaultName>
+            <Top>0.01389in</Top>
+            <Height>0.2in</Height>
+            <Width>10.4in</Width>
+            <Visibility>
+              <Hidden>=NOT Parameters!ShowChart.Value or Code.InitCountGroup(CountDistinct(Fields!Group1.Value))</Hidden>
+            </Visibility>
+            <DataElementOutput>NoOutput</DataElementOutput>
+            <Style>
+              <BackgroundColor>#c1d9f0</BackgroundColor>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Chart Name="LMVChart">
+            <ChartCategoryHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="chart2_CategoryGroup1">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Group1.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!Group1.Value</Value>
+                      <Direction>Descending</Direction>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=iif(Parameters!ShowCode.Value,Fields!GroupCode.Value,Fields!Group1.Value)</Label>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartMember>
+              </ChartMembers>
+            </ChartCategoryHierarchy>
+            <ChartSeriesHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="chart2_SeriesGroup1">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Group1.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!Group1.Value</Value>
+                      <Direction>Descending</Direction>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=iif(Parameters!ShowCode.Value,Fields!GroupCode.Value,Fields!Group1.Value)</Label>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartMember>
+              </ChartMembers>
+            </ChartSeriesHierarchy>
+            <ChartData>
+              <ChartSeriesCollection>
+                <ChartSeries Name="Series1">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=Sum(Fields!LongMval.Value)</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                        <Label>=SPACE(iif(SUM(Fields!LongMval.Value)/SUM(Fields!LongMval.Value,"LMVChart")&lt;0.5,30,0 )) &amp; iif(SUM(Fields!LongMval.Value)&lt;&gt;0, Format(SUM(Fields!LongMval.Value),"N"&amp;Parameters!MonetaryPrecision.Value),"")</Label>
+                        <Visible>true</Visible>
+                      </ChartDataLabel>
+                      <Style>
+                        <Border>
+                          <Width>0.376pt</Width>
+                        </Border>
+                        <Color>=Code.GetColor("Group1")</Color>
+                      </Style>
+                      <ChartMarker>
+                        <Size>6pt</Size>
+                        <Style />
+                      </ChartMarker>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Type>Bar</Type>
+                  <Subtype>Stacked</Subtype>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <CustomProperties>
+                    <CustomProperty>
+                      <Name>PointWidth</Name>
+                      <Value>0.6</Value>
+                    </CustomProperty>
+                  </CustomProperties>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+              </ChartSeriesCollection>
+            </ChartData>
+            <ChartAreas>
+              <ChartArea Name="Default">
+                <ChartCategoryAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                        <Width>0.75pt</Width>
+                      </Border>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <Margin>True</Margin>
+                    <VariableAutoInterval>true</VariableAutoInterval>
+                    <LabelInterval>0.1</LabelInterval>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                      <IntervalOffset>1</IntervalOffset>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Enabled>True</Enabled>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                      <IntervalOffset>1</IntervalOffset>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Type>None</Type>
+                    </ChartMinorTickMarks>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <PreventFontShrink>true</PreventFontShrink>
+                    <PreventFontGrow>true</PreventFontGrow>
+                    <IncludeZero>false</IncludeZero>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartCategoryAxes>
+                <ChartValueAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                        <Width>0.75pt</Width>
+                      </Border>
+                      <FontFamily>Calibri</FontFamily>
+                      <Format>N0</Format>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <Margin>True</Margin>
+                    <ChartMajorGridLines>
+                      <Enabled>True</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>DarkGray</Color>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Enabled>True</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>DarkGray</Color>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Enabled>True</Enabled>
+                      <Type>Inside</Type>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMinorTickMarks>
+                    <Scalar>true</Scalar>
+                    <HideLabels>true</HideLabels>
+                    <PreventFontShrink>true</PreventFontShrink>
+                    <PreventFontGrow>true</PreventFontGrow>
+                    <IncludeZero>false</IncludeZero>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartValueAxes>
+                <ChartThreeDProperties>
+                  <Enabled>true</Enabled>
+                  <Rotation>5</Rotation>
+                  <Inclination>15</Inclination>
+                  <WallThickness>0</WallThickness>
+                  <Clustered>true</Clustered>
+                </ChartThreeDProperties>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.75pt</Width>
+                  </Border>
+                  <BackgroundColor>White</BackgroundColor>
+                </Style>
+              </ChartArea>
+            </ChartAreas>
+            <ChartLegends>
+              <ChartLegend Name="Default">
+                <Hidden>true</Hidden>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.75pt</Width>
+                  </Border>
+                </Style>
+                <Position>RightCenter</Position>
+                <Layout>Column</Layout>
+                <ChartLegendTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </ChartLegendTitle>
+                <AutoFitTextDisabled>true</AutoFitTextDisabled>
+              </ChartLegend>
+            </ChartLegends>
+            <ChartTitles>
+              <ChartTitle Name="Default">
+                <Caption>Long Market Value</Caption>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </ChartTitle>
+            </ChartTitles>
+            <Palette>Pastel</Palette>
+            <DynamicHeight>=Code.DynamicHeight</DynamicHeight>
+            <ChartBorderSkin>
+              <Style>
+                <BackgroundColor>Gray</BackgroundColor>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <Color>White</Color>
+              </Style>
+            </ChartBorderSkin>
+            <ChartNoDataMessage Name="NoDataMessage">
+              <Caption>No Data Available</Caption>
+              <Style>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <TextAlign>General</TextAlign>
+                <VerticalAlign>Top</VerticalAlign>
+              </Style>
+            </ChartNoDataMessage>
+            <DataSetName>GetExposureInfo</DataSetName>
+            <Top>0.2in</Top>
+            <Height>2.5in</Height>
+            <Width>3.2in</Width>
+            <ZIndex>1</ZIndex>
+            <Visibility>
+              <Hidden>=NOT Parameters!ShowChart.Value</Hidden>
+            </Visibility>
+            <CustomProperties>
+              <CustomProperty>
+                <Name>__Upgraded2005__</Name>
+                <Value>__Upgraded2005__</Value>
+              </CustomProperty>
+            </CustomProperties>
+            <DataElementOutput>NoOutput</DataElementOutput>
+            <Style>
+              <BackgroundColor>White</BackgroundColor>
+              <Direction>RTL</Direction>
+            </Style>
+          </Chart>
+          <Chart Name="SMVChart">
+            <ChartCategoryHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="chart1_CategoryGroup1">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Group1.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!Group1.Value</Value>
+                      <Direction>Descending</Direction>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!Group1.Value</Label>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartMember>
+              </ChartMembers>
+            </ChartCategoryHierarchy>
+            <ChartSeriesHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="chart1_SeriesGroup1">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Group1.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!Group1.Value</Value>
+                      <Direction>Descending</Direction>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!Group1.Value</Label>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartMember>
+              </ChartMembers>
+            </ChartSeriesHierarchy>
+            <ChartData>
+              <ChartSeriesCollection>
+                <ChartSeries Name="Series1">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=Sum(Fields!ShortMval.Value)</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                        <Label>=SPACE(IIF(SUM(Fields!ShortMval.Value)/SUM(Fields!ShortMval.Value,"SMVChart") &lt; -0.5,15,0)) &amp; iif(sum(Fields!ShortMval.Value)=0,"", Format(sum(Fields!ShortMval.Value),"N"&amp;Parameters!MonetaryPrecision.Value))</Label>
+                        <Visible>true</Visible>
+                      </ChartDataLabel>
+                      <Style>
+                        <Border>
+                          <Width>0.376pt</Width>
+                        </Border>
+                        <Color>=Code.GetColor("Group2")</Color>
+                      </Style>
+                      <ChartMarker>
+                        <Size>6pt</Size>
+                        <Style />
+                      </ChartMarker>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Type>Bar</Type>
+                  <Subtype>Stacked</Subtype>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <CustomProperties>
+                    <CustomProperty>
+                      <Name>PointWidth</Name>
+                      <Value>0.6</Value>
+                    </CustomProperty>
+                  </CustomProperties>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+              </ChartSeriesCollection>
+            </ChartData>
+            <ChartAreas>
+              <ChartArea Name="Default">
+                <ChartCategoryAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                        <Width>0.75pt</Width>
+                      </Border>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <Margin>True</Margin>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                      <IntervalOffset>1</IntervalOffset>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Enabled>True</Enabled>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                      <IntervalOffset>1</IntervalOffset>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Type>None</Type>
+                    </ChartMinorTickMarks>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <HideLabels>true</HideLabels>
+                    <PreventFontShrink>true</PreventFontShrink>
+                    <PreventFontGrow>true</PreventFontGrow>
+                    <IncludeZero>false</IncludeZero>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartCategoryAxes>
+                <ChartValueAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                        <Width>0.75pt</Width>
+                      </Border>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <Format>N0</Format>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <Margin>True</Margin>
+                    <ChartMajorGridLines>
+                      <Enabled>True</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>DarkGray</Color>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Enabled>True</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>DarkGray</Color>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Enabled>True</Enabled>
+                      <Type>Inside</Type>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMinorTickMarks>
+                    <Scalar>true</Scalar>
+                    <HideLabels>true</HideLabels>
+                    <PreventFontShrink>true</PreventFontShrink>
+                    <PreventFontGrow>true</PreventFontGrow>
+                    <IncludeZero>false</IncludeZero>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartValueAxes>
+                <ChartThreeDProperties>
+                  <Enabled>true</Enabled>
+                  <Rotation>5</Rotation>
+                  <Inclination>15</Inclination>
+                  <WallThickness>0</WallThickness>
+                  <Clustered>true</Clustered>
+                </ChartThreeDProperties>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.75pt</Width>
+                  </Border>
+                  <BackgroundColor>White</BackgroundColor>
+                </Style>
+              </ChartArea>
+            </ChartAreas>
+            <ChartLegends>
+              <ChartLegend Name="Default">
+                <Hidden>true</Hidden>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.75pt</Width>
+                  </Border>
+                </Style>
+                <Position>RightCenter</Position>
+                <Layout>Column</Layout>
+                <ChartLegendTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </ChartLegendTitle>
+                <AutoFitTextDisabled>true</AutoFitTextDisabled>
+              </ChartLegend>
+            </ChartLegends>
+            <ChartTitles>
+              <ChartTitle Name="Default">
+                <Caption>Short Market Value</Caption>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </ChartTitle>
+            </ChartTitles>
+            <Palette>Pastel</Palette>
+            <DynamicHeight>=Code.DynamicHeight</DynamicHeight>
+            <ChartBorderSkin>
+              <Style>
+                <BackgroundColor>Gray</BackgroundColor>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <Color>White</Color>
+              </Style>
+            </ChartBorderSkin>
+            <ChartNoDataMessage Name="NoDataMessage">
+              <Caption>No Data Available</Caption>
+              <Style>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <TextAlign>General</TextAlign>
+                <VerticalAlign>Top</VerticalAlign>
+              </Style>
+            </ChartNoDataMessage>
+            <DataSetName>GetExposureInfo</DataSetName>
+            <Top>0.2in</Top>
+            <Left>3.3in</Left>
+            <Height>2.5in</Height>
+            <Width>2.9in</Width>
+            <ZIndex>2</ZIndex>
+            <Visibility>
+              <Hidden>=NOT Parameters!ShowChart.Value</Hidden>
+            </Visibility>
+            <CustomProperties>
+              <CustomProperty>
+                <Name>__Upgraded2005__</Name>
+                <Value>__Upgraded2005__</Value>
+              </CustomProperty>
+            </CustomProperties>
+            <DataElementOutput>NoOutput</DataElementOutput>
+            <Style>
+              <BackgroundColor>White</BackgroundColor>
+            </Style>
+          </Chart>
+          <Chart Name="chart3">
+            <ChartCategoryHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="chart3_CategoryGroup1">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Group1.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!Group1.Value</Value>
+                      <Direction>Descending</Direction>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!Group1.Value</Label>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartMember>
+              </ChartMembers>
+            </ChartCategoryHierarchy>
+            <ChartSeriesHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="chart3_SeriesGroup1">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Group1.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!Group1.Value</Value>
+                      <Direction>Descending</Direction>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!Group1.Value</Label>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartMember>
+              </ChartMembers>
+            </ChartSeriesHierarchy>
+            <ChartData>
+              <ChartSeriesCollection>
+                <ChartSeries Name="Series1">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=iif(sum(Fields!LongMval.Value)=0 and sum(Fields!ShortMval.Value)=0,0,iif(sum(Fields!ShortMval.Value)&gt;0,sum(Fields!LongMval.Value)+sum(Fields!ShortMval.Value),sum(Fields!LongMval.Value)-Abs(sum(Fields!ShortMval.Value))))</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                        <Label>=space(25)&amp; iif(sum(Fields!LongMval.Value)+sum(Fields!ShortMval.Value)=0,"",FORMAT(sum(Fields!LongMval.Value)+sum(Fields!ShortMval.Value),"N"&amp;Parameters!MonetaryPrecision.Value))</Label>
+                        <Visible>true</Visible>
+                        <Position>Center</Position>
+                      </ChartDataLabel>
+                      <Style>
+                        <Border>
+                          <Width>0.376pt</Width>
+                        </Border>
+                        <Color>=Code.GetColor("Group3")</Color>
+                      </Style>
+                      <ChartMarker>
+                        <Size>6pt</Size>
+                        <Style />
+                      </ChartMarker>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Type>Bar</Type>
+                  <Subtype>Stacked</Subtype>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <CustomProperties>
+                    <CustomProperty>
+                      <Name>PointWidth</Name>
+                      <Value>0.6</Value>
+                    </CustomProperty>
+                  </CustomProperties>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <Disabled>true</Disabled>
+                  </ChartSmartLabel>
+                </ChartSeries>
+              </ChartSeriesCollection>
+            </ChartData>
+            <ChartAreas>
+              <ChartArea Name="Default">
+                <ChartCategoryAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                        <Width>0.75pt</Width>
+                      </Border>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <Margin>True</Margin>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                      <IntervalOffset>1</IntervalOffset>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Enabled>True</Enabled>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                      <IntervalOffset>1</IntervalOffset>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Type>None</Type>
+                    </ChartMinorTickMarks>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <HideLabels>true</HideLabels>
+                    <PreventFontShrink>true</PreventFontShrink>
+                    <PreventFontGrow>true</PreventFontGrow>
+                    <IncludeZero>false</IncludeZero>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartCategoryAxes>
+                <ChartValueAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                        <Width>0.75pt</Width>
+                      </Border>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <Format>N0</Format>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <Margin>True</Margin>
+                    <ChartMajorGridLines>
+                      <Enabled>True</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>DarkGray</Color>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Enabled>True</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>DarkGray</Color>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Enabled>True</Enabled>
+                      <Type>Inside</Type>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMinorTickMarks>
+                    <Scalar>true</Scalar>
+                    <HideLabels>true</HideLabels>
+                    <PreventFontShrink>true</PreventFontShrink>
+                    <PreventFontGrow>true</PreventFontGrow>
+                    <IncludeZero>false</IncludeZero>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartValueAxes>
+                <ChartThreeDProperties>
+                  <Enabled>true</Enabled>
+                  <Rotation>5</Rotation>
+                  <Inclination>15</Inclination>
+                  <WallThickness>0</WallThickness>
+                  <Clustered>true</Clustered>
+                </ChartThreeDProperties>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.75pt</Width>
+                  </Border>
+                  <BackgroundColor>White</BackgroundColor>
+                </Style>
+              </ChartArea>
+            </ChartAreas>
+            <ChartLegends>
+              <ChartLegend Name="Default">
+                <Hidden>true</Hidden>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.75pt</Width>
+                  </Border>
+                </Style>
+                <Position>RightCenter</Position>
+                <Layout>Column</Layout>
+                <ChartLegendTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </ChartLegendTitle>
+                <AutoFitTextDisabled>true</AutoFitTextDisabled>
+              </ChartLegend>
+            </ChartLegends>
+            <ChartTitles>
+              <ChartTitle Name="Default">
+                <Caption>Net Market Value</Caption>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </ChartTitle>
+            </ChartTitles>
+            <Palette>Pastel</Palette>
+            <DynamicHeight>=Code.DynamicHeight</DynamicHeight>
+            <ChartBorderSkin>
+              <Style>
+                <BackgroundColor>Gray</BackgroundColor>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <Color>White</Color>
+              </Style>
+            </ChartBorderSkin>
+            <ChartNoDataMessage Name="NoDataMessage">
+              <Caption>No Data Available</Caption>
+              <Style>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <TextAlign>General</TextAlign>
+                <VerticalAlign>Top</VerticalAlign>
+              </Style>
+            </ChartNoDataMessage>
+            <DataSetName>GetExposureInfo</DataSetName>
+            <Top>0.2in</Top>
+            <Left>6.3in</Left>
+            <Height>2.5in</Height>
+            <Width>2in</Width>
+            <ZIndex>3</ZIndex>
+            <Visibility>
+              <Hidden>=NOT Parameters!ShowChart.Value</Hidden>
+            </Visibility>
+            <CustomProperties>
+              <CustomProperty>
+                <Name>__Upgraded2005__</Name>
+                <Value>__Upgraded2005__</Value>
+              </CustomProperty>
+            </CustomProperties>
+            <DataElementOutput>NoOutput</DataElementOutput>
+            <Style>
+              <BackgroundColor>White</BackgroundColor>
+            </Style>
+          </Chart>
+          <Chart Name="chart4">
+            <ChartCategoryHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="chart4_CategoryGroup1">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Group1.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!Group1.Value</Value>
+                      <Direction>Descending</Direction>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!Group1.Value</Label>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartMember>
+              </ChartMembers>
+            </ChartCategoryHierarchy>
+            <ChartSeriesHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="chart4_SeriesGroup1">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Group1.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!Group1.Value</Value>
+                      <Direction>Descending</Direction>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!Group1.Value</Label>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartMember>
+              </ChartMembers>
+            </ChartSeriesHierarchy>
+            <ChartData>
+              <ChartSeriesCollection>
+                <ChartSeries Name="Series1">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=iif(sum(Fields!LongMval.Value)=0 and sum(Fields!ShortMval.Value)=0,0,Abs(sum(Fields!LongMval.Value))+Abs(sum(Fields!ShortMval.Value)))</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                        <Label>=space(25) &amp; iif(sum(Fields!LongMval.Value)=0 and sum(Fields!ShortMval.Value)=0,"",format(Abs(sum(Fields!LongMval.Value))+Abs(sum(Fields!ShortMval.Value)),"N"&amp;Parameters!MonetaryPrecision.Value))</Label>
+                        <Visible>true</Visible>
+                        <Position>Left</Position>
+                      </ChartDataLabel>
+                      <Style>
+                        <Border>
+                          <Width>0.376pt</Width>
+                        </Border>
+                        <Color>=Code.GetColor("Group4")</Color>
+                      </Style>
+                      <ChartMarker>
+                        <Size>6pt</Size>
+                        <Style />
+                      </ChartMarker>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Type>Bar</Type>
+                  <Subtype>Stacked</Subtype>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <CustomProperties>
+                    <CustomProperty>
+                      <Name>PointWidth</Name>
+                      <Value>0.6</Value>
+                    </CustomProperty>
+                  </CustomProperties>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <Disabled>true</Disabled>
+                  </ChartSmartLabel>
+                </ChartSeries>
+              </ChartSeriesCollection>
+            </ChartData>
+            <ChartAreas>
+              <ChartArea Name="Default">
+                <ChartCategoryAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                        <Width>0.75pt</Width>
+                      </Border>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <Margin>True</Margin>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                      <IntervalOffset>1</IntervalOffset>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Enabled>True</Enabled>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                      <IntervalOffset>1</IntervalOffset>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Type>None</Type>
+                    </ChartMinorTickMarks>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <HideLabels>true</HideLabels>
+                    <PreventFontShrink>true</PreventFontShrink>
+                    <PreventFontGrow>true</PreventFontGrow>
+                    <IncludeZero>false</IncludeZero>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartCategoryAxes>
+                <ChartValueAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                        <Width>0.75pt</Width>
+                      </Border>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <Format>N0</Format>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <Margin>True</Margin>
+                    <ChartMajorGridLines>
+                      <Enabled>True</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>DarkGray</Color>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Enabled>True</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>DarkGray</Color>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Enabled>True</Enabled>
+                      <Type>Inside</Type>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                          <Width>0.75pt</Width>
+                        </Border>
+                      </Style>
+                      <Interval>NaN</Interval>
+                    </ChartMinorTickMarks>
+                    <Scalar>true</Scalar>
+                    <HideLabels>true</HideLabels>
+                    <PreventFontShrink>true</PreventFontShrink>
+                    <PreventFontGrow>true</PreventFontGrow>
+                    <IncludeZero>false</IncludeZero>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartValueAxes>
+                <ChartThreeDProperties>
+                  <Enabled>true</Enabled>
+                  <Rotation>5</Rotation>
+                  <Inclination>15</Inclination>
+                  <WallThickness>0</WallThickness>
+                  <Clustered>true</Clustered>
+                </ChartThreeDProperties>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.75pt</Width>
+                  </Border>
+                  <BackgroundColor>White</BackgroundColor>
+                </Style>
+              </ChartArea>
+            </ChartAreas>
+            <ChartLegends>
+              <ChartLegend Name="Default">
+                <Hidden>true</Hidden>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                    <Width>0.75pt</Width>
+                  </Border>
+                </Style>
+                <Position>RightCenter</Position>
+                <Layout>Column</Layout>
+                <ChartLegendTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </ChartLegendTitle>
+                <AutoFitTextDisabled>true</AutoFitTextDisabled>
+              </ChartLegend>
+            </ChartLegends>
+            <ChartTitles>
+              <ChartTitle Name="Default">
+                <Caption>Gross Market Value</Caption>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </ChartTitle>
+            </ChartTitles>
+            <Palette>Pastel</Palette>
+            <DynamicHeight>=Code.DynamicHeight</DynamicHeight>
+            <ChartBorderSkin>
+              <Style>
+                <BackgroundColor>Gray</BackgroundColor>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <Color>White</Color>
+              </Style>
+            </ChartBorderSkin>
+            <ChartNoDataMessage Name="NoDataMessage">
+              <Caption>No Data Available</Caption>
+              <Style>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <TextAlign>General</TextAlign>
+                <VerticalAlign>Top</VerticalAlign>
+              </Style>
+            </ChartNoDataMessage>
+            <DataSetName>GetExposureInfo</DataSetName>
+            <Top>0.2in</Top>
+            <Left>8.4in</Left>
+            <Height>2.5in</Height>
+            <Width>2in</Width>
+            <ZIndex>4</ZIndex>
+            <Visibility>
+              <Hidden>=NOT Parameters!ShowChart.Value</Hidden>
+            </Visibility>
+            <CustomProperties>
+              <CustomProperty>
+                <Name>__Upgraded2005__</Name>
+                <Value>__Upgraded2005__</Value>
+              </CustomProperty>
+            </CustomProperties>
+            <DataElementOutput>NoOutput</DataElementOutput>
+            <Style>
+              <BackgroundColor>White</BackgroundColor>
+            </Style>
+          </Chart>
+        </ReportItems>
+        <Top>0.95in</Top>
+        <Height>2.7in</Height>
+        <Width>10.4in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+    </ReportItems>
+    <Height>3.65in</Height>
+    <Style />
+  </Body>
+  <Width>10.4in</Width>
+  <Page>
+    <PageHeight>8.5in</PageHeight>
+    <PageWidth>11in</PageWidth>
+    <InteractiveHeight>8.5in</InteractiveHeight>
+    <InteractiveWidth>11in</InteractiveWidth>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="GenevaSource">
+      <Transaction>true</Transaction>
+      <ConnectionProperties>
+        <DataProvider>GENEVA</DataProvider>
+        <ConnectString>=Parameters!ConnectionString.Value</ConnectString>
+        <Prompt>Specify a user name and password for data source GenevaSource</Prompt>
+      </ConnectionProperties>
+      <rd:SecurityType>DataBase</rd:SecurityType>
+      <rd:DataSourceID>edd49c48-634a-4412-a94d-92f011a99e8f</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="GetExposureInfo">
+      <Query>
+        <DataSourceName>GenevaSource</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="Portfolio">
+            <Value>=Parameters!Portfolio.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossingCurrency">
+            <Value>=Parameters!CrossingCurrency.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BookCurrency">
+            <Value>=Parameters!BookCurrency.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PriceSchedule">
+            <Value>=Parameters!PriceSchedule.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LumpCashLots">
+            <Value>=Parameters!LumpCashLots.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="RegionalSettings">
+            <Value>=Parameters!RegionalSettings.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LumpNonCashLots">
+            <Value>=Parameters!LumpNonCashLots.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingView">
+            <Value>=Parameters!AccountingView.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BusinessCalendar">
+            <Value>=Parameters!BusinessCalendar.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BidAskPricing">
+            <Value>=Parameters!BidAskPricing.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ExpandAddendum">
+            <Value>=Parameters!ExpandAddendum.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="Consolidate">
+            <Value>=Parameters!Consolidate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnFutures">
+            <Value>=Parameters!CrossZeroOnFutures.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnOptions">
+            <Value>=Parameters!CrossZeroOnOptions.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnEquity">
+            <Value>=Parameters!CrossZeroOnEquity.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnDebt">
+            <Value>=Parameters!CrossZeroOnDebt.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnCoverShort">
+            <Value>=Parameters!CrossZeroOnCoverShort.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SettleFXCost">
+            <Value>=Parameters!SettleFXCost.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SegregateIncome">
+            <Value>=Parameters!SegregateIncome.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="WithholdPurchasedSoldAI">
+            <Value>=Parameters!WithholdPurchasedSoldAI.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccrueWithhold">
+            <Value>=Parameters!AccrueWithhold.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingRunType">
+            <Value>=Parameters!AccountingRunType.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AppraisalDay">
+            <Value>=Parameters!AppraisalDay.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccrueOnSTIF">
+            <Value>=Parameters!AccrueOnSTIF.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AmortizationElection">
+            <Value>=Parameters!AmortizationElection.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ByPassRule">
+            <Value>=Parameters!ByPassRule.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingParameters">
+            <Value>=Parameters!AccountingParameters.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ConsolidateLegalEntities">
+            <Value>=Parameters!ConsolidateLegalEntities.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingRule">
+            <Value>=Parameters!AccountingRule.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ExcludeCommission">
+            <Value>=Parameters!ExcludeCommission.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CounterClosingRuleOverride">
+            <Value>=Parameters!CounterClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FuturesClosingRuleOverride">
+            <Value>=Parameters!FuturesClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="InvestmentClosingRuleOverride">
+            <Value>=Parameters!InvestmentClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SecondaryCounterClosingRuleOverride">
+            <Value>=Parameters!SecondaryCounterClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SecondaryFuturesClosingRuleOverride">
+            <Value>=Parameters!SecondaryFuturesClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SecondaryInvestmentClosingRuleOverride">
+            <Value>=Parameters!SecondaryInvestmentClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="MarkToMarketCashTransfer">
+            <Value>=Parameters!MarkToMarketCashTransfer.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FundLegalEntityDescription">
+            <Value>=Parameters!FundLegalEntityDescription.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="MarkLegalEntity">
+            <Value>=Parameters!MarkLegalEntity.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FundLegalEntity">
+            <Value>=Parameters!FundLegalEntity.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SeparateFundLegalEntities">
+            <Value>=Parameters!SeparateFundLegalEntities.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableManualJE">
+            <Value>=Parameters!DisableManualJE.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PostValidationErrors">
+            <Value>=Parameters!PostValidationErrors.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableLockdowns">
+            <Value>=Parameters!DisableLockdowns.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableLDErrorRead">
+            <Value>=Parameters!DisableLDErrorRead.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableFreezepoints">
+            <Value>=Parameters!DisableFreezepoints.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="EnableRealTimePricing">
+            <Value>=Parameters!EnableRealTimePricing.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableSnapshots">
+            <Value>=Parameters!DisableSnapshots.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ScreenType">
+            <Value>=Parameters!ScreenType.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PeriodStartDate">
+            <Value>=Parameters!PeriodStartDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PeriodEndDate">
+            <Value>=Parameters!PeriodEndDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="KnowledgeDate">
+            <Value>=Parameters!KnowledgeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PriorKnowledgeDate">
+            <Value>=Parameters!PriorKnowledgeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingPeriod">
+            <Value>=Parameters!AccountingPeriod.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingCalendar">
+            <Value>=Parameters!AccountingCalendar.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ManagementFirm">
+            <Value>=Parameters!ManagementFirm.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AddendumPages">
+            <Value>=Parameters!AddendumPages.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingFilters">
+            <Value>=Parameters!AccountingFilters.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableInvestmentFilters">
+            <Value>=Parameters!DisableInvestmentFilters.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PortfolioDescription">
+            <Value>=Parameters!PortfolioDescription.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableHyperlinks">
+            <Value>=Parameters!DisableHyperlinks.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DisableBooks">
+            <Value>=Parameters!DisableBooks.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="Group1">
+            <Value>=Parameters!Group1.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="Group2">
+            <Value>=Parameters!Group2.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingSelectionRuleUsed">
+            <Value>=Parameters!AccountingSelectionRuleUsed.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LumpCrossGL">
+            <Value>=Parameters!LumpCrossGL.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="GainCalcMethod">
+            <Value>=Parameters!GainCalcMethod.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FreezeAccountingDate">
+            <Value>=Parameters!FreezeAccountingDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FreezeKnowledgeDate">
+            <Value>=Parameters!FreezeKnowledgeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ParallelConsolidationChildren">
+            <Value>=Parameters!ParallelConsolidationChildren.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="InventoryState">
+            <Value>=Parameters!InventoryState.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AllowBoxedPosition">
+            <Value>=Parameters!AllowBoxedPosition.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="GetKTimesFromDefaultCalendar">
+            <Value>=Parameters!GetKTimesFromDefaultCalendar.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FiscalCalendar">
+            <Value>=Parameters!FiscalCalendar.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="RelativeDate">
+            <Value>=Parameters!RelativeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LotLevelOverrides">
+            <Value>=Parameters!LotLevelOverrides.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="MOERoundingMethod">
+            <Value>=Parameters!MOERoundingMethod.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="HybridHistoricalView">
+            <Value>=Parameters!HybridHistoricalView.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BypassFLEConsolidatingFlag">
+            <Value>=Parameters!BypassFLEConsolidatingFlag.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="EnableTimeSeries">
+            <Value>=Parameters!EnableTimeSeries.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="IgnoreSpecificLotClosing">
+            <Value>=Parameters!IgnoreSpecificLotClosing.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PaydownGLasGainLoss">
+            <Value>=Parameters!PaydownGLasGainLoss.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LumpExpensesInSummaryLockdown">
+            <Value>=Parameters!LumpExpensesInSummaryLockdown.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT
+          DECODE(:Group1,
+          "InvestmentType",
+          {Investment.InvestmentType.Description},
+          "AssetType",
+          {Investment.AssetType.Description},
+          "Counterparty",
+          {LocationAccount.NameLine1},
+          "LocalBasisCurrency",
+          {BasketInvestment.BifurcationCurrency.Description},
+          "PrintGroup",
+          {Investment.PrintGroup.Description},
+          "SubIndustry",          {Investment.SubIndustry.Description},
+          "Industry",             {Investment.SubIndustry.Industry.Description},
+          "IndustryGroup",        {Investment.SubIndustry.Industry.IndustryGroup.Description},
+          "Sector",               {Investment.SubIndustry.Industry.IndustryGroup.Sector.Description},
+          "SubIndustry2",          {Investment.SubIndustry2.Description},
+          "Industry2",             {Investment.SubIndustry2.Industry.Description},
+          "IndustryGroup2",        {Investment.SubIndustry2.Industry.IndustryGroup.Description},
+          "Sector2",               {Investment.SubIndustry2.Industry.IndustryGroup.Sector.Description},
+          "Country",              {Investment.IssueCountry.Description},
+          "Issuer",              {Investment.Issuer.NameSort},
+          "None","") Group1,
+
+          DECODE(:Group2,
+          "InvestmentType",
+          {Investment.InvestmentType.Description},
+          "AssetType",
+          {Investment.AssetType.Description},
+          "Counterparty",
+          {LocationAccount.NameLine1},
+          "LocalBasisCurrency",
+          {BasketInvestment.BifurcationCurrency.Description},
+          "PrintGroup",
+          {Investment.PrintGroup.Description},
+          "SubIndustry",          {Investment.SubIndustry.Description},
+          "Industry",             {Investment.SubIndustry.Industry.Description},
+          "IndustryGroup",        {Investment.SubIndustry.Industry.IndustryGroup.Description},
+          "Sector",               {Investment.SubIndustry.Industry.IndustryGroup.Sector.Description},
+          "SubIndustry2",          {Investment.SubIndustry2.Description},
+          "Industry2",             {Investment.SubIndustry2.Industry.Description},
+          "IndustryGroup2",        {Investment.SubIndustry2.Industry.IndustryGroup.Description},
+          "Sector2",               {Investment.SubIndustry2.Industry.IndustryGroup.Sector.Description},
+          "Country",              {Investment.IssueCountry.Description},
+          "Issuer",              {Investment.Issuer.NameSort},
+          "None","") Group2,
+          DECODE(:Group1,
+          "InvestmentType",
+          {Investment.InvestmentType.Code},
+          "AssetType",
+          {Investment.AssetType.Code},
+          "Counterparty",
+          {LocationAccount.NameSort},
+          "Currency",
+          {BasketInvestment.BifurcationCurrency.Code}
+          )GroupCode,
+          Decode({BasketInvestment.IsSwap} ,
+          1, {Portfolio.AccountingParameters.BookCurrency.Description},
+          Decode ({BasketInvestment.IsOption} OR {BasketInvestment.IsWarrant} OR {BasketInvestment.IsFuture},
+          1,  {BasketInvestment.UnderlyingInvestment.Description} ,
+          Decode({BasketInvestment.IsForwardCash},
+          1,  DECODE(bisTaxLot=&gt;{TaxLotTransaction.PortfolioEvent.Investment.BifurcationCurrency.Description} == {BasketInvestment.Description },
+          1, {BasketInvestment.Description },
+          {Portfolio.AccountingParameters.BookCurrency.Description}),
+          DECODE({BasketInvestment.IsForwardFXContract},
+          1,DECODE({BasketInvestment.BuyCurrency.Description} == {Investment.Description},
+          1,{BasketInvestment.BuyCurrency.Description} ,
+          {Portfolio.AccountingParameters.BookCurrency.Description}),
+          {Investment.Description}))))  ExposureInvest,
+
+
+          Sum(Balance(Net,Book,PeriodEnd,:InventoryState,MktValSummary)
+          - Balance(Net,Book,PeriodEnd,InDefault,AllAmortizationAssetLiability)
+          + Balance(Net,Book,PeriodEnd,All,AllAccruedInterest)
+          - Balance(Net,Book,PeriodEnd,InDefault,AllAccruedInterest)) MktVal,
+
+          Sum(Balance(Long,Book,PeriodEnd,:InventoryState,MktValSummary)
+          - Balance(Long,Book,PeriodEnd,InDefault,AllAmortizationAssetLiability)
+          + Balance(Long,Book,PeriodEnd,All,AllAccruedInterest)
+          - Balance(Long,Book,PeriodEnd,InDefault,AllAccruedInterest))  LongMval,
+
+          Sum(Balance(Short,Book,PeriodEnd,:InventoryState,MktValSummary)
+          - Balance(Short,Book,PeriodEnd,InDefault,AllAmortizationAssetLiability)
+          + Balance(Short,Book,PeriodEnd,All,AllAccruedInterest)
+          - Balance(Short,Book,PeriodEnd,InDefault,AllAccruedInterest)) ShortMval,
+
+
+
+
+          {LocationAccount.NameLine1} Counterparty,
+
+          {Portfolio.AccountingParameters.BookCurrency.Code} BookCurrency
+FROM	bisLocalPosition
+GIVEN  Portfolio = :Portfolio,
+  AccountingPeriodStartDate = :PeriodStartDate,
+  AccountingPeriodEndDate = :PeriodEndDate,
+  KnowledgeDate = :KnowledgeDate,
+  PriorKnowledgeDate = :PriorKnowledgeDate,
+  AccountingFilters = :AccountingFilters,
+  AccountingParameters = :AccountingParameters,
+  ConsolidateLegalEntities = :ConsolidateLegalEntities,
+  AccountingRule = :AccountingRule,
+  AccountingRunType = :AccountingRunType,
+  AccountingView = :AccountingView,
+  AccrueOnSTIF = :AccrueOnSTIF,
+  AccrueWithhold = :AccrueWithhold,
+  AmortizationElection = :AmortizationElection,
+  AmortizeOnUnrealizedDate = :AmortizeOnUnrealizedDate,
+  AppraisalDay = :AppraisalDay,
+  BidAskClosing = :BidAskClosing,
+  BidAskPricing = :BidAskPricing,
+  BookCurrency = :BookCurrency,
+  BusinessCalendar = :BusinessCalendar,
+  ByPassRule = :ByPassRule,
+  CounterClosingRuleOverride = :CounterClosingRuleOverride,
+  CrossingCurrency = :CrossingCurrency,
+  CrossZeroOnCoverShort = :CrossZeroOnCoverShort,
+  CrossZeroOnDebt = :CrossZeroOnDebt,
+  CrossZeroOnEquity = :CrossZeroOnEquity,
+  CrossZeroOnFutures = :CrossZeroOnFutures,
+  CrossZeroOnOptions = :CrossZeroOnOptions,
+  ExcludeCommission = :ExcludeCommission,
+  FuturesClosingRuleOverride = :FuturesClosingRuleOverride,
+  InvestmentClosingRuleOverride = :InvestmentClosingRuleOverride,
+  LumpCashLots = :LumpCashLots,
+  LumpNonCashLots = :LumpNonCashLots,
+  MarkToMarketCashTransfer = :MarkToMarketCashTransfer,
+  PostDividendTaxLotDetail = :PostDividendTaxLotDetail,
+  PriceSchedule = :PriceSchedule,
+  SecondaryCounterClosingRuleOverride = :SecondaryCounterClosingRuleOverride,
+  SecondaryFuturesClosingRuleOverride = :SecondaryFuturesClosingRuleOverride,
+  SecondaryInvestmentClosingRuleOverride = :SecondaryInvestmentClosingRuleOverride,
+  SegregateIncome = :SegregateIncome,
+  SettleFXCost = :SettleFXCost,
+  WithholdPurchasedSoldAI = :WithholdPurchasedSoldAI,
+  LegalEntity = :FundLegalEntity,
+  MarkLegalEntity = :MarkLegalEntity,
+  DisableFreezepoints = :DisableFreezepoints,
+  DisableBooks = :DisableBooks,
+  DisableLockdowns = :DisableLockdowns,
+  DisableLDErrorRead = :DisableLDErrorRead,
+  DisableManualJE = :DisableManualJE,
+  DisableSnapshots = :DisableSnapshots,
+  EnableRealTimePricing = :EnableRealTimePricing,
+  PostValidationErrors = :PostValidationErrors,
+  SnapshotUse = :SnapshotUse,
+  BISQueryType = "PeriodActivity",
+  LumpCrossGL = :LumpCrossGL,
+  GainCalcMethod = :GainCalcMethod,
+  FiscalCalendar = :FiscalCalendar
+Where LongMval!=0 or ShortMval!=0
+GROUP BY Group1, Group2, ExposureInvest</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ExposureInvest">
+          <DataField>ExposureInvest</DataField>
+        </Field>
+        <Field Name="ViaInvest">
+          <DataField>ViaInvest</DataField>
+        </Field>
+        <Field Name="SwapType">
+          <DataField>SwapType</DataField>
+        </Field>
+        <Field Name="LongMval">
+          <DataField>LongMval</DataField>
+        </Field>
+        <Field Name="ShortMval">
+          <DataField>ShortMval</DataField>
+        </Field>
+        <Field Name="MktVal">
+          <DataField>MktVal</DataField>
+        </Field>
+        <Field Name="Counterparty">
+          <DataField>Counterparty</DataField>
+        </Field>
+        <Field Name="buyCurrency">
+          <DataField>buyCurrency</DataField>
+        </Field>
+        <Field Name="sellCurrency">
+          <DataField>sellCurrency</DataField>
+        </Field>
+        <Field Name="SwapUnderlyingPrice">
+          <DataField>SwapUnderlyingPrice</DataField>
+        </Field>
+        <Field Name="NotionalAmount">
+          <DataField>NotionalAmount</DataField>
+        </Field>
+        <Field Name="CFMVofUnderlying">
+          <DataField>CFMVofUnderlying</DataField>
+        </Field>
+        <Field Name="genKnowledgeDate">
+          <DataField>genKnowledgeDate</DataField>
+        </Field>
+        <Field Name="genKnowledgeDateExact">
+          <DataField>genKnowledgeDateExact</DataField>
+        </Field>
+        <Field Name="genDataSetID">
+          <DataField>genDataSetID</DataField>
+        </Field>
+        <Field Name="Group1">
+          <DataField>Group1</DataField>
+        </Field>
+        <Field Name="Group2">
+          <DataField>Group2</DataField>
+        </Field>
+        <Field Name="GroupCode">
+          <DataField>GroupCode</DataField>
+        </Field>
+        <Field Name="BookCurrency">
+          <DataField>BookCurrency</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="ConnectionString">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ConnectionString</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="Portfolio">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Portfolio</Prompt>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="PortfolioDescription">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Portfolio Description</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PeriodStartDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>01/01/1950</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Period Start Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PeriodEndDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>=CDate(ToDay().Date()+" 23:59:59")</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Period End Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="KnowledgeDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>=CDate(ToDay().Date()+" 23:59:59")</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Knowledge Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PriorKnowledgeDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>=CDate(ToDay().Date()+" 00:00:01")</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Prior Knowledge Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Consolidate">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>None</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Consolidate</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>All</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>GroupsOnly</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>None</Value>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="AddendumPages">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>Short</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>AddendumPages</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>None</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Short</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Long</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Param</Value>
+            <Label>Parameters Only</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="ManagementFirm">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ManagementFirm</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RegionalSettings">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>en-US</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>RegionalSettings</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MonetaryPrecision">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>2</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>MonetaryPrecision</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="QuantityPrecision">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>3</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>QuantityPrecision</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PricingPrecision">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>4</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PricingPrecision</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccountingRunType">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>Dynamic</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accounting Run Type</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>Dynamic</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>ClosedPeriod</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Books</Value>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="AccountingPeriod">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accounting Period</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccountingFilters">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>LIBAccounting Filters Type</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisableInvestmentFilters">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable Investment Filters</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="AccountingView">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accounting View</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccrueOnSTIF">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accrue On STIF</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccrueWithhold">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accrue Withhold</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AmortizationElection">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Amortization Election</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AppraisalDay">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Appraisal Day</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BidAskPricing">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Bid Ask Pricing</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BookCurrency">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Book Currency</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BusinessCalendar">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Business Calendar</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ByPassRule">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>By Pass Rule</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CounterClosingRuleOverride">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Counter Closing Rule Override</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CrossingCurrency">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Crossing Currency</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CrossZeroOnCoverShort">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Cross Zero On Cover Short</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CrossZeroOnDebt">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Cross Zero On Debt</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CrossZeroOnEquity">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Cross Zero On Equity</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CrossZeroOnFutures">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Cross Zero On Futures</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CrossZeroOnOptions">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Cross Zero On Options</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ExcludeCommission">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Exclude Commission</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FundLegalEntity">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Fund Legal Entity</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FundLegalEntityDescription">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Fund Legal Entity Description</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="FuturesClosingRuleOverride">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Futures Closing Rule Override</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="InvestmentClosingRuleOverride">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Investment Closing Rule Override</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LumpCashLots">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Lump Cash Lots</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LumpNonCashLots">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Lump Non Cash Lots</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MarkLegalEntity">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>All</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Mark Legal Entity</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="MarkToMarketCashTransfer">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Mark To Market Cash Transfer</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ConsolidateLegalEntities">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>SeparateFundLegalEntities</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Consolidate Legal Entities</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccountingParameters">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accounting Parameters</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccountingRule">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accounting Rule</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PriceSchedule">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Price Schedule</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SecondaryCounterClosingRuleOverride">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Secondary Counter Closing Rule Override</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SecondaryFuturesClosingRuleOverride">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Secondary Futures Closing Rule Override</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SecondaryInvestmentClosingRuleOverride">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Secondary Investment Closing Rule Override</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SegregateIncome">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Segregate Income</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SeparateFundLegalEntities">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Separate Fund Legal Entities</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SettleFXCost">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Settle FXCost</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="WithholdPurchasedSoldAI">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Withhold Purchased Sold AI</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AccountingCalendar">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accounting Calendar</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ScreenType">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Screen Type</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisableSnapshots">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable Snapshots</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EnableRealTimePricing">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Enable Real Time Pricing</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ExpandAddendum">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Expand Addendum Pages</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PostValidationErrors">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Post Validation Errors</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisableManualJE">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable Manual JE</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisableFreezepoints">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable Freezepoints</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisableLDErrorRead">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>False</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable LDError Read</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisableLockdowns">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable Lockdowns</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisableHyperlinks">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Disable Hyperlinks</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisableBooks">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>DisableBooks</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Group1">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>None</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Group1</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>None</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>AssetType</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Counterparty</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Country</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>LocalBasisCurrency</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>InvestmentType</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Industry</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Industry2</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>IndustryGroup</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>IndustryGroup2</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Issuer</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>PrintGroup</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Sector</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Sector2</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>SubIndustry</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>SubIndustry2</Value>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="Group2">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>None</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Group2</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>None</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>AssetType</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Counterparty</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Country</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>LocalBasisCurrency</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>InvestmentType</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Industry</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Industry2</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>IndustryGroup</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>IndustryGroup2</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Issuer</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>PrintGroup</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Sector</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Sector2</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>SubIndustry</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>SubIndustry2</Value>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="AccountingSelectionRuleUsed">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>False</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Accounting Selection Rule Used</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="ShowChart">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>False</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Show Chart</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ShowCode">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ShowCode</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LumpCrossGL">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Cross Gain Loss Inclusion</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="GainCalcMethod">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>GainCalcMethod</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FreezeAccountingDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Freeze Accounting Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FreezeKnowledgeDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Freeze Knowledge Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ParallelConsolidationChildren">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>0</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt># Of Processes To Use</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="InventoryState">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>AllAssetsAndPayables</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>InventoryState</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AllowBoxedPosition">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Allow Boxed Position</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="GetKTimesFromDefaultCalendar">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Get Knowledge Times from Default Calendar</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RelativeDate">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Relative Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FiscalCalendar">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Fiscal Calendar</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LotLevelOverrides">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Lot Level Overrides</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MOERoundingMethod">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>MOE Rounding Method</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="HybridHistoricalView">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <DefaultValue>
+        <Values>
+          <Value>False</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Hybrid Historical View</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="BypassFLEConsolidatingFlag">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <Prompt>Bypass Fund Legal Entity when Consolidating</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EnableTimeSeries">
+      <DataType>Boolean</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Enable Time Series</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="IgnoreSpecificLotClosing">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Ignore Specific Lot Closing</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PaydownGLasGainLoss">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Process Paydown GL as Realized Gain/Loss</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LumpExpensesInSummaryLockdown">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Lump Expenses in Summary Lockdown</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>
+    Private colorPalette As String() = {"#4B8DA4", "#F1E73f", "#9DD3D5", "#9E9E73", "#A4D077", "#6A6A6C", "#69B9AA", "#ECC043", "#6DC497", "#9D689B", "#AD8A44", "#C63070", "#AFB7AB", "#DFE056", "#EDA563"}
+
+    Private count As Integer = 0
+
+    Private mapping As New System.Collections.Hashtable()
+
+    Public Function GetColor(ByVal groupingValue As String) As String
+    If groupingValue = "" Then
+    Return "#82BBE7"
+    End If
+
+    If mapping.ContainsKey(groupingValue) Then
+    Return mapping(groupingValue)
+    End If
+    Dim c As String = colorPalette(count Mod colorPalette.Length)
+    count = count + 1
+    mapping.Add(groupingValue, c)
+    Return c
+    End Function
+
+
+public DynamicHeight as String = ""
+private height as Single = 0
+
+public function InitCountGroup(count As Integer) as boolean
+if count &lt; 10 then 
+  height = count * 0.45
+  else
+  height = count * 0.25
+  end if
+
+  DynamicHeight = CStr(height) + " in"
+
+  return false
+end function</Code>
+  <Language>=Parameters!RegionalSettings.Value</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>2cfc62f0-afc3-451e-b515-4fe52aa112a7</rd:ReportID>
+</Report>
