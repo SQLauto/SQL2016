@@ -3667,7 +3667,7 @@
                   <Parameter Name="RegionalSettings">
                     <Value>=Parameters!RegionalSettings.Value</Value>
                   </Parameter>
-                  <Parameter Name="ExtraParamName2">
+                  <Parameter Name="ExtraParamName1">
                     <Value>PerformanceFee</Value>
                   </Parameter>
                   <Parameter Name="UseNotionalValues">
@@ -3682,7 +3682,7 @@
                   <Parameter Name="CashFlowWeighting">
                     <Value>=Parameters!CashFlowWeighting.Value</Value>
                   </Parameter>
-                  <Parameter Name="ExtraParamName3">
+                  <Parameter Name="ExtraParamName2">
                     <Value>OpeningFlowMethod</Value>
                   </Parameter>
                   <Parameter Name="DoNotApplyTWRAdjustments">

@@ -23,16 +23,16 @@
   </DataSets>
   <Reports>
     <ProjectItem>
-      <Name>NEXTGEN Exposure Summary.rdl</Name>
-      <FullPath>NEXTGEN Exposure Summary.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>NEXTGEN Assets Under Management.rdl</Name>
       <FullPath>NEXTGEN Assets Under Management.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>NEXTGEN Consolidated Exposure Summary.rdl</Name>
       <FullPath>NEXTGEN Consolidated Exposure Summary.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NEXTGEN Exposure Summary.rdl</Name>
+      <FullPath>NEXTGEN Exposure Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>NEXTGEN Fixed Income Overview.rdl</Name>
@@ -63,8 +63,8 @@
       <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>NEXTGEN Portfolio Overview.rdl</Name>
-      <FullPath>NEXTGEN Portfolio Overview.rdl</FullPath>
+      <Name>SubReport_SmallHeaderLandscape.rdl</Name>
+      <FullPath>SubReport_SmallHeaderLandscape.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

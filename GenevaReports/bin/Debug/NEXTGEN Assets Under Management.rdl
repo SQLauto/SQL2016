@@ -618,12 +618,14 @@
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <BackgroundColor>=IIF(RunningValue(Fields!AssetType.Value,CountDistinct,"ColumnGroup") mod 2, "Green", "Red")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>

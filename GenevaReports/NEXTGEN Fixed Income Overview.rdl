@@ -970,7 +970,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=System.Text.RegularExpressions.Regex.Replace(Parameters!Group1.Value, "(?&lt;=[a-z])([A-Z])"," $1") &amp; " Exposure"</Value>
+                        <Value>="Exposure by " &amp; System.Text.RegularExpressions.Regex.Replace(Parameters!Group1.Value, "(?&lt;=[a-z])([A-Z])"," $1")</Value>
                         <Style>
                           <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
                           <FontFamily>=Code.StyleSheetValue("SectionTitleFamily")</FontFamily>
@@ -993,7 +993,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   <Border>
                     <Style>None</Style>
                   </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
                   <PaddingRight>2pt</PaddingRight>
                   <PaddingTop>2pt</PaddingTop>
                   <PaddingBottom>2pt</PaddingBottom>
@@ -1030,7 +1029,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   <Border>
                     <Style>None</Style>
                   </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
                   <PaddingRight>2pt</PaddingRight>
                   <PaddingTop>2pt</PaddingTop>
                   <PaddingBottom>2pt</PaddingBottom>
@@ -1067,7 +1065,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   <Border>
                     <Style>None</Style>
                   </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
                   <PaddingRight>2pt</PaddingRight>
                   <PaddingTop>2pt</PaddingTop>
                   <PaddingBottom>2pt</PaddingBottom>
@@ -2221,7 +2218,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   <Border>
                     <Style>None</Style>
                   </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
                   <PaddingRight>2pt</PaddingRight>
                   <PaddingTop>2pt</PaddingTop>
                   <PaddingBottom>2pt</PaddingBottom>
@@ -3249,28 +3245,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
       <Prompt>Accounting Selection Rule Used</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
-    <ReportParameter Name="DispalyQualityMaturitySectorData">
-      <DataType>Boolean</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value>True</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Display Fixed Income Rating &amp; Detail Data</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="DispalyQualityMaturitySectorPie">
-      <DataType>Boolean</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value>False</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Display Fixed Income Rating &amp; Detail Charts</Prompt>
-    </ReportParameter>
     <ReportParameter Name="LumpCrossGL">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
@@ -3325,16 +3299,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
       <Prompt>Included Credit Facility</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="RatePrecision">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value>4</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Rate Precision</Prompt>
     </ReportParameter>
     <ReportParameter Name="FreezeAccountingDate">
       <DataType>DateTime</DataType>
@@ -3497,15 +3461,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
           <LabelField>StyleSheet</LabelField>
         </DataSetReference>
       </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="TopValue">
-      <DataType>Integer</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>5</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Top Value</Prompt>
     </ReportParameter>
   </ReportParameters>
   <Code>

@@ -100,7 +100,6 @@
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.02in</Top>
                 <Height>0.25in</Height>
                 <Width>9.68515in</Width>
                 <Style>
@@ -110,42 +109,244 @@
               </Textbox>
             </ReportItems>
             <DataElementOutput>NoOutput</DataElementOutput>
-            <Top>1.11875in</Top>
+            <Top>1.10069in</Top>
             <Left>0.00083in</Left>
-            <Height>0.27in</Height>
-            <Width>9.74917in</Width>
+            <Height>0.25in</Height>
+            <Width>9.68515in</Width>
             <Style>
               <BackgroundColor>=Code.StyleSheetValue("ReportTitleBackgroundColor")</BackgroundColor>
             </Style>
           </Rectangle>
-          <Rectangle Name="Rectangle3">
+          <Rectangle Name="Rectangle2">
             <ReportItems>
-              <Tablix Name="PeriodEndList">
-                <TablixBody>
-                  <TablixColumns>
-                    <TablixColumn>
-                      <Width>4.54958in</Width>
-                    </TablixColumn>
-                  </TablixColumns>
-                  <TablixRows>
-                    <TablixRow>
-                      <Height>0.25in</Height>
-                      <TablixCells>
-                        <TablixCell>
-                          <CellContents>
-                            <Rectangle Name="PeriodEndList_Contents">
-                              <ReportItems>
-                                <Textbox Name="textbox2">
+              <Rectangle Name="Rectangle3">
+                <ReportItems>
+                  <Tablix Name="PeriodEndList">
+                    <TablixBody>
+                      <TablixColumns>
+                        <TablixColumn>
+                          <Width>2.23556in</Width>
+                        </TablixColumn>
+                      </TablixColumns>
+                      <TablixRows>
+                        <TablixRow>
+                          <Height>0.25in</Height>
+                          <TablixCells>
+                            <TablixCell>
+                              <CellContents>
+                                <Rectangle Name="PeriodEndList_Contents">
+                                  <ReportItems>
+                                    <Textbox Name="textbox2">
+                                      <CanGrow>true</CanGrow>
+                                      <KeepTogether>true</KeepTogether>
+                                      <Paragraphs>
+                                        <Paragraph>
+                                          <TextRuns>
+                                            <TextRun>
+                                              <Value>=IIF(Parameters!HidePeriodStartDate.Value,
+"Reporting Date: " &amp; FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate),
+"Reporting Period: " &amp; FormatDateTime(Last(Fields!Value.Value), DateFormat.ShortDate) &amp; " - " &amp; 
+FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
+                                              <Style>
+                                                <FontStyle>=Code.StyleSheetValue("ReportDateStyle")</FontStyle>
+                                                <FontFamily>=Code.StyleSheetValue("ReportDateFamily")</FontFamily>
+                                                <FontSize>=Code.StyleSheetValue("ReportDateSize")</FontSize>
+                                                <FontWeight>=Code.StyleSheetValue("ReportDateWeight")</FontWeight>
+                                                <TextDecoration>=Code.StyleSheetValue("ReportDateDecoration")</TextDecoration>
+                                                <Color>=Code.StyleSheetValue("ReportDateColor")</Color>
+                                              </Style>
+                                            </TextRun>
+                                          </TextRuns>
+                                          <Style>
+                                            <TextAlign>Left</TextAlign>
+                                          </Style>
+                                        </Paragraph>
+                                      </Paragraphs>
+                                      <Height>0.2in</Height>
+                                      <Width>2.23556in</Width>
+                                      <Style>
+                                        <VerticalAlign>Middle</VerticalAlign>
+                                        <PaddingLeft>2pt</PaddingLeft>
+                                        <PaddingRight>4pt</PaddingRight>
+                                        <PaddingTop>1pt</PaddingTop>
+                                      </Style>
+                                    </Textbox>
+                                  </ReportItems>
+                                  <KeepTogether>true</KeepTogether>
+                                  <Style />
+                                </Rectangle>
+                              </CellContents>
+                            </TablixCell>
+                          </TablixCells>
+                        </TablixRow>
+                      </TablixRows>
+                    </TablixBody>
+                    <TablixColumnHierarchy>
+                      <TablixMembers>
+                        <TablixMember />
+                      </TablixMembers>
+                    </TablixColumnHierarchy>
+                    <TablixRowHierarchy>
+                      <TablixMembers>
+                        <TablixMember>
+                          <Group Name="PeriodEndList_Details_Group">
+                            <GroupExpressions>
+                              <GroupExpression>="1"</GroupExpression>
+                            </GroupExpressions>
+                          </Group>
+                          <Visibility>
+                            <Hidden>=Fields!Value.Value = ""</Hidden>
+                          </Visibility>
+                          <DataElementOutput>Output</DataElementOutput>
+                          <KeepTogether>true</KeepTogether>
+                        </TablixMember>
+                      </TablixMembers>
+                    </TablixRowHierarchy>
+                    <DataSetName>ReportParameters</DataSetName>
+                    <Filters>
+                      <Filter>
+                        <FilterExpression>=Fields!Name.Value</FilterExpression>
+                        <Operator>Like</Operator>
+                        <FilterValues>
+                          <FilterValue>Period*Date</FilterValue>
+                        </FilterValues>
+                      </Filter>
+                    </Filters>
+                    <SortExpressions>
+                      <SortExpression>
+                        <Value>=Fields!Name.Value</Value>
+                      </SortExpression>
+                    </SortExpressions>
+                    <Top>0.3875in</Top>
+                    <Left>0.34834in</Left>
+                    <Height>0.25in</Height>
+                    <Width>2.23556in</Width>
+                    <DataElementOutput>NoOutput</DataElementOutput>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Tablix>
+                  <Tablix Name="PortfolioDescriptionList">
+                    <TablixBody>
+                      <TablixColumns>
+                        <TablixColumn>
+                          <Width>4.48556in</Width>
+                        </TablixColumn>
+                      </TablixColumns>
+                      <TablixRows>
+                        <TablixRow>
+                          <Height>0.25in</Height>
+                          <TablixCells>
+                            <TablixCell>
+                              <CellContents>
+                                <Rectangle Name="PortfolioDescriptionList_Contents">
+                                  <ReportItems>
+                                    <Textbox Name="PortfolioDescriptionTextbox2">
+                                      <CanGrow>true</CanGrow>
+                                      <KeepTogether>true</KeepTogether>
+                                      <Paragraphs>
+                                        <Paragraph>
+                                          <TextRuns>
+                                            <TextRun>
+                                              <Value>=Fields!Value.Value</Value>
+                                              <Style>
+                                                <FontStyle>=Code.StyleSheetValue("PortfolioNameStyle")</FontStyle>
+                                                <FontFamily>=Code.StyleSheetValue("PortfolioNameFamily")</FontFamily>
+                                                <FontSize>=Code.StyleSheetValue("PortfolioNameSize")</FontSize>
+                                                <FontWeight>=Code.StyleSheetValue("PortfolioNameWeight")</FontWeight>
+                                                <TextDecoration>=Code.StyleSheetValue("PortfolioNameDecoration")</TextDecoration>
+                                                <Color>=Code.StyleSheetValue("PortfolioNameColor")</Color>
+                                              </Style>
+                                            </TextRun>
+                                          </TextRuns>
+                                          <Style>
+                                            <TextAlign>Left</TextAlign>
+                                          </Style>
+                                        </Paragraph>
+                                      </Paragraphs>
+                                      <Height>0.25in</Height>
+                                      <Width>4.48556in</Width>
+                                      <DataElementOutput>NoOutput</DataElementOutput>
+                                      <Style>
+                                        <Border>
+                                          <Style>None</Style>
+                                        </Border>
+                                        <VerticalAlign>Middle</VerticalAlign>
+                                        <PaddingLeft>2pt</PaddingLeft>
+                                        <PaddingRight>2pt</PaddingRight>
+                                      </Style>
+                                    </Textbox>
+                                  </ReportItems>
+                                  <KeepTogether>true</KeepTogether>
+                                  <Style />
+                                </Rectangle>
+                              </CellContents>
+                            </TablixCell>
+                          </TablixCells>
+                        </TablixRow>
+                      </TablixRows>
+                    </TablixBody>
+                    <TablixColumnHierarchy>
+                      <TablixMembers>
+                        <TablixMember />
+                      </TablixMembers>
+                    </TablixColumnHierarchy>
+                    <TablixRowHierarchy>
+                      <TablixMembers>
+                        <TablixMember>
+                          <Group Name="PortfolioDescriptionList_Details_Group">
+                            <DataElementName>Item</DataElementName>
+                          </Group>
+                          <DataElementName>Item_Collection</DataElementName>
+                          <DataElementOutput>Output</DataElementOutput>
+                          <KeepTogether>true</KeepTogether>
+                        </TablixMember>
+                      </TablixMembers>
+                    </TablixRowHierarchy>
+                    <DataSetName>ReportParameters</DataSetName>
+                    <Filters>
+                      <Filter>
+                        <FilterExpression>=Fields!Name.Value</FilterExpression>
+                        <Operator>Equal</Operator>
+                        <FilterValues>
+                          <FilterValue>PortfolioDescription</FilterValue>
+                        </FilterValues>
+                      </Filter>
+                    </Filters>
+                    <Top>0.125in</Top>
+                    <Left>0.34834in</Left>
+                    <Height>0.25in</Height>
+                    <Width>4.48556in</Width>
+                    <ZIndex>1</ZIndex>
+                    <DataElementOutput>NoOutput</DataElementOutput>
+                    <Style>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Tablix>
+                  <Tablix Name="BookCurrency">
+                    <TablixBody>
+                      <TablixColumns>
+                        <TablixColumn>
+                          <Width>2.23556in</Width>
+                        </TablixColumn>
+                      </TablixColumns>
+                      <TablixRows>
+                        <TablixRow>
+                          <Height>0.2in</Height>
+                          <TablixCells>
+                            <TablixCell>
+                              <CellContents>
+                                <Textbox Name="Textbox4">
                                   <CanGrow>true</CanGrow>
                                   <KeepTogether>true</KeepTogether>
                                   <Paragraphs>
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>=IIF(Parameters!HidePeriodStartDate.Value,
-"Reporting Date: " &amp; FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate),
-"Reporting Period: " &amp; FormatDateTime(Last(Fields!Value.Value), DateFormat.ShortDate) &amp; " - " &amp; 
-FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
+                                          <Value>="Reporting Currency: " &amp; Fields!Value.Value</Value>
                                           <Style>
                                             <FontStyle>=Code.StyleSheetValue("ReportDateStyle")</FontStyle>
                                             <FontFamily>=Code.StyleSheetValue("ReportDateFamily")</FontFamily>
@@ -156,205 +357,276 @@ FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
                                           </Style>
                                         </TextRun>
                                       </TextRuns>
-                                      <Style>
-                                        <TextAlign>Left</TextAlign>
-                                      </Style>
+                                      <Style />
                                     </Paragraph>
                                   </Paragraphs>
-                                  <Height>0.25in</Height>
-                                  <Width>4.54958in</Width>
+                                  <rd:DefaultName>Textbox4</rd:DefaultName>
                                   <Style>
-                                    <VerticalAlign>Middle</VerticalAlign>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
                                     <PaddingLeft>2pt</PaddingLeft>
-                                    <PaddingRight>4pt</PaddingRight>
-                                    <PaddingTop>1pt</PaddingTop>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
                                   </Style>
                                 </Textbox>
-                              </ReportItems>
-                              <KeepTogether>true</KeepTogether>
-                              <Style />
-                            </Rectangle>
-                          </CellContents>
-                        </TablixCell>
-                      </TablixCells>
-                    </TablixRow>
-                  </TablixRows>
-                </TablixBody>
-                <TablixColumnHierarchy>
-                  <TablixMembers>
-                    <TablixMember />
-                  </TablixMembers>
-                </TablixColumnHierarchy>
-                <TablixRowHierarchy>
-                  <TablixMembers>
-                    <TablixMember>
-                      <Group Name="PeriodEndList_Details_Group">
-                        <GroupExpressions>
-                          <GroupExpression>="1"</GroupExpression>
-                        </GroupExpressions>
-                      </Group>
-                      <Visibility>
-                        <Hidden>=Fields!Value.Value = ""</Hidden>
-                      </Visibility>
-                      <DataElementOutput>Output</DataElementOutput>
-                      <KeepTogether>true</KeepTogether>
-                    </TablixMember>
-                  </TablixMembers>
-                </TablixRowHierarchy>
-                <DataSetName>ReportParameters</DataSetName>
-                <Filters>
-                  <Filter>
-                    <FilterExpression>=Fields!Name.Value</FilterExpression>
-                    <Operator>Like</Operator>
-                    <FilterValues>
-                      <FilterValue>Period*Date</FilterValue>
-                    </FilterValues>
-                  </Filter>
-                </Filters>
-                <SortExpressions>
-                  <SortExpression>
-                    <Value>=Fields!Name.Value</Value>
-                  </SortExpression>
-                </SortExpressions>
-                <Top>0.5625in</Top>
-                <Left>0.34834in</Left>
-                <Height>0.25in</Height>
-                <Width>4.54958in</Width>
-                <DataElementOutput>NoOutput</DataElementOutput>
-                <Style>
-                  <FontFamily>Calibri</FontFamily>
-                  <FontSize>8pt</FontSize>
-                  <TextAlign>Right</TextAlign>
-                </Style>
-              </Tablix>
-              <Tablix Name="PortfolioDescriptionList">
-                <TablixBody>
-                  <TablixColumns>
-                    <TablixColumn>
-                      <Width>4.48556in</Width>
-                    </TablixColumn>
-                  </TablixColumns>
-                  <TablixRows>
-                    <TablixRow>
-                      <Height>0.25in</Height>
-                      <TablixCells>
-                        <TablixCell>
-                          <CellContents>
-                            <Rectangle Name="PortfolioDescriptionList_Contents">
-                              <ReportItems>
-                                <Textbox Name="PortfolioDescriptionTextbox2">
+                              </CellContents>
+                            </TablixCell>
+                          </TablixCells>
+                        </TablixRow>
+                      </TablixRows>
+                    </TablixBody>
+                    <TablixColumnHierarchy>
+                      <TablixMembers>
+                        <TablixMember />
+                      </TablixMembers>
+                    </TablixColumnHierarchy>
+                    <TablixRowHierarchy>
+                      <TablixMembers>
+                        <TablixMember>
+                          <Group Name="Details" />
+                        </TablixMember>
+                      </TablixMembers>
+                    </TablixRowHierarchy>
+                    <DataSetName>ReportParameters</DataSetName>
+                    <Filters>
+                      <Filter>
+                        <FilterExpression>=Fields!Name.Value</FilterExpression>
+                        <Operator>Equal</Operator>
+                        <FilterValues>
+                          <FilterValue>BookCurrency</FilterValue>
+                        </FilterValues>
+                      </Filter>
+                    </Filters>
+                    <Top>0.625in</Top>
+                    <Left>0.34834in</Left>
+                    <Height>0.2in</Height>
+                    <Width>2.23556in</Width>
+                    <ZIndex>2</ZIndex>
+                    <Visibility>
+                      <Hidden>=Parameters!HideBookCurrency.Value</Hidden>
+                    </Visibility>
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                      </Border>
+                    </Style>
+                  </Tablix>
+                  <Tablix Name="Tablix2">
+                    <TablixBody>
+                      <TablixColumns>
+                        <TablixColumn>
+                          <Width>2.23556in</Width>
+                        </TablixColumn>
+                      </TablixColumns>
+                      <TablixRows>
+                        <TablixRow>
+                          <Height>0.2in</Height>
+                          <TablixCells>
+                            <TablixCell>
+                              <CellContents>
+                                <Textbox Name="Value">
                                   <CanGrow>true</CanGrow>
                                   <KeepTogether>true</KeepTogether>
                                   <Paragraphs>
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>=Fields!Value.Value</Value>
+                                          <Value>=IIF(Parameters!ExtraParamName1.Value = Nothing or Fields!Value.Value = Nothing, "", System.Text.RegularExpressions.Regex.Replace(Parameters!ExtraParamName1.Value, "(?&lt;=[a-z])([A-Z])"," $1") &amp; ": " &amp; System.Text.RegularExpressions.Regex.Replace(Fields!Value.Value, "(?&lt;=[a-z])([A-Z])"," $1"))</Value>
                                           <Style>
-                                            <FontStyle>=Code.StyleSheetValue("PortfolioNameStyle")</FontStyle>
-                                            <FontFamily>=Code.StyleSheetValue("PortfolioNameFamily")</FontFamily>
-                                            <FontSize>=Code.StyleSheetValue("PortfolioNameSize")</FontSize>
-                                            <FontWeight>=Code.StyleSheetValue("PortfolioNameWeight")</FontWeight>
-                                            <TextDecoration>=Code.StyleSheetValue("PortfolioNameDecoration")</TextDecoration>
-                                            <Color>=Code.StyleSheetValue("PortfolioNameColor")</Color>
+                                            <FontStyle>=Code.StyleSheetValue("ReportDateStyle")</FontStyle>
+                                            <FontFamily>=Code.StyleSheetValue("ReportDateFamily")</FontFamily>
+                                            <FontSize>=Code.StyleSheetValue("ReportDateSize")</FontSize>
+                                            <FontWeight>=Code.StyleSheetValue("ReportDateWeight")</FontWeight>
+                                            <TextDecoration>=Code.StyleSheetValue("ReportDateDecoration")</TextDecoration>
+                                            <Color>=Code.StyleSheetValue("ReportDateColor")</Color>
                                           </Style>
                                         </TextRun>
                                       </TextRuns>
-                                      <Style>
-                                        <TextAlign>Left</TextAlign>
-                                      </Style>
+                                      <Style />
                                     </Paragraph>
                                   </Paragraphs>
-                                  <Height>0.25in</Height>
-                                  <Width>4.48556in</Width>
-                                  <DataElementOutput>NoOutput</DataElementOutput>
+                                  <rd:DefaultName>Value</rd:DefaultName>
                                   <Style>
                                     <Border>
                                       <Style>None</Style>
                                     </Border>
-                                    <VerticalAlign>Bottom</VerticalAlign>
                                     <PaddingLeft>2pt</PaddingLeft>
                                     <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
                                   </Style>
                                 </Textbox>
-                              </ReportItems>
-                              <KeepTogether>true</KeepTogether>
-                              <Style />
-                            </Rectangle>
-                          </CellContents>
-                        </TablixCell>
-                      </TablixCells>
-                    </TablixRow>
-                  </TablixRows>
-                </TablixBody>
-                <TablixColumnHierarchy>
-                  <TablixMembers>
-                    <TablixMember />
-                  </TablixMembers>
-                </TablixColumnHierarchy>
-                <TablixRowHierarchy>
-                  <TablixMembers>
-                    <TablixMember>
-                      <Group Name="PortfolioDescriptionList_Details_Group">
-                        <DataElementName>Item</DataElementName>
-                      </Group>
-                      <DataElementName>Item_Collection</DataElementName>
-                      <DataElementOutput>Output</DataElementOutput>
-                      <KeepTogether>true</KeepTogether>
-                    </TablixMember>
-                  </TablixMembers>
-                </TablixRowHierarchy>
-                <DataSetName>ReportParameters</DataSetName>
-                <Filters>
-                  <Filter>
-                    <FilterExpression>=Fields!Name.Value</FilterExpression>
-                    <Operator>Equal</Operator>
-                    <FilterValues>
-                      <FilterValue>PortfolioDescription</FilterValue>
-                    </FilterValues>
-                  </Filter>
-                </Filters>
-                <Top>0.30972in</Top>
-                <Left>0.34834in</Left>
-                <Height>0.25in</Height>
-                <Width>4.48556in</Width>
-                <ZIndex>1</ZIndex>
-                <DataElementOutput>NoOutput</DataElementOutput>
+                              </CellContents>
+                            </TablixCell>
+                          </TablixCells>
+                        </TablixRow>
+                      </TablixRows>
+                    </TablixBody>
+                    <TablixColumnHierarchy>
+                      <TablixMembers>
+                        <TablixMember />
+                      </TablixMembers>
+                    </TablixColumnHierarchy>
+                    <TablixRowHierarchy>
+                      <TablixMembers>
+                        <TablixMember>
+                          <Group Name="Details2" />
+                          <Visibility>
+                            <Hidden>=Parameters!ExtraParamName1.Value = ""  or Fields!Value.Value = ""</Hidden>
+                          </Visibility>
+                        </TablixMember>
+                      </TablixMembers>
+                    </TablixRowHierarchy>
+                    <DataSetName>ReportParameters</DataSetName>
+                    <Filters>
+                      <Filter>
+                        <FilterExpression>=Fields!Name.Value</FilterExpression>
+                        <Operator>Equal</Operator>
+                        <FilterValues>
+                          <FilterValue>=Parameters!ExtraParamName1.Value</FilterValue>
+                        </FilterValues>
+                      </Filter>
+                    </Filters>
+                    <Top>0.38889in</Top>
+                    <Left>2.5839in</Left>
+                    <Height>0.2in</Height>
+                    <Width>2.23556in</Width>
+                    <ZIndex>3</ZIndex>
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                      </Border>
+                    </Style>
+                  </Tablix>
+                  <Tablix Name="Tablix4">
+                    <TablixBody>
+                      <TablixColumns>
+                        <TablixColumn>
+                          <Width>2.23556in</Width>
+                        </TablixColumn>
+                      </TablixColumns>
+                      <TablixRows>
+                        <TablixRow>
+                          <Height>0.2in</Height>
+                          <TablixCells>
+                            <TablixCell>
+                              <CellContents>
+                                <Textbox Name="Textbox11">
+                                  <CanGrow>true</CanGrow>
+                                  <KeepTogether>true</KeepTogether>
+                                  <Paragraphs>
+                                    <Paragraph>
+                                      <TextRuns>
+                                        <TextRun>
+                                          <Value>=IIF(Parameters!ExtraParamName2.Value = Nothing or Fields!Value.Value = Nothing, "", System.Text.RegularExpressions.Regex.Replace(Parameters!ExtraParamName2.Value, "(?&lt;=[a-z])([A-Z])"," $1") &amp; ": " &amp; System.Text.RegularExpressions.Regex.Replace(Fields!Value.Value, "(?&lt;=[a-z])([A-Z])"," $1"))</Value>
+                                          <Style>
+                                            <FontStyle>=Code.StyleSheetValue("ReportDateStyle")</FontStyle>
+                                            <FontFamily>=Code.StyleSheetValue("ReportDateFamily")</FontFamily>
+                                            <FontSize>=Code.StyleSheetValue("ReportDateSize")</FontSize>
+                                            <FontWeight>=Code.StyleSheetValue("ReportDateWeight")</FontWeight>
+                                            <TextDecoration>=Code.StyleSheetValue("ReportDateDecoration")</TextDecoration>
+                                            <Color>=Code.StyleSheetValue("ReportDateColor")</Color>
+                                          </Style>
+                                        </TextRun>
+                                      </TextRuns>
+                                      <Style />
+                                    </Paragraph>
+                                  </Paragraphs>
+                                  <rd:DefaultName>Textbox11</rd:DefaultName>
+                                  <Style>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                </Textbox>
+                              </CellContents>
+                            </TablixCell>
+                          </TablixCells>
+                        </TablixRow>
+                      </TablixRows>
+                    </TablixBody>
+                    <TablixColumnHierarchy>
+                      <TablixMembers>
+                        <TablixMember />
+                      </TablixMembers>
+                    </TablixColumnHierarchy>
+                    <TablixRowHierarchy>
+                      <TablixMembers>
+                        <TablixMember>
+                          <Group Name="Details3" />
+                          <Visibility>
+                            <Hidden>=Parameters!ExtraParamName2.Value = ""  or Fields!Value.Value = ""</Hidden>
+                          </Visibility>
+                        </TablixMember>
+                      </TablixMembers>
+                    </TablixRowHierarchy>
+                    <DataSetName>ReportParameters</DataSetName>
+                    <Filters>
+                      <Filter>
+                        <FilterExpression>=Fields!Name.Value</FilterExpression>
+                        <Operator>Equal</Operator>
+                        <FilterValues>
+                          <FilterValue>=Parameters!ExtraParamName2.Value</FilterValue>
+                        </FilterValues>
+                      </Filter>
+                    </Filters>
+                    <Top>0.625in</Top>
+                    <Left>2.5839in</Left>
+                    <Height>0.2in</Height>
+                    <Width>2.23556in</Width>
+                    <ZIndex>4</ZIndex>
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                      </Border>
+                    </Style>
+                  </Tablix>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Left>4.85208in</Left>
+                <Height>0.9125in</Height>
+                <Width>4.8339in</Width>
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <TextAlign>Center</TextAlign>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <BackgroundColor>=Code.StyleSheetValue("HeaderBackgroundColor")</BackgroundColor>
                 </Style>
-              </Tablix>
+              </Rectangle>
+              <Image Name="image1">
+                <Source>External</Source>
+                <Value>NextGenlogo.jpg</Value>
+                <Height>1.03125in</Height>
+                <Width>1.84375in</Width>
+                <ZIndex>1</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Image>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Left>4.85208in</Left>
-            <Height>0.875in</Height>
-            <Width>4.89792in</Width>
+            <Height>1.03125in</Height>
+            <Width>9.68598in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <BackgroundColor>=Code.StyleSheetValue("HeaderBackgroundColor")</BackgroundColor>
             </Style>
           </Rectangle>
-          <Image Name="image1">
-            <Source>External</Source>
-            <Value>NextGenlogo.jpg</Value>
-            <Height>1.03125in</Height>
-            <Width>1.84375in</Width>
-            <ZIndex>2</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Image>
         </ReportItems>
-        <Height>1.38875in</Height>
+        <Height>1.35069in</Height>
         <Style />
       </Body>
-      <Width>9.75in</Width>
+      <Width>9.68598in</Width>
       <Page>
         <PageHeight>8.5in</PageHeight>
         <PageWidth>11in</PageWidth>
