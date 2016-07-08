@@ -948,7 +948,7 @@ perAssets=Decimal</CommandText>
                 <ChartMember>
                   <Group Name="Chart1_CategoryGroup">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!Group1.Value</GroupExpression>
+                      <GroupExpression>=Iif(IsNothing(Fields!Group2.Value), "Undefined",Fields!Group2.Value)</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
@@ -956,24 +956,14 @@ perAssets=Decimal</CommandText>
                       <Value>=Fields!Group1.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <Label>=Fields!Group1.Value</Label>
+                  <Label>=Iif(IsNothing(Fields!Group2.Value),"Undefined",Fields!Group2.Value)</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Group Name="Chart1_SeriesGroup">
-                    <GroupExpressions>
-                      <GroupExpression>=Fields!Group2.Value</GroupExpression>
-                    </GroupExpressions>
-                  </Group>
-                  <SortExpressions>
-                    <SortExpression>
-                      <Value>=Fields!Group2.Value</Value>
-                    </SortExpression>
-                  </SortExpressions>
-                  <Label>=Fields!Group2.Value</Label>
+                  <Label>MVBook</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
@@ -994,11 +984,12 @@ perAssets=Decimal</CommandText>
                           <Format>0.00;(0.00)</Format>
                           <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
                         </Style>
-                        <Label>=Fields!perAssets.Value</Label>
+                        <Label>=Iif(IsNothing(Fields!Group2.Value),"Undefined",Fields!Group2.Value)</Label>
+                        <Visible>=Parameters!SeriesLabels.Value</Visible>
                         <Position>Outside</Position>
                       </ChartDataLabel>
                       <Style>
-                        <Color>=Code.GetColor(Fields!Group2.Value,Code.StyleSheetValue("ColorPalette"))</Color>
+                        <Color>=Code.GetColor(Iif(IsNothing(Fields!Group2.Value),"Undefined", Fields!Group2.Value),Code.StyleSheetValue("ColorPalette"))</Color>
                       </Style>
                       <ChartMarker>
                         <Style />
@@ -1018,6 +1009,16 @@ perAssets=Decimal</CommandText>
                       <Style />
                     </ChartDataLabel>
                   </ChartEmptyPoints>
+                  <CustomProperties>
+                    <CustomProperty>
+                      <Name>PieLabelStyle</Name>
+                      <Value>Outside</Value>
+                    </CustomProperty>
+                    <CustomProperty>
+                      <Name>PieLineColor</Name>
+                      <Value>Gainsboro</Value>
+                    </CustomProperty>
+                  </CustomProperties>
                   <ValueAxisName>Primary</ValueAxisName>
                   <CategoryAxisName>Primary</CategoryAxisName>
                   <ChartSmartLabel>
@@ -1258,7 +1259,7 @@ perAssets=Decimal</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Group1.Value</Value>
+                                  <Value>=Iif(IsNothing(Fields!Group1.Value),"Undefined",Fields!Group1.Value)</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
@@ -1554,14 +1555,13 @@ perAssets=Decimal</CommandText>
                               <Color>LightGrey</Color>
                               <Style>None</Style>
                             </Border>
-                            <BackgroundColor>=Code.GetColor(Fields!Group2.Value,Code.StyleSheetValue("ColorPalette"))</BackgroundColor>
+                            <BackgroundColor>=Code.GetColor(Iif(IsNothing(Fields!Group2.Value),"Undefined",Fields!Group2.Value),Code.StyleSheetValue("ColorPalette"))</BackgroundColor>
                             <PaddingLeft>12pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -1572,7 +1572,7 @@ perAssets=Decimal</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Group2.Value</Value>
+                                  <Value>=Iif(IsNothing(Fields!Group2.Value),"Undefined",Fields!Group2.Value)</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
                                     <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
@@ -1717,7 +1717,6 @@ perAssets=Decimal</CommandText>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -1865,7 +1864,6 @@ perAssets=Decimal</CommandText>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -4493,6 +4491,15 @@ perAssets=Decimal</CommandText>
         </Values>
       </DefaultValue>
       <Prompt>Disable Cash Management</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SeriesLabels">
+      <DataType>Boolean</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Show Series Labels</Prompt>
     </ReportParameter>
   </ReportParameters>
   <Code>

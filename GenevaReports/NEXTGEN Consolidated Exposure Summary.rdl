@@ -1156,24 +1156,14 @@ perAssets=Decimal</CommandText>
                           <Value>=Fields!Group1.Value</Value>
                         </SortExpression>
                       </SortExpressions>
-                      <Label>=Fields!Group1.Value</Label>
+                      <Label>=Iif(IsNothing(Fields!Group1.Value),"Undefined",Fields!Group1.Value)</Label>
                     </ChartMember>
                   </ChartMembers>
                 </ChartCategoryHierarchy>
                 <ChartSeriesHierarchy>
                   <ChartMembers>
                     <ChartMember>
-                      <Group Name="Chart1_SeriesGroup">
-                        <GroupExpressions>
-                          <GroupExpression>=Fields!Group2.Value</GroupExpression>
-                        </GroupExpressions>
-                      </Group>
-                      <SortExpressions>
-                        <SortExpression>
-                          <Value>=Fields!Group2.Value</Value>
-                        </SortExpression>
-                      </SortExpressions>
-                      <Label>=Fields!Group2.Value</Label>
+                      <Label>MVBook</Label>
                     </ChartMember>
                   </ChartMembers>
                 </ChartSeriesHierarchy>
@@ -1194,11 +1184,11 @@ perAssets=Decimal</CommandText>
                               <Format>0.00;(0.00)</Format>
                               <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
                             </Style>
-                            <Label>=Fields!perAssets.Value</Label>
+                            <Label>#PERCENT</Label>
                             <Visible>true</Visible>
                           </ChartDataLabel>
                           <Style>
-                            <Color>=Code.GetColor(Fields!Group2.Value,Code.StyleSheetValue("ColorPalette"))</Color>
+                            <Color>=Code.GetColor(Iif(IsNothing(Fields!Group1.Value),"Undefined",Fields!Group1.Value),Code.StyleSheetValue("ColorPalette"))</Color>
                           </Style>
                           <ChartMarker>
                             <Style />
@@ -1437,7 +1427,7 @@ perAssets=Decimal</CommandText>
                 <DataSetName>Data</DataSetName>
                 <Top>0.42513in</Top>
                 <Left>0.14285in</Left>
-                <Height>3.15625in</Height>
+                <Height>2.76042in</Height>
                 <Width>6.06771in</Width>
                 <Style>
                   <Border>
@@ -1496,7 +1486,7 @@ perAssets=Decimal</CommandText>
                   </TablixColumns>
                   <TablixRows>
                     <TablixRow>
-                      <Height>0.25in</Height>
+                      <Height>0.2in</Height>
                       <TablixCells>
                         <TablixCell>
                           <CellContents>
@@ -1526,11 +1516,10 @@ perAssets=Decimal</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
-                                <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
+                                <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
+                                <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1566,11 +1555,10 @@ perAssets=Decimal</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
-                                <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
+                                <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
+                                <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1578,7 +1566,7 @@ perAssets=Decimal</CommandText>
                       </TablixCells>
                     </TablixRow>
                     <TablixRow>
-                      <Height>0.25in</Height>
+                      <Height>0.2in</Height>
                       <TablixCells>
                         <TablixCell>
                           <CellContents>
@@ -1608,10 +1596,9 @@ perAssets=Decimal</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
+                                <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1647,10 +1634,9 @@ perAssets=Decimal</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
+                                <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1658,7 +1644,7 @@ perAssets=Decimal</CommandText>
                       </TablixCells>
                     </TablixRow>
                     <TablixRow>
-                      <Height>0.25in</Height>
+                      <Height>0.2in</Height>
                       <TablixCells>
                         <TablixCell>
                           <CellContents>
@@ -1688,10 +1674,9 @@ perAssets=Decimal</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
+                                <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1727,10 +1712,9 @@ perAssets=Decimal</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
+                                <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1738,7 +1722,7 @@ perAssets=Decimal</CommandText>
                       </TablixCells>
                     </TablixRow>
                     <TablixRow>
-                      <Height>0.25in</Height>
+                      <Height>0.2in</Height>
                       <TablixCells>
                         <TablixCell>
                           <CellContents>
@@ -1768,10 +1752,10 @@ perAssets=Decimal</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
+                                <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
+                                <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1807,10 +1791,10 @@ perAssets=Decimal</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
+                                <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
+                                <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1818,7 +1802,7 @@ perAssets=Decimal</CommandText>
                       </TablixCells>
                     </TablixRow>
                     <TablixRow>
-                      <Height>0.25in</Height>
+                      <Height>0.2in</Height>
                       <TablixCells>
                         <TablixCell>
                           <CellContents>
@@ -1848,11 +1832,10 @@ perAssets=Decimal</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
-                                <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
+                                <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
+                                <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1888,11 +1871,10 @@ perAssets=Decimal</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
-                                <BackgroundColor>=Code.StyleSheetValue("SectionSubtotalBackgroundColor")</BackgroundColor>
+                                <BackgroundColor>=Code.StyleSheetValue("SectionHeaderBackgroundColor")</BackgroundColor>
+                                <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1944,7 +1926,7 @@ perAssets=Decimal</CommandText>
                 <DataSetName>IRR</DataSetName>
                 <Top>0.42513in</Top>
                 <Left>6.28in</Left>
-                <Height>1.25in</Height>
+                <Height>1in</Height>
                 <Width>3.48958in</Width>
                 <ZIndex>2</ZIndex>
                 <Style>
@@ -1993,7 +1975,7 @@ perAssets=Decimal</CommandText>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>0.44167in</Top>
-            <Height>3.69597in</Height>
+            <Height>3.18555in</Height>
             <Width>10.31124in</Width>
             <Style>
               <Border>
@@ -2067,7 +2049,7 @@ perAssets=Decimal</CommandText>
               <BreakLocation>Start</BreakLocation>
             </PageBreak>
             <KeepTogether>true</KeepTogether>
-            <Top>4.95in</Top>
+            <Top>4.325in</Top>
             <Height>0.75in</Height>
             <Width>10.31124in</Width>
             <ZIndex>1</ZIndex>
@@ -2089,7 +2071,7 @@ perAssets=Decimal</CommandText>
                     <Value>=First(Fields!genDataSetID.Value, "Data")</Value>
                   </Parameter>
                   <Parameter Name="ReportTitle">
-                    <Value>=Globals!ReportName &amp; " by " &amp; Parameters!Group1.Value</Value>
+                    <Value>=Globals!ReportName &amp; " by " &amp; Parameters!Group1.Value &amp; " then by " &amp; Parameters!Group2.Value</Value>
                   </Parameter>
                   <Parameter Name="AccountingRunType">
                     <Value>=Parameters!AccountingRunType.Value</Value>
@@ -2101,7 +2083,7 @@ perAssets=Decimal</CommandText>
                     <Value>=Parameters!ConnectionString.Value</Value>
                   </Parameter>
                   <Parameter Name="HidePeriodStartDate">
-                    <Value>=Parameters!AccountingRunType.Value="Dynamic"</Value>
+                    <Value>False</Value>
                   </Parameter>
                   <Parameter Name="ExtraParamName1">
                     <Value>InventoryState</Value>
@@ -2141,35 +2123,6 @@ perAssets=Decimal</CommandText>
                 <TablixCornerRow>
                   <TablixCornerCell>
                     <CellContents>
-                      <Textbox Name="Textbox24">
-                        <CanGrow>true</CanGrow>
-                        <KeepTogether>true</KeepTogether>
-                        <Paragraphs>
-                          <Paragraph>
-                            <TextRuns>
-                              <TextRun>
-                                <Value />
-                                <Style />
-                              </TextRun>
-                            </TextRuns>
-                            <Style />
-                          </Paragraph>
-                        </Paragraphs>
-                        <rd:DefaultName>Textbox24</rd:DefaultName>
-                        <Style>
-                          <Border>
-                            <Style>None</Style>
-                          </Border>
-                          <PaddingLeft>2pt</PaddingLeft>
-                          <PaddingRight>2pt</PaddingRight>
-                          <PaddingTop>2pt</PaddingTop>
-                          <PaddingBottom>2pt</PaddingBottom>
-                        </Style>
-                      </Textbox>
-                    </CellContents>
-                  </TablixCornerCell>
-                  <TablixCornerCell>
-                    <CellContents>
                       <Textbox Name="Textbox23">
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
@@ -2203,13 +2156,13 @@ perAssets=Decimal</CommandText>
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.9375in</Width>
+                  <Width>0.85in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.9127in</Width>
+                  <Width>0.85in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.50959in</Width>
+                  <Width>0.4in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.05833in</Width>
@@ -2217,7 +2170,7 @@ perAssets=Decimal</CommandText>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.2in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -2249,6 +2202,7 @@ perAssets=Decimal</CommandText>
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2305,6 +2259,7 @@ perAssets=Decimal</CommandText>
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2361,6 +2316,7 @@ perAssets=Decimal</CommandText>
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -2608,10 +2564,9 @@ perAssets=Decimal</CommandText>
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -2647,10 +2602,9 @@ perAssets=Decimal</CommandText>
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -2686,10 +2640,9 @@ perAssets=Decimal</CommandText>
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -2910,7 +2863,7 @@ perAssets=Decimal</CommandText>
                     </GroupExpressions>
                   </Group>
                   <TablixHeader>
-                    <Size>0.25in</Size>
+                    <Size>0.2in</Size>
                     <CellContents>
                       <Textbox Name="Group1">
                         <CanGrow>true</CanGrow>
@@ -2919,7 +2872,7 @@ perAssets=Decimal</CommandText>
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>=Fields!Group1.Value</Value>
+                                <Value>=Iif(IsNothing(Fields!Group1.Value),"Undefined",Fields!Group1.Value)</Value>
                                 <Style>
                                   <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
                                   <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
@@ -2961,9 +2914,9 @@ perAssets=Decimal</CommandText>
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.2in</Size>
+                    <Size>0.96875in</Size>
                     <CellContents>
-                      <Textbox Name="Textbox25">
+                      <Textbox Name="Textbox17">
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
                         <Paragraphs>
@@ -2977,7 +2930,7 @@ perAssets=Decimal</CommandText>
                             <Style />
                           </Paragraph>
                         </Paragraphs>
-                        <rd:DefaultName>Textbox25</rd:DefaultName>
+                        <rd:DefaultName>Textbox17</rd:DefaultName>
                         <Style>
                           <Border>
                             <Style>None</Style>
@@ -2990,40 +2943,7 @@ perAssets=Decimal</CommandText>
                       </Textbox>
                     </CellContents>
                   </TablixHeader>
-                  <TablixMembers>
-                    <TablixMember>
-                      <TablixHeader>
-                        <Size>1.25in</Size>
-                        <CellContents>
-                          <Textbox Name="Textbox17">
-                            <CanGrow>true</CanGrow>
-                            <KeepTogether>true</KeepTogether>
-                            <Paragraphs>
-                              <Paragraph>
-                                <TextRuns>
-                                  <TextRun>
-                                    <Value />
-                                    <Style />
-                                  </TextRun>
-                                </TextRuns>
-                                <Style />
-                              </Paragraph>
-                            </Paragraphs>
-                            <rd:DefaultName>Textbox17</rd:DefaultName>
-                            <Style>
-                              <Border>
-                                <Style>None</Style>
-                              </Border>
-                              <PaddingLeft>2pt</PaddingLeft>
-                              <PaddingRight>2pt</PaddingRight>
-                              <PaddingTop>2pt</PaddingTop>
-                              <PaddingBottom>2pt</PaddingBottom>
-                            </Style>
-                          </Textbox>
-                        </CellContents>
-                      </TablixHeader>
-                    </TablixMember>
-                  </TablixMembers>
+                  <RepeatOnNewPage>true</RepeatOnNewPage>
                 </TablixMember>
                 <TablixMember>
                   <Group Name="RowGroup">
@@ -3034,9 +2954,9 @@ perAssets=Decimal</CommandText>
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>0.2in</Size>
+                        <Size>0.96875in</Size>
                         <CellContents>
-                          <Textbox Name="Textbox26">
+                          <Textbox Name="Textbox5">
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
@@ -3057,7 +2977,7 @@ perAssets=Decimal</CommandText>
                                 <Style />
                               </Paragraph>
                             </Paragraphs>
-                            <rd:DefaultName>Textbox26</rd:DefaultName>
+                            <rd:DefaultName>Textbox5</rd:DefaultName>
                             <Style>
                               <Border>
                                 <Style>None</Style>
@@ -3070,60 +2990,20 @@ perAssets=Decimal</CommandText>
                           </Textbox>
                         </CellContents>
                       </TablixHeader>
-                      <TablixMembers>
-                        <TablixMember>
-                          <TablixHeader>
-                            <Size>1.25in</Size>
-                            <CellContents>
-                              <Textbox Name="Textbox5">
-                                <CanGrow>true</CanGrow>
-                                <KeepTogether>true</KeepTogether>
-                                <Paragraphs>
-                                  <Paragraph>
-                                    <TextRuns>
-                                      <TextRun>
-                                        <Value />
-                                        <Style>
-                                          <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                          <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
-                                          <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
-                                          <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
-                                          <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
-                                          <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
-                                        </Style>
-                                      </TextRun>
-                                    </TextRuns>
-                                    <Style />
-                                  </Paragraph>
-                                </Paragraphs>
-                                <rd:DefaultName>Textbox5</rd:DefaultName>
-                                <Style>
-                                  <Border>
-                                    <Style>None</Style>
-                                  </Border>
-                                  <PaddingLeft>2pt</PaddingLeft>
-                                  <PaddingRight>2pt</PaddingRight>
-                                  <PaddingTop>2pt</PaddingTop>
-                                  <PaddingBottom>2pt</PaddingBottom>
-                                </Style>
-                              </Textbox>
-                            </CellContents>
-                          </TablixHeader>
-                        </TablixMember>
-                      </TablixMembers>
+                      <RepeatOnNewPage>true</RepeatOnNewPage>
                     </TablixMember>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>0.2in</Size>
+                        <Size>0.96875in</Size>
                         <CellContents>
-                          <Textbox Name="Textbox27">
+                          <Textbox Name="Group2">
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value />
+                                    <Value>=Iif(IsNothing(Fields!Group2.Value),"Undefined",Fields!Group2.Value)</Value>
                                     <Style>
                                       <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
                                       <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
@@ -3137,67 +3017,25 @@ perAssets=Decimal</CommandText>
                                 <Style />
                               </Paragraph>
                             </Paragraphs>
-                            <rd:DefaultName>Textbox27</rd:DefaultName>
+                            <rd:DefaultName>Group2</rd:DefaultName>
                             <Style>
                               <Border>
                                 <Style>None</Style>
                               </Border>
-                              <BackgroundColor>=Code.GetColor(Iif(IsNothing(Fields!Group2.Value),"Undefined",Fields!Group2.Value),Code.StyleSheetValue("ColorPalette"))</BackgroundColor>
+                              <VerticalAlign>Middle</VerticalAlign>
                               <PaddingLeft>2pt</PaddingLeft>
                               <PaddingRight>2pt</PaddingRight>
-                              <PaddingTop>2pt</PaddingTop>
-                              <PaddingBottom>2pt</PaddingBottom>
                             </Style>
                           </Textbox>
                         </CellContents>
                       </TablixHeader>
-                      <TablixMembers>
-                        <TablixMember>
-                          <TablixHeader>
-                            <Size>1.25in</Size>
-                            <CellContents>
-                              <Textbox Name="Group2">
-                                <CanGrow>true</CanGrow>
-                                <KeepTogether>true</KeepTogether>
-                                <Paragraphs>
-                                  <Paragraph>
-                                    <TextRuns>
-                                      <TextRun>
-                                        <Value>=Fields!Group2.Value</Value>
-                                        <Style>
-                                          <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                          <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
-                                          <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
-                                          <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
-                                          <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
-                                          <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
-                                        </Style>
-                                      </TextRun>
-                                    </TextRuns>
-                                    <Style />
-                                  </Paragraph>
-                                </Paragraphs>
-                                <rd:DefaultName>Group2</rd:DefaultName>
-                                <Style>
-                                  <Border>
-                                    <Style>None</Style>
-                                  </Border>
-                                  <PaddingLeft>2pt</PaddingLeft>
-                                  <PaddingRight>2pt</PaddingRight>
-                                  <PaddingTop>2pt</PaddingTop>
-                                  <PaddingBottom>2pt</PaddingBottom>
-                                </Style>
-                              </Textbox>
-                            </CellContents>
-                          </TablixHeader>
-                        </TablixMember>
-                      </TablixMembers>
+                      <RepeatOnNewPage>true</RepeatOnNewPage>
                     </TablixMember>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>0.2in</Size>
+                        <Size>0.96875in</Size>
                         <CellContents>
-                          <Textbox Name="Textbox28">
+                          <Textbox Name="Textbox14">
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
@@ -3218,7 +3056,7 @@ perAssets=Decimal</CommandText>
                                 <Style />
                               </Paragraph>
                             </Paragraphs>
-                            <rd:DefaultName>Textbox28</rd:DefaultName>
+                            <rd:DefaultName>Textbox14</rd:DefaultName>
                             <Style>
                               <Border>
                                 <Style>None</Style>
@@ -3231,57 +3069,17 @@ perAssets=Decimal</CommandText>
                           </Textbox>
                         </CellContents>
                       </TablixHeader>
-                      <TablixMembers>
-                        <TablixMember>
-                          <TablixHeader>
-                            <Size>1.25in</Size>
-                            <CellContents>
-                              <Textbox Name="Textbox14">
-                                <CanGrow>true</CanGrow>
-                                <KeepTogether>true</KeepTogether>
-                                <Paragraphs>
-                                  <Paragraph>
-                                    <TextRuns>
-                                      <TextRun>
-                                        <Value />
-                                        <Style>
-                                          <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                          <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
-                                          <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
-                                          <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
-                                          <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
-                                          <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
-                                        </Style>
-                                      </TextRun>
-                                    </TextRuns>
-                                    <Style />
-                                  </Paragraph>
-                                </Paragraphs>
-                                <rd:DefaultName>Textbox14</rd:DefaultName>
-                                <Style>
-                                  <Border>
-                                    <Style>None</Style>
-                                  </Border>
-                                  <PaddingLeft>2pt</PaddingLeft>
-                                  <PaddingRight>2pt</PaddingRight>
-                                  <PaddingTop>2pt</PaddingTop>
-                                  <PaddingBottom>2pt</PaddingBottom>
-                                </Style>
-                              </Textbox>
-                            </CellContents>
-                          </TablixHeader>
-                        </TablixMember>
-                      </TablixMembers>
+                      <RepeatOnNewPage>true</RepeatOnNewPage>
                     </TablixMember>
                   </TablixMembers>
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>Data</DataSetName>
-            <Top>4.20708in</Top>
-            <Left>0.155in</Left>
-            <Height>0.7625in</Height>
-            <Width>3.86812in</Width>
+            <Top>3.66958in</Top>
+            <Left>0.03in</Left>
+            <Height>0.6625in</Height>
+            <Width>3.12708in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -3290,10 +3088,10 @@ perAssets=Decimal</CommandText>
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>5.7in</Height>
+        <Height>5.075in</Height>
         <Style />
       </Body>
-      <Width>10.31124in</Width>
+      <Width>10.5in</Width>
       <Page>
         <PageFooter>
           <Height>0.4in</Height>
@@ -3368,12 +3166,10 @@ perAssets=Decimal</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value>01/01/1950</Value>
+          <Value>01/01/1950 00:00:00</Value>
         </Values>
       </DefaultValue>
-      <AllowBlank>true</AllowBlank>
       <Prompt>Period Start Date</Prompt>
-      <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="KnowledgeDate">
       <DataType>DateTime</DataType>
@@ -4521,29 +4317,6 @@ perAssets=Decimal</CommandText>
           <ValueField>Name</ValueField>
           <LabelField>Name</LabelField>
         </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="Color">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>Blue</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Group Background Color</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>Blue</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Gray</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>NoColor</Value>
-          </ParameterValue>
-        </ParameterValues>
       </ValidValues>
     </ReportParameter>
     <ReportParameter Name="LumpSwapGL">

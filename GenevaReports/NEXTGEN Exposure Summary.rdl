@@ -1381,7 +1381,7 @@ perAssets=Decimal</CommandText>
                 <DataSetName>IRR_Analysis</DataSetName>
                 <Top>0.24563in</Top>
                 <Left>4.89312in</Left>
-                <Height>3.29222in</Height>
+                <Height>2.97972in</Height>
                 <Width>5.47417in</Width>
                 <Style>
                   <Border>
@@ -2440,7 +2440,7 @@ perAssets=Decimal</CommandText>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>0.45556in</Top>
-            <Height>3.53785in</Height>
+            <Height>3.22535in</Height>
             <Width>10.4in</Width>
             <ZIndex>2</ZIndex>
             <Style>
@@ -2774,7 +2774,7 @@ perAssets=Decimal</CommandText>
               </Chart>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>3.99341in</Top>
+            <Top>3.74341in</Top>
             <Height>2.90631in</Height>
             <Width>10.4in</Width>
             <ZIndex>3</ZIndex>
@@ -2785,7 +2785,7 @@ perAssets=Decimal</CommandText>
             </Style>
           </Rectangle>
         </ReportItems>
-        <Height>6.89972in</Height>
+        <Height>6.64972in</Height>
         <Style />
       </Body>
       <Width>10.41635in</Width>

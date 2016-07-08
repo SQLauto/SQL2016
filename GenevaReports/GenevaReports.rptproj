@@ -39,8 +39,8 @@
       <FullPath>NEXTGEN Fixed Income Overview.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>NEXTGEN Fixed Income Portfolio Composition.rdl</Name>
-      <FullPath>NEXTGEN Fixed Income Portfolio Composition.rdl</FullPath>
+      <Name>NEXTGEN Fixed Income Holdings.rdl</Name>
+      <FullPath>NEXTGEN Fixed Income Holdings.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>NEXTGEN Performance Summary.rdl</Name>
@@ -59,12 +59,16 @@
       <FullPath>NEXTGEN Profit Loss Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>SubReport_SmallHeaderLandscape.rdl</Name>
+      <FullPath>SubReport_SmallHeaderLandscape.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>SubReport_SmallHeaderLandscape_NextGen.rdl</Name>
       <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>SubReport_SmallHeaderLandscape.rdl</Name>
-      <FullPath>SubReport_SmallHeaderLandscape.rdl</FullPath>
+      <Name>NEXTGEN Fixed Income Portfolio Composition.rdl</Name>
+      <FullPath>NEXTGEN Fixed Income Portfolio Composition.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

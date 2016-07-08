@@ -618,7 +618,7 @@
                             <Border>
                               <Style>None</Style>
                             </Border>
-                            <BackgroundColor>=IIF(RunningValue(Fields!AssetType.Value,CountDistinct,"ColumnGroup") mod 2, "Green", "Red")</BackgroundColor>
+                            <BackgroundColor>=Code.StyleSheetValue("DetailBackgroundColor")</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>

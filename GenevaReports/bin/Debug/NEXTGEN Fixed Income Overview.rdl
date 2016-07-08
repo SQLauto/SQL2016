@@ -634,7 +634,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
               </Border>
             </Style>
           </Rectangle>
-          <Rectangle Name="Rectangle_Quality">
+          <Rectangle Name="HeaderRectangle">
             <ReportItems>
               <Subreport Name="HeaderSubreport">
                 <ReportName>SubReport_SmallHeaderLandscape_NextGen</ReportName>
@@ -657,8 +657,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   <Parameter Name="HidePeriodStartDate">
                     <Value>=Parameters!AccountingRunType.Value="Dynamic"</Value>
                   </Parameter>
-                  <Parameter Name="ReportSubTitle">
-                    <Value>=Parameters!BookCurrency.Value</Value>
+                  <Parameter Name="ExtraParamName1">
+                    <Value>InventoryState</Value>
                   </Parameter>
                   <Parameter Name="LogoName">
                     <Value>=Parameters!LogoName.Value</Value>
@@ -669,9 +669,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                 </Parameters>
                 <MergeTransactions>true</MergeTransactions>
                 <KeepTogether>true</KeepTogether>
-                <Left>0.00764in</Left>
                 <Height>0.4in</Height>
-                <Width>10.49236in</Width>
+                <Width>10.4in</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -679,6 +678,19 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   <TextAlign>Center</TextAlign>
                 </Style>
               </Subreport>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Height>0.4in</Height>
+            <Width>10.4in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle_Quality">
+            <ReportItems>
               <Chart Name="Chart1">
                 <ChartCategoryHierarchy>
                   <ChartMembers>
@@ -951,10 +963,9 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </Style>
                 </ChartNoDataMessage>
                 <DataSetName>FlatData</DataSetName>
-                <Top>0.74236in</Top>
+                <Top>0.31458in</Top>
                 <Height>2.64875in</Height>
                 <Width>10.5in</Width>
-                <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -985,10 +996,9 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox10</rd:DefaultName>
-                <Top>0.42778in</Top>
                 <Height>0.25in</Height>
                 <Width>10.5in</Width>
-                <ZIndex>2</ZIndex>
+                <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -1020,11 +1030,11 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox10</rd:DefaultName>
-                <Top>3.50556in</Top>
+                <Top>3.07778in</Top>
                 <Left>3.50382in</Left>
                 <Height>0.25in</Height>
                 <Width>3.35417in</Width>
-                <ZIndex>3</ZIndex>
+                <ZIndex>2</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -1056,11 +1066,11 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox10</rd:DefaultName>
-                <Top>3.50556in</Top>
+                <Top>3.07778in</Top>
                 <Left>7.00382in</Left>
                 <Height>0.25in</Height>
                 <Width>3.25382in</Width>
-                <ZIndex>4</ZIndex>
+                <ZIndex>3</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -1344,11 +1354,11 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </Style>
                 </ChartNoDataMessage>
                 <DataSetName>FlatData</DataSetName>
-                <Top>3.825in</Top>
+                <Top>3.39722in</Top>
                 <Left>3.50382in</Left>
                 <Height>2.64111in</Height>
                 <Width>3.35417in</Width>
-                <ZIndex>5</ZIndex>
+                <ZIndex>4</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -1633,11 +1643,11 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </Style>
                 </ChartNoDataMessage>
                 <DataSetName>FlatData</DataSetName>
-                <Top>3.825in</Top>
+                <Top>3.39722in</Top>
                 <Left>7.00382in</Left>
                 <Height>2.64111in</Height>
                 <Width>3.49618in</Width>
-                <ZIndex>6</ZIndex>
+                <ZIndex>5</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -2177,11 +2187,11 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </TablixMembers>
                 </TablixRowHierarchy>
                 <DataSetName>FlatData</DataSetName>
-                <Top>3.83208in</Top>
+                <Top>3.4043in</Top>
                 <Left>0.00764in</Left>
                 <Height>1.5in</Height>
                 <Width>3.29166in</Width>
-                <ZIndex>7</ZIndex>
+                <ZIndex>6</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -2210,10 +2220,10 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox10</rd:DefaultName>
-                <Top>3.51264in</Top>
+                <Top>3.08486in</Top>
                 <Height>0.25in</Height>
                 <Width>3.29167in</Width>
-                <ZIndex>8</ZIndex>
+                <ZIndex>7</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -2226,9 +2236,10 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <DataElementOutput>ContentsOnly</DataElementOutput>
-            <Height>6.46611in</Height>
+            <Top>0.42778in</Top>
+            <Height>6.03833in</Height>
             <Width>10.5in</Width>
-            <ZIndex>1</ZIndex>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
