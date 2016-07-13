@@ -87,7 +87,7 @@
                         <Value>=System.Text.RegularExpressions.Regex.Replace(Replace(Parameters!ReportTitle.Value, "NEXTGEN ",""), "(?&lt;=[a-z])([A-Z])"," $1")</Value>
                         <Style>
                           <FontStyle>=Code.StyleSheetValue("ReportTitleStyle")</FontStyle>
-                          <FontFamily>=Code.StyleSheetValue("ReportTitleFamily")</FontFamily>
+                          <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                           <FontSize>=Code.StyleSheetValue("ReportTitleSize")</FontSize>
                           <FontWeight>=Code.StyleSheetValue("ReportTitleWeight")</FontWeight>
                           <TextDecoration>=Code.StyleSheetValue("ReportTitleDecoration")</TextDecoration>
@@ -149,7 +149,7 @@
 FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
                                               <Style>
                                                 <FontStyle>=Code.StyleSheetValue("ReportDateStyle")</FontStyle>
-                                                <FontFamily>=Code.StyleSheetValue("ReportDateFamily")</FontFamily>
+                                                <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                                 <FontSize>=Code.StyleSheetValue("ReportDateSize")</FontSize>
                                                 <FontWeight>=Code.StyleSheetValue("ReportDateWeight")</FontWeight>
                                                 <TextDecoration>=Code.StyleSheetValue("ReportDateDecoration")</TextDecoration>
@@ -253,7 +253,7 @@ FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
                                               <Value>=Fields!Value.Value</Value>
                                               <Style>
                                                 <FontStyle>=Code.StyleSheetValue("PortfolioNameStyle")</FontStyle>
-                                                <FontFamily>=Code.StyleSheetValue("PortfolioNameFamily")</FontFamily>
+                                                <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                                 <FontSize>=Code.StyleSheetValue("PortfolioNameSize")</FontSize>
                                                 <FontWeight>=Code.StyleSheetValue("PortfolioNameWeight")</FontWeight>
                                                 <TextDecoration>=Code.StyleSheetValue("PortfolioNameDecoration")</TextDecoration>
@@ -349,7 +349,7 @@ FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
                                           <Value>="Reporting Currency: " &amp; Fields!Value.Value</Value>
                                           <Style>
                                             <FontStyle>=Code.StyleSheetValue("ReportDateStyle")</FontStyle>
-                                            <FontFamily>=Code.StyleSheetValue("ReportDateFamily")</FontFamily>
+                                            <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                             <FontSize>=Code.StyleSheetValue("ReportDateSize")</FontSize>
                                             <FontWeight>=Code.StyleSheetValue("ReportDateWeight")</FontWeight>
                                             <TextDecoration>=Code.StyleSheetValue("ReportDateDecoration")</TextDecoration>
@@ -436,7 +436,7 @@ FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
                                           <Value>=IIF(Parameters!ExtraParamName1.Value = Nothing or Fields!Value.Value = Nothing, "", System.Text.RegularExpressions.Regex.Replace(Parameters!ExtraParamName1.Value, "(?&lt;=[a-z])([A-Z])"," $1") &amp; ": " &amp; System.Text.RegularExpressions.Regex.Replace(Fields!Value.Value, "(?&lt;=[a-z])([A-Z])"," $1"))</Value>
                                           <Style>
                                             <FontStyle>=Code.StyleSheetValue("ReportDateStyle")</FontStyle>
-                                            <FontFamily>=Code.StyleSheetValue("ReportDateFamily")</FontFamily>
+                                            <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                             <FontSize>=Code.StyleSheetValue("ReportDateSize")</FontSize>
                                             <FontWeight>=Code.StyleSheetValue("ReportDateWeight")</FontWeight>
                                             <TextDecoration>=Code.StyleSheetValue("ReportDateDecoration")</TextDecoration>
@@ -523,7 +523,7 @@ FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
                                           <Value>=IIF(Parameters!ExtraParamName2.Value = Nothing or Fields!Value.Value = Nothing, "", System.Text.RegularExpressions.Regex.Replace(Parameters!ExtraParamName2.Value, "(?&lt;=[a-z])([A-Z])"," $1") &amp; ": " &amp; System.Text.RegularExpressions.Regex.Replace(Fields!Value.Value, "(?&lt;=[a-z])([A-Z])"," $1"))</Value>
                                           <Style>
                                             <FontStyle>=Code.StyleSheetValue("ReportDateStyle")</FontStyle>
-                                            <FontFamily>=Code.StyleSheetValue("ReportDateFamily")</FontFamily>
+                                            <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                             <FontSize>=Code.StyleSheetValue("ReportDateSize")</FontSize>
                                             <FontWeight>=Code.StyleSheetValue("ReportDateWeight")</FontWeight>
                                             <TextDecoration>=Code.StyleSheetValue("ReportDateDecoration")</TextDecoration>
@@ -1006,6 +1006,15 @@ FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
       <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>
       <Prompt>Lump Expenses in Summary Lockdown</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FontFamily">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Segoe UI</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Font Family</Prompt>
     </ReportParameter>
   </ReportParameters>
   <Code>

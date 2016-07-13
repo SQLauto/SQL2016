@@ -536,6 +536,17 @@
         </Field>
       </Fields>
     </DataSet>
+    <DataSet Name="FontFamily">
+      <SharedDataSet>
+        <SharedDataSetReference>FontFamily</SharedDataSetReference>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="FontFamily">
+          <DataField>FontFamily</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>
@@ -612,6 +623,9 @@
                                 </Parameter>
                                 <Parameter Name="StyleSheetXML">
                                   <Value>=Parameters!StyleSheetXML.Value</Value>
+                                </Parameter>
+                                <Parameter Name="FontFamily">
+                                  <Value>=Parameters!FontFamily.Value</Value>
                                 </Parameter>
                               </Parameters>
                               <MergeTransactions>true</MergeTransactions>
@@ -7321,7 +7335,7 @@
     </ReportParameter>
     <ReportParameter Name="StyleSheetXML">
       <DataType>String</DataType>
-      <Prompt>Style Sheet</Prompt>
+      <Prompt>Color Scheme</Prompt>
       <ValidValues>
         <DataSetReference>
           <DataSetName>StyleSheet</DataSetName>
@@ -7330,123 +7344,22 @@
         </DataSetReference>
       </ValidValues>
     </ReportParameter>
-	  <ReportParameter Name="FontFamily">
-		  <DataType>String</DataType>
-		  <DefaultValue>
-			  <Values>
-				  <Value>Segoe UI</Value>
-			  </Values>
-		  </DefaultValue>
-		  <Prompt>Font Family</Prompt>
-		  <ValidValues>
-			  <ParameterValues>
-				  <ParameterValue>
-					  <Value>Arial</Value>
-					  <Label>Arial</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Arial Black</Value>
-					  <Label>Arial Black</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Calibri</Value>
-					  <Label>Calibri</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Calibri Light</Value>
-					  <Label>Calibri Light</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Cambria</Value>
-					  <Label>Cambria</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Cambria Math</Value>
-					  <Label>Cambria Math</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Candara</Value>
-					  <Label>Candara</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Century Gothic</Value>
-					  <Label>Century Gothic</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Comic Sans</Value>
-					  <Label>Comic Sans</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Consolas</Value>
-					  <Label>Consolas</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Constantia</Value>
-					  <Label>Constantia</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Corbel</Value>
-					  <Label>Corbel</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Courier New</Value>
-					  <Label>Courier New</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Franklin Gothic</Value>
-					  <Label>Franklin Gothic</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Georgia</Value>
-					  <Label>Georgia</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Impact</Value>
-					  <Label>Impact</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Lucida Console</Value>
-					  <Label>Lucida Console</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>News Gothic MT</Value>
-					  <Label>News Gothic MT</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Palatino</Value>
-					  <Label>Palatino</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Segoe UI</Value>
-					  <Label>Segoe UI</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Tahoma</Value>
-					  <Label>Tahoma</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Times New Roman</Value>
-					  <Label>Times New Roman</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Trebuchet MS</Value>
-					  <Label>Trebuchet MS</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Verdana</Value>
-					  <Label>Verdana</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Abadi MT Condensed Light</Value>
-					  <Label>Abadi MT Condensed Light</Label>
-				  </ParameterValue>
-				  <ParameterValue>
-					  <Value>Aharoni</Value>
-					  <Label>Aharoni</Label>
-				  </ParameterValue>
-			  </ParameterValues>
-		  </ValidValues>
-	  </ReportParameter>
+    <ReportParameter Name="FontFamily">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Segoe UI</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Font Family</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>FontFamily</DataSetName>
+          <ValueField>FontFamily</ValueField>
+          <LabelField>FontFamily</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
   </ReportParameters>
   <Code>
 	  Dim StyleSheetHash As System.Collections.Hashtable

@@ -20,6 +20,10 @@
       <Name>StyleSheet.rsd</Name>
       <FullPath>StyleSheet.rsd</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>FontFamily.rsd</Name>
+      <FullPath>FontFamily.rsd</FullPath>
+    </ProjectItem>
   </DataSets>
   <Reports>
     <ProjectItem>
@@ -35,12 +39,16 @@
       <FullPath>NEXTGEN Exposure Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>NEXTGEN Fixed Income Holdings.rdl</Name>
+      <FullPath>NEXTGEN Fixed Income Holdings.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>NEXTGEN Fixed Income Overview.rdl</Name>
       <FullPath>NEXTGEN Fixed Income Overview.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>NEXTGEN Fixed Income Holdings.rdl</Name>
-      <FullPath>NEXTGEN Fixed Income Holdings.rdl</FullPath>
+      <Name>NEXTGEN Fixed Income Portfolio Composition.rdl</Name>
+      <FullPath>NEXTGEN Fixed Income Portfolio Composition.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>NEXTGEN Performance Summary.rdl</Name>
@@ -65,10 +73,6 @@
     <ProjectItem>
       <Name>SubReport_SmallHeaderLandscape_NextGen.rdl</Name>
       <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>NEXTGEN Fixed Income Portfolio Composition.rdl</Name>
-      <FullPath>NEXTGEN Fixed Income Portfolio Composition.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

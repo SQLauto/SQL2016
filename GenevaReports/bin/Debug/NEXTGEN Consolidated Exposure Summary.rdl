@@ -1135,6 +1135,17 @@ perAssets=Decimal</CommandText>
         </Field>
       </Fields>
     </DataSet>
+    <DataSet Name="FontFamily">
+      <SharedDataSet>
+        <SharedDataSetReference>FontFamily</SharedDataSetReference>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="FontFamily">
+          <DataField>FontFamily</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>
@@ -1178,7 +1189,7 @@ perAssets=Decimal</CommandText>
                           <ChartDataLabel>
                             <Style>
                               <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
-                              <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
+                              <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                               <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
                               <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
                               <Format>0.00;(0.00)</Format>
@@ -1226,7 +1237,7 @@ perAssets=Decimal</CommandText>
                             <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
                           </Border>
                           <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
-                          <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
+                          <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                           <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
                           <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
                           <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
@@ -1309,7 +1320,7 @@ perAssets=Decimal</CommandText>
                             <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
                           </Border>
                           <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
-                          <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
+                          <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                           <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
                           <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
                           <Format>#,0;(#,0)</Format>
@@ -1448,7 +1459,7 @@ perAssets=Decimal</CommandText>
                         <Value>="Exposure by " &amp; System.Text.RegularExpressions.Regex.Replace(Parameters!Group1.Value, "(?&lt;=[a-z])([A-Z])"," $1")</Value>
                         <Style>
                           <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
-                          <FontFamily>=Code.StyleSheetValue("SectionTitleFamily")</FontFamily>
+                          <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                           <FontSize>=Code.StyleSheetValue("SectionTitleSize")</FontSize>
                           <FontWeight>=Code.StyleSheetValue("SectionTitleWeight")</FontWeight>
                           <TextDecoration>=Code.StyleSheetValue("SectionTitleDecoration")</TextDecoration>
@@ -1500,7 +1511,7 @@ perAssets=Decimal</CommandText>
                                       <Value>=Fields!RowName.Value</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
@@ -1536,7 +1547,7 @@ perAssets=Decimal</CommandText>
                                       <Value>=Fields!Val.Value</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
                                         <Format>#,0.00;(#,0.00)</Format>
@@ -1580,7 +1591,7 @@ perAssets=Decimal</CommandText>
                                       <Value>=Fields!RowName.Value</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
@@ -1615,7 +1626,7 @@ perAssets=Decimal</CommandText>
                                       <Value>=Fields!Val.Value</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
                                         <Format>#,0.00;(#,0.00)</Format>
@@ -1658,7 +1669,7 @@ perAssets=Decimal</CommandText>
                                       <Value>=Fields!RowName.Value</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
@@ -1693,7 +1704,7 @@ perAssets=Decimal</CommandText>
                                       <Value>=Fields!Val.Value</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
                                         <Format>#,0.00;(#,0.00)</Format>
@@ -1736,7 +1747,7 @@ perAssets=Decimal</CommandText>
                                       <Value>=Fields!RowName.Value</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
@@ -1772,7 +1783,7 @@ perAssets=Decimal</CommandText>
                                       <Value>=Fields!Val.Value</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
                                         <Format>#,0.00;(#,0.00)</Format>
@@ -1816,7 +1827,7 @@ perAssets=Decimal</CommandText>
                                       <Value>=Fields!RowName.Value</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
@@ -1852,7 +1863,7 @@ perAssets=Decimal</CommandText>
                                       <Value>=Fields!Val.Value</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
                                         <Format>#,0.00;(#,0.00)</Format>
@@ -1945,7 +1956,7 @@ perAssets=Decimal</CommandText>
                         <Value>Activity</Value>
                         <Style>
                           <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
-                          <FontFamily>=Code.StyleSheetValue("SectionTitleFamily")</FontFamily>
+                          <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                           <FontSize>=Code.StyleSheetValue("SectionTitleSize")</FontSize>
                           <FontWeight>=Code.StyleSheetValue("SectionTitleWeight")</FontWeight>
                           <TextDecoration>=Code.StyleSheetValue("SectionTitleDecoration")</TextDecoration>
@@ -2094,6 +2105,9 @@ perAssets=Decimal</CommandText>
                   <Parameter Name="StyleSheetXML">
                     <Value>=Parameters!StyleSheetXML.Value</Value>
                   </Parameter>
+                  <Parameter Name="FontFamily">
+                    <Value>=Parameters!FontFamily.Value</Value>
+                  </Parameter>
                 </Parameters>
                 <MergeTransactions>true</MergeTransactions>
                 <KeepTogether>true</KeepTogether>
@@ -2184,7 +2198,7 @@ perAssets=Decimal</CommandText>
                                   <Value>Market Value</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2223,7 +2237,7 @@ perAssets=Decimal</CommandText>
                                   <Value>Unrealized</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2241,7 +2255,7 @@ perAssets=Decimal</CommandText>
                                   <Value>Gain/Loss</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2280,7 +2294,7 @@ perAssets=Decimal</CommandText>
                                   <Value>%</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2298,7 +2312,7 @@ perAssets=Decimal</CommandText>
                                   <Value>Assets</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2337,7 +2351,7 @@ perAssets=Decimal</CommandText>
                                   <Value />
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2384,7 +2398,7 @@ perAssets=Decimal</CommandText>
                                   <Value />
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -2422,7 +2436,7 @@ perAssets=Decimal</CommandText>
                                   <Value />
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -2460,7 +2474,7 @@ perAssets=Decimal</CommandText>
                                   <Value />
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -2498,7 +2512,7 @@ perAssets=Decimal</CommandText>
                                   <Value />
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -2545,7 +2559,7 @@ perAssets=Decimal</CommandText>
                                   <Value>=Fields!MVBook.Value</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -2583,7 +2597,7 @@ perAssets=Decimal</CommandText>
                                   <Value>=Fields!UnrealTot.Value</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -2621,7 +2635,7 @@ perAssets=Decimal</CommandText>
                                   <Value>=Fields!perAssets.Value</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <Format>0;(0)</Format>
@@ -2659,7 +2673,7 @@ perAssets=Decimal</CommandText>
                                   <Value />
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -2706,7 +2720,7 @@ perAssets=Decimal</CommandText>
                                   <Value />
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -2744,7 +2758,7 @@ perAssets=Decimal</CommandText>
                                   <Value />
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -2782,7 +2796,7 @@ perAssets=Decimal</CommandText>
                                   <Value />
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -2820,7 +2834,7 @@ perAssets=Decimal</CommandText>
                                   <Value />
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -2875,7 +2889,7 @@ perAssets=Decimal</CommandText>
                                 <Value>=Iif(IsNothing(Fields!Group1.Value),"Undefined",Fields!Group1.Value)</Value>
                                 <Style>
                                   <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                  <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                  <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                   <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                   <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                   <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2966,7 +2980,7 @@ perAssets=Decimal</CommandText>
                                     <Value />
                                     <Style>
                                       <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                      <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                      <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                       <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                       <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                       <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -3006,7 +3020,7 @@ perAssets=Decimal</CommandText>
                                     <Value>=Iif(IsNothing(Fields!Group2.Value),"Undefined",Fields!Group2.Value)</Value>
                                     <Style>
                                       <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                      <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                      <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                       <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                       <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                       <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -3045,7 +3059,7 @@ perAssets=Decimal</CommandText>
                                     <Value />
                                     <Style>
                                       <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                      <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                      <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                       <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                       <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                       <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -3125,7 +3139,7 @@ perAssets=Decimal</CommandText>
   <ReportParameters>
     <ReportParameter Name="StyleSheetXML">
       <DataType>String</DataType>
-      <Prompt>Style Sheet</Prompt>
+      <Prompt>Color Scheme</Prompt>
       <ValidValues>
         <DataSetReference>
           <DataSetName>StyleSheet</DataSetName>
@@ -4570,6 +4584,22 @@ perAssets=Decimal</CommandText>
       <AllowBlank>true</AllowBlank>
       <Prompt>Request Type</Prompt>
       <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="FontFamily">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Segoe UI</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Font Family</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>FontFamily</DataSetName>
+          <ValueField>FontFamily</ValueField>
+          <LabelField>FontFamily</LabelField>
+        </DataSetReference>
+      </ValidValues>
     </ReportParameter>
   </ReportParameters>
   <Code>

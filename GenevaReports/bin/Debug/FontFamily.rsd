@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="">
+    <Query>
+      <DataSourceReference>GenevaSQLSource</DataSourceReference>
+      <CommandText>select 'Agency FB' as FontFamily
+union all select'Algerian Regular'
+union all select'Arial'
+union all select'Arial Black'
+union all select'Arial Rounded MT Bold'
+union all select'Arial Narrow'
+union all select'Baskerville Old Face Regular'
+union all select'Bauhaus 93 Regular'
+union all select'Bell MT'
+union all select'Berlin Sans FB'
+union all select'Bernard MT Condensed'
+union all select'Blackadder ITC Regular'
+union all select'Bodoni MT'
+union all select'Bodoni MT Poster Compressed Light'
+union all select'Book Antiqua'
+union all select'Bookman Old Style'
+union all select'Bradley Hand ITC Regular'
+union all select'Brittanic Bold'
+union all select'Broadway Regular'
+union all select'Brush Script MT Italic'
+union all select'Calibri'
+union all select'Calibri Light'
+union all select'Californian FB'
+union all select'Calisto MT'
+union all select'Cambria'
+union all select'Candara'
+union all select'Castellar Regular'
+union all select'Century Gothic'
+union all select'Century Schoolbook'
+union all select'Comic Sans MS'
+union all select'Consolas'
+union all select'Copperplate Gothic Bold'
+union all select'Copperplate Gothic Light'
+union all select'CopperplGoth Bd BT'
+union all select'Copse'
+union all select'Cornerstone'
+union all select'Coronet'
+union all select'Courier New'
+union all select'Courier'
+union all select'Garamond'
+union all select'Georgia'
+union all select'Haettenschweiler'
+union all select'Heather'
+union all select'Helvetica'
+union all select'Herald'
+union all select'Impact'
+union all select'Lucida Console'
+union all select'Lucida Handwriting'
+union all select'Lucida Sans Unicode'
+union all select'Lucida Sans'
+union all select'Oxygen'
+union all select'Roboto Slab'
+union all select'Sanchez'
+union all select'Scope One'
+union all select'Segoe UI'
+union all select'Segoe UI Light'
+union all select'Slabo 27px'
+union all select'Source Sans Pro Regular'
+union all select'Tahoma'
+union all select'Tempus Sans ITC'
+union all select'Times New Roman PS'
+union all select'Times New Roman'
+union all select'Times'
+union all select'Titillium Web'
+union all select'Trebuchet MS'
+union all select'Tristan'
+union all select'Tubular'
+union all select'Ubuntu'
+union all select'Verdana'</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="FontFamily">
+        <DataField>FontFamily</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

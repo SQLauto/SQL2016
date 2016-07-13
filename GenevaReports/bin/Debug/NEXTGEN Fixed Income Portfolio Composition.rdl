@@ -537,6 +537,17 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
         </Field>
       </Fields>
     </DataSet>
+    <DataSet Name="FontFamily">
+      <SharedDataSet>
+        <SharedDataSetReference>FontFamily</SharedDataSetReference>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="FontFamily">
+          <DataField>FontFamily</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>
@@ -641,7 +652,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                       </Group>
                       <SortExpressions>
                         <SortExpression>
-                          <Value>=Fields!RetingDesc.Value</Value>
+                          <Value>=Sum(Fields!MarketValue.Value)</Value>
+                          <Direction>Descending</Direction>
                         </SortExpression>
                       </SortExpressions>
                       <Label>=Iif(IsNothing(Fields!Rating.Value),"Undefined",Fields!Rating.Value)</Label>
@@ -666,7 +678,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                           <ChartDataLabel>
                             <Style>
                               <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
-                              <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
+                              <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                               <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
                               <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
                               <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
@@ -681,7 +693,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               <Style>None</Style>
                               <Width>0.376pt</Width>
                             </Border>
-                            <Color>=Code.GetColor(Fields!RetingDesc.Value,Code.StyleSheetValue("ColorPalette"))</Color>
+                            <Color>=Code.GetColor(Iif(IsNothing(Fields!Rating.Value),"Undefined",Fields!Rating.Value),Code.StyleSheetValue("ColorPalette"))</Color>
                           </Style>
                           <ChartMarker>
                             <Size>6pt</Size>
@@ -976,7 +988,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>Rating</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -1013,7 +1025,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>Book Cost</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -1050,7 +1062,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>Market Value</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -1087,7 +1099,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>Percent</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -1159,7 +1171,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value />
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -1193,7 +1205,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value />
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -1230,7 +1242,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value />
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -1267,7 +1279,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value />
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -1320,12 +1332,13 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               </Paragraphs>
                               <rd:DefaultName>Textbox363</rd:DefaultName>
                               <Style>
-                                <BackgroundColor>=Code.GetColor(Iif(IsNothing(Fields!RetingDesc.Value),"Undefined",Fields!RetingDesc.Value),Code.StyleSheetValue("ColorPalette"))</BackgroundColor>
+                                <BackgroundColor>=Code.GetColor(Iif(IsNothing(Fields!Rating.Value),"Undefined",Fields!Rating.Value),Code.StyleSheetValue("ColorPalette"))</BackgroundColor>
                                 <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>1pt</PaddingLeft>
                                 <PaddingRight>1pt</PaddingRight>
                               </Style>
                             </Textbox>
+                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                         <TablixCell>
@@ -1343,7 +1356,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
 	220,"...")</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -1378,7 +1391,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>=SUM(Fields!Cost.Value)</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <Format>#,0.00;(#,0.00)</Format>
@@ -1416,7 +1429,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>=Sum(Fields!MarketValue.Value)</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <Format>#,0.00;(#,0.00)</Format>
@@ -1454,7 +1467,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>=SUM(Fields!PrctAsset.Value)</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <Format>="P"&amp;Parameters!PercentagePrecision.Value</Format>
@@ -1528,7 +1541,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value />
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -1562,7 +1575,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value />
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -1599,7 +1612,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value />
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -1636,7 +1649,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value />
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -1733,7 +1746,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>=Sum(Fields!Cost.Value)</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("GrandTotalStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("GrandTotalFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("GrandTotalSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("GrandTotalWeight")</FontWeight>
                                         <Format>#,0.00;(#,0.00)</Format>
@@ -1772,7 +1785,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>=Sum(Fields!MarketValue.Value)</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("GrandTotalStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("GrandTotalFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("GrandTotalSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("GrandTotalWeight")</FontWeight>
                                         <Format>#,0.00;(#,0.00)</Format>
@@ -1811,7 +1824,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>=SUM(Fields!PrctAsset.Value)</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("GrandTotalStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("GrandTotalFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("GrandTotalSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("GrandTotalWeight")</FontWeight>
                                         <Format>="P"&amp;Parameters!PercentagePrecision.Value</Format>
@@ -1861,7 +1874,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                     <TablixMember>
                       <Group Name="Reting">
                         <GroupExpressions>
-                          <GroupExpression>=Fields!RetingDesc.Value</GroupExpression>
+                          <GroupExpression>=Iif(IsNothing(Fields!Rating.Value),"Undefined",Fields!Rating.Value)</GroupExpression>
                         </GroupExpressions>
                       </Group>
                       <SortExpressions>
@@ -1908,7 +1921,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                         <Value EvaluationMode="Constant">Distribution by Quality</Value>
                         <Style>
                           <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
-                          <FontFamily>=Code.StyleSheetValue("SectionTitleFamily")</FontFamily>
+                          <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                           <FontSize>=Code.StyleSheetValue("SectionTitleSize")</FontSize>
                           <FontWeight>=Code.StyleSheetValue("SectionTitleWeight")</FontWeight>
                           <TextDecoration>=Code.StyleSheetValue("SectionTitleDecoration")</TextDecoration>
@@ -1943,7 +1956,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                         <Value EvaluationMode="Constant">Distribution by Maturity</Value>
                         <Style>
                           <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
-                          <FontFamily>=Code.StyleSheetValue("SectionTitleFamily")</FontFamily>
+                          <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                           <FontSize>=Code.StyleSheetValue("SectionTitleSize")</FontSize>
                           <FontWeight>=Code.StyleSheetValue("SectionTitleWeight")</FontWeight>
                           <TextDecoration>=Code.StyleSheetValue("SectionTitleDecoration")</TextDecoration>
@@ -2013,7 +2026,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                           <ChartDataLabel>
                             <Style>
                               <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
-                              <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
+                              <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                               <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
                               <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
                               <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
@@ -2328,7 +2341,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>Maturity (in Years)</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2365,7 +2378,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>Book Cost</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2402,7 +2415,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>Market Value</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2439,7 +2452,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>Percent</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2497,7 +2510,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 <PaddingRight>1pt</PaddingRight>
                               </Style>
                             </Textbox>
-                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                         <TablixCell>
@@ -2512,7 +2524,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value />
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -2546,7 +2558,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value />
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -2583,7 +2595,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value />
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -2620,7 +2632,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value />
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -2679,7 +2691,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 <PaddingRight>1pt</PaddingRight>
                               </Style>
                             </Textbox>
-                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                         <TablixCell>
@@ -2698,7 +2709,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                     "20+"))))</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -2733,7 +2744,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>=SUM(Fields!Cost.Value)</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <Format>#,0.00;(#,0.00)</Format>
@@ -2771,7 +2782,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>=Sum(Fields!MarketValue.Value)</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <Format>#,0.00;(#,0.00)</Format>
@@ -2809,7 +2820,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>=SUM(Fields!PrctAsset.Value)</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <Format>="P"&amp;Parameters!PercentagePrecision.Value</Format>
@@ -2869,7 +2880,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 <PaddingRight>1pt</PaddingRight>
                               </Style>
                             </Textbox>
-                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                         <TablixCell>
@@ -2884,7 +2894,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value />
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -2918,7 +2928,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value />
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -2955,7 +2965,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value />
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -2992,7 +3002,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value />
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                         <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -3089,7 +3099,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>=Sum(Fields!Cost.Value)</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("GrandTotalStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("GrandTotalFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("GrandTotalSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("GrandTotalWeight")</FontWeight>
                                         <Format>#,0.00;(#,0.00)</Format>
@@ -3128,7 +3138,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>=Sum(Fields!MarketValue.Value)</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("GrandTotalStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("GrandTotalFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("GrandTotalSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("GrandTotalWeight")</FontWeight>
                                         <Format>#,0.00;(#,0.00)</Format>
@@ -3167,7 +3177,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                       <Value>=SUM(Fields!PrctAsset.Value)</Value>
                                       <Style>
                                         <FontStyle>=Code.StyleSheetValue("GrandTotalStyle")</FontStyle>
-                                        <FontFamily>=Code.StyleSheetValue("GrandTotalFamily")</FontFamily>
+                                        <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                         <FontSize>=Code.StyleSheetValue("GrandTotalSize")</FontSize>
                                         <FontWeight>=Code.StyleSheetValue("GrandTotalWeight")</FontWeight>
                                         <Format>="P"&amp;Parameters!PercentagePrecision.Value</Format>
@@ -3302,6 +3312,9 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </Parameter>
                   <Parameter Name="StyleSheetXML">
                     <Value>=Parameters!StyleSheetXML.Value</Value>
+                  </Parameter>
+                  <Parameter Name="FontFamily">
+                    <Value>=Parameters!FontFamily.Value</Value>
                   </Parameter>
                 </Parameters>
                 <MergeTransactions>true</MergeTransactions>
@@ -4497,12 +4510,28 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
     </ReportParameter>
     <ReportParameter Name="StyleSheetXML">
       <DataType>String</DataType>
-      <Prompt>Style Sheet</Prompt>
+      <Prompt>Color Scheme</Prompt>
       <ValidValues>
         <DataSetReference>
           <DataSetName>StyleSheet</DataSetName>
           <ValueField>StyleSheetXML</ValueField>
           <LabelField>StyleSheet</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="FontFamily">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Segoe UI</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Font Family</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>FontFamily</DataSetName>
+          <ValueField>FontFamily</ValueField>
+          <LabelField>FontFamily</LabelField>
         </DataSetReference>
       </ValidValues>
     </ReportParameter>

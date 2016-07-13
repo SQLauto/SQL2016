@@ -1969,6 +1969,17 @@
         </Field>
       </Fields>
     </DataSet>
+    <DataSet Name="FontFamily">
+      <SharedDataSet>
+        <SharedDataSetReference>FontFamily</SharedDataSetReference>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="FontFamily">
+          <DataField>FontFamily</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>
@@ -2098,7 +2109,7 @@
                                   <Value />
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2142,7 +2153,7 @@
                                   <Value>DTD</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderSize")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2187,7 +2198,7 @@
                                   <Value>MTD</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderSize")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2232,7 +2243,7 @@
                                   <Value>QTD</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderSize")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2277,7 +2288,7 @@
                                   <Value>YTD</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderSize")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2322,7 +2333,7 @@
                                   <Value>PTD</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderSize")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2367,7 +2378,7 @@
                                   <Value>ITD</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderSize")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -2858,7 +2869,7 @@
                                   <Value>=Fields!SegDesc.Value</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
@@ -3093,7 +3104,7 @@
                                   <Value>=Fields!Seg.Value</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -3130,7 +3141,7 @@
                                   <Value>=IIF(IsNothing(Fields!DTD.Value) or CStr(Fields!DTD.Value) = "NaN", "NA",Format(Fields!DTD.Value,"N" &amp; Parameters!MonetaryPrecision.Value))</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -3167,7 +3178,7 @@
                                   <Value>=IIF(IsNothing(Fields!MTD.Value) or CStr(Fields!MTD.Value) = "NaN", "NA",Format(Fields!MTD.Value,"N" &amp; Parameters!MonetaryPrecision.Value))</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -3204,7 +3215,7 @@
                                   <Value>=IIF(IsNothing(Fields!QTD.Value) or CStr(Fields!QTD.Value) = "NaN", "NA",Format(Fields!QTD.Value,"N" &amp; Parameters!MonetaryPrecision.Value))</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -3241,7 +3252,7 @@
                                   <Value>=IIF(IsNothing(Fields!YTD.Value) or CStr(Fields!YTD.Value) = "NaN", "NA",Format(Fields!YTD.Value,"N" &amp; Parameters!MonetaryPrecision.Value))</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -3278,7 +3289,7 @@
                                   <Value>=IIF(IsNothing(Fields!PTD.Value) or CStr(Fields!PTD.Value) = "NaN", "NA",Format(Fields!PTD.Value,"N" &amp; Parameters!MonetaryPrecision.Value))</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
@@ -3316,7 +3327,7 @@
                                   <Value>=IIF(IsNothing(Fields!ITD.Value) or CStr(Fields!ITD.Value) = "NaN", "NA",Format(Fields!ITD.Value,"N" &amp; Parameters!MonetaryPrecision.Value))</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("DetailStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("DetailFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("DetailSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("DetailWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("DetailDecoration")</TextDecoration>
@@ -3694,6 +3705,9 @@
                   <Parameter Name="StyleSheetXML">
                     <Value>=Parameters!StyleSheetXML.Value</Value>
                   </Parameter>
+                  <Parameter Name="FontFamily">
+                    <Value>=Parameters!FontFamily.Value</Value>
+                  </Parameter>
                 </Parameters>
                 <MergeTransactions>true</MergeTransactions>
                 <KeepTogether>true</KeepTogether>
@@ -3805,7 +3819,7 @@
                         <Color>Gainsboro</Color>
                       </Border>
                       <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
-                      <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
+                      <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                       <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
                       <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
                       <Format>d</Format>
@@ -3893,7 +3907,7 @@
                         <Style>Solid</Style>
                       </Border>
                       <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
-                      <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
+                      <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                       <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
                       <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
                       <Format>0.00;(0.00)</Format>
@@ -3986,7 +4000,7 @@
                   </Border>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
-                  <FontFamily>=Code.StyleSheetValue("ChartDetailFamily")</FontFamily>
+                  <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                   <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
                   <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
                   <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
@@ -4302,7 +4316,7 @@
                                   <Value>=Last(Fields!PortfolioPeriodTWR.Value)</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("KPIValueStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("KPIValueFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("KPIValueSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("KPIValueWeight")</FontWeight>
                                     <Format>0.00;(0.00)</Format>
@@ -4418,7 +4432,7 @@
                                   <Value>Total Return</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
@@ -4533,7 +4547,7 @@
                                   <Value>=Fields!Val.Value</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("KPIValueStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("KPIValueFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("KPIValueSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("KPIValueWeight")</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -4577,7 +4591,7 @@
                                   <Value>Total Market Value</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
@@ -4666,7 +4680,7 @@
                                   <Value>=Fields!Val.Value</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("KPIValueStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("KPIValueFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("KPIValueSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("KPIValueWeight")</FontWeight>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -4710,7 +4724,7 @@
                                   <Value>Total Gains after Fees</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                    <FontFamily>=Code.StyleSheetValue("SectionHeaderFamily")</FontFamily>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
                                     <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
@@ -4820,7 +4834,7 @@
   <ReportParameters>
     <ReportParameter Name="StyleSheetXML">
       <DataType>String</DataType>
-      <Prompt>Style Sheet</Prompt>
+      <Prompt>Color Scheme</Prompt>
       <ValidValues>
         <DataSetReference>
           <DataSetName>StyleSheet</DataSetName>
@@ -6160,6 +6174,22 @@
       <AllowBlank>true</AllowBlank>
       <Prompt>Disable Loc Acct Filters</Prompt>
       <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="FontFamily">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Segoe UI</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Font Family</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>FontFamily</DataSetName>
+          <ValueField>FontFamily</ValueField>
+          <LabelField>FontFamily</LabelField>
+        </DataSetReference>
+      </ValidValues>
     </ReportParameter>
   </ReportParameters>
   <Code>Public Shared Dim iLoop As Integer = 1
