@@ -518,6 +518,9 @@
                   <Parameter Name="StyleSheetXML">
                     <Value>=Parameters!StyleSheetXML.Value</Value>
                   </Parameter>
+                  <Parameter Name="FontFamily">
+                    <Value>=Parameters!FontFamily.Value</Value>
+                  </Parameter>
                 </Parameters>
                 <MergeTransactions>true</MergeTransactions>
                 <KeepTogether>true</KeepTogether>
@@ -625,7 +628,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -653,7 +655,7 @@
                                 <Value>=Fields!AssetType.Value</Value>
                                 <Style>
                                   <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
-                                  <FontFamily>=Code.StyleSheetValue("ColumnHeaderFamily")</FontFamily>
+                                  <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                   <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
                                   <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
                                   <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
@@ -725,7 +727,6 @@
                           <PaddingBottom>2pt</PaddingBottom>
                         </Style>
                       </Textbox>
-                      <rd:Selected>true</rd:Selected>
                     </CellContents>
                   </TablixHeader>
                 </TablixMember>
