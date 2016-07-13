@@ -751,7 +751,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                             <Visible>true</Visible>
                           </ChartDataLabel>
                           <Style>
-                            <Color>=Code.GetColor(Iif(IsNothing(Fields!SectorDesc.Value),"Undefined",Fields!SectorDesc.Value),Code.StyleSheetValue("ColorPalette"))</Color>
+                            <Color>=Code.GetColor(Iif(IsNothing(Fields!Group1.Value),"Undefined",Fields!Group1.Value),Code.StyleSheetValue("ColorPalette"))</Color>
                           </Style>
                           <ChartMarker>
                             <Style />
