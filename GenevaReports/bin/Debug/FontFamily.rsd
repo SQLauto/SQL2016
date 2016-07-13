@@ -5,6 +5,13 @@
       <DataSourceReference>GenevaSQLSource</DataSourceReference>
       <CommandText>select 'Agency FB' as FontFamily
 union all select'Algerian Regular'
+union all select'Apex Rounded Book'
+union all select'Apex Rounded Bold'
+union all select'Apex Rounded Bold Italic'
+union all select'Apex Rounded Medium'
+union all select'Apex Rounded Medium Italic'
+union all select'Apex Rounded Semi Bold'
+union all select'Apex Rounded Semi Bold Italic'
 union all select'Arial'
 union all select'Arial Black'
 union all select'Arial Rounded MT Bold'
