@@ -711,7 +711,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                     <ChartMember>
                       <Group Name="Chart1_CategoryGroup">
                         <GroupExpressions>
-                          <GroupExpression>=Fields!Group1.Value</GroupExpression>
+                          <GroupExpression>=Iif(IsNothing(Fields!Group1.Value),"Undefined",Fields!Group1.Value)</GroupExpression>
                         </GroupExpressions>
                       </Group>
                       <SortExpressions>
@@ -720,7 +720,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                           <Direction>Descending</Direction>
                         </SortExpression>
                       </SortExpressions>
-                      <Label>=Fields!Group1.Value</Label>
+                      <Label>=Iif(IsNothing(Fields!Group1.Value),"Undefined",Fields!Group1.Value)</Label>
                     </ChartMember>
                   </ChartMembers>
                 </ChartCategoryHierarchy>
