@@ -17,12 +17,12 @@
   </DataSources>
   <DataSets>
     <ProjectItem>
-      <Name>StyleSheet.rsd</Name>
-      <FullPath>StyleSheet.rsd</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>FontFamily.rsd</Name>
       <FullPath>FontFamily.rsd</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>StyleSheet.rsd</Name>
+      <FullPath>StyleSheet.rsd</FullPath>
     </ProjectItem>
   </DataSets>
   <Reports>
@@ -73,6 +73,22 @@
     <ProjectItem>
       <Name>SubReport_SmallHeaderLandscape_NextGen.rdl</Name>
       <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Transaction History.rdl</Name>
+      <FullPath>Transaction History.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NEXTGEN Net Position Appraisal.rdl</Name>
+      <FullPath>NEXTGEN Net Position Appraisal.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Net Position Appraisal.rdl</Name>
+      <FullPath>Net Position Appraisal.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PortfolioAppraisal.rdl</Name>
+      <FullPath>PortfolioAppraisal.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

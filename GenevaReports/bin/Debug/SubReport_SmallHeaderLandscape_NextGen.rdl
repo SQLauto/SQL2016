@@ -162,7 +162,7 @@ FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
                                           </Style>
                                         </Paragraph>
                                       </Paragraphs>
-                                      <Height>0.2in</Height>
+                                      <Height>0.20139in</Height>
                                       <Width>2.23556in</Width>
                                       <Style>
                                         <VerticalAlign>Middle</VerticalAlign>
@@ -315,7 +315,7 @@ FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
                         </FilterValues>
                       </Filter>
                     </Filters>
-                    <Top>0.125in</Top>
+                    <Top>0.1in</Top>
                     <Left>0.34834in</Left>
                     <Height>0.25in</Height>
                     <Width>4.48556in</Width>
@@ -399,7 +399,7 @@ FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
                         </FilterValues>
                       </Filter>
                     </Filters>
-                    <Top>0.625in</Top>
+                    <Top>0.65in</Top>
                     <Left>0.34834in</Left>
                     <Height>0.2in</Height>
                     <Width>2.23556in</Width>
@@ -576,7 +576,7 @@ FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
                         </FilterValues>
                       </Filter>
                     </Filters>
-                    <Top>0.625in</Top>
+                    <Top>0.65in</Top>
                     <Left>2.5839in</Left>
                     <Height>0.2in</Height>
                     <Width>2.23556in</Width>
