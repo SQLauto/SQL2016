@@ -27,16 +27,16 @@
   </DataSets>
   <Reports>
     <ProjectItem>
+      <Name>Net Position Appraisal.rdl</Name>
+      <FullPath>Net Position Appraisal.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>NEXTGEN Assets Under Management.rdl</Name>
       <FullPath>NEXTGEN Assets Under Management.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>NEXTGEN Consolidated Exposure Summary.rdl</Name>
       <FullPath>NEXTGEN Consolidated Exposure Summary.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>NEXTGEN Exposure Summary.rdl</Name>
-      <FullPath>NEXTGEN Exposure Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>NEXTGEN Fixed Income Holdings.rdl</Name>
@@ -49,6 +49,10 @@
     <ProjectItem>
       <Name>NEXTGEN Fixed Income Portfolio Composition.rdl</Name>
       <FullPath>NEXTGEN Fixed Income Portfolio Composition.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NEXTGEN Net Position Appraisal.rdl</Name>
+      <FullPath>NEXTGEN Net Position Appraisal.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>NEXTGEN Performance Summary.rdl</Name>
@@ -67,6 +71,10 @@
       <FullPath>NEXTGEN Profit Loss Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>PortfolioAppraisal.rdl</Name>
+      <FullPath>PortfolioAppraisal.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>SubReport_SmallHeaderLandscape.rdl</Name>
       <FullPath>SubReport_SmallHeaderLandscape.rdl</FullPath>
     </ProjectItem>
@@ -75,20 +83,16 @@
       <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Transaction History.rdl</Name>
-      <FullPath>Transaction History.rdl</FullPath>
+      <Name>NEXTGEN Transaction Summary.rdl</Name>
+      <FullPath>NEXTGEN Transaction Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>NEXTGEN Net Position Appraisal.rdl</Name>
-      <FullPath>NEXTGEN Net Position Appraisal.rdl</FullPath>
+      <Name>Exposure Summary.rdl</Name>
+      <FullPath>Exposure Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Net Position Appraisal.rdl</Name>
-      <FullPath>Net Position Appraisal.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>PortfolioAppraisal.rdl</Name>
-      <FullPath>PortfolioAppraisal.rdl</FullPath>
+      <Name>NEXTGEN Exposure Summary.rdl</Name>
+      <FullPath>NEXTGEN Exposure Summary.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
