@@ -923,7 +923,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                 <TablixBody>
                   <TablixColumns>
                     <TablixColumn>
-                      <Width>0.2in</Width>
+                      <Width>0.1875in</Width>
                     </TablixColumn>
                     <TablixColumn>
                       <Width>2.49757in</Width>
@@ -940,7 +940,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </TablixColumns>
                   <TablixRows>
                     <TablixRow>
-                      <Height>0.2in</Height>
+                      <Height>0.1875in</Height>
                       <TablixCells>
                         <TablixCell>
                           <CellContents>
@@ -969,9 +969,10 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
-                                <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <VerticalAlign>Bottom</VerticalAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1004,13 +1005,19 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               <rd:DefaultName>Textbox391</rd:DefaultName>
                               <Style>
                                 <Border>
+                                  <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
                                   <Style>None</Style>
                                 </Border>
-                                <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <BottomBorder>
+                                  <Style>Solid</Style>
+                                </BottomBorder>
+                                <VerticalAlign>Bottom</VerticalAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
+                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                         <TablixCell>
@@ -1041,13 +1048,19 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               <rd:DefaultName>Textbox282</rd:DefaultName>
                               <Style>
                                 <Border>
+                                  <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
                                   <Style>None</Style>
                                 </Border>
-                                <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <BottomBorder>
+                                  <Style>Solid</Style>
+                                </BottomBorder>
+                                <VerticalAlign>Bottom</VerticalAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
+                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                         <TablixCell>
@@ -1078,13 +1091,19 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               <rd:DefaultName>Textbox452</rd:DefaultName>
                               <Style>
                                 <Border>
+                                  <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
                                   <Style>None</Style>
                                 </Border>
-                                <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <BottomBorder>
+                                  <Style>Solid</Style>
+                                </BottomBorder>
+                                <VerticalAlign>Bottom</VerticalAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
+                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                         <TablixCell>
@@ -1115,13 +1134,19 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               <ZIndex>6</ZIndex>
                               <Style>
                                 <Border>
+                                  <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
                                   <Style>None</Style>
                                 </Border>
-                                <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <BottomBorder>
+                                  <Style>Solid</Style>
+                                </BottomBorder>
+                                <VerticalAlign>Bottom</VerticalAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
+                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                       </TablixCells>
@@ -1187,8 +1212,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               <rd:DefaultName>Textbox2</rd:DefaultName>
                               <Style>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1224,8 +1249,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                   <Style>None</Style>
                                 </Border>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1261,8 +1286,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                   <Style>None</Style>
                                 </Border>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1298,8 +1323,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                   <Style>None</Style>
                                 </Border>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1307,7 +1332,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                       </TablixCells>
                     </TablixRow>
                     <TablixRow>
-                      <Height>0.2in</Height>
+                      <Height>0.1875in</Height>
                       <TablixCells>
                         <TablixCell>
                           <CellContents>
@@ -1372,8 +1397,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               <DataElementName>Quality</DataElementName>
                               <Style>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1410,8 +1435,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                   <Style>None</Style>
                                 </Border>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1448,8 +1473,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                   <Style>None</Style>
                                 </Border>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1487,8 +1512,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                   <Style>None</Style>
                                 </Border>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1556,8 +1581,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               <rd:DefaultName>Textbox8</rd:DefaultName>
                               <Style>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1593,8 +1618,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                   <Style>None</Style>
                                 </Border>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1630,8 +1655,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                   <Style>None</Style>
                                 </Border>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1667,8 +1692,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                   <Style>None</Style>
                                 </Border>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1676,7 +1701,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                       </TablixCells>
                     </TablixRow>
                     <TablixRow>
-                      <Height>0.2in</Height>
+                      <Height>0.1875in</Height>
                       <TablixCells>
                         <TablixCell>
                           <CellContents>
@@ -1727,8 +1752,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               <ZIndex>1</ZIndex>
                               <Style>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1766,8 +1791,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 </Border>
                                 <BackgroundColor>=Code.StyleSheetValue("GrandTotalBackgroundColor")</BackgroundColor>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1805,8 +1830,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 </Border>
                                 <BackgroundColor>=Code.StyleSheetValue("GrandTotalBackgroundColor")</BackgroundColor>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1844,8 +1869,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 </Border>
                                 <BackgroundColor>=Code.StyleSheetValue("GrandTotalBackgroundColor")</BackgroundColor>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -1905,8 +1930,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                 </SortExpressions>
                 <Top>0.31944in</Top>
                 <Left>4.42674in</Left>
-                <Height>0.6625in</Height>
-                <Width>5.41042in</Width>
+                <Height>0.625in</Height>
+                <Width>5.39792in</Width>
                 <ZIndex>1</ZIndex>
                 <Style />
               </Tablix>
@@ -2275,10 +2300,10 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                 <TablixBody>
                   <TablixColumns>
                     <TablixColumn>
-                      <Width>0.2in</Width>
+                      <Width>0.1875in</Width>
                     </TablixColumn>
                     <TablixColumn>
-                      <Width>2.475in</Width>
+                      <Width>2.49757in</Width>
                     </TablixColumn>
                     <TablixColumn>
                       <Width>1in</Width>
@@ -2292,7 +2317,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   </TablixColumns>
                   <TablixRows>
                     <TablixRow>
-                      <Height>0.25in</Height>
+                      <Height>0.1875in</Height>
                       <TablixCells>
                         <TablixCell>
                           <CellContents>
@@ -2321,9 +2346,10 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
-                                <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <VerticalAlign>Bottom</VerticalAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -2356,13 +2382,19 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               <rd:DefaultName>Textbox39</rd:DefaultName>
                               <Style>
                                 <Border>
+                                  <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
                                   <Style>None</Style>
                                 </Border>
-                                <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <BottomBorder>
+                                  <Style>Solid</Style>
+                                </BottomBorder>
+                                <VerticalAlign>Bottom</VerticalAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
+                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                         <TablixCell>
@@ -2393,13 +2425,19 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               <rd:DefaultName>Textbox28</rd:DefaultName>
                               <Style>
                                 <Border>
+                                  <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
                                   <Style>None</Style>
                                 </Border>
-                                <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <BottomBorder>
+                                  <Style>Solid</Style>
+                                </BottomBorder>
+                                <VerticalAlign>Bottom</VerticalAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
+                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                         <TablixCell>
@@ -2430,13 +2468,19 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               <rd:DefaultName>Textbox45</rd:DefaultName>
                               <Style>
                                 <Border>
+                                  <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
                                   <Style>None</Style>
                                 </Border>
-                                <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <BottomBorder>
+                                  <Style>Solid</Style>
+                                </BottomBorder>
+                                <VerticalAlign>Bottom</VerticalAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
+                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                         <TablixCell>
@@ -2467,13 +2511,19 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               <ZIndex>6</ZIndex>
                               <Style>
                                 <Border>
+                                  <Color>=Code.StyleSheetValue("HeaderLineColor")</Color>
                                   <Style>None</Style>
                                 </Border>
-                                <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <BottomBorder>
+                                  <Style>Solid</Style>
+                                </BottomBorder>
+                                <VerticalAlign>Bottom</VerticalAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
+                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                       </TablixCells>
@@ -2659,7 +2709,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                       </TablixCells>
                     </TablixRow>
                     <TablixRow>
-                      <Height>0.2in</Height>
+                      <Height>0.1875in</Height>
                       <TablixCells>
                         <TablixCell>
                           <CellContents>
@@ -2725,8 +2775,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               <DataElementName>Quality</DataElementName>
                               <Style>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -2763,8 +2813,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                   <Style>None</Style>
                                 </Border>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -2801,8 +2851,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                   <Style>None</Style>
                                 </Border>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -2840,8 +2890,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                   <Style>None</Style>
                                 </Border>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -3029,7 +3079,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                       </TablixCells>
                     </TablixRow>
                     <TablixRow>
-                      <Height>0.25in</Height>
+                      <Height>0.1875in</Height>
                       <TablixCells>
                         <TablixCell>
                           <CellContents>
@@ -3080,8 +3130,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               <ZIndex>1</ZIndex>
                               <Style>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -3119,8 +3169,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 </Border>
                                 <BackgroundColor>=Code.StyleSheetValue("GrandTotalBackgroundColor")</BackgroundColor>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -3158,8 +3208,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 </Border>
                                 <BackgroundColor>=Code.StyleSheetValue("GrandTotalBackgroundColor")</BackgroundColor>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -3197,8 +3247,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 </Border>
                                 <BackgroundColor>=Code.StyleSheetValue("GrandTotalBackgroundColor")</BackgroundColor>
                                 <VerticalAlign>Middle</VerticalAlign>
-                                <PaddingLeft>1pt</PaddingLeft>
-                                <PaddingRight>1pt</PaddingRight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
                           </CellContents>
@@ -3258,8 +3308,8 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                 </SortExpressions>
                 <Top>3.11806in</Top>
                 <Left>4.44931in</Left>
-                <Height>0.7625in</Height>
-                <Width>5.38785in</Width>
+                <Height>0.625in</Height>
+                <Width>5.39792in</Width>
                 <ZIndex>5</ZIndex>
                 <Style />
               </Tablix>
