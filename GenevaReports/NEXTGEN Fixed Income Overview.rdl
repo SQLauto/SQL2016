@@ -680,6 +680,9 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                   <Parameter Name="FontFamily">
                     <Value>=Parameters!FontFamily.Value</Value>
                   </Parameter>
+                  <Parameter Name="ShowTitle">
+                    <Value>=Parameters!ShowTitle.Value</Value>
+                  </Parameter>
                 </Parameters>
                 <MergeTransactions>true</MergeTransactions>
                 <KeepTogether>true</KeepTogether>
@@ -3502,6 +3505,16 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
           <LabelField>FontFamily</LabelField>
         </DataSetReference>
       </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="ShowTitle">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ShowTitle</Prompt>
     </ReportParameter>
   </ReportParameters>
   <Code>

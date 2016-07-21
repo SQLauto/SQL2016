@@ -113,6 +113,9 @@
             <Left>0.00083in</Left>
             <Height>0.25in</Height>
             <Width>9.68515in</Width>
+            <Visibility>
+              <Hidden>=not(Parameters!ShowTitle.Value)</Hidden>
+            </Visibility>
             <Style>
               <BackgroundColor>=Code.StyleSheetValue("ReportTitleBackgroundColor")</BackgroundColor>
             </Style>
@@ -623,7 +626,7 @@ FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
             </Style>
           </Rectangle>
         </ReportItems>
-        <Height>1.35069in</Height>
+        <Height>1.51736in</Height>
         <Style />
       </Body>
       <Width>9.68598in</Width>
@@ -1015,6 +1018,16 @@ FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
         </Values>
       </DefaultValue>
       <Prompt>Font Family</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ShowTitle">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ShowTitle</Prompt>
     </ReportParameter>
   </ReportParameters>
   <Code>

@@ -613,7 +613,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                 <MergeTransactions>true</MergeTransactions>
                 <KeepTogether>true</KeepTogether>
                 <Height>0.45in</Height>
-                <Width>10in</Width>
+                <Width>10.39236in</Width>
                 <ToolTip>Addendum Pages</ToolTip>
                 <Style>
                   <Border>
@@ -626,10 +626,10 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
               <BreakLocation>Start</BreakLocation>
             </PageBreak>
             <KeepTogether>true</KeepTogether>
-            <Top>5.73612in</Top>
-            <Left>0.00764in</Left>
+            <Top>2.36112in</Top>
+            <Left>0in</Left>
             <Height>0.45in</Height>
-            <Width>10in</Width>
+            <Width>10.39236in</Width>
             <Visibility>
               <Hidden>=Parameters!AddendumPages.Value="None"</Hidden>
             </Visibility>
@@ -703,6 +703,9 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                     </Parameter>
                                     <Parameter Name="FontFamily">
                                       <Value>=Parameters!FontFamily.Value</Value>
+                                    </Parameter>
+                                    <Parameter Name="ShowTitle">
+                                      <Value>=Parameters!ShowTitle.Value</Value>
                                     </Parameter>
                                   </Parameters>
                                   <MergeTransactions>true</MergeTransactions>
@@ -1255,6 +1258,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
+                                <BackgroundColor>=Iif(RowNumber(nothing) mod 2, Code.StyleSheetValue("AltDetailBackgroundColor1"), Code.StyleSheetValue("AltDetailBackgroundColor2"))</BackgroundColor>
                                 <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>12pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
@@ -1290,6 +1294,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
+                                <BackgroundColor>=Iif(RowNumber(nothing) mod 2, Code.StyleSheetValue("AltDetailBackgroundColor1"), Code.StyleSheetValue("AltDetailBackgroundColor2"))</BackgroundColor>
                                 <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
@@ -1328,6 +1333,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
+                                <BackgroundColor>=Iif(RowNumber(nothing) mod 2, Code.StyleSheetValue("AltDetailBackgroundColor1"), Code.StyleSheetValue("AltDetailBackgroundColor2"))</BackgroundColor>
                                 <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
@@ -1366,6 +1372,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
+                                <BackgroundColor>=Iif(RowNumber(nothing) mod 2, Code.StyleSheetValue("AltDetailBackgroundColor1"), Code.StyleSheetValue("AltDetailBackgroundColor2"))</BackgroundColor>
                                 <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
@@ -1403,6 +1410,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
+                                <BackgroundColor>=Iif(RowNumber(nothing) mod 2, Code.StyleSheetValue("AltDetailBackgroundColor1"), Code.StyleSheetValue("AltDetailBackgroundColor2"))</BackgroundColor>
                                 <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
@@ -1441,6 +1449,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
+                                <BackgroundColor>=Iif(RowNumber(nothing) mod 2, Code.StyleSheetValue("AltDetailBackgroundColor1"), Code.StyleSheetValue("AltDetailBackgroundColor2"))</BackgroundColor>
                                 <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
@@ -2443,7 +2452,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
             </PageBreak>
             <KeepTogether>true</KeepTogether>
             <DataElementOutput>ContentsOnly</DataElementOutput>
-            <Height>6.19237in</Height>
+            <Height>2.275in</Height>
             <Width>10.4in</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -2453,7 +2462,7 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
             </Style>
           </Rectangle>
         </ReportItems>
-        <Height>6.19237in</Height>
+        <Height>2.81112in</Height>
         <Style />
       </Body>
       <Width>10.4in</Width>
@@ -3647,6 +3656,16 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
           <LabelField>FontFamily</LabelField>
         </DataSetReference>
       </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="ShowTitle">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ShowTitle</Prompt>
     </ReportParameter>
   </ReportParameters>
   <Code>

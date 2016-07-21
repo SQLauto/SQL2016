@@ -2758,6 +2758,9 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                   <Parameter Name="FontFamily">
                     <Value>=Parameters!FontFamily.Value</Value>
                   </Parameter>
+                  <Parameter Name="ShowTitle">
+                    <Value>=Parameters!ShowTitle.Value</Value>
+                  </Parameter>
                 </Parameters>
                 <MergeTransactions>true</MergeTransactions>
                 <KeepTogether>true</KeepTogether>
@@ -3850,6 +3853,16 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
       <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>
       <Prompt>Change Investment Display</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ShowTitle">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ShowTitle</Prompt>
     </ReportParameter>
   </ReportParameters>
   <Code>

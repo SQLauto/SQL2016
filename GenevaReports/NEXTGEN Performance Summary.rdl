@@ -3708,6 +3708,9 @@
                   <Parameter Name="FontFamily">
                     <Value>=Parameters!FontFamily.Value</Value>
                   </Parameter>
+                  <Parameter Name="ShowTitle">
+                    <Value>=Parameters!ShowTitle.Value</Value>
+                  </Parameter>
                 </Parameters>
                 <MergeTransactions>true</MergeTransactions>
                 <KeepTogether>true</KeepTogether>
@@ -6190,6 +6193,16 @@
           <LabelField>FontFamily</LabelField>
         </DataSetReference>
       </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="ShowTitle">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ShowTitle</Prompt>
     </ReportParameter>
   </ReportParameters>
   <Code>Public Shared Dim iLoop As Integer = 1
