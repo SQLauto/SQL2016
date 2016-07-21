@@ -267,7 +267,7 @@
             <Value>=Parameters!FreezeKnowledgeDate.Value</Value>
           </QueryParameter>
           <QueryParameter Name="Group1">
-            <Value>=Parameters!Group1.Value</Value>
+            <Value>None</Value>
           </QueryParameter>
           <QueryParameter Name="ParallelConsolidationChildren">
             <Value>=Parameters!ParallelConsolidationChildren.Value</Value>
@@ -2009,7 +2009,11 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                     <ChartMember>
                       <Group Name="MaturityYearsGroup">
                         <GroupExpressions>
-                          <GroupExpression>=Fields!MaturityYearsGroup.Value</GroupExpression>
+                          <GroupExpression>=IIF(Fields!MaturityYearsGroup.Value="A", "0-3",
+                                    IIF(Fields!MaturityYearsGroup.Value="B","3-7",
+                                    IIF(Fields!MaturityYearsGroup.Value="C","7-10",
+                                    IIF(Fields!MaturityYearsGroup.Value="D","10-20",
+                                    "20+"))))</GroupExpression>
                         </GroupExpressions>
                       </Group>
                       <SortExpressions>
@@ -2061,7 +2065,11 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               <Style>None</Style>
                               <Width>0.376pt</Width>
                             </Border>
-                            <Color>=Code.GetColor(Fields!MaturityYearsGroup.Value,Code.StyleSheetValue("ColorPalette"))</Color>
+                            <Color>=Code.GetColor(IIF(Fields!MaturityYearsGroup.Value="A", "0-3",
+                                    IIF(Fields!MaturityYearsGroup.Value="B","3-7",
+                                    IIF(Fields!MaturityYearsGroup.Value="C","7-10",
+                                    IIF(Fields!MaturityYearsGroup.Value="D","10-20",
+                                    "20+")))),Code.StyleSheetValue("ColorPalette"))</Color>
                           </Style>
                           <ChartMarker>
                             <Size>6pt</Size>
@@ -2726,7 +2734,11 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                               </Paragraphs>
                               <rd:DefaultName>Textbox36</rd:DefaultName>
                               <Style>
-                                <BackgroundColor>=Code.GetColor(Fields!MaturityYearsGroup.Value,Code.StyleSheetValue("ColorPalette"))</BackgroundColor>
+                                <BackgroundColor>=Code.GetColor(IIF(Fields!MaturityYearsGroup.Value="A", "0-3",
+                                    IIF(Fields!MaturityYearsGroup.Value="B","3-7",
+                                    IIF(Fields!MaturityYearsGroup.Value="C","7-10",
+                                    IIF(Fields!MaturityYearsGroup.Value="D","10-20",
+                                    "20+")))),Code.StyleSheetValue("ColorPalette"))</BackgroundColor>
                                 <VerticalAlign>Middle</VerticalAlign>
                                 <PaddingLeft>1pt</PaddingLeft>
                                 <PaddingRight>1pt</PaddingRight>
@@ -4141,29 +4153,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
       <AllowBlank>true</AllowBlank>
       <Prompt>Screen Type</Prompt>
       <Hidden>true</Hidden>
-    </ReportParameter>
-    <ReportParameter Name="Group1">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value>AssetType</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Group By</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>AssetType</Value>
-            <Label>Asset Type</Label>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>InvestmentType</Value>
-            <Label>Investment Type</Label>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
     </ReportParameter>
     <ReportParameter Name="InventoryState">
       <DataType>String</DataType>
