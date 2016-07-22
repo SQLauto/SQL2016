@@ -79,8 +79,8 @@
       <FullPath>NEXTGEN Transaction Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Portfolio Overview.rdl</Name>
-      <FullPath>Portfolio Overview.rdl</FullPath>
+      <Name>NEXTGEN Portfolio Overview.rdl</Name>
+      <FullPath>NEXTGEN Portfolio Overview.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>PortfolioAppraisal.rdl</Name>
@@ -101,6 +101,10 @@
     <ProjectItem>
       <Name>SubReport_SmallHeaderLandscape_NextGen.rdl</Name>
       <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Portfolio Overview.rdl</Name>
+      <FullPath>Portfolio Overview.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

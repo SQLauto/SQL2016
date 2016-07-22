@@ -1,151 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
-  <Author>Advent Software, Inc.</Author>
-  <DataSources>
-    <DataSource Name="GenevaSource">
-      <Transaction>true</Transaction>
-      <ConnectionProperties>
-        <DataProvider>GENEVA</DataProvider>
-        <ConnectString>=Parameters!ConnectionString.Value</ConnectString>
-        <Prompt>Specify a user name and password for data source GenevaSource</Prompt>
-      </ConnectionProperties>
-      <rd:DataSourceID>b8d6ee4a-b975-43ab-a493-41265f60c121</rd:DataSourceID>
-      <rd:SecurityType>DataBase</rd:SecurityType>
-    </DataSource>
-  </DataSources>
-  <DataSets>
-    <DataSet Name="ActivitySummary">
-      <Fields>
-        <Field Name="BegMVBook">
-          <DataField>BegMVBook</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="BegAccruedInterest">
-          <DataField>BegAccruedInterest</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="Contributed">
-          <DataField>Contributed</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="RealGL">
-          <DataField>RealGL</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="UnrealGL">
-          <DataField>UnrealGL</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="Income">
-          <DataField>Income</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="InvestInMaster">
-          <DataField>InvestInMaster</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="ChgInAI">
-          <DataField>ChgInAI</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="EndMVBook">
-          <DataField>EndMVBook</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="AddItUp">
-          <DataField>AddItUp</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="AccruedInterest">
-          <DataField>AccruedInterest</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="Diff">
-          <DataField>Diff</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="NetIncome">
-          <DataField>NetIncome</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="genKnowledgeDate">
-          <DataField>genKnowledgeDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="genKnowledgeDateExact">
-          <DataField>genKnowledgeDateExact</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="genDataSetID">
-          <DataField>genDataSetID</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>GenevaSource</DataSourceName>
-        <CommandText>SELECT
-SUM( Balance(Net,Book,PeriodStart,AllAssetsAndPayables,MktValSummary)
-                 - Balance(Net,Book,PeriodStart,InDefault,AllAmortizationAssetLiability)
-                 + Balance(Net,Book,PeriodStart, MtoMTWRNotational, MktValMtoMTWRNotational)
-                 + Balance(Net,Book,PeriodStart, MtoMTWRNotational, AIMtoMTWRNotational)
-               + Balance(Net,Book,PeriodStart,All,AllAccruedInterest)
-               - Balance(Net,Book,PeriodStart,InDefault,AllAccruedInterest) ) BegMVBook,
-SUM(Balance(Net,Book,PeriodStart,All,AllAccruedInterest) - Balance(Net,Book,PeriodStart,InDefault,AllAccruedInterest)) BegAccruedInterest,
-SUM(-Balance(Net,Book,PeriodToDate,All,AllContributed)) Contributed,
-SUM(-Balance(Net,Book,PeriodToDate,All,AllRealGainLoss)) RealGL,
-SUM(Balance(Net,Book,PeriodToDate,AllAssetsAndPayables,UnrealizedGL) - Balance(Net,Book,PeriodToDate,AllAssetsAndPayables,MToMPriceGL)
-    - Balance(Net,Book,PeriodToDate,AllAssetsAndPayables,MToMFXGL)
-    - Balance(Net,Book,PeriodToDate,AllAssetsAndPayables,AllAmortizationRevExp)) UnrealGL,
-SUM(-Balance(Net,Book,PeriodToDate,AllAssetsAndPayables,AllRevenuesAndExpenses) - UnrealGL - RealGL - AccruedInterest + BegAccruedInterest) Income,
-SUM(Balance(Net,Book,PeriodEnd,All,InvestmentInMaster)) InvestInMaster,
-SUM(Balance(Net,Book,PeriodToDate,All,AllAccruedInterest) - Balance(Net,Book,PeriodToDate,InDefault,AllAccruedInterest)) ChgInAI,
-SUM(Balance(Net,Book,PeriodEnd,AllAssetsAndPayables,MktValSummary) - Balance(Net,Book,PeriodEnd,InDefault,AllAmortizationAssetLiability) 
-    + Balance(Net,Book,PeriodEnd,All,AllAccruedInterest) - Balance(Net,Book,PeriodEnd,InDefault,AllAccruedInterest)) EndMVBook,
-SUM(Balance(Net,Book,PeriodEnd,All,AllAccruedInterest) - Balance(Net,Book,PeriodEnd,InDefault,AllAccruedInterest)) AccruedInterest,
-SUM(BegMVBook + Contributed + RealGL + UnrealGL + Income + InvestInMaster + AccruedInterest ) AddItUp,
-SUM(EndMVBook - AddItUp) Diff,
-SUM(RealGL + UnrealGL + Income + ChgInAI) NetIncome
-FROM bisLocalPosition
-GIVEN
-GROUP BY {Portfolio.Key}</CommandText>
-        <QueryParameters>
-          <QueryParameter Name="JobTitle">
-            <Value>=Parameters!JobTitle.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="AddendumPages">
-            <Value>=Parameters!AddendumPages.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="GetKTimesFromDefaultCalendar">
-            <Value>=Parameters!GetKTimesFromDefaultCalendar.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="RelativeDate">
-            <Value>=Parameters!RelativeDate.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="LotLevelOverrides">
-            <Value>=Parameters!LotLevelOverrides.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="MOERoundingMethod">
-            <Value>=Parameters!MOERoundingMethod.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="HybridHistoricalView">
-            <Value>=Parameters!HybridHistoricalView.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="BypassFLEConsolidatingFlag">
-            <Value>=Parameters!BypassFLEConsolidatingFlag.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="IgnoreSpecificLotClosing">
-            <Value>=Parameters!IgnoreSpecificLotClosing.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="PaydownGLasGainLoss">
-            <Value>=Parameters!PaydownGLasGainLoss.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="LumpExpensesInSummaryLockdown">
-            <Value>=Parameters!LumpExpensesInSummaryLockdown.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-      </Query>
-    </DataSet>
-  </DataSets>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
       <Rectangle Name="rectangle1">
@@ -828,13 +682,166 @@ GROUP BY {Portfolio.Key}</CommandText>
     <Height>2.3in</Height>
     <Style />
   </Body>
+  <Width>3.8in</Width>
+  <Page>
+    <PageHeight>3.3in</PageHeight>
+    <PageWidth>3.5in</PageWidth>
+    <Style />
+  </Page>
+  <Author>Advent Software, Inc.</Author>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="GenevaSource">
+      <Transaction>true</Transaction>
+      <ConnectionProperties>
+        <DataProvider>GENEVA</DataProvider>
+        <ConnectString>=Parameters!ConnectionString.Value</ConnectString>
+        <Prompt>Specify a user name and password for data source GenevaSource</Prompt>
+      </ConnectionProperties>
+      <rd:SecurityType>DataBase</rd:SecurityType>
+      <rd:DataSourceID>b8d6ee4a-b975-43ab-a493-41265f60c121</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="ActivitySummary">
+      <Query>
+        <DataSourceName>GenevaSource</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="JobTitle">
+            <Value>=Parameters!JobTitle.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AddendumPages">
+            <Value>=Parameters!AddendumPages.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="GetKTimesFromDefaultCalendar">
+            <Value>=Parameters!GetKTimesFromDefaultCalendar.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="RelativeDate">
+            <Value>=Parameters!RelativeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LotLevelOverrides">
+            <Value>=Parameters!LotLevelOverrides.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="MOERoundingMethod">
+            <Value>=Parameters!MOERoundingMethod.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="HybridHistoricalView">
+            <Value>=Parameters!HybridHistoricalView.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BypassFLEConsolidatingFlag">
+            <Value>=Parameters!BypassFLEConsolidatingFlag.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="IgnoreSpecificLotClosing">
+            <Value>=Parameters!IgnoreSpecificLotClosing.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PaydownGLasGainLoss">
+            <Value>=Parameters!PaydownGLasGainLoss.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LumpExpensesInSummaryLockdown">
+            <Value>=Parameters!LumpExpensesInSummaryLockdown.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT
+SUM( Balance(Net,Book,PeriodStart,AllAssetsAndPayables,MktValSummary)
+                 - Balance(Net,Book,PeriodStart,InDefault,AllAmortizationAssetLiability)
+                 + Balance(Net,Book,PeriodStart, MtoMTWRNotational, MktValMtoMTWRNotational)
+                 + Balance(Net,Book,PeriodStart, MtoMTWRNotational, AIMtoMTWRNotational)
+               + Balance(Net,Book,PeriodStart,All,AllAccruedInterest)
+               - Balance(Net,Book,PeriodStart,InDefault,AllAccruedInterest) ) BegMVBook,
+SUM(Balance(Net,Book,PeriodStart,All,AllAccruedInterest) - Balance(Net,Book,PeriodStart,InDefault,AllAccruedInterest)) BegAccruedInterest,
+SUM(-Balance(Net,Book,PeriodToDate,All,AllContributed)) Contributed,
+SUM(-Balance(Net,Book,PeriodToDate,All,AllRealGainLoss)) RealGL,
+SUM(Balance(Net,Book,PeriodToDate,AllAssetsAndPayables,UnrealizedGL) - Balance(Net,Book,PeriodToDate,AllAssetsAndPayables,MToMPriceGL)
+    - Balance(Net,Book,PeriodToDate,AllAssetsAndPayables,MToMFXGL)
+    - Balance(Net,Book,PeriodToDate,AllAssetsAndPayables,AllAmortizationRevExp)) UnrealGL,
+SUM(-Balance(Net,Book,PeriodToDate,AllAssetsAndPayables,AllRevenuesAndExpenses) - UnrealGL - RealGL - AccruedInterest + BegAccruedInterest) Income,
+SUM(Balance(Net,Book,PeriodEnd,All,InvestmentInMaster)) InvestInMaster,
+SUM(Balance(Net,Book,PeriodToDate,All,AllAccruedInterest) - Balance(Net,Book,PeriodToDate,InDefault,AllAccruedInterest)) ChgInAI,
+SUM(Balance(Net,Book,PeriodEnd,AllAssetsAndPayables,MktValSummary) - Balance(Net,Book,PeriodEnd,InDefault,AllAmortizationAssetLiability) 
+    + Balance(Net,Book,PeriodEnd,All,AllAccruedInterest) - Balance(Net,Book,PeriodEnd,InDefault,AllAccruedInterest)) EndMVBook,
+SUM(Balance(Net,Book,PeriodEnd,All,AllAccruedInterest) - Balance(Net,Book,PeriodEnd,InDefault,AllAccruedInterest)) AccruedInterest,
+SUM(BegMVBook + Contributed + RealGL + UnrealGL + Income + InvestInMaster + AccruedInterest ) AddItUp,
+SUM(EndMVBook - AddItUp) Diff,
+SUM(RealGL + UnrealGL + Income + ChgInAI) NetIncome
+FROM bisLocalPosition
+
+GROUP BY {Portfolio.Key}</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BegMVBook">
+          <DataField>BegMVBook</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="BegAccruedInterest">
+          <DataField>BegAccruedInterest</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Contributed">
+          <DataField>Contributed</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="RealGL">
+          <DataField>RealGL</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="UnrealGL">
+          <DataField>UnrealGL</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Income">
+          <DataField>Income</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="InvestInMaster">
+          <DataField>InvestInMaster</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="ChgInAI">
+          <DataField>ChgInAI</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="EndMVBook">
+          <DataField>EndMVBook</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="AddItUp">
+          <DataField>AddItUp</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="AccruedInterest">
+          <DataField>AccruedInterest</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Diff">
+          <DataField>Diff</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="NetIncome">
+          <DataField>NetIncome</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="genKnowledgeDate">
+          <DataField>genKnowledgeDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="genKnowledgeDateExact">
+          <DataField>genKnowledgeDateExact</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="genDataSetID">
+          <DataField>genDataSetID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
   <ReportParameters>
     <ReportParameter Name="ConnectionString">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -895,7 +902,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -906,7 +913,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -917,7 +924,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1024,7 +1031,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1035,7 +1042,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1046,7 +1053,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1057,7 +1064,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1068,7 +1075,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1079,7 +1086,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1090,7 +1097,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1101,7 +1108,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1112,7 +1119,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1123,7 +1130,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1134,7 +1141,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1145,7 +1152,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1156,7 +1163,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1167,7 +1174,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1178,7 +1185,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1189,7 +1196,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1200,7 +1207,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1211,7 +1218,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1222,7 +1229,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1233,7 +1240,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1244,7 +1251,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1255,7 +1262,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1266,7 +1273,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1277,7 +1284,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1288,7 +1295,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1299,7 +1306,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1310,7 +1317,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1321,7 +1328,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1344,7 +1351,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1355,7 +1362,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1366,7 +1373,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1377,7 +1384,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1388,7 +1395,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1399,7 +1406,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1410,7 +1417,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1421,7 +1428,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1443,7 +1450,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1454,7 +1461,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1465,7 +1472,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1487,7 +1494,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1498,7 +1505,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1509,7 +1516,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1520,7 +1527,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1542,7 +1549,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1575,7 +1582,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1586,7 +1593,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1641,7 +1648,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1675,7 +1682,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1686,7 +1693,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1697,7 +1704,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1708,7 +1715,7 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -1771,12 +1778,12 @@ GROUP BY {Portfolio.Key}</CommandText>
     <ReportParameter Name="HybridHistoricalView">
       <DataType>Boolean</DataType>
       <Nullable>true</Nullable>
-      <AllowBlank>true</AllowBlank>
       <DefaultValue>
         <Values>
           <Value>False</Value>
         </Values>
       </DefaultValue>
+      <AllowBlank>true</AllowBlank>
       <Prompt>Hybrid Historical View</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
@@ -1809,14 +1816,8 @@ GROUP BY {Portfolio.Key}</CommandText>
       <Prompt>Lump Expenses in Summary Lockdown</Prompt>
     </ReportParameter>
   </ReportParameters>
-  <Width>3.8in</Width>
-  <Page>
-    <PageHeight>3.3in</PageHeight>
-    <PageWidth>3.5in</PageWidth>
-    <Style />
-  </Page>
   <Language>=Parameters!RegionalSettings.Value</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
-  <rd:ReportID>eabb25e8-dcf8-4a23-a331-4334d9945d52</rd:ReportID>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>eabb25e8-dcf8-4a23-a331-4334d9945d52</rd:ReportID>
 </Report>
