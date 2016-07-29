@@ -627,7 +627,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
             </PageBreak>
             <KeepTogether>true</KeepTogether>
             <Top>2.36112in</Top>
-            <Left>0in</Left>
             <Height>0.45in</Height>
             <Width>10.39236in</Width>
             <Visibility>
@@ -2447,9 +2446,6 @@ COMPUTE ComputeTotMktVal AS SUM(MarketValue)</CommandText>
                 </Style>
               </Tablix>
             </ReportItems>
-            <PageBreak>
-              <BreakLocation>End</BreakLocation>
-            </PageBreak>
             <KeepTogether>true</KeepTogether>
             <DataElementOutput>ContentsOnly</DataElementOutput>
             <Height>2.275in</Height>
