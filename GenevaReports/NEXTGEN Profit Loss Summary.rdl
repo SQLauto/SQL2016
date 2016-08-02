@@ -2431,13 +2431,13 @@ perAssets=Decimal</CommandText>
                       <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                       <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
                       <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
-                      <Format>=SWITCH(MAX(Fields!TotGL.Value)&gt;1000000000,"0,,,;(0,,,)",
-	MAX(Fields!TotGL.Value)&gt;1000000,"0,,;(0,,)", 
-		MAX(Fields!TotGL.Value)&gt;=0,"0,;(0,)")</Format>
+                      <Format>=SWITCH(MAX(Fields!TotGL.Value-Fields!Income.Value)&gt;1000000000,"0,,,;(0,,,)",
+	MAX(Fields!TotGL.Value-Fields!Income.Value)&gt;1000000,"0,,;(0,,)", 
+		MAX(Fields!TotGL.Value-Fields!Income.Value)&gt;=0,"0,;(0,)")</Format>
                       <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
                     </Style>
                     <ChartAxisTitle>
-                      <Caption>=SWITCH(MAX(Fields!TotGL.Value)&gt;1000000000,"In Billions",MAX(Fields!TotGL.Value)&gt;1000000,"In Millions",MAX(Fields!TotGL.Value)&gt;=0,"In Thousands")</Caption>
+                      <Caption>=SWITCH(MAX(Fields!TotGL.Value-Fields!Income.Value)&gt;1000000000,"In Billions",MAX(Fields!TotGL.Value-Fields!Income.Value)&gt;1000000,"In Millions",MAX(Fields!TotGL.Value-Fields!Income.Value)&gt;=0,"In Thousands")</Caption>
                       <Style>
                         <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
                         <FontFamily>=Parameters!FontFamily.Value</FontFamily>
@@ -2889,13 +2889,13 @@ perAssets=Decimal</CommandText>
                       <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                       <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
                       <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
-                      <Format>=SWITCH(MAX(Fields!TotGL.Value)&gt;1000000000,"0,,,;(0,,,)",
-	MAX(Fields!TotGL.Value)&gt;1000000,"0,,;(0,,)", 
-		MAX(Fields!TotGL.Value)&gt;=0,"0,;(0,)")</Format>
+                      <Format>=SWITCH(MAX(Fields!TotGL.Value - Fields!Income.Value)&gt;1000000000,"0,,,;(0,,,)",
+	MAX(Fields!TotGL.Value - Fields!Income.Value)&gt;1000000,"0,,;(0,,)", 
+		MAX(Fields!TotGL.Value - Fields!Income.Value)&gt;=0,"0,;(0,)")</Format>
                       <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
                     </Style>
                     <ChartAxisTitle>
-                      <Caption>=SWITCH(MAX(Fields!TotGL.Value)&gt;1000000000,"In Billions",MAX(Fields!TotGL.Value)&gt;1000000,"In Millions",MAX(Fields!TotGL.Value)&gt;=0,"In Thousands")</Caption>
+                      <Caption>=SWITCH(MAX(Fields!TotGL.Value-Fields!Income.Value)&gt;1000000000,"In Billions",MAX(Fields!TotGL.Value-Fields!Income.Value)&gt;1000000,"In Millions",MAX(Fields!TotGL.Value-Fields!Income.Value)&gt;=0,"In Thousands")</Caption>
                       <Style>
                         <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
                         <FontFamily>=Parameters!FontFamily.Value</FontFamily>
