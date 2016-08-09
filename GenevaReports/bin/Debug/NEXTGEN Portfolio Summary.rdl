@@ -3129,7 +3129,7 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <DataElementOutput>ContentsOnly</DataElementOutput>
-            <Top>0.50695in</Top>
+            <Top>3.41945in</Top>
             <Height>2.96402in</Height>
             <Width>10.4in</Width>
             <Style />
@@ -3875,7 +3875,7 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
               </Chart>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>3.54875in</Top>
+            <Top>0.42375in</Top>
             <Height>2.94889in</Height>
             <Width>10.4in</Width>
             <ZIndex>3</ZIndex>
@@ -3886,7 +3886,7 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
             </Style>
           </Rectangle>
         </ReportItems>
-        <Height>6.49764in</Height>
+        <Height>6.38347in</Height>
         <Style />
       </Body>
       <Width>10.41635in</Width>
