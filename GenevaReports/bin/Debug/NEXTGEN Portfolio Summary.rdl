@@ -2723,63 +2723,87 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
         <ReportItems>
           <Rectangle Name="rectangle1">
             <ReportItems>
-              <Chart Name="Chart1">
+              <Textbox Name="Textbox1">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>="Performance History by " &amp; System.Text.RegularExpressions.Regex.Replace(Parameters!PerformanceKey.Value, "(?&lt;=[a-z])([A-Z])"," $1")</Value>
+                        <Style>
+                          <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
+                          <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                          <FontSize>=Code.StyleSheetValue("SectionTitleSize")</FontSize>
+                          <FontWeight>=Code.StyleSheetValue("SectionTitleWeight")</FontWeight>
+                          <TextDecoration>=Code.StyleSheetValue("SectionTitleDecoration")</TextDecoration>
+                          <Color>=Code.StyleSheetValue("SectionTitleColor")</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox1</rd:DefaultName>
+                <Height>0.25in</Height>
+                <Width>10.4in</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Chart Name="Chart3">
                 <ChartCategoryHierarchy>
                   <ChartMembers>
                     <ChartMember>
-                      <Group Name="Chart1_CategoryGroup">
+                      <Group Name="Chart3_CategoryGroup">
                         <GroupExpressions>
-                          <GroupExpression>=Fields!Group1.Value</GroupExpression>
+                          <GroupExpression>=Fields!EndDate.Value</GroupExpression>
                         </GroupExpressions>
                       </Group>
                       <SortExpressions>
                         <SortExpression>
-                          <Value>=Fields!Group1.Value</Value>
+                          <Value>=Fields!EndDate.Value</Value>
                         </SortExpression>
                       </SortExpressions>
-                      <Label>=Fields!Group1.Value</Label>
+                      <Label>=Fields!EndDate.Value</Label>
                     </ChartMember>
                   </ChartMembers>
                 </ChartCategoryHierarchy>
                 <ChartSeriesHierarchy>
                   <ChartMembers>
                     <ChartMember>
-                      <Group Name="Chart1_SeriesGroup">
+                      <Group Name="Chart3_SeriesGroup">
                         <GroupExpressions>
-                          <GroupExpression>=Fields!Group1.Value</GroupExpression>
+                          <GroupExpression>=Fields!KeyDesc.Value</GroupExpression>
                         </GroupExpressions>
                       </Group>
                       <SortExpressions>
                         <SortExpression>
-                          <Value>=Fields!Group1.Value</Value>
+                          <Value>=Fields!KeyDesc.Value</Value>
                         </SortExpression>
                       </SortExpressions>
-                      <ChartMembers>
-                        <ChartMember>
-                          <Label>Long Mval</Label>
-                        </ChartMember>
-                        <ChartMember>
-                          <Label>Short Mval</Label>
-                        </ChartMember>
-                      </ChartMembers>
-                      <Label>=Fields!Group1.Value</Label>
+                      <Label>=Fields!KeyDesc.Value</Label>
                     </ChartMember>
                   </ChartMembers>
                 </ChartSeriesHierarchy>
                 <ChartData>
                   <ChartSeriesCollection>
-                    <ChartSeries Name="LongMval">
-                      <Hidden>=IsNothing(SUM(Fields!LongMval.Value))</Hidden>
+                    <ChartSeries Name="TWRBook">
                       <ChartDataPoints>
                         <ChartDataPoint>
                           <ChartDataPointValues>
-                            <Y>=Sum(Fields!LongMval.Value)</Y>
+                            <Y>=Code.GetCumulativeTWR(RowNumber(nothing) - 1)</Y>
                           </ChartDataPointValues>
                           <ChartDataLabel>
                             <Style />
                           </ChartDataLabel>
                           <Style>
-                            <Color>=Code.GetColor(Fields!Group1.Value &amp; "Long",Code.StyleSheetValue("ColorPalette"))</Color>
+                            <Color>=Code.GetColor(Fields!KeyDesc.Value,Code.StyleSheetValue("ColorPalette"))</Color>
                           </Style>
                           <ChartMarker>
                             <Style />
@@ -2787,44 +2811,7 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                           <DataElementOutput>Output</DataElementOutput>
                         </ChartDataPoint>
                       </ChartDataPoints>
-                      <Subtype>Stacked</Subtype>
-                      <Style />
-                      <ChartEmptyPoints>
-                        <Style />
-                        <ChartMarker>
-                          <Style />
-                        </ChartMarker>
-                        <ChartDataLabel>
-                          <Style />
-                        </ChartDataLabel>
-                      </ChartEmptyPoints>
-                      <ValueAxisName>Primary</ValueAxisName>
-                      <CategoryAxisName>Primary</CategoryAxisName>
-                      <ChartSmartLabel>
-                        <CalloutLineColor>Black</CalloutLineColor>
-                        <MinMovingDistance>0pt</MinMovingDistance>
-                      </ChartSmartLabel>
-                    </ChartSeries>
-                    <ChartSeries Name="ShortMval">
-                      <Hidden>=IsNothing(SUM(Fields!ShortMval.Value))</Hidden>
-                      <ChartDataPoints>
-                        <ChartDataPoint>
-                          <ChartDataPointValues>
-                            <Y>=Sum(Fields!ShortMval.Value)</Y>
-                          </ChartDataPointValues>
-                          <ChartDataLabel>
-                            <Style />
-                          </ChartDataLabel>
-                          <Style>
-                            <Color>=Code.GetColor(Fields!Group1.Value &amp; "Short",Code.StyleSheetValue("ColorPalette"))</Color>
-                          </Style>
-                          <ChartMarker>
-                            <Style />
-                          </ChartMarker>
-                          <DataElementOutput>Output</DataElementOutput>
-                        </ChartDataPoint>
-                      </ChartDataPoints>
-                      <Subtype>Stacked</Subtype>
+                      <Type>Line</Type>
                       <Style />
                       <ChartEmptyPoints>
                         <Style />
@@ -2856,6 +2843,7 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                           <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                           <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
                           <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
+                          <Format>M/d/yyyy</Format>
                           <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
                         </Style>
                         <ChartAxisTitle>
@@ -2864,7 +2852,6 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                             <FontSize>8pt</FontSize>
                           </Style>
                         </ChartAxisTitle>
-                        <Interval>1</Interval>
                         <ChartMajorGridLines>
                           <Enabled>False</Enabled>
                           <Style>
@@ -2888,8 +2875,10 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                           <Length>0.5</Length>
                         </ChartMinorTickMarks>
                         <CrossAt>NaN</CrossAt>
-                        <Minimum>NaN</Minimum>
-                        <Maximum>NaN</Maximum>
+                        <Scalar>true</Scalar>
+                        <Minimum>=Parameters!PeriodStartDate.Value</Minimum>
+                        <Maximum>=Parameters!PeriodEndDate.Value</Maximum>
+                        <IncludeZero>false</IncludeZero>
                         <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
                         <ChartAxisScaleBreak>
                           <Style />
@@ -2943,21 +2932,13 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                           <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                           <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
                           <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
-                          <Format>=SWITCH(MAX(Sum(Fields!LongMval.Value))&gt;1000000000 OR MAX(Sum(Fields!ShortMval.Value))&gt;1000000000,"0,,,;(0,,,)",
-	MAX(Sum(Fields!LongMval.Value))&gt;1000000 OR MAX(Sum(Fields!ShortMval.Value))&gt;1000000,"0,,;(0,,)", 
-		MAX(Sum(Fields!LongMval.Value))&gt;=0 OR MAX(Sum(Fields!ShortMval.Value))&gt;=0,"0,;(0,)")</Format>
-                          <TextDecoration>=Code.StyleSheetValue("ChartDetailDecoration")</TextDecoration>
+                          <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
                           <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
                         </Style>
                         <ChartAxisTitle>
-                          <Caption>=SWITCH(MAX(SUM(Fields!LongMval.Value))&gt;1000000000 OR MAX(SUM(Fields!ShortMval.Value))&gt;1000000000,"In Billions",MAX(SUM(Fields!LongMval.Value))&gt;1000000 OR MAX(SUM(Fields!ShortMval.Value))&gt;1000000,"In Millions",MAX(SUM(Fields!LongMval.Value))&gt;=0 OR MAX(SUM(Fields!ShortMval.Value))&gt;=0,"In Thousands")</Caption>
+                          <Caption />
                           <Style>
-                            <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
-                            <FontFamily>=Parameters!FontFamily.Value</FontFamily>
-                            <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
-                            <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
-                            <TextDecoration>=Code.StyleSheetValue("ChartDetailDecoration")</TextDecoration>
-                            <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
+                            <FontSize>8pt</FontSize>
                           </Style>
                         </ChartAxisTitle>
                         <ChartMajorGridLines>
@@ -2984,6 +2965,7 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                         <CrossAt>NaN</CrossAt>
                         <Minimum>NaN</Minimum>
                         <Maximum>NaN</Maximum>
+                        <IncludeZero>false</IncludeZero>
                         <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
                         <ChartAxisScaleBreak>
                           <Style />
@@ -2991,12 +2973,7 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                       </ChartAxis>
                       <ChartAxis Name="Secondary">
                         <Style>
-                          <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                          <FontFamily>=Parameters!FontFamily.Value</FontFamily>
-                          <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
-                          <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
-                          <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
-                          <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
+                          <FontSize>8pt</FontSize>
                         </Style>
                         <ChartAxisTitle>
                           <Caption>Axis Title</Caption>
@@ -3037,17 +3014,12 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                   </ChartArea>
                 </ChartAreas>
                 <ChartLegends>
-                  <ChartLegend Name="Legend1">
+                  <ChartLegend Name="Default">
                     <Style>
                       <BackgroundGradientType>None</BackgroundGradientType>
-                      <FontStyle>=Code.StyleSheetValue("ChartDetailStyle")</FontStyle>
-                      <FontFamily>=Parameters!FontFamily.Value</FontFamily>
-                      <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
-                      <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
-                      <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
+                      <FontSize>8pt</FontSize>
                     </Style>
                     <Position>BottomCenter</Position>
-                    <Layout>WideTable</Layout>
                     <ChartLegendTitle>
                       <Caption />
                       <Style>
@@ -3056,12 +3028,8 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                         <TextAlign>Center</TextAlign>
                       </Style>
                     </ChartLegendTitle>
-                    <AutoFitTextDisabled>true</AutoFitTextDisabled>
                     <HeaderSeparatorColor>Black</HeaderSeparatorColor>
                     <ColumnSeparatorColor>Black</ColumnSeparatorColor>
-                    <Reversed>False</Reversed>
-                    <MaxAutoSize>100</MaxAutoSize>
-                    <TextWrapThreshold>0</TextWrapThreshold>
                   </ChartLegend>
                 </ChartLegends>
                 <Palette>BrightPastel</Palette>
@@ -3080,10 +3048,11 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                     <VerticalAlign>Top</VerticalAlign>
                   </Style>
                 </ChartNoDataMessage>
-                <DataSetName>GetExposureInfo</DataSetName>
-                <Top>0.28694in</Top>
-                <Height>2.67708in</Height>
-                <Width>10.4in</Width>
+                <DataSetName>Cumulative</DataSetName>
+                <Top>0.31541in</Top>
+                <Height>2.45833in</Height>
+                <Width>10.41635in</Width>
+                <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -3092,46 +3061,12 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                   <BackgroundGradientType>None</BackgroundGradientType>
                 </Style>
               </Chart>
-              <Textbox Name="Textbox1">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>="Long Short Exposure by " &amp; System.Text.RegularExpressions.Regex.Replace(Parameters!Group1.Value, "(?&lt;=[a-z])([A-Z])"," $1")</Value>
-                        <Style>
-                          <FontStyle>=Code.StyleSheetValue("SectionTitleStyle")</FontStyle>
-                          <FontFamily>=Parameters!FontFamily.Value</FontFamily>
-                          <FontSize>=Code.StyleSheetValue("SectionTitleSize")</FontSize>
-                          <FontWeight>=Code.StyleSheetValue("SectionTitleWeight")</FontWeight>
-                          <TextDecoration>=Code.StyleSheetValue("SectionTitleDecoration")</TextDecoration>
-                          <Color>=Code.StyleSheetValue("SectionTitleColor")</Color>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style />
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox1</rd:DefaultName>
-                <Height>0.25in</Height>
-                <Width>10.4in</Width>
-                <ZIndex>1</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <DataElementOutput>ContentsOnly</DataElementOutput>
             <Top>3.41945in</Top>
-            <Height>2.96402in</Height>
-            <Width>10.4in</Width>
+            <Height>2.77374in</Height>
+            <Width>10.41635in</Width>
             <Style />
           </Rectangle>
           <Rectangle Name="HeaderRectangle">
@@ -3546,6 +3481,9 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                           <Style />
                         </ChartDataLabel>
                       </ChartEmptyPoints>
+                      <ChartItemInLegend>
+                        <LegendText>Ending Market Value</LegendText>
+                      </ChartItemInLegend>
                       <ValueAxisName>Primary</ValueAxisName>
                       <CategoryAxisName>Primary</CategoryAxisName>
                       <ChartSmartLabel>
@@ -3587,6 +3525,9 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                           <Style />
                         </ChartDataLabel>
                       </ChartEmptyPoints>
+                      <ChartItemInLegend>
+                        <LegendText>Beginning Market Value</LegendText>
+                      </ChartItemInLegend>
                       <ValueAxisName>Primary</ValueAxisName>
                       <CategoryAxisName>Primary</CategoryAxisName>
                       <ChartSmartLabel>
@@ -3623,6 +3564,9 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                           <Style />
                         </ChartDataLabel>
                       </ChartEmptyPoints>
+                      <ChartItemInLegend>
+                        <LegendText>Contributions/Withdrawals</LegendText>
+                      </ChartItemInLegend>
                       <ValueAxisName>Primary</ValueAxisName>
                       <CategoryAxisName>Primary</CategoryAxisName>
                       <ChartSmartLabel>
@@ -3873,6 +3817,250 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                   <BackgroundGradientType>None</BackgroundGradientType>
                 </Style>
               </Chart>
+              <Tablix Name="Tablix2">
+                <TablixBody>
+                  <TablixColumns>
+                    <TablixColumn>
+                      <Width>1in</Width>
+                    </TablixColumn>
+                    <TablixColumn>
+                      <Width>1in</Width>
+                    </TablixColumn>
+                    <TablixColumn>
+                      <Width>1in</Width>
+                    </TablixColumn>
+                  </TablixColumns>
+                  <TablixRows>
+                    <TablixRow>
+                      <Height>0.25in</Height>
+                      <TablixCells>
+                        <TablixCell>
+                          <CellContents>
+                            <Textbox Name="Textbox3">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value />
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox3</rd:DefaultName>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>Solid</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                          </CellContents>
+                        </TablixCell>
+                        <TablixCell>
+                          <CellContents>
+                            <Textbox Name="Textbox5">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value />
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox5</rd:DefaultName>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>Solid</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                          </CellContents>
+                        </TablixCell>
+                        <TablixCell>
+                          <CellContents>
+                            <Textbox Name="Textbox7">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value />
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox7</rd:DefaultName>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>Solid</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                          </CellContents>
+                        </TablixCell>
+                      </TablixCells>
+                    </TablixRow>
+                    <TablixRow>
+                      <Height>0.25in</Height>
+                      <TablixCells>
+                        <TablixCell>
+                          <CellContents>
+                            <Textbox Name="Textbox4">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value />
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox4</rd:DefaultName>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>Solid</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                          </CellContents>
+                        </TablixCell>
+                        <TablixCell>
+                          <CellContents>
+                            <Textbox Name="Textbox6">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value />
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox6</rd:DefaultName>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>Solid</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                          </CellContents>
+                        </TablixCell>
+                        <TablixCell>
+                          <CellContents>
+                            <Textbox Name="Textbox9">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value />
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox9</rd:DefaultName>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>Solid</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                          </CellContents>
+                        </TablixCell>
+                      </TablixCells>
+                    </TablixRow>
+                  </TablixRows>
+                </TablixBody>
+                <TablixColumnHierarchy>
+                  <TablixMembers>
+                    <TablixMember />
+                    <TablixMember />
+                    <TablixMember />
+                  </TablixMembers>
+                </TablixColumnHierarchy>
+                <TablixRowHierarchy>
+                  <TablixMembers>
+                    <TablixMember>
+                      <KeepWithGroup>After</KeepWithGroup>
+                    </TablixMember>
+                    <TablixMember>
+                      <Group Name="Details1">
+                        <Variables>
+                          <Variable Name="Value">
+                            <Value>=Code.AddValue(Fields!TWRBook.Value)</Value>
+                          </Variable>
+                        </Variables>
+                      </Group>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixRowHierarchy>
+                <DataSetName>Cumulative</DataSetName>
+                <Top>1.11667in</Top>
+                <Left>0.44667in</Left>
+                <Height>0.5in</Height>
+                <Width>3in</Width>
+                <ZIndex>4</ZIndex>
+                <Visibility>
+                  <Hidden>true</Hidden>
+                </Visibility>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Tablix>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>0.42375in</Top>
@@ -3886,7 +4074,7 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
             </Style>
           </Rectangle>
         </ReportItems>
-        <Height>6.38347in</Height>
+        <Height>6.24306in</Height>
         <Style />
       </Body>
       <Width>10.41635in</Width>
@@ -5246,92 +5434,124 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
       <Prompt>ShowTitle</Prompt>
     </ReportParameter>
   </ReportParameters>
-  <Code>
-		Dim StyleSheetHash As System.Collections.Hashtable
+  <Code>Public Shared Dim iLoop As Integer = 1
+Public Shared Dim cumulativeTWR As Decimal = 100
 
-		Public Function InitStyleSheet()
 
-		Dim xmlDocument As System.Xml.XmlDocument = New System.Xml.XmlDocument()
-		xmlDocument.LoadXml(Report.Parameters!StyleSheetXML.Value)
-		Dim rootNode As System.Xml.XmlElement = xmlDocument.SelectSingleNode("StyleSheetInfo")
+	  Dim StyleSheetHash As System.Collections.Hashtable
 
-		StyleSheetHash = New System.Collections.Hashtable()
+	  Public Function InitStyleSheet()
 
-		For Each a As System.Xml.XmlAttribute In rootNode.Attributes
-		StyleSheetHash.Add(a.Name, a.Value)
-		Next
+	  Dim xmlDocument As System.Xml.XmlDocument = New System.Xml.XmlDocument()
+	  xmlDocument.LoadXml(Report.Parameters!StyleSheetXML.Value)
+	  Dim rootNode As System.Xml.XmlElement = xmlDocument.SelectSingleNode("StyleSheetInfo")
 
-		End Function
+	  StyleSheetHash = New System.Collections.Hashtable()
 
-		Public Function StyleSheetValue(StyleSheetValueName As String) As String
+	  For Each a As System.Xml.XmlAttribute In rootNode.Attributes
+	  StyleSheetHash.Add(a.Name, a.Value)
+	  Next
 
-		If (styleSheetHash Is Nothing)
-		InitStyleSheet()
-		End If
+	  End Function
 
-		If (StyleSheetHash.ContainsKey(StyleSheetValueName))
-		Return StyleSheetHash(StyleSheetValueName)
-		End If
+	  Public Function StyleSheetValue(StyleSheetValueName As String) As String
 
-		Return Nothing
+	  If (styleSheetHash Is Nothing)
+	  InitStyleSheet()
+	  End If
 
-		End Function
+	  If (StyleSheetHash.ContainsKey(StyleSheetValueName))
+	  Return StyleSheetHash(StyleSheetValueName)
+	  End If
 
-		Private ColorCount As Integer = 0
-		Private ColorMapping As New System.Collections.Hashtable()
-		Private Colors() As String = nothing
+	  Return Nothing
 
-		Public Function GetColor(ByVal groupingValue As String, ByVal delimitedColors As String) As String
-		' 1. If the mapping already exists, then just return the mapped color.
-		If ColorMapping.ContainsKey(groupingValue) Then Return ColorMapping(groupingValue)
+	  End Function
 
-		' 2. Create the ColorPaletteColors() if they do not already exist.
-		If Colors Is Nothing Then Colors = delimitedColors.Split(New Char() {","c}, StringSplitOptions.RemoveEmptyEntries)
+	  Private ColorCount As Integer = 0
+	  Private ColorMapping As New System.Collections.Hashtable()
+	  Private Colors() As String = nothing
 
-		' 3. Add the new color to the mapping.
-		Dim color As String = Colors(ColorCount Mod Colors.Length)
-		ColorCount = ColorCount + 1
-		ColorMapping.Add(groupingValue, color)
+	  Public Function GetColor(ByVal groupingValue As String, ByVal delimitedColors As String) As String
+	  ' 1. If the mapping already exists, then just return the mapped color.
+	  If ColorMapping.ContainsKey(groupingValue) Then Return ColorMapping(groupingValue)
 
-		' 4. Return the new color.
-		Return color
-		End Function
-		public dim ColorGroup1 as String
-		public dim ColorGroup2 as String
-		public dim ColorGroup3 as String
-		public dim ColorGroup4 as String
-		public dim ColorGroup5 as String
-		public dim ColorGroup6 as String
+	  ' 2. Create the ColorPaletteColors() if they do not already exist.
+	  If Colors Is Nothing Then Colors = delimitedColors.Split(New Char() {","c}, StringSplitOptions.RemoveEmptyEntries)
 
-		public function InitColorGroups(colorSet as String) as boolean
-		if colorSet = "Blue" then
-		ColorGroup1 = "#B7D4EE"
-		ColorGroup2 = "#C1D9F0"
-		ColorGroup3 = "#CBDEF2"
-		ColorGroup4 = "#D5E3F4"
-		ColorGroup5 = "#DFE9F6"
-		ColorGroup6 = "#E6EEF9"
-		end if
-		if colorSet = "Gray" then
-		ColorGroup1 = "#BABABA"
-		ColorGroup2 = "#BEBEBE"
-		ColorGroup3 = "#C4C4C4"
-		ColorGroup4 = "#CACACA"
-		ColorGroup5 = "#CECECE"
-		ColorGroup6 = "#D8D8D8"
-		end if
-		if colorSet = "NoColor" then
-		ColorGroup1 = "Transparent"
-		ColorGroup2 = "Transparent"
-		ColorGroup3 = "Transparent"
-		ColorGroup4 = "Transparent"
-		ColorGroup5 = "Transparent"
-		ColorGroup6 = "Transparent"
-		end if
+	  ' 3. Add the new color to the mapping.
+	  Dim color As String = Colors(ColorCount Mod Colors.Length)
+	  ColorCount = ColorCount + 1
+	  ColorMapping.Add(groupingValue, color)
 
-		return false
-		end function
-	</Code>
+	  ' 4. Return the new color.
+	  Return color
+	  End Function
+
+	  public dim ColorGroup1 as String
+	  public dim ColorGroup2 as String
+	  public dim ColorGroup3 as String
+	  public dim ColorGroup4 as String
+	  public dim ColorGroup5 as String
+	  public dim ColorGroup6 as String
+
+	  public function InitColorGroups(colorSet as String) as boolean
+	  if colorSet = "Blue" then
+	  ColorGroup1 = "#B7D4EE"
+	  ColorGroup2 = "#C1D9F0"
+	  ColorGroup3 = "#CBDEF2"
+	  ColorGroup4 = "#D5E3F4"
+	  ColorGroup5 = "#DFE9F6"
+	  ColorGroup6 = "#E6EEF9"
+	  end if
+	  if colorSet = "Gray" then
+	  ColorGroup1 = "#BABABA"
+	  ColorGroup2 = "#BEBEBE"
+	  ColorGroup3 = "#C4C4C4"
+	  ColorGroup4 = "#CACACA"
+	  ColorGroup5 = "#CECECE"
+	  ColorGroup6 = "#D8D8D8"
+	  end if
+	  if colorSet = "NoColor" then
+	  ColorGroup1 = "Transparent"
+	  ColorGroup2 = "Transparent"
+	  ColorGroup3 = "Transparent"
+	  ColorGroup4 = "Transparent"
+	  ColorGroup5 = "Transparent"
+	  ColorGroup6 = "Transparent"
+	  end if
+
+	  return false
+	  end function
+
+Public Shared Dim values As System.Collections.ArrayList
+
+Public Shared Function AddValue(ByVal newValue As Decimal) As Decimal
+	If (values Is Nothing) Then
+		values = New System.Collections.ArrayList()
+	End If
+	values.Add(1 + newValue / 100)
+	AddValue = values.Count
+End Function
+
+Public Shared Function GetValue(ByVal row as Integer) As Decimal
+	GetValue = values(row)
+End Function
+
+Public Shared Function GetCumulativeTWR(ByVal rowNumber As Integer) As Decimal
+
+	If (rowNumber = 0) Then
+		'is the first row, so starting basis value = 100
+		GetCumulativeTWR = cumulativeTWR 
+	ElseIf (rowNumber = 1) Then
+		'second row is 100*(1+TWR/100)
+		GetCumulativeTWR = cumulativeTWR * values(iLoop)
+	Else
+		GetCumulativeTWR = cumulativeTWR  * values(iLoop - 1)
+	End If
+	iLoop += 1 'increment loop variable by 1
+End Function
+</Code>
   <Language>=Parameters!RegionalSettings.Value</Language>
   <CodeModules>
     <CodeModule>System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</CodeModule>
