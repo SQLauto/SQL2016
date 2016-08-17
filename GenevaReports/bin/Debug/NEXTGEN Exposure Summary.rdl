@@ -870,16 +870,15 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                     <ChartMember>
                       <Group Name="LMVChart_CategoryGroup">
                         <GroupExpressions>
-                          <GroupExpression>=Fields!Group1.Value</GroupExpression>
+                          <GroupExpression>=Iif(IsNothing(Fields!Group1.Value),"Undefined",Fields!Group1.Value)</GroupExpression>
                         </GroupExpressions>
                       </Group>
                       <SortExpressions>
                         <SortExpression>
-                          <Value>=Sum(Fields!Net.Value)</Value>
-                          <Direction>Descending</Direction>
+                          <Value>=Sum(Fields!Long.Value) - Sum(Fields!Short.Value)</Value>
                         </SortExpression>
                       </SortExpressions>
-                      <Label>=Fields!Group1.Value</Label>
+                      <Label>=Iif(IsNothing(Fields!Group1.Value),"Undefined",Fields!Group1.Value)</Label>
                     </ChartMember>
                   </ChartMembers>
                 </ChartCategoryHierarchy>
@@ -893,6 +892,9 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                     </ChartMember>
                     <ChartMember>
                       <Label>Net</Label>
+                    </ChartMember>
+                    <ChartMember>
+                      <Label>Short</Label>
                     </ChartMember>
                   </ChartMembers>
                 </ChartSeriesHierarchy>
@@ -924,6 +926,7 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                           </ChartMarker>
                         </ChartDataPoint>
                       </ChartDataPoints>
+                      <Type>Bar</Type>
                       <Subtype>Stacked</Subtype>
                       <Style />
                       <ChartEmptyPoints>
@@ -960,6 +963,7 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                           <DataElementOutput>Output</DataElementOutput>
                         </ChartDataPoint>
                       </ChartDataPoints>
+                      <Type>Bar</Type>
                       <Subtype>Stacked</Subtype>
                       <Style />
                       <ChartEmptyPoints>
@@ -996,6 +1000,7 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                           <DataElementOutput>Output</DataElementOutput>
                         </ChartDataPoint>
                       </ChartDataPoints>
+                      <Type>Bar</Type>
                       <Subtype>Stacked</Subtype>
                       <Style />
                       <ChartEmptyPoints>
@@ -1007,6 +1012,44 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                           <Style />
                         </ChartDataLabel>
                       </ChartEmptyPoints>
+                      <ValueAxisName>Primary</ValueAxisName>
+                      <CategoryAxisName>Primary</CategoryAxisName>
+                      <ChartSmartLabel>
+                        <CalloutLineColor>Black</CalloutLineColor>
+                        <MinMovingDistance>0pt</MinMovingDistance>
+                      </ChartSmartLabel>
+                    </ChartSeries>
+                    <ChartSeries Name="Series">
+                      <ChartDataPoints>
+                        <ChartDataPoint>
+                          <ChartDataPointValues>
+                            <Y>=Sum(Fields!Long.Value) - Sum(Fields!Short.Value)</Y>
+                          </ChartDataPointValues>
+                          <ChartDataLabel>
+                            <Style />
+                          </ChartDataLabel>
+                          <Style />
+                          <ChartMarker>
+                            <Style />
+                          </ChartMarker>
+                          <DataElementOutput>Output</DataElementOutput>
+                        </ChartDataPoint>
+                      </ChartDataPoints>
+                      <Type>Bar</Type>
+                      <Subtype>Stacked</Subtype>
+                      <Style />
+                      <ChartEmptyPoints>
+                        <Style />
+                        <ChartMarker>
+                          <Style />
+                        </ChartMarker>
+                        <ChartDataLabel>
+                          <Style />
+                        </ChartDataLabel>
+                      </ChartEmptyPoints>
+                      <ChartItemInLegend>
+                        <LegendText>Gross</LegendText>
+                      </ChartItemInLegend>
                       <ValueAxisName>Primary</ValueAxisName>
                       <CategoryAxisName>Primary</CategoryAxisName>
                       <ChartSmartLabel>
@@ -1029,7 +1072,7 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                           <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                           <FontSize>=Code.StyleSheetValue("ChartDetailSize")</FontSize>
                           <FontWeight>=Code.StyleSheetValue("ChartDetailWeight")</FontWeight>
-                          <TextDecoration>=Code.StyleSheetValue("ChartDetailDecoration")</TextDecoration>
+                          <TextDecoration>None</TextDecoration>
                           <Color>=Code.StyleSheetValue("ChartDetailColor")</Color>
                         </Style>
                         <ChartAxisTitle>
@@ -1038,8 +1081,8 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                             <FontSize>8pt</FontSize>
                           </Style>
                         </ChartAxisTitle>
+                        <Margin>False</Margin>
                         <VariableAutoInterval>true</VariableAutoInterval>
-                        <LabelInterval>0.1</LabelInterval>
                         <ChartMajorGridLines>
                           <Enabled>False</Enabled>
                           <Style>
@@ -1078,8 +1121,9 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                         <Minimum>NaN</Minimum>
                         <Maximum>NaN</Maximum>
                         <PreventFontShrink>true</PreventFontShrink>
-                        <PreventFontGrow>true</PreventFontGrow>
+                        <AllowLabelRotation>None</AllowLabelRotation>
                         <IncludeZero>false</IncludeZero>
+                        <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
                         <ChartAxisScaleBreak>
                           <Style />
                         </ChartAxisScaleBreak>
@@ -2020,6 +2064,7 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                                 <PaddingRight>2pt</PaddingRight>
                               </Style>
                             </Textbox>
+                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                         <TablixCell>
@@ -2313,6 +2358,7 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                                 <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
+                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                         <TablixCell>
@@ -2557,12 +2603,12 @@ GROUP BY Group1, Group2, ExposureInvest</CommandText>
                     <TablixMember>
                       <Group Name="Group11">
                         <GroupExpressions>
-                          <GroupExpression>=Fields!Group1.Value</GroupExpression>
+                          <GroupExpression>=Iif(IsNothing(Fields!Group1.Value),"Undefined",Fields!Group1.Value)</GroupExpression>
                         </GroupExpressions>
                       </Group>
                       <SortExpressions>
                         <SortExpression>
-                          <Value>=Sum(ABS(Fields!Net.Value))</Value>
+                          <Value>=Sum(Fields!Long.Value) - Sum(Fields!Short.Value)</Value>
                           <Direction>Descending</Direction>
                         </SortExpression>
                       </SortExpressions>
