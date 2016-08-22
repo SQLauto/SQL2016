@@ -90,7 +90,7 @@
       <Options>
         <OutputPath>bin\Debug</OutputPath>
         <TargetServerVersion>SSRS2008R2</TargetServerVersion>
-        <TargetServerURL>http://dkim2.advent.com/ReportServer</TargetServerURL>
+        <TargetServerURL>http://vmsfwfdev1.advent.com/ReportServer</TargetServerURL>
         <TargetFolder>GenevaReports</TargetFolder>
         <TargetDataSourceFolder>GenevaReports</TargetDataSourceFolder>
         <TargetDatasetFolder>GenevaReports</TargetDatasetFolder>

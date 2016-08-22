@@ -606,8 +606,8 @@ FormatDateTime(First(Fields!Value.Value), DateFormat.ShortDate))</Value>
                 <Source>External</Source>
                 <Value>NextGenlogo.jpg</Value>
                 <Sizing>FitProportional</Sizing>
-                <Top>0.1in</Top>
-                <Height>0.93125in</Height>
+                <Top>0.24583in</Top>
+                <Height>0.78542in</Height>
                 <Width>1.84375in</Width>
                 <ZIndex>1</ZIndex>
                 <Style>

@@ -488,7 +488,7 @@
                   <Width>0.7in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.51667in</Width>
+                  <Width>2.51875in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.74583in</Width>
@@ -500,7 +500,7 @@
                   <Width>0.6in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.49167in</Width>
+                  <Width>0.63542in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.9in</Width>
@@ -512,7 +512,7 @@
                   <Width>0.9in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.0875in</Width>
+                  <Width>0.9in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -563,7 +563,7 @@
                               <MergeTransactions>true</MergeTransactions>
                               <KeepTogether>true</KeepTogether>
                               <Height>0.4in</Height>
-                              <Width>10.44167in</Width>
+                              <Width>10.4in</Width>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -742,7 +742,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -763,6 +763,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -1082,7 +1083,25 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Book Gain/Income</Value>
+                                  <Value>Book</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Gain/Income</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
                                     <FontFamily>=Parameters!FontFamily.Value</FontFamily>
@@ -3155,7 +3174,7 @@
             </TablixRowHierarchy>
             <DataSetName>Data</DataSetName>
             <Height>1.8995in</Height>
-            <Width>10.44167in</Width>
+            <Width>10.4in</Width>
             <DataElementOutput>Output</DataElementOutput>
             <Style>
               <FontFamily>Calibri</FontFamily>
@@ -3246,7 +3265,7 @@
         <Height>2.825in</Height>
         <Style />
       </Body>
-      <Width>10.44167in</Width>
+      <Width>10.4in</Width>
       <Page>
         <PageFooter>
           <Height>0.365in</Height>
