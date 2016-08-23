@@ -763,7 +763,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3262,29 +3261,11 @@
             </Style>
           </Rectangle>
         </ReportItems>
-        <Height>2.825in</Height>
+        <Height>2.7in</Height>
         <Style />
       </Body>
       <Width>10.4in</Width>
       <Page>
-        <PageFooter>
-          <Height>0.365in</Height>
-          <PrintOnFirstPage>true</PrintOnFirstPage>
-          <PrintOnLastPage>true</PrintOnLastPage>
-          <ReportItems>
-            <Image Name="GenevaLogo">
-              <Source>External</Source>
-              <Value>GenevaLogo.jpg</Value>
-              <Sizing>Fit</Sizing>
-              <Top>0.14in</Top>
-              <Left>8.9in</Left>
-              <Height>0.22in</Height>
-              <Width>1.1in</Width>
-              <Style />
-            </Image>
-          </ReportItems>
-          <Style />
-        </PageFooter>
         <PageHeight>8.5in</PageHeight>
         <PageWidth>11in</PageWidth>
         <InteractiveHeight>455in</InteractiveHeight>
