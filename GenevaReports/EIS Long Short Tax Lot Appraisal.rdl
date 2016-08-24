@@ -48,7 +48,7 @@
                           <ReportName>SubReport_SmallHeaderLandscape</ReportName>
                           <Parameters>
                             <Parameter Name="DataSetID">
-                              <Value>null</Value>
+                              <Value>=First(Fields!genDataSetID.Value, "Data")</Value>
                             </Parameter>
                             <Parameter Name="ReportTitle">
                               <Value>=Globals!ReportName</Value>
@@ -5834,6 +5834,224 @@
         <Field Name="Accrued">
           <DataField>Accrued</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Data">
+      <Query>
+        <DataSourceName>GenevaSource</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="JobTitle">
+            <Value>=Globals!ReportName</Value>
+          </QueryParameter>
+          <QueryParameter Name="Consolidate">
+            <Value>=Parameters!Consolidate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossingCurrency">
+            <Value>=Parameters!CrossingCurrency.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BookCurrency">
+            <Value>=Parameters!BookCurrency.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PriceSchedule">
+            <Value>=Parameters!PriceSchedule.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LumpCashLots">
+            <Value>=Parameters!LumpCashLots.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="LumpNonCashLots">
+            <Value>=Parameters!LumpNonCashLots.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingView">
+            <Value>=Parameters!AccountingView.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BusinessCalendar">
+            <Value>=Parameters!BusinessCalendar.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="BidAskPricing">
+            <Value>=Parameters!BidAskPricing.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnFutures">
+            <Value>=Parameters!CrossZeroOnFutures.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnOptions">
+            <Value>=Parameters!CrossZeroOnOptions.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnEquity">
+            <Value>=Parameters!CrossZeroOnEquity.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnDebt">
+            <Value>=Parameters!CrossZeroOnDebt.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CrossZeroOnCoverShort">
+            <Value>=Parameters!CrossZeroOnCoverShort.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SettleFXCost">
+            <Value>=Parameters!SettleFXCost.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SegregateIncome">
+            <Value>=Parameters!SegregateIncome.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="WithholdPurchasedSoldAI">
+            <Value>=Parameters!WithholdPurchasedSoldAI.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccrueWithhold">
+            <Value>=Parameters!AccrueWithhold.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingRunType">
+            <Value>=Parameters!AccountingRunType.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AppraisalDay">
+            <Value>=Parameters!AppraisalDay.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccrueOnSTIF">
+            <Value>=Parameters!AccrueOnSTIF.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AmortizationElection">
+            <Value>=Parameters!AmortizationElection.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ByPassRule">
+            <Value>=Parameters!ByPassRule.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ExcludeCommission">
+            <Value>=Parameters!ExcludeCommission.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="CounterClosingRuleOverride">
+            <Value>=Parameters!CounterClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FuturesClosingRuleOverride">
+            <Value>=Parameters!FuturesClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="InvestmentClosingRuleOverride">
+            <Value>=Parameters!InvestmentClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SecondaryCounterClosingRuleOverride">
+            <Value>=Parameters!SecondaryCounterClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SecondaryFuturesClosingRuleOverride">
+            <Value>=Parameters!SecondaryFuturesClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SecondaryInvestmentClosingRuleOverride">
+            <Value>=Parameters!SecondaryInvestmentClosingRuleOverride.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="MarkToMarketCashTransfer">
+            <Value>=Parameters!MarkToMarketCashTransfer.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FundLegalEntityDescription">
+            <Value>=Parameters!FundLegalEntityDescription.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="MarkLegalEntity">
+            <Value>=Parameters!MarkLegalEntity.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="FundLegalEntity">
+            <Value>=Parameters!FundLegalEntity.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SeparateFundLegalEntities">
+            <Value>=Parameters!SeparateFundLegalEntities.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="Portfolio">
+            <Value>=Parameters!Portfolio.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PeriodStartDate">
+            <Value>=Parameters!PeriodStartDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PeriodEndDate">
+            <Value>=Parameters!PeriodEndDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="KnowledgeDate">
+            <Value>=Parameters!KnowledgeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PriorKnowledgeDate">
+            <Value>=Parameters!PriorKnowledgeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="StyleName">
+            <Value>=Parameters!StyleName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AddendumPages">
+            <Value>=Parameters!AddendumPages.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingPeriod">
+            <Value>=Parameters!AccountingPeriod.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingCalendar">
+            <Value>=Parameters!AccountingCalendar.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="AccountingFilters">
+            <Value>=Parameters!AccountingFilters.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ManagementFirm">
+            <Value>=Parameters!ManagementFirm.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="PortfolioDescription">
+            <Value>=Parameters!PortfolioDescription.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>
+				  RUNRSL accounts.rsl Data;
+				  TYPE
+				  Invest=String,
+				  Custodian=String,
+				  LocAcct=String,
+				  TaxLot=String,
+				  LongShort=String,
+				  RTLot=String,
+				  State=String,
+				  FinAcct=String,
+				  Denom=String,
+				  PTDLocal=Decimal,
+				  YTDLocal=Decimal,
+				  PTDBook=Decimal,
+				  YTDBook=Decimal
+			  </CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Invest">
+          <DataField>Invest</DataField>
+        </Field>
+        <Field Name="Custodian">
+          <DataField>Custodian</DataField>
+        </Field>
+        <Field Name="LocAcct">
+          <DataField>LocAcct</DataField>
+        </Field>
+        <Field Name="TaxLot">
+          <DataField>TaxLot</DataField>
+        </Field>
+        <Field Name="LongShort">
+          <DataField>LongShort</DataField>
+        </Field>
+        <Field Name="RTLot">
+          <DataField>RTLot</DataField>
+        </Field>
+        <Field Name="State">
+          <DataField>State</DataField>
+        </Field>
+        <Field Name="FinAcct">
+          <DataField>FinAcct</DataField>
+        </Field>
+        <Field Name="Denom">
+          <DataField>Denom</DataField>
+        </Field>
+        <Field Name="PTDLocal">
+          <DataField>PTDLocal</DataField>
+        </Field>
+        <Field Name="YTDLocal">
+          <DataField>YTDLocal</DataField>
+        </Field>
+        <Field Name="PTDBook">
+          <DataField>PTDBook</DataField>
+        </Field>
+        <Field Name="YTDBook">
+          <DataField>YTDBook</DataField>
+        </Field>
+        <Field Name="genKnowledgeDate">
+          <DataField>genKnowledgeDate</DataField>
+        </Field>
+        <Field Name="genActualKnowledgeDate">
+          <DataField>genActualKnowledgeDate</DataField>
+        </Field>
+        <Field Name="genDataSetID">
+          <DataField>genDataSetID</DataField>
         </Field>
       </Fields>
     </DataSet>
