@@ -87,20 +87,16 @@
       <FullPath>NEXTGEN Transaction Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>SubReport_SmallHeaderLandscape_NextGen.rdl</Name>
-      <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>SubReport_SmallHeaderLandscape.rdl</Name>
       <FullPath>SubReport_SmallHeaderLandscape.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Account Listing.rdl</Name>
-      <FullPath>Account Listing.rdl</FullPath>
+      <Name>SubReport_SmallHeaderLandscape_NextGen.rdl</Name>
+      <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Transaction History.rdl</Name>
-      <FullPath>Transaction History.rdl</FullPath>
+      <Name>EIS Transaction History.rdl</Name>
+      <FullPath>EIS Transaction History.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

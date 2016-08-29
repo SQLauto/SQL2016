@@ -6,25 +6,43 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.28421in</Width>
+              <Width>0.85in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.31368in</Width>
+              <Width>0.6in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.31368in</Width>
+              <Width>0.75in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.31368in</Width>
+              <Width>0.5in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.31368in</Width>
+              <Width>1.6in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.31368in</Width>
+              <Width>0.6in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.54739in</Width>
+              <Width>0.9in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.6in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.4in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.9in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.9in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.9in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.9in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -35,14 +53,14 @@
                   <CellContents>
                     <Rectangle Name="rectangle1">
                       <ReportItems>
-                        <Subreport Name="HeaderSubreport">
+                        <Subreport Name="subreport2">
                           <ReportName>SubReport_SmallHeaderLandscape</ReportName>
                           <Parameters>
                             <Parameter Name="DataSetID">
-                              <Value>=Fields!genDataSetID.Value</Value>
+                              <Value>=First(Fields!genDataSetID.Value, "Accounts")</Value>
                             </Parameter>
                             <Parameter Name="ReportTitle">
-                              <Value>=Globals!ReportName &amp; " by " &amp; Parameters!Group1.Value</Value>
+                              <Value>=Globals!ReportName</Value>
                             </Parameter>
                             <Parameter Name="AccountingRunType">
                               <Value>=Parameters!AccountingRunType.Value</Value>
@@ -53,11 +71,11 @@
                             <Parameter Name="ConnectionString">
                               <Value>=Parameters!ConnectionString.Value</Value>
                             </Parameter>
-                            <Parameter Name="HidePeriodStartDate">
-                              <Value>=Parameters!AccountingRunType.Value="Dynamic"</Value>
-                            </Parameter>
                             <Parameter Name="ExtraParamName1">
-                              <Value>InventoryState</Value>
+                              <Value>EventType</Value>
+                            </Parameter>
+                            <Parameter Name="ExtraParamName2">
+                              <Value>SettleCurrency</Value>
                             </Parameter>
                             <Parameter Name="LogoName">
                               <Value>=Parameters!LogoName.Value</Value>
@@ -71,19 +89,26 @@
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <FontFamily>Calibri</FontFamily>
                             <TextAlign>Center</TextAlign>
                           </Style>
                         </Subreport>
                       </ReportItems>
-                      <DataElementOutput>NoOutput</DataElementOutput>
-                      <ZIndex>56</ZIndex>
+                      <DataElementOutput>ContentsOnly</DataElementOutput>
+                      <ZIndex>44</ZIndex>
                       <Style>
                         <BackgroundColor>White</BackgroundColor>
                       </Style>
                     </Rectangle>
-                    <ColSpan>7</ColSpan>
+                    <ColSpan>13</ColSpan>
                   </CellContents>
                 </TablixCell>
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
                 <TablixCell />
                 <TablixCell />
                 <TablixCell />
@@ -97,204 +122,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TextBox43">
+                    <Textbox Name="HideCSVTextBox42">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
-                              <Style>
-                                <FontFamily>Calibri</FontFamily>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <ZIndex>48</ZIndex>
-                      <DataElementOutput>NoOutput</DataElementOutput>
-                      <Style>
-                        <BottomBorder>
-                          <Style>Solid</Style>
-                        </BottomBorder>
-                        <BackgroundColor>White</BackgroundColor>
-                        <VerticalAlign>Bottom</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>0.1in</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="TextBox45">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Cost Book</Value>
-                              <Style>
-                                <FontFamily>Calibri</FontFamily>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <ZIndex>47</ZIndex>
-                      <DataElementOutput>NoOutput</DataElementOutput>
-                      <Style>
-                        <BottomBorder>
-                          <Style>Solid</Style>
-                        </BottomBorder>
-                        <BackgroundColor>White</BackgroundColor>
-                        <VerticalAlign>Bottom</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>0.1in</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="TextBox47">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Market Value Book</Value>
-                              <Style>
-                                <FontFamily>Calibri</FontFamily>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <ZIndex>46</ZIndex>
-                      <DataElementOutput>NoOutput</DataElementOutput>
-                      <Style>
-                        <BottomBorder>
-                          <Style>Solid</Style>
-                        </BottomBorder>
-                        <BackgroundColor>White</BackgroundColor>
-                        <VerticalAlign>Bottom</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>0.1in</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="TextBox49">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Price Gain/Loss</Value>
-                              <Style>
-                                <FontFamily>Calibri</FontFamily>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <ZIndex>45</ZIndex>
-                      <DataElementOutput>NoOutput</DataElementOutput>
-                      <Style>
-                        <BottomBorder>
-                          <Style>Solid</Style>
-                        </BottomBorder>
-                        <BackgroundColor>White</BackgroundColor>
-                        <VerticalAlign>Bottom</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>0.1in</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="TextBox51">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>FX Gain/Loss</Value>
-                              <Style>
-                                <FontFamily>Calibri</FontFamily>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <ZIndex>44</ZIndex>
-                      <DataElementOutput>NoOutput</DataElementOutput>
-                      <Style>
-                        <BottomBorder>
-                          <Style>Solid</Style>
-                        </BottomBorder>
-                        <BackgroundColor>White</BackgroundColor>
-                        <VerticalAlign>Bottom</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>0.1in</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="TextBox53">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Total Gain/Loss</Value>
+                              <Value>Trade Date</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -325,14 +160,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TextBox55">
+                    <Textbox Name="HideCSVTextBox44">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>% Assets</Value>
+                              <Value>Settle Date</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -361,6 +196,424 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="HideCSVTextBox46">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Transaction Type</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>41</ZIndex>
+                      <DataElementOutput>NoOutput</DataElementOutput>
+                      <Style>
+                        <BottomBorder>
+                          <Style>Solid</Style>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>0.1in</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="HideCSVTextBox48">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Tran ID</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>40</ZIndex>
+                      <DataElementOutput>NoOutput</DataElementOutput>
+                      <Style>
+                        <BottomBorder>
+                          <Style>Solid</Style>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>0.1in</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="HideCSVTextBox50">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Investment</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>39</ZIndex>
+                      <DataElementOutput>NoOutput</DataElementOutput>
+                      <Style>
+                        <BottomBorder>
+                          <Style>Solid</Style>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>0.1in</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="HideCSVTextBox52">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Custodian Account</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>38</ZIndex>
+                      <DataElementOutput>NoOutput</DataElementOutput>
+                      <Style>
+                        <BottomBorder>
+                          <Style>Solid</Style>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>0.1in</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="HideCSVTextBox54">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Quantity</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>37</ZIndex>
+                      <DataElementOutput>NoOutput</DataElementOutput>
+                      <Style>
+                        <BottomBorder>
+                          <Style>Solid</Style>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>0.1in</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="HideCSVTextBox56">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Price</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>36</ZIndex>
+                      <DataElementOutput>NoOutput</DataElementOutput>
+                      <Style>
+                        <BottomBorder>
+                          <Style>Solid</Style>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>0.1in</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="HideCSVTextBox58">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Currency</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>35</ZIndex>
+                      <DataElementOutput>NoOutput</DataElementOutput>
+                      <Style>
+                        <BottomBorder>
+                          <Style>Solid</Style>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>0.1in</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="HideCSVTextBox60">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Currency Net Amount</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>34</ZIndex>
+                      <DataElementOutput>NoOutput</DataElementOutput>
+                      <Style>
+                        <BottomBorder>
+                          <Style>Solid</Style>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>0.1in</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="HideCSVTextBox62">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Book Net Amount</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>33</ZIndex>
+                      <DataElementOutput>NoOutput</DataElementOutput>
+                      <Style>
+                        <BottomBorder>
+                          <Style>Solid</Style>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>0.1in</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="HideCSVTextBox64">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Local Gain/Income</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>32</ZIndex>
+                      <DataElementOutput>NoOutput</DataElementOutput>
+                      <Style>
+                        <BottomBorder>
+                          <Style>Solid</Style>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>0.1in</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="HideCSVTextBox66">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Book Gain/Income</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>31</ZIndex>
+                      <DataElementOutput>NoOutput</DataElementOutput>
+                      <Style>
+                        <BottomBorder>
+                          <Style>Solid</Style>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Bottom</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>0.1in</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
@@ -368,7 +621,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="textbox30">
+                    <Textbox Name="textboxGroup1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -388,12 +641,53 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <ZIndex>34</ZIndex>
-                      <DataElementName>Currency</DataElementName>
-                      <DataElementOutput>Output</DataElementOutput>
+                      <ZIndex>30</ZIndex>
+                      <DataElementName>Group1</DataElementName>
                       <Style>
-                        <BackgroundColor>=Code.ColorGroup2</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
+                        <BackgroundColor>=Code.ColorGroup1</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>9</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox23">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>25</ZIndex>
+                      <DataElementOutput>NoOutput</DataElementOutput>
+                      <Style>
+                        <BackgroundColor>=Code.ColorGroup1</BackgroundColor>
                         <PaddingLeft>1pt</PaddingLeft>
                         <PaddingRight>1pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -404,19 +698,19 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="HideCSVTextBox72">
+                    <Textbox Name="HideCSVtextbox27">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!CostBook.Value)</Value>
+                              <Value>=Sum(Fields!BookNet.Value)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
+                                <Format>N</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -425,14 +719,10 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <ZIndex>12</ZIndex>
+                      <ZIndex>23</ZIndex>
                       <DataElementOutput>NoOutput</DataElementOutput>
                       <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <BackgroundColor>=Code.ColorGroup2</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
+                        <BackgroundColor>=Code.ColorGroup1</BackgroundColor>
                         <PaddingLeft>1pt</PaddingLeft>
                         <PaddingRight>1pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -443,19 +733,18 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="HideCSVTextBox74">
+                    <Textbox Name="Textbox1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!MVBook.Value)</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -464,14 +753,9 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <ZIndex>11</ZIndex>
-                      <DataElementOutput>NoOutput</DataElementOutput>
+                      <rd:DefaultName>Textbox1</rd:DefaultName>
                       <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <BackgroundColor>=Code.ColorGroup2</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
+                        <BackgroundColor>=Code.ColorGroup1</BackgroundColor>
                         <PaddingLeft>1pt</PaddingLeft>
                         <PaddingRight>1pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -482,19 +766,19 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="HideCSVTextBox76">
+                    <Textbox Name="HideCSVtextbox26">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!UnrealPrice.Value)</Value>
+                              <Value>=SUM(Fields!BookGain.Value)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
+                                <Format>N</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -503,14 +787,92 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <ZIndex>10</ZIndex>
+                      <ZIndex>22</ZIndex>
                       <DataElementOutput>NoOutput</DataElementOutput>
                       <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
+                        <BackgroundColor>=Code.ColorGroup1</BackgroundColor>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.2in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textboxGroup2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Group2.Value</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>21</ZIndex>
+                      <DataElementName>Group2</DataElementName>
+                      <Style>
                         <BackgroundColor>=Code.ColorGroup2</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>10pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>9</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="HideCSVtextbox36">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>16</ZIndex>
+                      <DataElementOutput>NoOutput</DataElementOutput>
+                      <Style>
+                        <BackgroundColor>=Code.ColorGroup2</BackgroundColor>
                         <PaddingLeft>1pt</PaddingLeft>
                         <PaddingRight>1pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -521,19 +883,19 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="HideCSVTextBox78">
+                    <Textbox Name="HideCSVtextbox41">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!UnrealFX.Value)</Value>
+                              <Value>=Sum(Fields!BookNet.Value)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
+                                <Format>N</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -542,14 +904,10 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <ZIndex>9</ZIndex>
+                      <ZIndex>14</ZIndex>
                       <DataElementOutput>NoOutput</DataElementOutput>
                       <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
                         <BackgroundColor>=Code.ColorGroup2</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>1pt</PaddingLeft>
                         <PaddingRight>1pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -560,19 +918,18 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="HideCSVTextBox80">
+                    <Textbox Name="Textbox2">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!UnrealTot.Value)</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -581,14 +938,9 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <ZIndex>8</ZIndex>
-                      <DataElementOutput>NoOutput</DataElementOutput>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
                       <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
                         <BackgroundColor>=Code.ColorGroup2</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>1pt</PaddingLeft>
                         <PaddingRight>1pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -599,19 +951,19 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="HideCSVTextBox82">
+                    <Textbox Name="HideCSVtextbox39">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!perAssets.Value)</Value>
+                              <Value>=SUM(Fields!BookGain.Value)</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Format>N2</Format>
+                                <Format>N</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -620,14 +972,10 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <ZIndex>7</ZIndex>
+                      <ZIndex>13</ZIndex>
                       <DataElementOutput>NoOutput</DataElementOutput>
                       <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
                         <BackgroundColor>=Code.ColorGroup2</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>1pt</PaddingLeft>
                         <PaddingRight>1pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -643,15 +991,80 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TextBox108">
+                    <Textbox Name="textbox14">
                       <CanGrow>true</CanGrow>
-                      <HideDuplicates>Group2</HideDuplicates>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Group2.Value</Value>
+                              <Value>=Fields!TDate.Value</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>7pt</FontSize>
+                                <Format>d</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>12</ZIndex>
+                      <DataElementName>TradeDate</DataElementName>
+                      <Style>
+                        <PaddingLeft>18pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                        <PaddingTop>1pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox37">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!SDate.Value</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>7pt</FontSize>
+                                <Format>d</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>11</ZIndex>
+                      <DataElementName>SettleDate</DataElementName>
+                      <Style>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                        <PaddingTop>1pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox38">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!TranType.Value</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -663,11 +1076,10 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <ZIndex>6</ZIndex>
-                      <DataElementName>Group2</DataElementName>
+                      <ZIndex>10</ZIndex>
+                      <DataElementName>TransactionType</DataElementName>
                       <Style>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>5pt</PaddingLeft>
+                        <PaddingLeft>1pt</PaddingLeft>
                         <PaddingRight>1pt</PaddingRight>
                         <PaddingTop>1pt</PaddingTop>
                         <PaddingBottom>1pt</PaddingBottom>
@@ -677,18 +1089,155 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TextBox110">
+                    <Textbox Name="textbox39">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!CostBook.Value</Value>
+                              <Value>=Fields!EventID.Value</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>7pt</FontSize>
-                                <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
+                                <Color>=IIF(Parameters!DisableHyperlinks.Value,"Black","Blue")</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ActionInfo>
+                        <Actions>
+                          <Action>
+                            <Hyperlink>=IIF(Parameters!DisableHyperlinks.Value,"","TransactionLookup:?TransactionId=" &amp; CStr(Fields!EventIDLink.Value))</Hyperlink>
+                          </Action>
+                        </Actions>
+                      </ActionInfo>
+                      <ZIndex>9</ZIndex>
+                      <ToolTip>="Zoom to Transaction edit screen"</ToolTip>
+                      <DataElementName>TranID</DataElementName>
+                      <Style>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                        <PaddingTop>1pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox40">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Invest.Value</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>7pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>8</ZIndex>
+                      <DataElementName>Investment</DataElementName>
+                      <Style>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                        <PaddingTop>1pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox41">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Custodian.Value</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>7pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>7</ZIndex>
+                      <DataElementName>CustodianAccount</DataElementName>
+                      <Style>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                        <PaddingTop>1pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox42">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Format(Fields!Quantity.Value,"N" &amp; Parameters!QuantityPrecision.Value)</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>7pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>6</ZIndex>
+                      <DataElementName>Quantity</DataElementName>
+                      <Style>
+                        <PaddingLeft>1pt</PaddingLeft>
+                        <PaddingRight>1pt</PaddingRight>
+                        <PaddingTop>1pt</PaddingTop>
+                        <PaddingBottom>1pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <rd:Selected>true</rd:Selected>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox43">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=IIF(IsNumeric(Fields!PriceDesc.Value),FormatNumber(Fields!Price.Value,Parameters!PricingPrecision.Value),Fields!PriceDesc.Value)</Value>
+                              <Style>
+                                <FontFamily>Calibri</FontFamily>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -698,9 +1247,8 @@
                         </Paragraph>
                       </Paragraphs>
                       <ZIndex>5</ZIndex>
-                      <DataElementName>CostBook</DataElementName>
+                      <DataElementName>Price</DataElementName>
                       <Style>
-                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>1pt</PaddingLeft>
                         <PaddingRight>1pt</PaddingRight>
                         <PaddingTop>1pt</PaddingTop>
@@ -711,30 +1259,28 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TextBox112">
+                    <Textbox Name="textbox44">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!MVBook.Value</Value>
+                              <Value>=Fields!Curr.Value</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>7pt</FontSize>
-                                <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
                       <ZIndex>4</ZIndex>
-                      <DataElementName>MarketValueBook</DataElementName>
+                      <DataElementName>Currency</DataElementName>
                       <Style>
-                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>1pt</PaddingLeft>
                         <PaddingRight>1pt</PaddingRight>
                         <PaddingTop>1pt</PaddingTop>
@@ -745,14 +1291,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TextBox114">
+                    <Textbox Name="textbox45">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!UnrealPrice.Value</Value>
+                              <Value>=Fields!LocalNet.Value</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -766,9 +1312,8 @@
                         </Paragraph>
                       </Paragraphs>
                       <ZIndex>3</ZIndex>
-                      <DataElementName>PriceGainLoss</DataElementName>
+                      <DataElementName>CurrencyNetAmount</DataElementName>
                       <Style>
-                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>1pt</PaddingLeft>
                         <PaddingRight>1pt</PaddingRight>
                         <PaddingTop>1pt</PaddingTop>
@@ -779,14 +1324,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TextBox116">
+                    <Textbox Name="textbox46">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!UnrealFX.Value</Value>
+                              <Value>=Fields!BookNet.Value</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -800,9 +1345,8 @@
                         </Paragraph>
                       </Paragraphs>
                       <ZIndex>2</ZIndex>
-                      <DataElementName>FXGainLoss</DataElementName>
+                      <DataElementName>BookNetAmount</DataElementName>
                       <Style>
-                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>1pt</PaddingLeft>
                         <PaddingRight>1pt</PaddingRight>
                         <PaddingTop>1pt</PaddingTop>
@@ -813,14 +1357,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TextBox118">
+                    <Textbox Name="textbox47">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!UnrealTot.Value</Value>
+                              <Value>=Fields!LocalGain.Value</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>7pt</FontSize>
@@ -834,9 +1378,8 @@
                         </Paragraph>
                       </Paragraphs>
                       <ZIndex>1</ZIndex>
-                      <DataElementName>TotalGainLoss</DataElementName>
+                      <DataElementName>LocalGainIncome</DataElementName>
                       <Style>
-                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>1pt</PaddingLeft>
                         <PaddingRight>1pt</PaddingRight>
                         <PaddingTop>1pt</PaddingTop>
@@ -847,18 +1390,18 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TextBox120">
+                    <Textbox Name="textbox48">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!perAssets.Value</Value>
+                              <Value>=Fields!BookGain.Value</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>7pt</FontSize>
-                                <Format>N2</Format>
+                                <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -867,266 +1410,12 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <DataElementName>perAssets</DataElementName>
+                      <DataElementName>BookGainIncome</DataElementName>
                       <Style>
-                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>1pt</PaddingLeft>
                         <PaddingRight>1pt</PaddingRight>
                         <PaddingTop>1pt</PaddingTop>
                         <PaddingBottom>1pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-              </TablixCells>
-            </TablixRow>
-            <TablixRow>
-              <Height>0.2in</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="HideCSVTextBox121">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Report Totals:</Value>
-                              <Style>
-                                <FontFamily>Calibri</FontFamily>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Left</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <ZIndex>27</ZIndex>
-                      <DataElementOutput>NoOutput</DataElementOutput>
-                      <Style>
-                        <BackgroundColor>=Code.ColorGroup1</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>1pt</PaddingLeft>
-                        <PaddingRight>1pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="HideCSVTextBox123">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=SUM(Fields!CostBook.Value)</Value>
-                              <Style>
-                                <FontFamily>Calibri</FontFamily>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Right</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <ZIndex>26</ZIndex>
-                      <DataElementOutput>NoOutput</DataElementOutput>
-                      <Style>
-                        <BackgroundColor>=Code.ColorGroup1</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>1pt</PaddingLeft>
-                        <PaddingRight>1pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="HideCSVTextBox125">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=SUM(Fields!MVBook.Value)</Value>
-                              <Style>
-                                <FontFamily>Calibri</FontFamily>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Right</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <ZIndex>25</ZIndex>
-                      <DataElementOutput>NoOutput</DataElementOutput>
-                      <Style>
-                        <BackgroundColor>=Code.ColorGroup1</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>1pt</PaddingLeft>
-                        <PaddingRight>1pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="HideCSVTextBox127">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=SUM(Fields!UnrealPrice.Value)</Value>
-                              <Style>
-                                <FontFamily>Calibri</FontFamily>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Right</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <ZIndex>24</ZIndex>
-                      <DataElementOutput>NoOutput</DataElementOutput>
-                      <Style>
-                        <BackgroundColor>=Code.ColorGroup1</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>1pt</PaddingLeft>
-                        <PaddingRight>1pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="HideCSVTextBox129">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=SUM(Fields!UnrealFX.Value)</Value>
-                              <Style>
-                                <FontFamily>Calibri</FontFamily>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Right</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <ZIndex>23</ZIndex>
-                      <DataElementOutput>NoOutput</DataElementOutput>
-                      <Style>
-                        <BackgroundColor>=Code.ColorGroup1</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>1pt</PaddingLeft>
-                        <PaddingRight>1pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="HideCSVTextBox131">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=SUM(Fields!UnrealTot.Value)</Value>
-                              <Style>
-                                <FontFamily>Calibri</FontFamily>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Right</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <ZIndex>22</ZIndex>
-                      <DataElementOutput>NoOutput</DataElementOutput>
-                      <Style>
-                        <BackgroundColor>=Code.ColorGroup1</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>1pt</PaddingLeft>
-                        <PaddingRight>1pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="TextBox133">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style>
-                                <FontFamily>Calibri</FontFamily>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <ZIndex>21</ZIndex>
-                      <DataElementOutput>NoOutput</DataElementOutput>
-                      <Style>
-                        <BackgroundColor>=Code.ColorGroup1</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>1pt</PaddingLeft>
-                        <PaddingRight>1pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -1137,6 +1426,12 @@
         </TablixBody>
         <TablixColumnHierarchy>
           <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
             <TablixMember />
             <TablixMember />
             <TablixMember />
@@ -1182,6 +1477,13 @@
                   </Group>
                   <TablixMembers>
                     <TablixMember>
+                      <Visibility>
+                        <Hidden>=Parameters!Group2.Value="None"</Hidden>
+                      </Visibility>
+                      <KeepWithGroup>After</KeepWithGroup>
+                      <KeepTogether>true</KeepTogether>
+                    </TablixMember>
+                    <TablixMember>
                       <Group Name="Table1_Details_Group">
                         <DataElementName>Detail</DataElementName>
                       </Group>
@@ -1196,10 +1498,6 @@
                 </TablixMember>
               </TablixMembers>
             </TablixMember>
-            <TablixMember>
-              <KeepWithGroup>Before</KeepWithGroup>
-              <KeepTogether>true</KeepTogether>
-            </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Data</DataSetName>
@@ -1208,7 +1506,10 @@
         <Visibility>
           <Hidden>=Code.InitColorGroups(Parameters!Color.Value)</Hidden>
         </Visibility>
-        <Style />
+        <DataElementOutput>Output</DataElementOutput>
+        <Style>
+          <FontFamily>Calibri</FontFamily>
+        </Style>
       </Tablix>
       <Rectangle Name="Rectangle2">
         <ReportItems>
@@ -1216,7 +1517,7 @@
             <ReportName>SubReport_AddendumErrors</ReportName>
             <Parameters>
               <Parameter Name="DataSetID">
-                <Value>=First(Fields!genDataSetID.Value, "Data")</Value>
+                <Value>=First(Fields!genDataSetID.Value, "Accounts")</Value>
               </Parameter>
               <Parameter Name="ReportTitle">
                 <Value>=Globals!ReportName</Value>
@@ -1269,7 +1570,12 @@
             <Height>0.75in</Height>
             <Width>10.4in</Width>
             <ToolTip>Addendum Pages</ToolTip>
-            <Style />
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <FontFamily>Calibri</FontFamily>
+            </Style>
           </Subreport>
         </ReportItems>
         <PageBreak>
@@ -1281,7 +1587,7 @@
         <Width>10.4in</Width>
         <ZIndex>1</ZIndex>
         <Visibility>
-          <Hidden>=Parameters!AddendumPages.Value="None"</Hidden>
+          <Hidden>=Parameters!AddendumPages.Value= "None"</Hidden>
         </Visibility>
         <Style>
           <Border>
@@ -1296,10 +1602,51 @@
   <Width>10.4in</Width>
   <Page>
     <PageFooter>
-      <Height>0.4in</Height>
+      <Height>0.365in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
+        <Image Name="GenevaLogo">
+          <Source>External</Source>
+          <Value>GenevaLogo.jpg</Value>
+          <Sizing>Fit</Sizing>
+          <Top>0.14in</Top>
+          <Left>8.9in</Left>
+          <Height>0.22in</Height>
+          <Width>1.1in</Width>
+          <Style />
+        </Image>
+        <Textbox Name="preDefinedTextbox20">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="Page " &amp; Globals!PageNumber &amp; " of " &amp; Globals!TotalPages</Value>
+                  <Style>
+                    <FontFamily>Calibri</FontFamily>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>0.14in</Top>
+          <Left>1.6in</Left>
+          <Height>0.225in</Height>
+          <Width>6.8in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <VerticalAlign>Bottom</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
         <Textbox Name="ExecutionTime">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -1320,58 +1667,17 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <Top>0.18in</Top>
+          <Top>0.14in</Top>
           <Height>0.22in</Height>
           <Width>1.6in</Width>
-          <Style>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="preDefinedTextbox20">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>="Page " &amp; Globals!PageNumber &amp; " of " &amp; Globals!TotalPages</Value>
-                  <Style>
-                    <FontFamily>Calibri</FontFamily>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-          </Paragraphs>
-          <Top>0.18in</Top>
-          <Left>1.6in</Left>
-          <Height>0.22in</Height>
-          <Width>6.8in</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <VerticalAlign>Bottom</VerticalAlign>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Image Name="GenevaLogo">
-          <Source>External</Source>
-          <Value>GenevaLogo.jpg</Value>
-          <Sizing>FitProportional</Sizing>
-          <Top>0.18in</Top>
-          <Left>8.9in</Left>
-          <Height>0.22in</Height>
-          <Width>1.1in</Width>
           <ZIndex>2</ZIndex>
-          <Style />
-        </Image>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
       </ReportItems>
       <Style />
     </PageFooter>
@@ -1385,7 +1691,7 @@
     <BottomMargin>0.5in</BottomMargin>
     <Style />
   </Page>
-  <Description>Summarizes positions by Asset Type, Industry, Investment Type, Print Group, and by local basis currency, held on the report date.</Description>
+  <Description>Displays all transactions processed during the reporting period. For each transaction, the report displays book amounts, and calculates the gain/loss based on the accounting run.</Description>
   <Author>Advent Software, Inc.</Author>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -1397,65 +1703,30 @@
         <Prompt>Specify a user name and password for data source GenevaSource</Prompt>
       </ConnectionProperties>
       <rd:SecurityType>DataBase</rd:SecurityType>
-      <rd:DataSourceID>ad9c836b-4daa-414c-bfbc-cee99d3c0be6</rd:DataSourceID>
+      <rd:DataSourceID>3504e3c0-7d44-40af-95d8-8f6dfa2e3f04</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="GenevaEIS">
+      <DataSourceReference>GenevaEIS</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>b86a7548-5376-47b4-9ea1-893740ca6672</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="InventoryState">
-      <Query>
-        <DataSourceName>GenevaSource</DataSourceName>
-        <CommandText>SELECT Code FROM InventoryState ORDER BY Code;</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="Name">
-          <DataField>Code</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Value">
-          <DataField>Value</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="genKnowledgeDate">
-          <DataField>genKnowledgeDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="genKnowledgeDateExact">
-          <DataField>genKnowledgeDateExact</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="genDataSetID">
-          <DataField>genDataSetID</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="LIBGetInventoryStateInfo">
+    <DataSet Name="LIBGetSettleCurrencyInfo">
       <Query>
         <DataSourceName>GenevaSource</DataSourceName>
         <QueryParameters>
-          <QueryParameter Name="JobTitle">
-            <Value>=Globals!ReportName</Value>
-          </QueryParameter>
-          <QueryParameter Name="InventoryState">
-            <Value>=Parameters!InventoryState.Value</Value>
+          <QueryParameter Name="SettleCurrency">
+            <Value>=Parameters!SettleCurrency.Value</Value>
           </QueryParameter>
           <QueryParameter Name="KnowledgeDate">
             <Value>=FormatDateTime(Parameters!KnowledgeDate.Value)</Value>
           </QueryParameter>
+          <QueryParameter Name="JobTitle">
+            <Value>=Parameters!JobTitle.Value</Value>
+          </QueryParameter>
           <QueryParameter Name="AddendumPages">
             <Value>=Parameters!AddendumPages.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="Group1">
-            <Value>=Parameters!Group1.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="Group2">
-            <Value>=Parameters!Group2.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="Group1Field">
-            <Value>=Parameters!Group1Field.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="Group2Field">
-            <Value>=Parameters!Group2Field.Value</Value>
           </QueryParameter>
           <QueryParameter Name="AlternateID">
             <Value>=Parameters!AlternateID.Value</Value>
@@ -1464,39 +1735,180 @@
             <Value>=Parameters!MOERoundingMethod.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>SELECT  Description FROM	InventoryState WITH KEY Code = :InventoryState GIVEN   KnowledgeDate = :KnowledgeDate;</CommandText>
+        <CommandText>
+          AGASELECT  Description
+          FROM	MediumofExchange WITH KEY :SettleCurrency
+          GIVEN   KnowledgeDate = :KnowledgeDate
+        </CommandText>
       </Query>
       <Fields>
         <Field Name="Description">
           <DataField>Description</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="genKnowledgeDate">
-          <DataField>genKnowledgeDate</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
+      </Fields>
+    </DataSet>
+    <DataSet Name="SettleCurrenty">
+      <Query>
+        <DataSourceName>GenevaSource</DataSourceName>
+        <CommandText>
+          DEFAULTROW "", "";
+          AGASELECT
+          {Key} Name,
+          Code Value
+          FROM MediumOfExchange
+          ORDER BY Name;
+        </CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Name">
+          <DataField>Name</DataField>
         </Field>
-        <Field Name="genKnowledgeDateExact">
-          <DataField>genKnowledgeDateExact</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="Value">
+          <DataField>Value</DataField>
         </Field>
-        <Field Name="genDataSetID">
-          <DataField>genDataSetID</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Group1">
-          <DataField>Group1</DataField>
-        </Field>
-        <Field Name="Group2">
-          <DataField>Group2</DataField>
+      </Fields>
+    </DataSet>
+    <DataSet Name="EventType">
+      <Query>
+        <DataSourceName>GenevaSource</DataSourceName>
+        <CommandText>
+          DEFAULTROW "";
+          CHILDCLASSES PortfolioEvent
+        </CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ClassName">
+          <DataField>ClassName</DataField>
         </Field>
       </Fields>
     </DataSet>
     <DataSet Name="Data">
       <Query>
+        <DataSourceName>GenevaEIS</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@PeriodStartDate">
+            <Value>=Parameters!PeriodStartDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PeriodEndDate">
+            <Value>=Parameters!PeriodEndDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PriorKnowledgeDate">
+            <Value>=Parameters!PriorKnowledgeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@KnowledgeDate">
+            <Value>=Parameters!KnowledgeDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Portfolio">
+            <Value>=Parameters!Portfolio.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SettleCurrency">
+            <Value>=Parameters!SettleCurrency.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@BookCurrency">
+            <Value>=Parameters!BookCurrency.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@EventType">
+            <Value>=Parameters!EventType.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Group1">
+            <Value>=Parameters!Group1.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Group1Field">
+            <Value>=Parameters!Group1Field.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Group2">
+            <Value>=Parameters!Group2.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Group2Field">
+            <Value>=Parameters!Group2Field.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>bis.reporttranHist</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="TDate">
+          <DataField>TDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="SDate">
+          <DataField>SDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Transaction_Description">
+          <DataField>Transaction Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EventID">
+          <DataField>EventID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Invest">
+          <DataField>Invest</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EventIDLink">
+          <DataField>EventIDLink</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Custodian">
+          <DataField>Custodian</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Price">
+          <DataField>Price</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Curr">
+          <DataField>Currency</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LocalNet">
+          <DataField>LocalNet</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="BookNet">
+          <DataField>BookNet</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="LocalGain">
+          <DataField>LocalGain</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="BookGain">
+          <DataField>BookGain</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Group1">
+          <Value>=""</Value>
+        </Field>
+        <Field Name="Group2">
+          <Value>=""</Value>
+        </Field>
+        <Field Name="TranType">
+          <Value>=""</Value>
+        </Field>
+        <Field Name="QtyDesc">
+          <Value>=Fields!Quantity.Value</Value>
+        </Field>
+        <Field Name="PriceDesc">
+          <Value>=Fields!Price.Value</Value>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Accounts">
+      <Query>
         <DataSourceName>GenevaSource</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="JobTitle">
             <Value>=Globals!ReportName</Value>
+          </QueryParameter>
+          <QueryParameter Name="Consolidate">
+            <Value>=Parameters!Consolidate.Value</Value>
           </QueryParameter>
           <QueryParameter Name="CrossingCurrency">
             <Value>=Parameters!CrossingCurrency.Value</Value>
@@ -1588,9 +2000,6 @@
           <QueryParameter Name="MarkToMarketCashTransfer">
             <Value>=Parameters!MarkToMarketCashTransfer.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="RegionalSettings">
-            <Value>=Parameters!RegionalSettings.Value</Value>
-          </QueryParameter>
           <QueryParameter Name="FundLegalEntityDescription">
             <Value>=Parameters!FundLegalEntityDescription.Value</Value>
           </QueryParameter>
@@ -1633,178 +2042,70 @@
           <QueryParameter Name="AccountingFilters">
             <Value>=Parameters!AccountingFilters.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="InventoryState">
-            <Value>=Parameters!InventoryState.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="Group1">
-            <Value>=Parameters!Group1.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="Group2">
-            <Value>=Parameters!Group2.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="Group1Field">
-            <Value>=Parameters!Group1Field.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="Group2Field">
-            <Value>=Parameters!Group2Field.Value</Value>
-          </QueryParameter>
           <QueryParameter Name="ManagementFirm">
             <Value>=Parameters!ManagementFirm.Value</Value>
           </QueryParameter>
           <QueryParameter Name="PortfolioDescription">
             <Value>=Parameters!PortfolioDescription.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="Consolidate">
-            <Value>=Parameters!Consolidate.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="AmortizeOnUnrealizedDate">
-            <Value>=Parameters!AmortizeOnUnrealizedDate.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="DisableFreezepoints">
-            <Value>=Parameters!DisableFreezepoints.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="DisableLDErrorRead">
-            <Value>=Parameters!DisableLDErrorRead.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="DisableLockdowns">
-            <Value>=Parameters!DisableLockdowns.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="PostDividendTaxLotDetail">
-            <Value>=Parameters!PostDividendTaxLotDetail.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="PostValidationErrors">
-            <Value>=Parameters!PostValidationErrors.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="DisableManualJE">
-            <Value>=Parameters!DisableManualJE.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="AccountingParameters">
-            <Value>=Parameters!AccountingParameters.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="ConsolidateLegalEntities">
-            <Value>=Parameters!ConsolidateLegalEntities.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="BidAskClosing">
-            <Value>=Parameters!BidAskClosing.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="SnapshotUse">
-            <Value>=Parameters!SnapshotUse.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="UseAPFrom">
-            <Value>=Parameters!UseAPFrom.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="DisableSnapshots">
-            <Value>=Parameters!DisableSnapshots.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="EnableRealTimePricing">
-            <Value>=Parameters!EnableRealTimePricing.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="ExpandAddendum">
-            <Value>=Parameters!ExpandAddendum.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="LumpSwapGL">
-            <Value>=Parameters!LumpSwapGL.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="DisableBooks">
-            <Value>=Parameters!DisableBooks.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="AccountingRule">
-            <Value>=Parameters!AccountingRule.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="DisableHyperlinks">
-            <Value>=Parameters!DisableHyperlinks.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="AccountingSelectionRuleUsed">
-            <Value>=Parameters!AccountingSelectionRuleUsed.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="LumpCrossGL">
-            <Value>=Parameters!LumpCrossGL.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="GainCalcMethod">
-            <Value>=Parameters!GainCalcMethod.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="FreezeAccountingDate">
-            <Value>=Parameters!FreezeAccountingDate.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="FreezeKnowledgeDate">
-            <Value>=Parameters!FreezeKnowledgeDate.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="ParallelConsolidationChildren">
-            <Value>=Parameters!ParallelConsolidationChildren.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="AllowBoxedPosition">
-            <Value>=Parameters!AllowBoxedPosition.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="GetKTimesFromDefaultCalendar">
-            <Value>=Parameters!GetKTimesFromDefaultCalendar.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="AlternateID">
-            <Value>=Parameters!AlternateID.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="FiscalCalendar">
-            <Value>=Parameters!FiscalCalendar.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="RelativeDate">
-            <Value>=Parameters!RelativeDate.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="LotLevelOverrides">
-            <Value>=Parameters!LotLevelOverrides.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="MOERoundingMethod">
-            <Value>=Parameters!MOERoundingMethod.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="HybridHistoricalView">
-            <Value>=Parameters!HybridHistoricalView.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="BypassFLEConsolidatingFlag">
-            <Value>=Parameters!BypassFLEConsolidatingFlag.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="EnableTimeSeries">
-            <Value>=Parameters!EnableTimeSeries.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="IgnoreSpecificLotClosing">
-            <Value>=Parameters!IgnoreSpecificLotClosing.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="PaydownGLasGainLoss">
-            <Value>=Parameters!PaydownGLasGainLoss.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="LumpExpensesInSummaryLockdown">
-            <Value>=Parameters!LumpExpensesInSummaryLockdown.Value</Value>
-          </QueryParameter>
         </QueryParameters>
-        <CommandText>RUNRSL appsum.rsl Data;
-TYPE
-Group1=String,
-Group2=String,
-Invest=String,
-CostBook=Decimal,
-MVBook=Decimal,
-UnrealPrice=Decimal,
-UnrealFX=Decimal,
-UnrealTot=Decimal,
-perAssets=Decimal</CommandText>
+        <CommandText>
+				  RUNRSL accounts.rsl Data;
+				  TYPE
+				  Invest=String,
+				  Custodian=String,
+				  LocAcct=String,
+				  TaxLot=String,
+				  LongShort=String,
+				  RTLot=String,
+				  State=String,
+				  FinAcct=String,
+				  Denom=String,
+				  PTDLocal=Decimal,
+				  YTDLocal=Decimal,
+				  PTDBook=Decimal,
+				  YTDBook=Decimal
+			  </CommandText>
       </Query>
       <Fields>
         <Field Name="Invest">
           <DataField>Invest</DataField>
         </Field>
-        <Field Name="CostBook">
-          <DataField>CostBook</DataField>
+        <Field Name="Custodian">
+          <DataField>Custodian</DataField>
         </Field>
-        <Field Name="MVBook">
-          <DataField>MVBook</DataField>
+        <Field Name="LocAcct">
+          <DataField>LocAcct</DataField>
         </Field>
-        <Field Name="UnrealPrice">
-          <DataField>UnrealPrice</DataField>
+        <Field Name="TaxLot">
+          <DataField>TaxLot</DataField>
         </Field>
-        <Field Name="UnrealFX">
-          <DataField>UnrealFX</DataField>
+        <Field Name="LongShort">
+          <DataField>LongShort</DataField>
         </Field>
-        <Field Name="UnrealTot">
-          <DataField>UnrealTot</DataField>
+        <Field Name="RTLot">
+          <DataField>RTLot</DataField>
         </Field>
-        <Field Name="perAssets">
-          <DataField>perAssets</DataField>
+        <Field Name="State">
+          <DataField>State</DataField>
+        </Field>
+        <Field Name="FinAcct">
+          <DataField>FinAcct</DataField>
+        </Field>
+        <Field Name="Denom">
+          <DataField>Denom</DataField>
+        </Field>
+        <Field Name="PTDLocal">
+          <DataField>PTDLocal</DataField>
+        </Field>
+        <Field Name="YTDLocal">
+          <DataField>YTDLocal</DataField>
+        </Field>
+        <Field Name="PTDBook">
+          <DataField>PTDBook</DataField>
+        </Field>
+        <Field Name="YTDBook">
+          <DataField>YTDBook</DataField>
         </Field>
         <Field Name="genKnowledgeDate">
           <DataField>genKnowledgeDate</DataField>
@@ -1814,12 +2115,6 @@ perAssets=Decimal</CommandText>
         </Field>
         <Field Name="genDataSetID">
           <DataField>genDataSetID</DataField>
-        </Field>
-        <Field Name="Group1">
-          <DataField>Group1</DataField>
-        </Field>
-        <Field Name="Group2">
-          <DataField>Group2</DataField>
         </Field>
       </Fields>
     </DataSet>
@@ -1842,6 +2137,17 @@ perAssets=Decimal</CommandText>
       <Prompt>Portfolio</Prompt>
       <MultiValue>true</MultiValue>
     </ReportParameter>
+    <ReportParameter Name="PeriodStartDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Period Start Date</Prompt>
+    </ReportParameter>
     <ReportParameter Name="PeriodEndDate">
       <DataType>DateTime</DataType>
       <Nullable>true</Nullable>
@@ -1852,18 +2158,6 @@ perAssets=Decimal</CommandText>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
       <Prompt>Period End Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="PeriodStartDate">
-      <DataType>DateTime</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value>01/01/1950</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Period Start Date</Prompt>
-      <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="KnowledgeDate">
       <DataType>DateTime</DataType>
@@ -2013,6 +2307,12 @@ perAssets=Decimal</CommandText>
           <ParameterValue>
             <Value>Books</Value>
           </ParameterValue>
+          <ParameterValue>
+            <Value>Incremental</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Hybrid</Value>
+          </ParameterValue>
         </ParameterValues>
       </ValidValues>
     </ReportParameter>
@@ -2081,17 +2381,6 @@ perAssets=Decimal</CommandText>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
       <Prompt>Amortization Election</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="AmortizeOnUnrealizedDate">
-      <DataType>DateTime</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Amortize On Unrealized Date</Prompt>
     </ReportParameter>
     <ReportParameter Name="AppraisalDay">
       <DataType>String</DataType>
@@ -2230,7 +2519,7 @@ perAssets=Decimal</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Value>False</Value>
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -2241,7 +2530,7 @@ perAssets=Decimal</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Value>False</Value>
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -2252,7 +2541,7 @@ perAssets=Decimal</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Value>False</Value>
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -2344,7 +2633,7 @@ perAssets=Decimal</CommandText>
             <Value>MatchingLegalEntity</Value>
           </ParameterValue>
           <ParameterValue>
-            <Value>MatchingBookCurreny</Value>
+            <Value>MatchingBookCurrency</Value>
           </ParameterValue>
         </ParameterValues>
       </ValidValues>
@@ -2442,7 +2731,7 @@ perAssets=Decimal</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value>true</Value>
+          <Value>false</Value>
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -2475,7 +2764,7 @@ perAssets=Decimal</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Value>e</Value>
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -2513,6 +2802,7 @@ perAssets=Decimal</CommandText>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
       <Prompt>Fund Legal Entity Description</Prompt>
+      <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="DisableManualJE">
       <DataType>Boolean</DataType>
@@ -2525,6 +2815,17 @@ perAssets=Decimal</CommandText>
       <AllowBlank>true</AllowBlank>
       <Prompt>Disable Manual JE</Prompt>
     </ReportParameter>
+    <ReportParameter Name="EventType">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Transaction Type</Prompt>
+    </ReportParameter>
     <ReportParameter Name="AccountingCalendar">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
@@ -2535,6 +2836,47 @@ perAssets=Decimal</CommandText>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
       <Prompt>Accounting Calendar</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="lastAccountDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>01/01/1950</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Last Account Date</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="SettleCurrency">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Settle Currency</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>SettleCurrenty</DataSetName>
+          <ValueField>Value</ValueField>
+          <LabelField>Name</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="ConsolidateLegalEntities">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>SeparateFundLegalEntities</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Consolidate Legal Entities</Prompt>
     </ReportParameter>
     <ReportParameter Name="AccountingParameters">
       <DataType>String</DataType>
@@ -2547,16 +2889,28 @@ perAssets=Decimal</CommandText>
       <AllowBlank>true</AllowBlank>
       <Prompt>Accounting Parameters</Prompt>
     </ReportParameter>
-    <ReportParameter Name="ConsolidateLegalEntities">
+    <ReportParameter Name="requestType">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value>SeparateFundLegalEntities</Value>
+          <Value>ssrs</Value>
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
-      <Prompt>Consolidate Legal Entities</Prompt>
+      <Prompt>Request Type</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="AmortizeOnUnrealizedDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Amortize On Unrealized Date</Prompt>
     </ReportParameter>
     <ReportParameter Name="SnapshotUse">
       <DataType>String</DataType>
@@ -2591,6 +2945,17 @@ perAssets=Decimal</CommandText>
       <AllowBlank>true</AllowBlank>
       <Prompt>Disable Snapshots</Prompt>
     </ReportParameter>
+    <ReportParameter Name="EnableRealTimePricing">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Enable Real Time Pricing</Prompt>
+    </ReportParameter>
     <ReportParameter Name="ExpandAddendum">
       <DataType>Boolean</DataType>
       <Nullable>true</Nullable>
@@ -2611,18 +2976,7 @@ perAssets=Decimal</CommandText>
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
-      <Prompt>DisableHyperlinks</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="DisableBooks">
-      <DataType>Boolean</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value>false</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>DisableBooks</Prompt>
+      <Prompt>Disable Hyperlinks</Prompt>
     </ReportParameter>
     <ReportParameter Name="AccountingRule">
       <DataType>String</DataType>
@@ -2634,6 +2988,17 @@ perAssets=Decimal</CommandText>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
       <Prompt>Accounting Rule</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DisableBooks">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>DisableBooks</Prompt>
     </ReportParameter>
     <ReportParameter Name="AccountingSelectionRuleUsed">
       <DataType>Boolean</DataType>
@@ -2669,66 +3034,12 @@ perAssets=Decimal</CommandText>
       <AllowBlank>true</AllowBlank>
       <Prompt>GainCalcMethod</Prompt>
     </ReportParameter>
-    <ReportParameter Name="FreezeAccountingDate">
-      <DataType>DateTime</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Freeze Accounting Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="FreezeKnowledgeDate">
-      <DataType>DateTime</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Freeze Knowledge Date</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="EnableRealTimePricing">
-      <DataType>Boolean</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value>false</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Enable Real Time Pricing</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="ParallelConsolidationChildren">
-      <DataType>Integer</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value>0</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt># Of Processes To Use</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="AllowBoxedPosition">
-      <DataType>Boolean</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value>false</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Allow Boxed Position</Prompt>
-    </ReportParameter>
     <ReportParameter Name="Group1">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value>IncomeCurrency</Value>
+          <Value>None</Value>
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -2737,124 +3048,67 @@ perAssets=Decimal</CommandText>
         <ParameterValues>
           <ParameterValue>
             <Value>None</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Analyst</Value>
+            <Label>None</Label>
           </ParameterValue>
           <ParameterValue>
             <Value>AssetType</Value>
+            <Label>Asset Type</Label>
           </ParameterValue>
           <ParameterValue>
-            <Value>BusinessUnit</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Custodian</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>CustodianAccount</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>DeliveryAgent</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Denomination</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Exchange</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>IncomeCurrency</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Industry</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Industry2</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>IndustryGroup</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>IndustryGroup2</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Investment</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>InvestmentType</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>IssueCountry</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Issuer</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>LONGSHORT</Value>
-            <Label>Long Short</Label>
+            <Value>Country</Value>
+            <Label>Country</Label>
           </ParameterValue>
           <ParameterValue>
             <Value>LocalBasisCurrency</Value>
+            <Label>LocalBasisCurrency</Label>
           </ParameterValue>
           <ParameterValue>
-            <Value>PriceDenom</Value>
+            <Value>GermanTaxPrintGroup</Value>
+            <Label>German Tax Print Group</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>InvestmentType</Value>
+            <Label>Investment Type</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Industry</Value>
+            <Label>Industry</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Industry2</Value>
+            <Label>Industry2</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>IndustryGroup</Value>
+            <Label>Industry Group</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>IndustryGroup2</Value>
+            <Label>Industry Group2</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Issuer</Value>
+            <Label>Issuer</Label>
           </ParameterValue>
           <ParameterValue>
             <Value>PrintGroup</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>RiskCurrency</Value>
+            <Label>Print Group</Label>
           </ParameterValue>
           <ParameterValue>
             <Value>Sector</Value>
+            <Label>Sector</Label>
           </ParameterValue>
           <ParameterValue>
             <Value>Sector2</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Strategy</Value>
+            <Label>Sector2</Label>
           </ParameterValue>
           <ParameterValue>
             <Value>SubIndustry</Value>
+            <Label>Sub Industry</Label>
           </ParameterValue>
           <ParameterValue>
             <Value>SubIndustry2</Value>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="Group1Field">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value>Description</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Group1Field</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>Key</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Description</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>UserDef1</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>UserDef2</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>UserDef3</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>UserDef4</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>UserDef5</Value>
+            <Label>Sub Industry2</Label>
           </ParameterValue>
         </ParameterValues>
       </ValidValues>
@@ -2864,7 +3118,7 @@ perAssets=Decimal</CommandText>
       <Nullable>true</Nullable>
       <DefaultValue>
         <Values>
-          <Value>InvestmentType</Value>
+          <Value>None</Value>
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
@@ -2873,144 +3127,69 @@ perAssets=Decimal</CommandText>
         <ParameterValues>
           <ParameterValue>
             <Value>None</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Analyst</Value>
+            <Label>None</Label>
           </ParameterValue>
           <ParameterValue>
             <Value>AssetType</Value>
+            <Label>Asset Type</Label>
           </ParameterValue>
           <ParameterValue>
-            <Value>BusinessUnit</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Custodian</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>CustodianAccount</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>DeliveryAgent</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Denomination</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Exchange</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>IncomeCurrency</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Industry</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Industry2</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>IndustryGroup</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>IndustryGroup2</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Investment</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>InvestmentType</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>IssueCountry</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Issuer</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>LONGSHORT</Value>
-            <Label>Long Short</Label>
+            <Value>Country</Value>
+            <Label>Country</Label>
           </ParameterValue>
           <ParameterValue>
             <Value>LocalBasisCurrency</Value>
+            <Label>LocalBasisCurrency</Label>
           </ParameterValue>
           <ParameterValue>
-            <Value>PriceDenom</Value>
+            <Value>GermanTaxPrintGroup</Value>
+            <Label>German Tax Print Group</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>InvestmentType</Value>
+            <Label>Investment Type</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Industry</Value>
+            <Label>Industry</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Industry2</Value>
+            <Label>Industry2</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>IndustryGroup</Value>
+            <Label>Industry Group</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>IndustryGroup2</Value>
+            <Label>Industry Group2</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Issuer</Value>
+            <Label>Issuer</Label>
           </ParameterValue>
           <ParameterValue>
             <Value>PrintGroup</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>RiskCurrency</Value>
+            <Label>Print Group</Label>
           </ParameterValue>
           <ParameterValue>
             <Value>Sector</Value>
+            <Label>Sector</Label>
           </ParameterValue>
           <ParameterValue>
             <Value>Sector2</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Strategy</Value>
+            <Label>Sector2</Label>
           </ParameterValue>
           <ParameterValue>
             <Value>SubIndustry</Value>
+            <Label>Sub Industry</Label>
           </ParameterValue>
           <ParameterValue>
             <Value>SubIndustry2</Value>
+            <Label>Sub Industry2</Label>
           </ParameterValue>
         </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="Group2Field">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value>Description</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Group2Field</Prompt>
-      <ValidValues>
-        <ParameterValues>
-          <ParameterValue>
-            <Value>Key</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>Description</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>UserDef1</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>UserDef2</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>UserDef3</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>UserDef4</Value>
-          </ParameterValue>
-          <ParameterValue>
-            <Value>UserDef5</Value>
-          </ParameterValue>
-        </ParameterValues>
-      </ValidValues>
-    </ReportParameter>
-    <ReportParameter Name="InventoryState">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <DefaultValue>
-        <Values>
-          <Value>AllAssetsAndPayables</Value>
-        </Values>
-      </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Inventory State</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>InventoryState</DataSetName>
-          <ValueField>Name</ValueField>
-          <LabelField>Name</LabelField>
-        </DataSetReference>
       </ValidValues>
     </ReportParameter>
     <ReportParameter Name="Color">
@@ -3036,7 +3215,40 @@ perAssets=Decimal</CommandText>
         </ParameterValues>
       </ValidValues>
     </ReportParameter>
-    <ReportParameter Name="LumpSwapGL">
+    <ReportParameter Name="FreezeAccountingDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Freeze Accounting Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FreezeKnowledgeDate">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Freeze Knowledge Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ParallelConsolidationChildren">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>0</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt># Of Processes To Use</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ExcludeNonCoveredTaxLotsFromWashSales">
       <DataType>Boolean</DataType>
       <Nullable>true</Nullable>
       <DefaultValue>
@@ -3044,8 +3256,18 @@ perAssets=Decimal</CommandText>
           <Value>false</Value>
         </Values>
       </DefaultValue>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>Lump Price and FX GainLoss for Swaps</Prompt>
+      <Prompt>Exclude Non Covered Tax Lots From Wash Sales</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="AllowBoxedPosition">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Allow Boxed Position</Prompt>
     </ReportParameter>
     <ReportParameter Name="GetKTimesFromDefaultCalendar">
       <DataType>Boolean</DataType>
@@ -3107,12 +3329,12 @@ perAssets=Decimal</CommandText>
     <ReportParameter Name="HybridHistoricalView">
       <DataType>Boolean</DataType>
       <Nullable>true</Nullable>
-      <AllowBlank>true</AllowBlank>
       <DefaultValue>
         <Values>
           <Value>False</Value>
         </Values>
       </DefaultValue>
+      <AllowBlank>true</AllowBlank>
       <Prompt>Hybrid Historical View</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
@@ -3153,47 +3375,48 @@ perAssets=Decimal</CommandText>
       <AllowBlank>true</AllowBlank>
       <Prompt>Lump Expenses in Summary Lockdown</Prompt>
     </ReportParameter>
+    <ReportParameter Name="Group1Field">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Description</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Group1Field</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Group2Field">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Description</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Group2Field</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <Code>
-        
-        public dim ColorGroup1 as String
-        public dim ColorGroup2 as String
-        public dim ColorGroup3 as String
-        public dim ColorGroup4 as String
-        public dim ColorGroup5 as String
-        public dim ColorGroup6 as String
+    public dim ColorGroup1 as String = "Blue"
+    public dim ColorGroup2 as String = "Gray"
 
-        public function InitColorGroups(colorSet as String) as boolean
-        if colorSet = "Blue" then
-        ColorGroup1 = "#B7D4EE"
-        ColorGroup2 = "#C1D9F0"
-        ColorGroup3 = "#CBDEF2"
-        ColorGroup4 = "#D5E3F4"
-        ColorGroup5 = "#DFE9F6"
-        ColorGroup6 = "#E6EEF9"
-        end if
-        if colorSet = "Gray" then
-        ColorGroup1 = "#BABABA"
-        ColorGroup2 = "#BEBEBE"
-        ColorGroup3 = "#C4C4C4"
-        ColorGroup4 = "#CACACA"
-        ColorGroup5 = "#CECECE"
-        ColorGroup6 = "#D8D8D8"
-        end if
-        if colorSet = "NoColor" then
-        ColorGroup1 = "Transparent"
-        ColorGroup2 = "Transparent"
-        ColorGroup3 = "Transparent"
-        ColorGroup4 = "Transparent"
-        ColorGroup5 = "Transparent"
-        ColorGroup6 = "Transparent"
-        end if
+    public function InitColorGroups(colorSet as String) as boolean
+    if colorSet = "Blue" then
+    ColorGroup1 = "#c1d9f0"
+    ColorGroup2 = "#e6eef9"
+    end if
+    if colorSet = "Gray" then
+    ColorGroup1 = "#cecece"
+    ColorGroup2 = "#d8d8d8"
+    end if
+    if colorSet = "NoColor" then
+    ColorGroup1 = "Transparent"
+    ColorGroup2 = "Transparent"
+    end if
 
-        return false
-        end function
-</Code>
+    return false
+    end function
+  </Code>
   <Language>=Parameters!RegionalSettings.Value</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>b7d1e2bd-eb92-4f94-be5c-74539025344b</rd:ReportID>
+  <rd:ReportID>2d08d220-8b81-49c1-98e3-a10d621d52d4</rd:ReportID>
 </Report>

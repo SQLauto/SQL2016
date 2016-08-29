@@ -1,9 +1,9 @@
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[bis].[TranHist]') AND type in (N'P'))
-DROP PROCEDURE [bis].[TranHist]
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[bis].[ReportTranHist]') AND type in (N'P'))
+DROP PROCEDURE [bis].[ReportTranHist]
 GO
 /*	Test execution script
 
-exec sp_executesql N'EXEC [bis].[TranHist] @PeriodStartDate = @PeriodStartDate, @PeriodEndDate = @PeriodEndDate, @PriorKnowledgeDate = @PriorKnowledgeDate, 
+exec sp_executesql N'EXEC [bis].[ReportTranHist] @PeriodStartDate = @PeriodStartDate, @PeriodEndDate = @PeriodEndDate, @PriorKnowledgeDate = @PriorKnowledgeDate, 
 	@KnowledgeDate = @KnowledgeDate, @Portfolio = @Portfolio, @SettleCurrency = @SettleCurrency, @BookCurrency = @BookCurrency, @EventType = @EventType,
 	@Group1 = @Group1, @Group1Field = @Group1Field, @Group2 = @Group2, 
 	@Group2Field = @Group2Field',
@@ -25,7 +25,7 @@ exec sp_executesql N'EXEC [bis].[TranHist] @PeriodStartDate = @PeriodStartDate, 
 	@Group2Field=N'Description'
 
 */
-create procedure [bis].[TranHist]
+create procedure [bis].[ReportTranHist]
 	@PeriodStartDate datetime2(7) = '1950-01-01',
 	@PeriodEndDate datetime2(7) = null,
 	@PriorKnowledgeDate datetime2(7) = null,
@@ -101,6 +101,7 @@ create table #tjel2
 	GroupByTranID	int,
 	RealTranID		int,
 	EventID	nvarchar(128),
+	EventIDLink	nvarchar(128),
 	ICode	nvarchar(400),
 	QuantityAmount	decimal(38,8),
 	Price	float,
@@ -131,6 +132,7 @@ if object_id('tempdb.dbo.#troutine') is not null
 create table #troutine
 (
 	EventID	nvarchar(128),
+	EventIDLink	nvarchar(128),
 	TDate	datetime2(7),
 	SDate	datetime2(0),
 	Invest	nvarchar(max),
@@ -155,6 +157,7 @@ if object_id('tempdb.dbo.#tprint') is not null
 create table #tprint
 (
 	EventID	nvarchar(128),
+	EventIDLink	nvarchar(128),
 	TDate	datetime2(7),
 	SDate	datetime2(0),
 	Invest	nvarchar(max),
@@ -285,13 +288,14 @@ WHERE ( (jel.AccountingDate >= @PeriodStartDate AND jel.AccountingDate <= @Perio
 INSERT INTO #tjel2
 (
 	TDate, Settle, SDate, EType, GroupByTranID, RealTranID, Invest,
-	EventID, ICode, QuantityAmount, Price, SCurrency, LocalGain, BookGain,
+	EventID, EventIDLink, ICode, QuantityAmount, Price, SCurrency, LocalGain, BookGain,
 	AccountDate, PershareAmt, DenomId, StrategyId, MedofExch, RDate, RealID, WithholdCheck, InventoryStateId, LocationAccountId, LocalAmount, BookAmount, TaxLotId, PETaxLotId
 )
 SELECT
 	j.TDate, j.Settle, j.SDate, j.EType, j.GroupByTranID, j.RealTranID, j.Invest,
 	--IIF( j.RealTranID < 10000, NULL, CONCAT(CAST(j.RealTranID AS nvarchar(128)), N' ') ) AS EventID, -- GEN-6128919 concat {Parent.StaticEventDesc} {Parent.Parent.AdjustmentType}
 	IIF(j.RealTranID < 10000, NULL, j.RealTranID) AS EventID,
+	IIF(j.RealTranID < 10000, NULL, j.RealTranID) AS EventIDLink,
 	j.ICode, j.QuantityAmount,
 
 	CASE WHEN binv.IsFuture = 1 AND (SELECT uinv.IsDebt FROM aga.Investment uinv WHERE binv.UnderlyingInvestment = uinv.ChainId) = 1 THEN portevt.Price --HundredMinusYield
@@ -343,7 +347,7 @@ WHERE ((portevt.EventDate >= @PeriodStartDate AND portevt.EventDate <= @PeriodEn
 
 INSERT INTO #troutine
 (
-	EventID, TDate, SDate, Invest, LocationAccountId, DenomId, Quantity, LocalGain, BookGain, LocalNet, BookNet, Price, PETaxLotId, RDate, PershareAmt, Scurrency, EType 
+	EventID, EventIDLink, TDate, SDate, Invest, LocationAccountId, DenomId, Quantity, LocalGain, BookGain, LocalNet, BookNet, Price, PETaxLotId, RDate, PershareAmt, Scurrency, EType 
 )
 SELECT 
 
@@ -352,6 +356,7 @@ SELECT
 	--CASE WHEN @Group2 = N'None' THEN N''
 	--	 ELSE N'Grouping()' END AS Group2, --GEN-6128341
 	j.EventID,	--	AS [Tran ID],
+	j.EventIDLink,
 	j.TDate,
 	j.SDate,
 	j.Invest,
@@ -390,15 +395,15 @@ GROUP BY
 			--  ELSE N'Grouping()' END, --Group1
 		 --CASE WHEN @Group2 = N'None' THEN N''
 			--  ELSE N'Grouping()' END, --Group2 
-		 j.GroupByTranID, j.EventID, IIF(portevt.IsTransfer = 1, j.StrategyId, NULL), j.LocationAccountId, j.ICode, j.WithholdCheck, j.EType, j.RDate, j.TDate, j.SDate, j.Invest, j.DenomId, j.Price, j.PETaxLotId, j.PershareAmt, j.SCurrency
+		 j.GroupByTranID, j.EventID, j.EventIDLink, IIF(portevt.IsTransfer = 1, j.StrategyId, NULL), j.LocationAccountId, j.ICode, j.WithholdCheck, j.EType, j.RDate, j.TDate, j.SDate, j.Invest, j.DenomId, j.Price, j.PETaxLotId, j.PershareAmt, j.SCurrency
 
 
 INSERT #tprint
 (
-	EventID, TDate, SDate, Invest, Quantity, LocalGain, BookGain, LocalNet, BookNet, Price, PETaxLotId, RDate, SCurrency, Custodian 
+	EventID, EventIDLink, TDate, SDate, Invest, Quantity, LocalGain, BookGain, LocalNet, BookNet, Price, PETaxLotId, RDate, SCurrency, Custodian 
 )
 SELECT 
-	EventID, TDate, SDate, Invest,
+	EventID, EventIDLink, TDate, SDate, Invest,
 	CASE WHEN  (portevt.IsDividend = 1 OR portevt.IsGrossAmountDividend = 1 OR portevt.IsGrossAmountInterest = 1 OR portevt.IsInterest = 1)
 			   THEN IIF(r.PerShareAmt != 0 AND (portevt.ReinvestFlag = 0 OR r.TDate != r.RDate), IIF(r.SCurrency != @BookCurrency, NULL, ROUND(r.LocalGain/r.PerShareAmt, 0)), IIF(portevt.ReinvestFlag = 0, NULL, r.Quantity))
 		 WHEN r.EType = N'Reclaim' OR r.EType = N'Withholding' THEN NULL -- in rsl, set it to "" not N/A
@@ -423,7 +428,7 @@ LEFT JOIN aga.LocationAccount loc ON loc.LocationAccount_BId = r.LocationAccount
 
 SELECT p.TDate, p.SDate, 
 p.EType AS [Transaction Description],
-p.EventID, p.Invest, p.Custodian, p.Quantity, p.Price, p.SCurrency AS Currency, p.LocalNet, p.BookNet, p.LocalGain, p.BookGain
+p.EventID, p.EventIDLink, p.Invest, p.Custodian, p.Quantity, p.Price, p.SCurrency AS Currency, p.LocalNet, p.BookNet, p.LocalGain, p.BookGain
 FROM #tprint p
 LEFT JOIN aga.PortfolioEvent portevt ON cast(p.PETaxLotId as NVARCHAR(64)) = portevt.Number
 WHERE  portevt.IsRepo = 1 OR portevt.IsReverseRepo = 1 OR portevt.IsPrePaid = 1 OR portevt.IsCreditActivity = 1
