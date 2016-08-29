@@ -98,6 +98,10 @@
       <Name>Account Listing.rdl</Name>
       <FullPath>Account Listing.rdl</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Transaction History.rdl</Name>
+      <FullPath>Transaction History.rdl</FullPath>
+    </ProjectItem>
   </Reports>
   <Configurations>
     <Configuration>
