@@ -25,8 +25,8 @@ create procedure [bis].[ReportTaxLotAppLs]
 as
 begin
 -- KnowledgeDate can't be EOD today for some reason...so I'm traveling back in time a month 
-set @KnowledgeDate = dateadd(Month,-1,@KnowledgeDate);
-set @PriorKnowledgeDate = dateadd(Month,-1,@PriorKnowledgeDate);
+--set @KnowledgeDate = dateadd(Month,-1,@KnowledgeDate);
+--set @PriorKnowledgeDate = dateadd(Month,-1,@PriorKnowledgeDate);
 --select @KnowledgeDate
 
 declare @PortfolioId int = null, 

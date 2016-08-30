@@ -5478,7 +5478,7 @@
                                     </TablixMember>
                                     <TablixMember>
                                       <Visibility>
-                                        <Hidden>=Trim(Fields!Accrued.Value) = "0"</Hidden>
+                                        <Hidden>=Fields!Accrued.Value=0</Hidden>
                                       </Visibility>
                                     </TablixMember>
                                   </TablixMembers>
@@ -5638,6 +5638,7 @@
       <ConnectionProperties>
         <DataProvider>SQL</DataProvider>
         <ConnectString>Data Source=dkim2;Initial Catalog=GenevaEIS_dkim</ConnectString>
+        <Prompt>Specify a user name and password for data source GenevaEIS:</Prompt>
       </ConnectionProperties>
       <rd:SecurityType>DataBase</rd:SecurityType>
       <rd:DataSourceID>29aff08e-e76b-4b47-8da9-1894e028fddc</rd:DataSourceID>
