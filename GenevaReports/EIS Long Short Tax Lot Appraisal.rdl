@@ -5719,20 +5719,23 @@
       <Query>
         <DataSourceName>GenevaEIS</DataSourceName>
         <QueryParameters>
-          <QueryParameter Name="@PeriodStartDate">
-            <Value>=Parameters!PeriodStartDate.Value</Value>
+          <QueryParameter Name="@PortfolioNameSort">
+            <Value>=Parameters!Portfolio.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="@PeriodEndDate">
-            <Value>=Parameters!PeriodEndDate.Value</Value>
+          <QueryParameter Name="@AccountingParametersCode">
+            <Value>=Parameters!AccountingParameters.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PeriodStart">
+            <Value>=Parameters!PeriodStartDate.Value</Value>
           </QueryParameter>
           <QueryParameter Name="@PriorKnowledgeDate">
             <Value>=Parameters!PriorKnowledgeDate.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="@PeriodEnd">
+            <Value>=Parameters!PeriodEndDate.Value</Value>
+          </QueryParameter>
           <QueryParameter Name="@KnowledgeDate">
             <Value>=Parameters!KnowledgeDate.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@Portfolio">
-            <Value>=Parameters!Portfolio.Value</Value>
           </QueryParameter>
           <QueryParameter Name="@LumpSwapGL">
             <Value>=Parameters!LumpSwapGL.Value</Value>
@@ -5750,9 +5753,8 @@
             <Value>=Parameters!Group2Field.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>EXEC [bis].[ReportTaxLotAppLs] @PeriodStartDate = @PeriodStartDate, @PeriodEndDate = @PeriodEndDate, @PriorKnowledgeDate = @PriorKnowledgeDate, 
-@KnowledgeDate = @KnowledgeDate, @Portfolio = @Portfolio, @LumpSwapGL = @LumpSwapGL, @Group1 = @Group1, @Group1Field = @Group1Field, @Group2 = @Group2, 
-@Group2Field = @Group2Field</CommandText>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>eisRep.taxlotappls</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <Fields>
@@ -5811,6 +5813,10 @@
         <Field Name="IsForwardCash">
           <DataField>IsForwardCash</DataField>
           <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="OrderDesc">
+          <DataField>OrderDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Qty">
           <DataField>Qty</DataField>

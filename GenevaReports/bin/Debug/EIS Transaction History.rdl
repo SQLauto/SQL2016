@@ -1222,7 +1222,6 @@
                         <PaddingBottom>1pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1786,35 +1785,38 @@
       <Query>
         <DataSourceName>GenevaEIS</DataSourceName>
         <QueryParameters>
-          <QueryParameter Name="@PeriodStartDate">
-            <Value>=Parameters!PeriodStartDate.Value</Value>
+          <QueryParameter Name="@PortfolioNameSort">
+            <Value>=Parameters!Portfolio.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="@PeriodEndDate">
-            <Value>=Parameters!PeriodEndDate.Value</Value>
+          <QueryParameter Name="@AccountingParametersCode">
+            <Value>=Parameters!AccountingParameters.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PeriodStart">
+            <Value>=Parameters!PeriodStartDate.Value</Value>
           </QueryParameter>
           <QueryParameter Name="@PriorKnowledgeDate">
             <Value>=Parameters!PriorKnowledgeDate.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="@PeriodEnd">
+            <Value>=Parameters!PeriodEndDate.Value</Value>
+          </QueryParameter>
           <QueryParameter Name="@KnowledgeDate">
             <Value>=Parameters!KnowledgeDate.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="@Portfolio">
-            <Value>=Parameters!Portfolio.Value</Value>
           </QueryParameter>
           <QueryParameter Name="@SettleCurrency">
             <Value>=Parameters!SettleCurrency.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="@BookCurrency">
-            <Value>=Parameters!BookCurrency.Value</Value>
+          <QueryParameter Name="@Group1">
+            <Value>=Parameters!Group1.Value</Value>
           </QueryParameter>
           <QueryParameter Name="@EventType">
             <Value>=Parameters!EventType.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="@Group1">
-            <Value>=Parameters!Group1.Value</Value>
-          </QueryParameter>
           <QueryParameter Name="@Group1Field">
             <Value>=Parameters!Group1Field.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@BookCurrency">
+            <Value>=Parameters!BookCurrency.Value</Value>
           </QueryParameter>
           <QueryParameter Name="@Group2">
             <Value>=Parameters!Group2.Value</Value>
@@ -1824,7 +1826,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>bis.reporttranHist</CommandText>
+        <CommandText>eisRep.TranHist</CommandText>
       </Query>
       <Fields>
         <Field Name="TDate">
@@ -1835,8 +1837,8 @@
           <DataField>SDate</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="Transaction_Description">
-          <DataField>Transaction Description</DataField>
+        <Field Name="TranType">
+          <DataField>TranType</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="EventID">
@@ -1847,9 +1849,11 @@
           <DataField>Invest</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="EventIDLink">
-          <DataField>EventIDLink</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="Group1">
+          <Value>=""</Value>
+        </Field>
+        <Field Name="Group2">
+          <Value>=""</Value>
         </Field>
         <Field Name="Custodian">
           <DataField>Custodian</DataField>
@@ -1859,13 +1863,19 @@
           <DataField>Quantity</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
+        <Field Name="QtyDesc">
+          <Value>=Fields!Quantity.Value</Value>
+        </Field>
         <Field Name="Price">
           <DataField>Price</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="Curr">
-          <DataField>Currency</DataField>
+          <DataField>Curr</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PriceDesc">
+          <Value>=Fields!Price.Value</Value>
         </Field>
         <Field Name="LocalNet">
           <DataField>LocalNet</DataField>
@@ -1883,20 +1893,8 @@
           <DataField>BookGain</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="Group1">
-          <Value>=""</Value>
-        </Field>
-        <Field Name="Group2">
-          <Value>=""</Value>
-        </Field>
-        <Field Name="TranType">
-          <Value>=""</Value>
-        </Field>
-        <Field Name="QtyDesc">
-          <Value>=Fields!Quantity.Value</Value>
-        </Field>
-        <Field Name="PriceDesc">
-          <Value>=Fields!Price.Value</Value>
+        <Field Name="EventIDLink">
+          <Value>=Fields!EventID.Value</Value>
         </Field>
       </Fields>
     </DataSet>

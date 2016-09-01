@@ -35,6 +35,10 @@
       <FullPath>EIS Long Short Tax Lot Appraisal.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>EIS Transaction History.rdl</Name>
+      <FullPath>EIS Transaction History.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>NEXTGEN Assets Under Management.rdl</Name>
       <FullPath>NEXTGEN Assets Under Management.rdl</FullPath>
     </ProjectItem>
@@ -93,10 +97,6 @@
     <ProjectItem>
       <Name>SubReport_SmallHeaderLandscape_NextGen.rdl</Name>
       <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>EIS Transaction History.rdl</Name>
-      <FullPath>EIS Transaction History.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
