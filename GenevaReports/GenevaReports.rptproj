@@ -47,6 +47,14 @@
       <FullPath>NEXTGEN Consolidated Exposure Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>NEXTGEN EIS Long Short Tax Lot Appraisal.rdl</Name>
+      <FullPath>NEXTGEN EIS Long Short Tax Lot Appraisal.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NEXTGEN EIS Transaction History.rdl</Name>
+      <FullPath>NEXTGEN EIS Transaction History.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>NEXTGEN Exposure Summary.rdl</Name>
       <FullPath>NEXTGEN Exposure Summary.rdl</FullPath>
     </ProjectItem>
@@ -106,7 +114,7 @@
       <Options>
         <OutputPath>bin\Debug</OutputPath>
         <TargetServerVersion>SSRS2008R2</TargetServerVersion>
-        <TargetServerURL>http://dkim2/ReportServer</TargetServerURL>
+        <TargetServerURL>http://vmsfsqlbis/ReportServer</TargetServerURL>
         <TargetFolder>GenevaReports</TargetFolder>
         <TargetDataSourceFolder>GenevaReports</TargetDataSourceFolder>
         <TargetDatasetFolder>GenevaReports</TargetDatasetFolder>

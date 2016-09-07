@@ -5635,11 +5635,7 @@
       <rd:DataSourceID>0e7a51be-cdc7-493d-bee2-72bbfe4aed17</rd:DataSourceID>
     </DataSource>
     <DataSource Name="GenevaEIS">
-      <ConnectionProperties>
-        <DataProvider>SQL</DataProvider>
-        <ConnectString>Data Source=dkim2;Initial Catalog=GenevaEIS_dkim</ConnectString>
-        <Prompt>Specify a user name and password for data source GenevaEIS:</Prompt>
-      </ConnectionProperties>
+      <DataSourceReference>GenevaEIS</DataSourceReference>
       <rd:SecurityType>DataBase</rd:SecurityType>
       <rd:DataSourceID>29aff08e-e76b-4b47-8da9-1894e028fddc</rd:DataSourceID>
     </DataSource>
@@ -7464,6 +7460,9 @@
     end function
   </Code>
   <Language>=Parameters!RegionalSettings.Value</Language>
+  <CodeModules>
+    <CodeModule>System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</CodeModule>
+  </CodeModules>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>338e1864-40c0-4a57-86ba-faf7779ceb97</rd:ReportID>

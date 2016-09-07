@@ -2,7 +2,7 @@
 <RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="GenevaEIS">
   <ConnectionProperties>
     <Extension>SQL</Extension>
-    <ConnectString>Data Source=DKIM2;Initial Catalog=GenevaEIS_dkim</ConnectString>
+    <ConnectString>Data Source=vmsfsqlbis;Initial Catalog=GenevaEIS_demo</ConnectString>
   </ConnectionProperties>
   <DataSourceID>3546c198-aef8-42cd-a2ae-b3ce139212c5</DataSourceID>
 </RptDataSource>

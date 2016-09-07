@@ -13,7 +13,7 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'eisRep.TranH
 DROP PROCEDURE eisRep.TranHist
 GO
 /*	Test execution script
-
+exec eisRep.TranHist @PortfolioNameSort=N'Global13030',@AccountingParametersCode=N'USDfx',@PeriodStart='2009-08-01 00:00:00',@PriorKnowledgeDate=NULL,@PeriodEnd='2009-08-09 23:59:59',@KnowledgeDate='2016-09-07 23:59:59',@SettleCurrency=N'',@Group1=N'LocalBasisCurrency',@EventType=N'',@Group1Field=N'Description',@BookCurrency=NULL,@Group2=N'InvestmentType',@Group2Field=N'Description'
 */
 create procedure eisRep.TranHist
     @PortfolioNameSort          nvarchar(400)   = null,

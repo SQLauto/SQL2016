@@ -1829,9 +1829,17 @@
         <CommandText>eisRep.TranHist</CommandText>
       </Query>
       <Fields>
+        <Field Name="Group1">
+          <DataField>Group1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="TDate">
           <DataField>TDate</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Group2">
+          <DataField>Group2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="SDate">
           <DataField>SDate</DataField>
@@ -1848,12 +1856,6 @@
         <Field Name="Invest">
           <DataField>Invest</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Group1">
-          <Value>=""</Value>
-        </Field>
-        <Field Name="Group2">
-          <Value>=""</Value>
         </Field>
         <Field Name="Custodian">
           <DataField>Custodian</DataField>
