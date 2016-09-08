@@ -82,13 +82,15 @@ exec geneva.GetBisIdAtKnowledgeDate
 
 declare @PortfolioId int = null
 
-if object_id('tempdb.dbo.#tjel') is not null
-       exec ('drop table #tjel');
+--if object_id('tempdb.dbo.@tjel') is not null
+--       exec ('drop table @tjel');
 
 set nocount on;
 
-create table #tjel
+declare @tjel table
 (
+	Group1 nvarchar(255),
+	Group2 nvarchar(255),
 	TDate	datetime2(7),
 	Settle	datetime2(0),
 	SDate	datetime2(0),
@@ -121,11 +123,13 @@ create table #tjel
 	PETaxLotId	int
 );
 
-if object_id('tempdb.dbo.#tjel2') is not null
-       exec ('drop table #tjel2');
+--if object_id('tempdb.dbo.@tjel2') is not null
+--       exec ('drop table @tjel2');
 
-create table #tjel2
+declare @tjel2 table
 (
+	Group1 nvarchar(255),
+	Group2 nvarchar(255),
 	TDate	datetime2(7),
 	Settle  datetime2(0),
 	SDate	datetime2(0),
@@ -159,11 +163,13 @@ create table #tjel2
 );
 
 
-if object_id('tempdb.dbo.#troutine') is not null
-       exec ('drop table #troutine');
+--if object_id('tempdb.dbo.@troutine') is not null
+--       exec ('drop table @troutine');
 
-create table #troutine
+declare @troutine table
 (
+	Group1 nvarchar(255),
+	Group2 nvarchar(255),
 	EventID	nvarchar(128),
 	EventIDLink	nvarchar(128),
 	TDate	datetime2(7),
@@ -182,14 +188,16 @@ create table #troutine
 	PerShareAmt	decimal(38,8),
 	SCurrency	nvarchar(400),
 	EType	nvarchar(max),
-	EventType nvarchar(255),
+	EventType nvarchar(255)
 );
 
-if object_id('tempdb.dbo.#tprint') is not null
-       exec ('drop table #tprint');
+--if object_id('tempdb.dbo.@tprint') is not null
+--       exec ('drop table @tprint');
 
-create table #tprint
+declare @tprint table
 (
+	Group1 nvarchar(255),
+	Group2 nvarchar(255),
 	EventID	nvarchar(128),
 	EventIDLink	nvarchar(128),
 	TDate	datetime2(7),
@@ -220,12 +228,23 @@ end;
 declare @AllRevExpID int = null;
 SELECT @AllRevExpID = f.InstanceId FROM aga.FinancialAccount f where f.Code = N'AllRevenuesAndExpenses'
 
-INSERT INTO #tjel
+INSERT INTO @tjel
 (
-	TDate, Settle, SDate, EventType, EType, GroupByTranID, RealTranID, Invest, ICode, LocalAmount, BookAmount, QuantityAmount, AccountingDate, InvestmentId, BasketId, StrategyId,
+	Group1, Group2, TDate, Settle, SDate, EventType, EType, GroupByTranID, RealTranID, Invest, ICode, LocalAmount, BookAmount, QuantityAmount, AccountingDate, InvestmentId, BasketId, StrategyId,
 	DenomId, FinancialAccountId, InventoryStateId, LocationAccountId, TaxLotId, PETaxLotId, DescriptionId, SCurrency, AccountDate, PershareAmt, MedofExch, RDate, RealID, WithholdCheck
 )
 SELECT 
+    CASE @Group1
+    WHEN 'InvestmentType' THEN IIF(binv.IsForwardFXContract = 1,[aga].fGetInvestmentTypeCode(binv.InvestmentType) , InvestmentType.Description)
+    WHEN 'LocalBasisCurrency' THEN InvBifurcation.Description
+    --ELSE Grouping(:Group1, :Group1Field) GEN-6128341
+    END Group1,
+
+    CASE @Group2
+    WHEN 'InvestmentType' THEN IIF(binv.IsForwardFXContract = 1, [aga].fGetInvestmentTypeCode(binv.InvestmentType), InvestmentType.Description)
+    WHEN 'LocalBasisCurrency' THEN InvBifurcation.Description
+    --ELSE Grouping(:Group2, :Group2Field) GEN-6128341
+    END Group2,
 
 	CASE WHEN jel.AccountingDate = cast(portevt.ReinvestDate AS DATETIME2(2)) THEN  cast(portevt.ReinvestDate AS DATETIME2(2))
 		 WHEN portevt.IsCDXCreditEvent = 1	THEN portevt.AuctionDate
@@ -305,19 +324,22 @@ LEFT JOIN aga.PortfolioEvent portevt ON cast(jel.PETaxLotId as NVARCHAR(64)) = p
 LEFT JOIN aga.Investment inv ON inv.Investment_BId = jel.InvestmentId
 LEFT JOIN aga.Investment binv ON binv.Investment_BId = jel.BasketId
 LEFT JOIN aga.Investment portevtinv ON portevtinv.ChainId = portevt.Investment
+LEFT JOIN aga.InvestmentType InvestmentType ON InvestmentType.ChainId = inv.InvestmentType
+LEFT JOIN aga.MediumOfExchange InvBifurcation ON InvBifurcation.ChainId = inv.BifurcationCurrency
 left join agaSchema.Class cl on cl.ClassId = portevt.ClassId
+
 WHERE ( (jel.AccountingDate >= @PeriodStart AND jel.AccountingDate <= @PeriodEnd AND jel.KnowledgeDate < @KnowledgeDate) )
 	  AND jel.BisId = @BisId
 
 
-INSERT INTO #tjel2
+INSERT INTO @tjel2
 (
-	TDate, Settle, SDate, EventType, EType, GroupByTranID, RealTranID, Invest,
+	Group1, Group2, TDate, Settle, SDate, EventType, EType, GroupByTranID, RealTranID, Invest,
 	EventID, EventIDLink, ICode, QuantityAmount, Price, SCurrency, LocalGain, BookGain,
 	AccountDate, PershareAmt, DenomId, StrategyId, MedofExch, RDate, RealID, WithholdCheck, InventoryStateId, LocationAccountId, LocalAmount, BookAmount, TaxLotId, PETaxLotId
 )
 SELECT
-	j.TDate, j.Settle, j.SDate, j.EventType, j.EType, j.GroupByTranID, j.RealTranID, j.Invest,
+	j.Group1, j.Group2, j.TDate, j.Settle, j.SDate, j.EventType, j.EType, j.GroupByTranID, j.RealTranID, j.Invest,
 	--IIF( j.RealTranID < 10000, NULL, CONCAT(CAST(j.RealTranID AS nvarchar(128)), N' ') ) AS EventID, -- GEN-6128919 concat {Parent.StaticEventDesc} {Parent.Parent.AdjustmentType}
 	IIF(j.RealTranID < 10000, NULL, j.RealTranID) AS EventID,
 	IIF(j.RealTranID < 10000, NULL, j.RealTranID) AS EventIDLink,
@@ -349,7 +371,7 @@ SELECT
 	j.BookAmount, 
 	j.TaxLotId, 
 	j.PETaxLotId
-FROM #tjel j
+FROM @tjel j
 LEFT JOIN aga.PortfolioEvent portevt ON cast(j.PETaxLotId as NVARCHAR(64)) = portevt.Number
 LEFT JOIN aga.Investment portevtinv ON portevtinv.ChainId = portevt.Investment
 LEFT JOIN aga.Investment inv ON inv.Investment_BId = j.InvestmentId
@@ -370,16 +392,17 @@ WHERE ((portevt.EventDate >= @PeriodStart AND portevt.EventDate <= @PeriodEnd) O
 	  AND j.PETaxLotId NOT BETWEEN 499 AND 3401 -- GEN-6129015
 
 
-INSERT INTO #troutine
+INSERT INTO @troutine
 (
-	EventID, TDate, SDate, EventType, Invest, LocationAccountId, DenomId, Quantity, LocalGain, BookGain, LocalNet, BookNet, Price, PETaxLotId, RDate, PershareAmt, Scurrency, EType 
+	Group1, Group2, EventID, TDate, SDate, EventType, Invest, LocationAccountId, DenomId, Quantity, LocalGain, BookGain, LocalNet, BookNet, Price, PETaxLotId, RDate, PershareAmt, Scurrency, EType 
 )
 SELECT 
-
 	--CASE WHEN @Group1 = N'None' THEN N''
 	--	 ELSE N'Grouping()' END AS Group1, --GEN-6128341
 	--CASE WHEN @Group2 = N'None' THEN N''
 	--	 ELSE N'Grouping()' END AS Group2, --GEN-6128341
+	j.Group1, 
+	j.Group2,
 	j.EventID,	--	AS [Tran ID],
 	j.TDate,
 	j.SDate, j.EventType, 
@@ -409,25 +432,24 @@ SELECT
 	j.SCurrency, 
 	j.EType
 
-FROM #tjel2 j
+FROM @tjel2 j
 LEFT JOIN aga.PortfolioEvent portevt ON cast(j.PETaxLotId as NVARCHAR(64)) = portevt.Number
 LEFT JOIN aga.LocationAccount Custodian ON Custodian.LocationAccount_BId = j.LocationAccountId
 LEFT JOIN aga.MediumOfExchange denom ON denom.Investment_BId = j.DenomId
-
 GROUP BY  
 		 --CASE WHEN @Group1 = N'None' THEN N''
 			--  ELSE N'Grouping()' END, --Group1
 		 --CASE WHEN @Group2 = N'None' THEN N''
 			--  ELSE N'Grouping()' END, --Group2 
-		 j.GroupByTranID, j.EventID, j.EventType, IIF(portevt.IsTransfer = 1, j.StrategyId, NULL), j.LocationAccountId, j.ICode, j.WithholdCheck, j.EType, j.RDate, j.TDate, j.SDate, j.Invest, j.DenomId, j.Price, j.PETaxLotId, j.PershareAmt, j.SCurrency
+		 j.Group1, j.Group2, j.GroupByTranID, j.EventID, j.EventType, IIF(portevt.IsTransfer = 1, j.StrategyId, NULL), j.LocationAccountId, j.ICode, j.WithholdCheck, j.EType, j.RDate, j.TDate, j.SDate, j.Invest, j.DenomId, j.Price, j.PETaxLotId, j.PershareAmt, j.SCurrency
 
 
-INSERT #tprint
+INSERT @tprint
 (
-	EventID, TDate, SDate, EventType, Invest, Quantity, LocalGain, BookGain, LocalNet, BookNet, Price, PETaxLotId, RDate, SCurrency, Custodian 
+	Group1, Group2, EventID, TDate, SDate, EventType, Invest, Quantity, LocalGain, BookGain, LocalNet, BookNet, Price, PETaxLotId, RDate, SCurrency, Custodian 
 )
 SELECT 
-	EventID, TDate, SDate, EventType, Invest,
+	Group1, Group2, EventID, TDate, SDate, EventType, Invest,
 	CASE WHEN  (portevt.IsDividend = 1 OR portevt.IsGrossAmountDividend = 1 OR portevt.IsGrossAmountInterest = 1 OR portevt.IsInterest = 1)
 			   THEN IIF(r.PerShareAmt != 0 AND (portevt.ReinvestFlag = 0 OR r.TDate != r.RDate), IIF(r.SCurrency != @BookCurrency, NULL, ROUND(r.LocalGain/r.PerShareAmt, 0)), IIF(portevt.ReinvestFlag = 0, NULL, r.Quantity))
 		 WHEN r.EType = N'Reclaim' OR r.EType = N'Withholding' THEN NULL -- in rsl, set it to "" not N/A
@@ -444,13 +466,15 @@ SELECT
 	IIF(r.SCurrency = NULL OR r.SCurrency = N'', denom.Code, r.SCurrency) AS SCurrency,
 	loc.NameSort custodianaccount
 FROM
-#troutine r
+@troutine r
 LEFT JOIN aga.PortfolioEvent portevt ON cast(r.PETaxLotId as NVARCHAR(64)) = portevt.Number
 LEFT JOIN aga.MediumOfExchange denom ON denom.Investment_BId = r.DenomId
 LEFT JOIN aga.Investment portevtinv ON portevtinv.ChainId = portevt.Investment
 LEFT JOIN aga.LocationAccount loc ON loc.LocationAccount_BId = r.LocationAccountId
 
 SELECT 
+	p.Group1,
+	p.Group2,
 	p.TDate, 
 	p.SDate, 
 	p.EventType as [TranType],
@@ -464,7 +488,7 @@ SELECT
 	p.BookNet, 
 	p.LocalGain, 
 	p.BookGain
-FROM #tprint p
+FROM @tprint p
 LEFT JOIN aga.PortfolioEvent portevt ON cast(p.PETaxLotId as NVARCHAR(64)) = portevt.Number
 WHERE  portevt.IsRepo = 1 OR portevt.IsReverseRepo = 1 OR portevt.IsPrePaid = 1 OR portevt.IsCreditActivity = 1
 		OR (portevt.IsForwardFX = 1 AND p.BookGain != 0 AND (p.BookGain > 0.001 OR p.BookGain < - 0.001))
