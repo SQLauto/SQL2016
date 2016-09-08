@@ -198,6 +198,8 @@ begin try
             tl.InvestCode           InvestCode,
             tl.Group1               Group1,
             tl.Group2               Group2,
+			tl.Desc2,
+			tl.Desc3,
             tl.TaxLotDesc,
             tl.LotId                LotID,
             tl.TaxLotDay,
