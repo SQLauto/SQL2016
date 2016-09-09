@@ -1066,6 +1066,7 @@
                             <PaddingRight>2pt</PaddingRight>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2907,7 +2908,7 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox1">
+                        <Textbox Name="Textbox19">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -2930,387 +2931,10 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox1</rd:DefaultName>
-                          <Style>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>12pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox2">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox2</rd:DefaultName>
-                          <Style>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox3">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox3</rd:DefaultName>
-                          <Style>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox4">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox4</rd:DefaultName>
-                          <Style>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox5">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox5</rd:DefaultName>
-                          <Style>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox6">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox6</rd:DefaultName>
-                          <Style>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="HideCSVTextBox418">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!CostBook.Value)</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
-                                    <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <ZIndex>58</ZIndex>
-                          <DataElementOutput>NoOutput</DataElementOutput>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                            </TopBorder>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="HideCSVTextBox420">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!MVBook.Value)</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
-                                    <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <ZIndex>57</ZIndex>
-                          <DataElementOutput>NoOutput</DataElementOutput>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                            </TopBorder>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="HideCSVTextBox422">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!UnrealPrice.Value)</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
-                                    <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <ZIndex>56</ZIndex>
-                          <DataElementOutput>NoOutput</DataElementOutput>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                            </TopBorder>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="HideCSVTextBox424">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!UnrealFX.Value)</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
-                                    <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <ZIndex>55</ZIndex>
-                          <DataElementOutput>NoOutput</DataElementOutput>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                            </TopBorder>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-                <TablixRow>
-                  <Height>0.1875in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox19">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=iif(isnothing(Fields!Group1.Value),"Undefined",Fields!Group1.Value) &amp; " Total"</Value>
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
-                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Left</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
                           <rd:DefaultName>Textbox19</rd:DefaultName>
                           <Style>
                             <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>8pt</PaddingLeft>
+                            <PaddingLeft>12pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                           </Style>
                         </Textbox>
@@ -3668,7 +3292,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!LS.Value &amp; " Total"</Value>
+                                  <Value>=iif(isnothing(Fields!Group1.Value),"Undefined",Fields!Group1.Value) &amp; " Total"</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
                                     <FontFamily>=Parameters!FontFamily.Value</FontFamily>
@@ -3687,7 +3311,7 @@
                           <rd:DefaultName>Textbox33</rd:DefaultName>
                           <Style>
                             <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingLeft>8pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                           </Style>
                         </Textbox>
@@ -4034,18 +3658,18 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.125in</Height>
+                  <Height>0.1875in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox72">
+                        <Textbox Name="Textbox1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!LS.Value &amp; " Total"</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
                                     <FontFamily>=Parameters!FontFamily.Value</FontFamily>
@@ -4061,7 +3685,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox72</rd:DefaultName>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
                           <Style>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -4072,7 +3696,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox73">
+                        <Textbox Name="Textbox2">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -4095,7 +3719,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox73</rd:DefaultName>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
                           <Style>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -4106,7 +3730,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox74">
+                        <Textbox Name="Textbox3">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -4129,7 +3753,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox74</rd:DefaultName>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
                           <Style>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -4140,7 +3764,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox77">
+                        <Textbox Name="Textbox4">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -4163,7 +3787,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox77</rd:DefaultName>
+                          <rd:DefaultName>Textbox4</rd:DefaultName>
                           <Style>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -4174,7 +3798,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox78">
+                        <Textbox Name="Textbox5">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -4197,7 +3821,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox78</rd:DefaultName>
+                          <rd:DefaultName>Textbox5</rd:DefaultName>
                           <Style>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -4208,7 +3832,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox79">
+                        <Textbox Name="Textbox6">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -4231,7 +3855,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox79</rd:DefaultName>
+                          <rd:DefaultName>Textbox6</rd:DefaultName>
                           <Style>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -4242,19 +3866,20 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox80">
+                        <Textbox Name="HideCSVTextBox305">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Sum(Fields!CostBook.Value)</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
                                     <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
                                     <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
                                     <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
                                   </Style>
@@ -4265,47 +3890,8 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox80</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                            </TopBorder>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox81">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
-                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
-                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
-                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
-                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
-                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox81</rd:DefaultName>
+                          <ZIndex>124</ZIndex>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -4322,19 +3908,20 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox82">
+                        <Textbox Name="HideCSVTextBox307">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Sum(Fields!MVBook.Value)</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
                                     <FontFamily>=Parameters!FontFamily.Value</FontFamily>
                                     <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
                                     <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
                                     <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
                                     <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
                                   </Style>
@@ -4345,7 +3932,8 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox82</rd:DefaultName>
+                          <ZIndex>123</ZIndex>
+                          <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -4362,7 +3950,300 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox83">
+                        <Textbox Name="HideCSVTextBox309">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!UnrealPrice.Value)</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <ZIndex>122</ZIndex>
+                          <DataElementOutput>NoOutput</DataElementOutput>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                            </TopBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="HideCSVTextBox311">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!UnrealFX.Value)</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <Format>="N" &amp; Parameters!MonetaryPrecision.Value</Format>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <ZIndex>121</ZIndex>
+                          <DataElementOutput>NoOutput</DataElementOutput>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                            </TopBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.1875in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox39">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox39</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox40">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox40</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox41">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox41</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox42">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox42</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox44">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox44</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox49">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionSubtotalStyle")</FontStyle>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionSubtotalSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionSubtotalWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionSubtotalDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionSubtotalColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox49</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox51">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -4385,7 +4266,127 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox83</rd:DefaultName>
+                          <rd:DefaultName>Textbox51</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                            </TopBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox53">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox53</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                            </TopBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox55">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox55</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                            </TopBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox57">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("SectionHeaderStyle")</FontStyle>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("SectionHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("SectionHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("SectionHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("SectionHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox57</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -4433,6 +4434,7 @@
                           <ZIndex>162</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("GrandTotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -4467,6 +4469,7 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox75</rd:DefaultName>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("GrandTotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -4502,6 +4505,7 @@
                           <ZIndex>161</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("GrandTotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -4537,6 +4541,7 @@
                           <ZIndex>160</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("GrandTotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -4572,6 +4577,7 @@
                           <ZIndex>159</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("GrandTotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -4607,6 +4613,7 @@
                           <ZIndex>158</ZIndex>
                           <DataElementOutput>NoOutput</DataElementOutput>
                           <Style>
+                            <BackgroundColor>=Code.StyleSheetValue("GrandTotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -4649,6 +4656,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("GrandTotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -4691,6 +4699,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("GrandTotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -4733,6 +4742,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("GrandTotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -4775,6 +4785,7 @@
                             <TopBorder>
                               <Color>Black</Color>
                             </TopBorder>
+                            <BackgroundColor>=Code.StyleSheetValue("GrandTotalBackgroundColor")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -5196,6 +5207,9 @@
                   </Group>
                   <SortExpressions>
                     <SortExpression>
+                      <Value>=Fields!LS.Value</Value>
+                    </SortExpression>
+                    <SortExpression>
                       <Value>=Fields!IsMediumOfExchange.Value</Value>
                       <Direction>Descending</Direction>
                     </SortExpression>
@@ -5207,6 +5221,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <KeepWithGroup>After</KeepWithGroup>
+                      <RepeatOnNewPage>true</RepeatOnNewPage>
                       <KeepTogether>true</KeepTogether>
                     </TablixMember>
                     <TablixMember>
@@ -5221,6 +5236,7 @@
                             <Hidden>=Parameters!Group1.Value="None"</Hidden>
                           </Visibility>
                           <KeepWithGroup>After</KeepWithGroup>
+                          <RepeatOnNewPage>true</RepeatOnNewPage>
                           <KeepTogether>true</KeepTogether>
                         </TablixMember>
                         <TablixMember>
@@ -5235,6 +5251,7 @@
                                 <Hidden>=Parameters!Group2.Value="None"</Hidden>
                               </Visibility>
                               <KeepWithGroup>After</KeepWithGroup>
+                              <RepeatOnNewPage>true</RepeatOnNewPage>
                               <KeepTogether>true</KeepTogether>
                             </TablixMember>
                             <TablixMember>
@@ -5260,9 +5277,6 @@
                                   <DataElementOutput>Output</DataElementOutput>
                                   <KeepTogether>true</KeepTogether>
                                 </TablixMember>
-                                <TablixMember>
-                                  <KeepWithGroup>Before</KeepWithGroup>
-                                </TablixMember>
                               </TablixMembers>
                             </TablixMember>
                             <TablixMember>
@@ -5273,10 +5287,13 @@
                         <TablixMember>
                           <KeepWithGroup>Before</KeepWithGroup>
                         </TablixMember>
-                        <TablixMember>
-                          <KeepWithGroup>Before</KeepWithGroup>
-                        </TablixMember>
                       </TablixMembers>
+                    </TablixMember>
+                    <TablixMember>
+                      <KeepWithGroup>Before</KeepWithGroup>
+                    </TablixMember>
+                    <TablixMember>
+                      <KeepWithGroup>Before</KeepWithGroup>
                     </TablixMember>
                   </TablixMembers>
                 </TablixMember>
@@ -5297,12 +5314,12 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>FlatData</DataSetName>
-            <Height>2.5875in</Height>
+            <Height>2.65in</Height>
             <Width>10.39996in</Width>
             <Style />
           </Tablix>
         </ReportItems>
-        <Height>2.5875in</Height>
+        <Height>2.65in</Height>
         <Style />
       </Body>
       <Width>10.4in</Width>
