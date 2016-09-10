@@ -273,7 +273,8 @@ begin try
 				  END "MktValueBook",
 
                   [Net,Book,PeriodEnd,All,AllAccruedInterest] - [Net,Book,PeriodEnd,All,DelayedCompPendingTradeAIRevExp] - [Net,Book,PeriodEnd,InDefault,AllAccruedInterest] "AccruedInt",
-                  IIF(Basket.IsSwapInvestment = 1 AND @LumpSwapGL = 1, [Net,Book,PeriodEnd,AllAssetsAndPayables,UnrealizedPriceGL] + [Net,Book,PeriodEnd,AllAssetsAndPayables,UnrealizedFXGL], [Net,Book,PeriodEnd,AllAssetsAndPayables,UnrealizedPriceGL]) AS "unRealPriceGL",
+                  --IIF(Basket.IsSwapInvestment = 1 AND @LumpSwapGL = 1, [Net,Book,PeriodEnd,AllAssetsAndPayables,UnrealizedPriceGL] + [Net,Book,PeriodEnd,AllAssetsAndPayables,UnrealizedFXGL], [Net,Book,PeriodEnd,AllAssetsAndPayables,UnrealizedPriceGL]) AS "unRealPriceGL",
+				  [Net,Unit,Current,AllAssetsAndPayables,Quantity] * inv.PricingFactor * Inf.[Net,Local,PeriodEnd,Informational,MarketPrice] - [Net,Book,PeriodEnd,AllAssetsAndPayables,AmortizedCost] - [Net,Book,PeriodEnd,InDefault,AllAmortizationAssetLiability] AS "unRealPriceGL",
                   IIF(Basket.IsSwapInvestment = 1 AND @LumpSwapGL = 1, 0, [Net,Book,PeriodEnd,AllAssetsAndPayables,UnrealizedFXGL]) AS "unRealFXGL",
 
                   CASE WHEN inv.IsForwardCash = 1  THEN CONCAT(
