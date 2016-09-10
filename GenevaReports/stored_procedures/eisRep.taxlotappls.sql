@@ -267,7 +267,11 @@ begin try
                   Inf.[Net,Local,PeriodEnd,Informational,UnitCost] "Unit Cost",
                   Inf.[Net,Local,PeriodEnd,Informational,MarketPrice] AS "Market Price",
                   [Net,Book,PeriodEnd,AllAssetsAndPayables,AmortizedCost] - [Net,Book,PeriodEnd,InDefault,AllAmortizationAssetLiability] "BookCost", --cost book = AmortCost - InDefaultCost
-                  [Net,Book,PeriodEnd,AllAssetsAndPayables,MktValSummary] - [Net,Book,PeriodEnd,InDefault,AllAmortizationAssetLiability] "MktValueBook",
+                  
+				  CASE WHEN inv.IsMediumOfExchange = 1 THEN [Net,Book,PeriodEnd,AllAssetsAndPayables,MktValSummary] - [Net,Book,PeriodEnd,InDefault,AllAmortizationAssetLiability] 
+						ELSE [Net,Unit,Current,AllAssetsAndPayables,Quantity] * inv.PricingFactor * Inf.[Net,Local,PeriodEnd,Informational,MarketPrice]
+				  END "MktValueBook",
+
                   [Net,Book,PeriodEnd,All,AllAccruedInterest] - [Net,Book,PeriodEnd,All,DelayedCompPendingTradeAIRevExp] - [Net,Book,PeriodEnd,InDefault,AllAccruedInterest] "AccruedInt",
                   IIF(Basket.IsSwapInvestment = 1 AND @LumpSwapGL = 1, [Net,Book,PeriodEnd,AllAssetsAndPayables,UnrealizedPriceGL] + [Net,Book,PeriodEnd,AllAssetsAndPayables,UnrealizedFXGL], [Net,Book,PeriodEnd,AllAssetsAndPayables,UnrealizedPriceGL]) AS "unRealPriceGL",
                   IIF(Basket.IsSwapInvestment = 1 AND @LumpSwapGL = 1, 0, [Net,Book,PeriodEnd,AllAssetsAndPayables,UnrealizedFXGL]) AS "unRealFXGL",
