@@ -463,43 +463,43 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.85769in</Width>
+                  <Width>0.85in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.60769in</Width>
+                  <Width>0.85in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.75769in</Width>
+                  <Width>0.5in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.62227in</Width>
+                  <Width>0.9in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.37852in</Width>
+                  <Width>1.5in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.74311in</Width>
+                  <Width>0.5in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.65769in</Width>
+                  <Width>0.9in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.60769in</Width>
+                  <Width>0.5in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.40769in</Width>
+                  <Width>0.4in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.90769in</Width>
+                  <Width>0.9in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.90769in</Width>
+                  <Width>0.9in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.90769in</Width>
+                  <Width>0.9in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.13689in</Width>
+                  <Width>0.9in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -683,7 +683,25 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Transaction Type</Value>
+                                  <Value>Tran</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Type</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
                                     <FontFamily>=Parameters!FontFamily.Value</FontFamily>
@@ -727,7 +745,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Tran ID</Value>
+                                  <Value>Tran</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
                                     <FontFamily>=Parameters!FontFamily.Value</FontFamily>
@@ -739,7 +757,25 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>ID</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -815,7 +851,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Custodian</Value>
+                                  <Value>Cust</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
                                     <FontFamily>=Parameters!FontFamily.Value</FontFamily>
@@ -980,7 +1016,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -992,7 +1027,25 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Currency Net Amount</Value>
+                                  <Value>Currency</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Net Amount</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
                                     <FontFamily>=Parameters!FontFamily.Value</FontFamily>
@@ -1036,7 +1089,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Book Net Amount</Value>
+                                  <Value>Net Amount</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
                                     <FontFamily>=Parameters!FontFamily.Value</FontFamily>
@@ -1080,7 +1133,25 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Local Gain/Income</Value>
+                                  <Value>Local</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Gain/Income</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
                                     <FontFamily>=Parameters!FontFamily.Value</FontFamily>
@@ -1124,7 +1195,25 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Book Gain/Income</Value>
+                                  <Value>Book</Value>
+                                  <Style>
+                                    <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
+                                    <FontFamily>=Parameters!FontFamily.Value</FontFamily>
+                                    <FontSize>=Code.StyleSheetValue("ColumnHeaderSize")</FontSize>
+                                    <FontWeight>=Code.StyleSheetValue("ColumnHeaderWeight")</FontWeight>
+                                    <TextDecoration>=Code.StyleSheetValue("ColumnHeaderDecoration")</TextDecoration>
+                                    <Color>=Code.StyleSheetValue("ColumnHeaderColor")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Gain/Income</Value>
                                   <Style>
                                     <FontStyle>=Code.StyleSheetValue("ColumnHeaderStyle")</FontStyle>
                                     <FontFamily>=Parameters!FontFamily.Value</FontFamily>
@@ -1389,11 +1478,12 @@
                           <Style>
                             <BackgroundColor>=Code.ColorGroup2</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingLeft>14pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                           </Style>
                         </Textbox>
                         <ColSpan>9</ColSpan>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell />
@@ -1685,7 +1775,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
