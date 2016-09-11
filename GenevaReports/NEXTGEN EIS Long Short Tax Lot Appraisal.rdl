@@ -6678,6 +6678,11 @@
     </ReportParameter>
     <ReportParameter Name="StyleSheetXML">
       <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Advent Design Handbook</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>Style Sheet</Prompt>
       <ValidValues>
         <DataSetReference>

@@ -1483,7 +1483,6 @@
                           </Style>
                         </Textbox>
                         <ColSpan>9</ColSpan>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell />
@@ -3567,6 +3566,11 @@
     </ReportParameter>
     <ReportParameter Name="StyleSheetXML">
       <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Advent Design Handbook</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>StyleSheetXML</Prompt>
       <ValidValues>
         <DataSetReference>
