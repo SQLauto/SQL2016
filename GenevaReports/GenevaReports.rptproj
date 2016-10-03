@@ -99,6 +99,10 @@
       <FullPath>NEXTGEN Transaction Summary.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Price Source Comparison.rdl</Name>
+      <FullPath>Price Source Comparison.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>SubReport_SmallHeaderLandscape.rdl</Name>
       <FullPath>SubReport_SmallHeaderLandscape.rdl</FullPath>
     </ProjectItem>
