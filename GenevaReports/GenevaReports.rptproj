@@ -110,6 +110,14 @@
       <Name>SubReport_SmallHeaderLandscape_NextGen.rdl</Name>
       <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Investment Position Appraisal.rdl</Name>
+      <FullPath>Investment Position Appraisal.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Statement of Net Assets.rdl</Name>
+      <FullPath>Statement of Net Assets.rdl</FullPath>
+    </ProjectItem>
   </Reports>
   <Configurations>
     <Configuration>
@@ -118,7 +126,7 @@
       <Options>
         <OutputPath>bin\Debug</OutputPath>
         <TargetServerVersion>SSRS2008R2</TargetServerVersion>
-        <TargetServerURL>http://vmsfsqlbis/ReportServer</TargetServerURL>
+        <TargetServerURL>http://dkim2/ReportServer</TargetServerURL>
         <TargetFolder>GenevaReports</TargetFolder>
         <TargetDataSourceFolder>GenevaReports</TargetDataSourceFolder>
         <TargetDatasetFolder>GenevaReports</TargetDatasetFolder>
