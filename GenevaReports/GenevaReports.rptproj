@@ -111,12 +111,12 @@
       <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Investment Position Appraisal.rdl</Name>
-      <FullPath>Investment Position Appraisal.rdl</FullPath>
+      <Name>Cost Roll Forward.rdl</Name>
+      <FullPath>Cost Roll Forward.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Statement of Net Assets.rdl</Name>
-      <FullPath>Statement of Net Assets.rdl</FullPath>
+      <Name>Master Income Accruals Report.rdl</Name>
+      <FullPath>Master Income Accruals Report.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
