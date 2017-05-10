@@ -1,0 +1,277 @@
+ADV-RSL-2.2
+/*---------------------------------------------------------------------------
+| Copyright (c) 2007
+| Advent Software, Inc.  San Francisco, California, USA.
+| All Rights Reserved.
+*----------------------------------------------------------------------------
+| $Source$ assetrec.rsl
+| $Revision$
+| $Date$
+| $Author$
+| $State$
+*--------------------------------------------------------------------------*/
+
+
+REPORT  "Cost Roll Forward" 
+(
+#include "acctparam.include"
+	STRING 	Portfolio
+,	DATE 	PeriodStartDate = "01/01/1950"
+,	DATE	PeriodEndDate = EndToday
+,	DATE	KnowledgeDate = EndToday
+,	DATE   PriorKnowledgeDate = BeginToday
+,	STRING  StyleName = "e"
+,	NODEF   AccountingPeriod
+,	STRING	AddendumPages
+,	NODEF   AccountingCalendar
+,	LIBSTRUCT LIBAccountingFiltersType AccountingFilters
+,	STRING  DisableLocAcctFilters = "Yes"
+,	STRING  DisableStrategyFilters = "Yes"
+,	STRING	ManagementFirm
+,	STRING	PortfolioDescription
+,	STRING ReportType = "Detail"
+, STRING requestType = ""  HIDE
+, STRING	Group1 = "InvestmentType"
+, STRING	Group1Field = "Description"
+, STRING	Group2Field = "Description"
+, STRING	Group2 = "None"
+)
+
+STYLE :StyleName 
+SUBMISSION SCREEN PeriodAcctReps 
+TYPE Dynamic, ClosedPeriod, Books;
+
+RECORD Info
+{
+Portfolio, LS, Group1, Group2, Invest, InvDesc, TLotID,
+RealLong, RealShort, RealGL, BegQty, EndQty, BegCost, EndCost, UnrealAmorGL,
+
+AllDebitsNoA, AllCreditsNoA, DRCRAdjustments, RecCreditsNoA, PayDebitsNoA,
+RealLongNoA, RealShortNoA, RealGLNoA, AddsNoA, InvAdds, WithsNoA, 
+ObjLink,
+Amort //holder
+};
+
+VARIABLE Info rb;  // receive bucket
+VARIABLE objLink, totalTransRec;
+
+// All the FIELDs we will use in the RRFORMATs
+
+FIELD Invest	"Investment"	20 JUST = LEFT, WRAP = WORDWRAP;
+FIELD InvDesc	"Description"	40 JUST = LEFT, WRAP = WORDWRAP;
+FIELD TLotID	"Tax Lot ID"	10	JUST = CENTER, SEP = NO;
+FIELD BegCost	"Beginning Cost"	20	JUST = RIGHT, PREC = ::__mPrec, XTYPE = DECIMAL;
+FIELD Adds	"Purchases"	20	JUST = RIGHT, PREC = ::__mPrec, XTYPE = DECIMAL;
+FIELD InvAdds	"Contributions"	20	JUST = RIGHT, PREC = ::__mPrec, XTYPE = DECIMAL;
+FIELD Withs	"Sales"	20	JUST = RIGHT, PREC = ::__mPrec, XTYPE = DECIMAL;
+FIELD Amort	"Amortization"	20	JUST = RIGHT, PREC = ::__mPrec, XTYPE = DECIMAL;
+FIELD RealGL	"Realized"	20	JUST = RIGHT, PREC = ::__mPrec, XTYPE = DECIMAL;
+FIELD EndCost	"Ending Cost"	20	JUST = RIGHT, PREC = ::__mPrec, XTYPE = DECIMAL;
+FIELD Group1    "Investment Type"           	  30	JUST = LEFT, XTYPE = STRING;
+FIELD Group2    ""           	  1	JUST = LEFT, XTYPE = STRING;
+FIELD Portfolio    "Portfolio"		30	JUST = LEFT, XTYPE = STRING;
+
+RRFORMAT Data
+Portfolio, SPACE 2,
+Group1, SPACE 2,
+Invest, SPACE 2,
+InvDesc, SPACE 2,
+TLotID, SPACE 2,
+BegCost, SPACE 2,
+Adds, SPACE 2,
+InvAdds, SPACE 2,
+Withs, SPACE 2,
+Amort, SPACE 2,
+RealGL, SPACE 2,
+EndCost
+;
+
+RRFORMAT FlatData
+Portfolio, SPACE 2,
+Group1, SPACE 2,
+Group2, SPACE 2,
+Invest, SPACE 2,
+InvDesc, SPACE 2,
+TLotID, SPACE 2,
+BegCost, SPACE 2,
+Adds, SPACE 2,
+InvAdds, SPACE 2,
+Withs, SPACE 2,
+Amort, SPACE 2,
+RealGL, SPACE 2,
+EndCost
+;
+
+QUERY 	costrollsummary_Costroll
+SELECT
+	{Portfolio.NameSort},
+	<< "Long" | "Short" >> LS,
+
+	{Grouping(:Group1,:Group1Field)} || " - " || LS Group1,
+	{Grouping(:Group2,:Group2Field)} Group2,
+	
+	//DECODE(:ReportType,"Detail",{Investment.Code},"") Invest,
+	{Investment.Code} Invest,
+	
+	//DECODE(:ReportType,"Detail",{Investment.Description},"") InvDesc,
+	{Investment.Description} InvDesc,
+	
+	DECODE(:ReportType,"Detail",{TaxLotTransaction.PortfolioEvent.TaxLotId},"") TLotID,
+	 		 
+	SUM( << Balance(Long,Book,PeriodToDate,All,AllRealGainLoss) | 0 >> ) RealLong, //incl. amortization
+		 
+	SUM( << 0 | Balance(Short,Book,PeriodToDate,All,AllRealGainLoss) >> ) RealShort, //incl. amortization
+		 
+	SUM(-1 * (RealLong + RealShort)) RealGL, 
+
+        SUM(Balance(Net,Unit,PeriodStart,AllAssetsAndPayables,Quantity)) BegQty,
+
+        SUM(Balance(Net,Unit,Current,AllAssetsAndPayables,Quantity)) EndQty,
+	
+	SUM( << Balance(Long,Book,PeriodStart,AllAssetsAndPayables,AmortizedCost) - Balance(Long,Book,PeriodStart,InDefault,AllAmortizationAssetLiability) |
+		 Balance(Short,Book,PeriodStart,AllAssetsAndPayables,AmortizedCost) - Balance(Short,Book,PeriodStart,InDefault,AllAmortizationAssetLiability) >> ) BegCost, //incl. amortization
+		 
+	SUM( << Balance(Long,Book,PeriodEnd,AllAssetsAndPayables,AmortizedCost) - Balance(Long,Book,PeriodEnd,InDefault,AllAmortizationAssetLiability) |
+		 Balance(Short,Book,PeriodEnd,AllAssetsAndPayables,AmortizedCost) - Balance(Short,Book,PeriodEnd,InDefault,AllAmortizationAssetLiability) >> ) EndCost, //incl. amortization
+
+	SUM( << -Balance(Long,Book,PeriodToDate,All,AllAmortizationRevExp) |
+		-Balance(Short,Book,PeriodToDate,All,AllAmortizationRevExp) >> ) UnrealAmorGL, // unreal amortization revexp
+				 	
+        SUM( << Balance(Long,BookDebit,PeriodToDate,AllAssetsAndPayables,Cost) + Balance(Long,BookDebit,PeriodToDate,CustodianXfer,CustodianXfer) - Balance(Long,BookDebit,PeriodToDate,InDefault,Cost) - Balance(Long,BookDebit,PeriodToDate,UnfundedLiability,Cost)|
+		Balance(Short,BookDebit,PeriodToDate,AllAssetsAndPayables,Cost) + Balance(Short,BookDebit,PeriodToDate,CustodianXfer,CustodianXfer) - Balance(Short,BookDebit,PeriodToDate,InDefault,Cost) - Balance(Short,BookDebit,PeriodToDate,UnfundedLiability,Cost) >> ) AllDebitsNoA, // debits to cost (not amortized cost)				 
+				 
+        SUM( << Balance(Long,BookCredit,PeriodToDate,AllAssetsAndPayables,Cost) + Balance(Long,BookCredit,PeriodToDate,CustodianXfer,CustodianXfer) + Balance(Long,BookDebit,PeriodToDate,InDefault,Cost) + Balance(Long,BookDebit,PeriodToDate,UnfundedLiability,Cost) |
+		Balance(Short,BookCredit,PeriodToDate,AllAssetsAndPayables,Cost) + Balance(Short,BookCredit,PeriodToDate,CustodianXfer,CustodianXfer) + Balance(Short,BookDebit,PeriodToDate,InDefault,Cost) + Balance(Short,BookDebit,PeriodToDate,UnfundedLiability,Cost) >> ) AllCreditsNoA, // credits to cost (not amortized cost)
+		 
+	// UnfundedLiability adjustment ( PR5056683 - Bank debt purchases overstated )
+        SUM(<< Balance(Long,Book,PeriodToDate,All,UnfundedLiability) | Balance(Short,Book,PeriodToDate,All,UnfundedLiability) >> ) DRCRAdjustments,
+	
+      	SUM( << Balance(Long,BookCredit,PeriodToDate,Receivable,Cost) + Balance(Long,BookCredit,PeriodToDate,OverdueReceivable,Cost) + Balance(Long,BookCredit,PeriodToDate,CustodianXfer,CustodianXfer) |
+		 Balance(Short,BookCredit,PeriodToDate,Receivable,Cost) + Balance(Short,BookCredit,PeriodToDate,OverdueReceivable,Cost) + Balance(Short,BookCredit,PeriodToDate,CustodianXfer,CustodianXfer) >> ) RecCreditsNoA,
+		 		 
+	SUM( << Balance(Long,BookDebit,PeriodToDate,Payable,Cost) + Balance(Long,BookDebit,PeriodToDate,OverduePayable,Cost) + Balance(Long,BookDebit,PeriodToDate,CustodianXfer,CustodianXfer) |
+		 Balance(Short,BookDebit,PeriodToDate,Payable,Cost) + Balance(Short,BookDebit,PeriodToDate,OverduePayable,Cost) + Balance(Short,BookDebit,PeriodToDate,CustodianXfer,CustodianXfer) >> ) PayDebitsNoA,
+	SUM( << Balance(Long,Book,PeriodToDate,All,AllRealGainLoss)
+		- Balance(Long,Book,PeriodToDate,All,AllAmortizationRealized)
+		| 0 >> ) RealLongNoA, // not incl. amortization - back out the amort amt from total real gain/loss
+		 
+	SUM( << 0 |
+		Balance(Short,Book,PeriodToDate,All,AllRealGainLoss)
+		- Balance(Short,Book,PeriodToDate,All,AllAmortizationRealized) >> ) RealShortNoA, // not incl. amortization - same as above
+		 
+	SUM(-1 * (RealLongNoA + RealShortNoA)) RealGLNoA,  // not incl. amortization
+	
+//	SUM(DECODE({RoleTrackingState.Code} == "Payable" OR {RoleTrackingState.Code} == "Receivable" OR {RoleTrackingState.Code} == "OverduePayable" OR {RoleTrackingState.Code} == "OverdueReceivable",1,
+//		AllDebitsNoA + RealShortNoA,
+	SUM(AllDebitsNoA + RecCreditsNoA - PayDebitsNoA + RealShortNoA) AddsNoA,
+		
+	SUM(DECODE({TaxLotTransaction.PortfolioEvent.EventType} == "ReceiveLong"
+		AND {TaxLotTransaction.PortfolioEvent.EventDate} >= :PeriodStartDate
+		AND {TaxLotTransaction.PortfolioEvent.EventDate} <= :PeriodEndDate
+		AND {TaxLotTransaction.PortfolioEvent.Investment.Code} == {Investment.Code}
+		,1,AddsNoA,0)) InvAdds,
+	
+//	SUM(DECODE({RoleTrackingState.Code} == "Payable" OR {RoleTrackingState.Code} == "Receivable" OR {RoleTrackingState.Code} == "OverduePayable" OR {RoleTrackingState.Code} == "OverdueReceivable",1,
+//		AllCreditsNoA + RealLongNoA,
+	SUM(AllCreditsNoA - RecCreditsNoA + PayDebitsNoA + RealLongNoA) WithsNoA,		
+        GetUnderlyingObject() ObjLink		
+FROM	bisTaxlot
+GIVEN
+#include "given.include"
+, BISQueryType = "PeriodActivity"
+, DisableLocAcctFilters = :DisableLocAcctFilters
+, DisableStrategyFilters = :DisableStrategyFilters
+, SumConsolidatedResult = "No"
+WHERE	{Investment.IsMediumOfExchange} == 0 AND {Investment.IsForwardCash} == 0
+GROUP BY	Group1, Group2, LS, Invest, InvDesc, TLotID, {Portfolio.NameSort}
+for 	BegCost != 0 OR EndCost != 0 OR	WithsNoA != 0  OR	AddsNoA != 0
+ORDER BY  Group1, Group2,  UPPER(Invest), getTaxLotDate(), TLotID
+;
+
+QUERY costrollsummary_TransferRecQuery
+SELECT SUM( BookAmount ) Total
+FROM bisStdJELine OFF :objLink THROUGH bisStdJELine
+Where {FinancialAccount.Code} == "Receivable" and {PortfolioEvent.EventType} == "Transfer"
+group by "1"
+;
+
+print_detail()
+{
+  // GEN-6106639: Set the cost to 0 if the taxlot is already closed.
+  if(:rb.BegQty == 0)
+  {
+      :rb.BegCost = 0.00;
+  }
+  if(:rb.EndQty == 0)
+  {
+      :rb.EndCost = 0.00;
+  }
+
+  // GEN-5072635: Dont count the receivable amount from transfer transaction.
+  :objLink = :rb.ObjLink;
+  :totalTransRec = 0;
+  GET costrollsummary_TransferRecQuery into :totalTransRec;
+  :rb.AddsNoA -= :totalTransRec;
+  :rb.WithsNoA += :totalTransRec;
+
+  if(:rb.DRCRAdjustments > 0 )
+  {
+    :rb.AddsNoA -= :rb.DRCRAdjustments;
+    :rb.WithsNoA += :rb.DRCRAdjustments;
+  }
+  else
+  {
+    :rb.WithsNoA -= :rb.DRCRAdjustments;
+    :rb.AddsNoA += :rb.DRCRAdjustments;
+  }
+  
+  :rb.WithsNoA = :rb.WithsNoA - (:rb.RealGL - :rb.RealGLNoA);
+  :rb.Amort = :rb.UnrealAmorGL + (:rb.RealGL - :rb.RealGLNoA);
+  :rb.RealGL = :rb.RealGLNoA;
+  :rb.AddsNoA = :rb.AddsNoA - :rb.InvAdds;
+
+  if(LOWER(:requestType) == "ssrs" )
+    {
+      PUSHFORMAT FlatData;
+      PRINT :rb {Portfolio,
+      	    Group1,
+	    Group2,
+    Invest,
+    InvDesc,
+    TLotID,
+    BegCost,
+    AddsNoA,
+    InvAdds,
+    WithsNoA,
+    Amort,
+    RealGL,
+    	    EndCost};
+      POPFORMAT;
+    }
+    else
+    {
+     PRINT :rb {Portfolio,
+     	   Group1,
+     	   Invest,
+    	   InvDesc,
+    	   TLotID,
+    	   BegCost,
+    	   AddsNoA,
+    	   InvAdds,
+    	   WithsNoA,
+    	   Amort,
+    	   RealGL,
+    	   EndCost}; 
+    }
+}
+
+
+MAIN
+{
+  BEGINHEADER;
+  PUSHFORMAT Data;
+  PRINTHEADINGS;
+  ENDHEADER;
+  GET costrollsummary_Costroll INTO :rb EXECUTING print_detail;
+  POPFORMAT;
+}

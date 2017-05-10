@@ -31,12 +31,20 @@
   </DataSets>
   <Reports>
     <ProjectItem>
+      <Name>Cost Roll Forward Summary.rdl</Name>
+      <FullPath>Cost Roll Forward Summary.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>EIS Long Short Tax Lot Appraisal.rdl</Name>
       <FullPath>EIS Long Short Tax Lot Appraisal.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>EIS Transaction History.rdl</Name>
       <FullPath>EIS Transaction History.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Master Income Accruals Report.rdl</Name>
+      <FullPath>Master Income Accruals Report.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>NEXTGEN Assets Under Management.rdl</Name>
@@ -110,14 +118,6 @@
       <Name>SubReport_SmallHeaderLandscape_NextGen.rdl</Name>
       <FullPath>SubReport_SmallHeaderLandscape_NextGen.rdl</FullPath>
     </ProjectItem>
-    <ProjectItem>
-      <Name>Cost Roll Forward.rdl</Name>
-      <FullPath>Cost Roll Forward.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Master Income Accruals Report.rdl</Name>
-      <FullPath>Master Income Accruals Report.rdl</FullPath>
-    </ProjectItem>
   </Reports>
   <Configurations>
     <Configuration>
@@ -126,7 +126,7 @@
       <Options>
         <OutputPath>bin\Debug</OutputPath>
         <TargetServerVersion>SSRS2008R2</TargetServerVersion>
-        <TargetServerURL>http://dkim2/ReportServer</TargetServerURL>
+        <TargetServerURL>http://vmsfwfdev3.advent.com/ReportServer</TargetServerURL>
         <TargetFolder>GenevaReports</TargetFolder>
         <TargetDataSourceFolder>GenevaReports</TargetDataSourceFolder>
         <TargetDatasetFolder>GenevaReports</TargetDatasetFolder>
